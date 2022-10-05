@@ -11,7 +11,7 @@ int main()
         fflush(stdin) ;
         flag = scanf ("%d %d %d" , &a , &b , &c) ;
     }
-    while (flag!=3);
+    while (flag!=3 || a==0);
     double D=(b*b-4*a*c) , root1 , root2 ;
     if (D==0) printf ("\nThe multiple real root of equation ") ;
     else if (D>0) printf ("\nThe real roots of equation ") ;
