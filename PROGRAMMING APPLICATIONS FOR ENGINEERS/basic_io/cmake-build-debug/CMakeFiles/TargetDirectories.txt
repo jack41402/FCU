@@ -1,0 +1,4 @@
+D:/C++/FCU/basic_io/cmake-build-debug/CMakeFiles/basic_io.dir
+D:/C++/FCU/basic_io/cmake-build-debug/CMakeFiles/integer_alignment.dir
+D:/C++/FCU/basic_io/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C++/FCU/basic_io/cmake-build-debug/CMakeFiles/rebuild_cache.dir

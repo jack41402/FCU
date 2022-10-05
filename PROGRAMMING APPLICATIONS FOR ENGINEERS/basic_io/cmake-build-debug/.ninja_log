@@ -1,0 +1,9 @@
+# ninja log v5
+0	163	6857948146121033	CMakeFiles/basic_io.dir/integer_alignment.c.obj	57e7e2f3bf557011
+1	94	6857948738264250	CMakeFiles/integer_alignment.dir/integer_alignment.c.obj	beab1d5e4bb781e7
+6	252	6857948146988276	CMakeFiles/basic_io.dir/escape_sequence.c.obj	e68bd05fc3dc67b
+36	263	6857948147151949	CMakeFiles/basic_io.dir/upper_case_in_order.c.obj	d22258dc65363ea2
+28	263	6857948147115421	CMakeFiles/basic_io.dir/integer_io.c.obj	e446607ac39a5c6e
+12	271	6857948147221765	CMakeFiles/basic_io.dir/string_to_character.c.obj	e262c257d7153f1
+17	266	6857948147171895	CMakeFiles/basic_io.dir/text_line.c.obj	2aa22b16f74d7692
+94	223	6857948739502641	integer_alignment.exe	4208a6f556d7078
