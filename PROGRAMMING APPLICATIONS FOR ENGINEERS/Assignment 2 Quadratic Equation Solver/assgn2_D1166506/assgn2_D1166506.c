@@ -12,7 +12,7 @@ int main()
         flag = scanf ("%d %d %d" , &a , &b , &c) ;
     }
     while (flag!=3 || a==0);
-    double D=(b*b-4*a*c) , root1 , root2 ;
+    double D=(b*b-4*a*c) , x1 , x2 ;
     if (D==0) printf ("\nThe multiple real root of equation ") ;
     else if (D>0) printf ("\nThe real roots of equation ") ;
     else printf ("\nThe complex roots of equation ") ;
@@ -30,23 +30,15 @@ int main()
         if (b==-1) printf ("-X") ;
         else printf ("%dX" , b) ;
     }
-    if (c>0) printf ("+%d" , c) ;
-    else if (c<0) printf ("%d" , c) ;
+    if (c) printf ("%+d" , c) ;
     printf ("=0 ") ;
-
-    root1 = (-b+sqrt(D))/(2*(double)a) ;
-    root2 = (-b-sqrt(D))/(2*(double)a) ;
-    if (root1==0) root1 = 0 ;
-    if (root2==0) root2 = 0 ;
-    if (D==0) printf ("is %.4f.\n" , root1) ;
-    //PROBLEM!!!!!!!!!!!!!!!!!!!! -5 2 0
-    else if (D>0) printf ("are %.4f and %.4f.\n" , root1 , root2) ;
+    x1 = -b/(2*(double)a) , x2 = sqrt(fabs(D))/(2*(double)a) ;
+    if (D==0) printf ("is %.4lf.\n" , x1+x2) ;
+    else if (D>0) printf ("are %.4lf and %.4lf.\n" , x1+x2 , x1-x2) ;
     else
     {
-        double real = -(double)b/(2*(double)a) ;
-        double complex=sqrt(-D)/(2*a) ;
-        if (b!=0) printf ("are %.4f+%.4fi and %.4f-%.4fi.\n" , real , complex , real , complex) ;
-        else printf ("are %.4fi and -%.4fi.\n" , complex , complex) ;
+        if (b!=0) printf ("are %.4lf+%.4lfi and %.4lf-%.4lfi.\n" , x1 , x2 , x1 , x2) ;
+        else printf ("are %.4lfi and -%.4lfi.\n" , x2 , x2) ;
     }
     return 0;
 }
