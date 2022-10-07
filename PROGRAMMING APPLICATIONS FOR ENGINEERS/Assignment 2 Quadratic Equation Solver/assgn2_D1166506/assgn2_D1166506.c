@@ -20,16 +20,9 @@ int main()
     if (a==1) printf ("X**2") ;
     else if (a==-1) printf ("-X**2") ;
     else if (a!=0) printf ("%dX**2" , a) ;
-    if (b>0)
-    {
-        if (b==1) printf ("+X") ;
-        else printf ("+%dX" , b) ;
-    }
-    else if (b<0)
-    {
-        if (b==-1) printf ("-X") ;
-        else printf ("%dX" , b) ;
-    }
+    if (b==1) printf ("+X") ;
+    else if (b==-1) printf ("-X") ;
+    else if (b!=0) printf ("%+dX" , a) ;
     if (c) printf ("%+d" , c) ;
     printf ("=0 ") ;
     x1 = -b/(2*(double)a) , x2 = sqrt(fabs(D))/(2*(double)a) ;
