@@ -22,10 +22,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c2f36957-5f95-4ac0-b56f-7d0108ac5b37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assgn2_D1166506.c" beforeDir="false" afterPath="$PROJECT_DIR$/assgn2_D1166506.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/assgn2_D1166506.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/assgn2_D1166506.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/assgn2_D1166506.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assgn2_D1166506.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PUBLIC SPEAKING FOR NONNATIVE SPEAKERS/Public Speaking Assignment 2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PUBLIC SPEAKING FOR NONNATIVE SPEAKERS/Public Speaking Presentation Topic Assignment 4 Week 5 2022.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +92,7 @@
       <workItem from="1665392543912" duration="1444000" />
       <workItem from="1665394187503" duration="1093000" />
       <workItem from="1665395582117" duration="4312000" />
+      <workItem from="1665402778172" duration="6407000" />
     </task>
     <servers />
   </component>

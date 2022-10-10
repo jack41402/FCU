@@ -38,7 +38,9 @@ int main()
     //Use conditional expressions to determine and print the equation.
     if (D==0) printf ("is %.4lf.\n" , x1+x2) ;
     else if (D>0) printf ("are %.4lf and %.4lf.\n" , x1+x2 , x1-x2) ;
-    else if (x1!=0) printf ("are %.4lf+%.4lfi and %.4lf-%.4lfi.\n" , x1 , x2 , x1 , x2) ;
-    else printf ("are %.4lfi and -%.4lfi.\n" , x2 , x2) ;
+    else if (x1!=0  && x2!=1) printf ("are %.4lf+%.4lfi and %.4lf-%.4lfi.\n" , x1 , x2 , x1 , x2) ;
+    else if (x1!=0) printf ("are %.4lf+i and %.4lf-i.\n" , x1 , x1) ;
+    else if (x2!=1) printf ("are %.4lfi and -%.4lfi.\n" , x2 , x2) ;
+    else printf ("are i and -i.\n") ;
     return 0;
 }
