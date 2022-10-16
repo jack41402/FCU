@@ -17,7 +17,7 @@ int main()
         //Get the variables a, b, and c.
         scanf ("%lf %lf %lf" , &a , &b , &c) ;
     }
-    //If variable a, b, or c is not an integer value or variable a is equal to 0, input the variables a, b, and c again.
+        //If variable a, b, or c is not an integer value or variable a is equal to 0, input the variables a, b, and c again.
     while (a!=(int)a || b!=(int)b || c!=(int)c || a==0);
     //Declare and initialize the value of the variable D, a discriminant of the quadratic equation.
     double D=(b*b-4*a*c) ;
