@@ -22,20 +22,19 @@ int main()
 {
     while (1)
     {
-        int X , Y , carry=0 , ans=0 , overflow ;
+        int X , Y , carry=0 , ans=0 , overflow , compare ;
         char operator ;
-        printf ("Enter \"X + Y\" or \"X - Y\" (X, Y: -2,147,483,648 to 2,147,483,647): ") , fflush(stdout) ;
+        printf ("Enter \"X + Y\" or \"X - Y\" (X, Y: -2,147,483,648 to 2,147,483,647): ") ;
         scanf("%d %c %d", &X, &operator, &Y) ;
         if (X==0 && Y==0) break ; // Break the loop while X and Y are both equal to 0.
-        if (operator == '-') carry = 1 ; // Carry in at the first digit while the operator is negative.
+        (operator=='-') ? (compare = X - Y , carry = 1) : (compare = X + Y); // Carry in at the first digit while the operator is negative.
         adder(X , (operator=='-') ? ~Y : Y , &carry , &ans , &overflow) ; // Use the function adder to sum up X and Y.
         // print the variables X, Y, and S in both decimal and binary.
         printf ("X = %-10d  Binary value: " , X) , printBinary (X) , printf ("\n") ;
         printf ("Y = %-10d  Binary value: " , Y) , printBinary (Y) , printf ("\n") ;
         printf ("S = %-10d  Binary value: " , ans) , printBinary (ans) , printf ("\n") ;
-        (X+Y==ans) ? printf("Correct! Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) : printf("Incorrect! Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) ;
-        if (overflow) printf("Overflow!\n") ; // Use carry to catch the flag
-        fflush(stdout) ;
+        (compare==ans) ? printf("Correct! Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) : printf("Incorrect! Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) ;
+        if (overflow) printf("**** The addition-subtraction operation is overflow.\n") ; // Use overflow to catch the flag
     }
     return 0;
 }
