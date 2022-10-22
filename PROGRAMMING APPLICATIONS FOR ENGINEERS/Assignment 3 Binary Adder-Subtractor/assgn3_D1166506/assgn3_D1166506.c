@@ -33,7 +33,7 @@ int main()
         printf ("X = %-10d  Binary value: " , X) , printBinary (X) , printf ("\n") ;
         printf ("Y = %-10d  Binary value: " , Y) , printBinary (Y) , printf ("\n") ;
         printf ("S = %-10d  Binary value: " , ans) , printBinary (ans) , printf ("\n") ;
-        (compare==ans) ? printf("Correct! Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) : printf("Incorrect! Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) ;
+        (compare==ans) ? printf("Correct! ") : printf("Incorrect! ") , printf("Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) ;
         if (overflow) printf("**** The addition-subtraction operation is overflow.\n") ; // Use overflow to catch the flag
     }
     return 0;
