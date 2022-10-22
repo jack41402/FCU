@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void printBinary(unsigned int n) // Print the integer variable in binary.
 {
@@ -23,7 +24,7 @@ int main()
     while (1)
     {
         int X , Y , carry=0 , ans=0 , overflow , compare ;
-        char operator ;
+        char operator , str[32] ;
         printf ("Enter \"X + Y\" or \"X - Y\" (X, Y: -2,147,483,648 to 2,147,483,647): ") ;
         scanf("%d %c %d", &X, &operator, &Y) ;
         if (X==0 && Y==0) break ; // Break the loop while X and Y are both equal to 0.
@@ -35,6 +36,7 @@ int main()
         printf ("S = %-10d  Binary value: " , ans) , printBinary (ans) , printf ("\n") ;
         (compare==ans) ? printf("Correct! ") : printf("Incorrect! ") , printf("Adder-subtractor operation test: %d %c %d = %d\n" , X , operator , Y , ans) ;
         if (overflow) printf("**** The addition-subtraction operation is overflow.\n") ; // Use overflow to catch the flag
+        printf ("%s" , itoa(X , str , 2)) ;
     }
     return 0;
 }
