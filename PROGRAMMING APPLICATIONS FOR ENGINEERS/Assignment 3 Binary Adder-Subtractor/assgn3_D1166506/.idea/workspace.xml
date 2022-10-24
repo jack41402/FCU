@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="CMakePresetLoader">{
-  &quot;useNewFormat&quot;: true
-}</component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -20,197 +17,33 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8888f26b-e77b-4eb6-9184-cc0adc0323ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/basic_io.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/cache-v2-dc1e79df1091a42ea665.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8780a45e7ec70ba13245.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7ee64b738c9c0b7d849e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-25T07-41-32-0341.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/target-basic_io-Debug-21acf6deeacfee095468.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/target-integer_alignment-Debug-7fb22bffecccf4ab6765.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-9b620ed1f760c4b64b3a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/escape_sequence.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/integer_alignment.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/integer_io.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/string_to_character.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/text_line.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/upper_case_in_order.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/integer_alignment.dir/integer_alignment.c.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/build.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/cmake-build-debug/integer_alignment.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/escape_sequence.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/integer_alignment.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/integer_io.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/string_to_character.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/text_line.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Basic IO/upper_case_in_order.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Calendars/Calendars.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Calendars/calendars.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/binary_adder.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/binary_adder_subtractor.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/bitwise_logic_operations.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b3c45e54aa3a032403f7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3aabbb99c2bcd07f41da.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d7962db29681e54b26b0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-17T05-25-54-0203.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/target-Logic_Operations-Debug-b0f6f7b42b6efefc574e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-9b620ed1f760c4b64b3a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/build.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/logic_operations.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Logic Operations/parity_check.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Multiplication Tables/Multiplication_Tables.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Multiplication Tables/multiplication_tables.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Numeral Representations/Numeral_Representations.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Programming Practices/Numeral Representations/numeral_representations.pdf" afterDir="false" />
+    <list default="true" id="230ea1ec-ded6-44d8-81a3-315f53dabfc9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../~$sgn3_D1166506.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assgn3_D1166506.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../assgn3_D1166506.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assgn3_D1166506.c" beforeDir="false" afterPath="$PROJECT_DIR$/assgn3_D1166506.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn3_D1166506.dir/assgn3_D1166506.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn3_D1166506.dir/assgn3_D1166506.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-00dfdc227f8b3bc0cfe6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-64417a21f4ecca3915ac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-22T18-48-00-0061.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-4466d0e0b5c70530b31c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn3_D1166506.dir/assgn3_D1166506.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assgn3_D1166506.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assgn3_D1166506.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/.idea/basic_io.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/basic_io.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/cache-v2-dc1e79df1091a42ea665.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-8780a45e7ec70ba13245.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-7ee64b738c9c0b7d849e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/index-2022-09-25T07-41-32-0341.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/target-basic_io-Debug-21acf6deeacfee095468.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/target-integer_alignment-Debug-7fb22bffecccf4ab6765.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-9b620ed1f760c4b64b3a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/escape_sequence.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/integer_alignment.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/integer_io.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/string_to_character.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/text_line.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/basic_io.dir/upper_case_in_order.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/integer_alignment.dir/integer_alignment.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/cmake-build-debug/integer_alignment.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/escape_sequence.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/integer_alignment.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/integer_io.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/string_to_character.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/text_line.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Basic IO/upper_case_in_order.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Draw_Figure.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/.idea/Logic Operations.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/binary_adder.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/binary_adder_subtractor.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/bitwise_logic_operations.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/cache-v2-b3c45e54aa3a032403f7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3aabbb99c2bcd07f41da.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d7962db29681e54b26b0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-17T05-25-54-0203.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/target-Logic_Operations-Debug-b0f6f7b42b6efefc574e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-9b620ed1f760c4b64b3a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/logic_operations.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Logic Operations/parity_check.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assgn3_D1166506.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,34 +63,26 @@
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2022" />
-    <option name="minorVersion" value="2.3" />
+    <option name="minorVersion" value="2.4" />
   </component>
-  <component name="ProjectId" id="2GVCcV8u2KpBrKnGJXTqUKE1eA8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2GZTopYVs31cBkbrJd3JlVLN9ph" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C/C++"
+    "cidr.known.project.marker": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="assgn3_D1166506" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assgn3_D1166506" TARGET_NAME="assgn3_D1166506" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assgn3_D1166506" RUN_TARGET_NAME="assgn3_D1166506">
@@ -269,31 +94,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8888f26b-e77b-4eb6-9184-cc0adc0323ca" name="Changes" comment="" />
-      <created>1666464444092</created>
+      <changelist id="230ea1ec-ded6-44d8-81a3-315f53dabfc9" name="Changes" comment="" />
+      <created>1666595283489</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1666464444092</updated>
-      <workItem from="1666464445712" duration="6635000" />
-      <workItem from="1666518872729" duration="2138000" />
+      <updated>1666595283489</updated>
+      <workItem from="1666595285987" duration="50000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

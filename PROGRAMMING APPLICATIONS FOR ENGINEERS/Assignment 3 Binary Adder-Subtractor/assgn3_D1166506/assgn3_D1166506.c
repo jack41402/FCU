@@ -21,18 +21,18 @@ int main()
     while (1)
     {
         int X , Y , carry=0 , ans=0 , overflow , compare ;
-        char operator , str[32] ;
-        printf ("Enter \"X + Y\" or \"X - Y\" (X, Y: -2,147,483,648 to 2,147,483,647): ") , fflush(stdout) ;
-        scanf("%d %c %d", &X, &operator, &Y) ;
+        char sign ;
+        printf ("Enter \"X + Y\" or \"X - Y\" (X, Y: -2,147,483,648 to 2,147,483,647): ") ;
+        fflush(stdin) , scanf("%d %c %d", &X, &sign, &Y) ;
         if (X==0 && Y==0) break ; // Break the loop while X and Y are both equal to 0.
-        (operator=='-') ? (compare = X - Y , carry = 1) : (compare = X + Y); // Determine carry in at the first digit equal to 1 while the operator is negative.
-        adder(X , (operator=='-') ? ~Y : Y , &carry , &ans , &overflow) ; // Use the function adder to sum up X and Y.
+        (sign=='-') ? (compare = X - Y , carry = 1) : (compare = X + Y); // Determine carry in at the first digit equal to 1 while the sign is negative.
+        adder(X , (sign=='-') ? ~Y : Y , &carry , &ans , &overflow) ; // Use the function adder to sum up X and Y.
         // print the variables X, Y, and S in both decimal and binary.
-        printf ("X = %-10d  Binary value: " , X) , printBinary (X) , printf ("\n") ;
-        printf ("Y = %-10d  Binary value: " , Y) , printBinary (Y) , printf ("\n") ;
-        printf ("S = %-10d  Binary value: " , ans) , printBinary (ans) , printf ("\n") ;
+        printf ("X = %-11d  Binary value: " , X) , printBinary (X) , printf ("\n") ;
+        printf ("Y = %-11d  Binary value: " , Y) , printBinary (Y) , printf ("\n") ;
+        printf ("S = %-11d  Binary value: " , ans) , printBinary (ans) , printf ("\n") ;
         int flag=(compare==ans) ;
-        printf("%s Adder-subtractor operation test: %d %c %d %s %d\n" , (flag) ? "Correct!" : "Incorrect!" ,  X , operator , Y  , (flag) ? "=" : "!=" , ans) ;
+        printf("%s Adder-subtractor operation test: %d %c %d %s %d\n" , (flag) ? "Correct!" : "Incorrect!" ,  X , sign , Y  , (flag) ? "=" : "!=" , ans) ;
         // Use overflow to catch the flag, and if overflow is true then print this sentence.
         if (overflow) printf("**** The addition-subtraction operation is overflow.\n") ;
         printf ("-----------------------------------------------------\n") ;
