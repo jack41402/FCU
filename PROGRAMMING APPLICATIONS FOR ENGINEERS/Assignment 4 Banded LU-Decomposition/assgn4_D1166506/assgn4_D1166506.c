@@ -1,21 +1,25 @@
 #include <stdio.h>
 #include <math.h>
-#include <time.h>
 #include <stdlib.h>
 
+// Declare the variables n, r, and s; flag to determine the correctness.
 int n , r , s , flag=1 ;
+// Declare and initialize the array A, L, U, and temp as instruction.
 double A[100][100]={0} , L[100][100]={0} , U[100][100]={0} , temp[100][100]={0};
 
+// min function
 int min (int a , int b)
 {
     return (a>b) ? b : a ;
 }
 
+// max function
 int max (int a , int b)
 {
     return (a>b) ? a : b ;
 }
 
+// Function of LU decomposition as instructions.
 void LU_decompose()
 {
     for (int k=0 ; k<n ; k++)
@@ -29,13 +33,15 @@ void LU_decompose()
 
 int main()
 {
+    // Print the sentences and input the variables.
     printf ("Enter matrix size n: ") , fflush(stdout) ;
     scanf ("%d" , &n) ;
-    printf ("Enter the lower bandwidth and the of matrix A, (r, s): ") , fflush(stdout) ;
+    printf ("\nEnter the lower bandwidth and the of matrix A, (r, s): ") , fflush(stdout) ;
     scanf ("%d %d" , &r , &s) ;
+    // Set the random seed to 0.
     srand (0) ;
-
-    printf ("\n\nMatrix A:\n") ;
+    //Generate and print the matrix A.
+    printf ("\nMatrix A:\n") ;
     for (int i=0 ; i<n ; ++i)
     {
         for (int j=0 ; j<max (0 , i-r) ; ++j) printf ("        ") ;
@@ -47,7 +53,9 @@ int main()
         }
         printf ("\n") ;
     }
+    // Use Lu_decompose function to generate matrices L and U.
     LU_decompose() ;
+    // Print the matrices L and U
     printf ("\n\nMatrix L:\n") ;
     for (int i=0 ; i<n ; ++i)
     {
@@ -62,15 +70,17 @@ int main()
         for (int j=i ; j<=min(n-1 ,i+s) ; ++j) printf ("%8.4lf" , U[i][j]) ;
         printf ("\n") ;
     }
-
+    // Verify the correctness of LU decomposition.
     for (int i=0 ; i<n && flag ; ++i)
+    {
         for (int j=0 ; j<n && flag ; ++j)
         {
             A[i][j] = 0 ;
             for (int k=0 ; k<=min(i , j) ; ++k) A[i][j] += L[i][k] * U[k][j]; // Compute A[i][j] for A<=LU
             flag = flag && (fabs(A[i][j]-temp[i][j])<1e-4); // Compare A[i][j] and A1[i][j], allow error 0.0001.
         }
-
+    }
+    // Print the sentence according to the flag.
     if (flag) printf("\nThe LU-decomposition program is correct.\n"); // The program is correct.
     else printf("\nThe LU-decomposition program is incorrect.\n"); // The program is incorrect.
     return 0;
