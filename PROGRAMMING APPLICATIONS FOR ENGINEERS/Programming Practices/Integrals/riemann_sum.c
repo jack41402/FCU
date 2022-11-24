@@ -60,7 +60,7 @@ int main(void) {
   area = -1; // Set initial area to -1.
   last = -2; // Set initial previous area to -2.
   // Continue when the difference error of two intration is greatier than epsilon.
-  while (fabs(area-last)>epsilon) { 
+  while (fabs(area-last)>epsilon) {
     interval = (b - a) / T; // Interval size.
     point = a + interval / 2; // Middle point of the first interval. 
     last = area; // The area of the previous iteration.
