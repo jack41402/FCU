@@ -29,7 +29,7 @@ int main(void) {
   int r; // Size of square matrices.
   int i, j, k; // Loop variable.
   
-  srand(time(NULL)); // Seed of the random number generator.
+  srand(0); // Seed of the random number generator.
   
   printf("Enter the square matrix size r: "); // Input size of square matrix.
   scanf("%d", &r);
