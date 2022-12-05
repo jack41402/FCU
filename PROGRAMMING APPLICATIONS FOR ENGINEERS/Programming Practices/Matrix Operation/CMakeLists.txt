@@ -14,3 +14,4 @@ add_executable(Matrix_Operation
 
 add_executable(lu_decomposition lu_decomposition.c)
 add_executable(matrix_multiplication_triangular matrix_multiplication_triangular.c)
+add_executable(determinant determinant.c)

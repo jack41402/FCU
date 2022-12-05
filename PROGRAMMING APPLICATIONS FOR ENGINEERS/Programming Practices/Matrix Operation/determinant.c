@@ -10,7 +10,7 @@ unsigned long cnt=0;
 // smatrix is the pointer to the input matrix; m: matrix size.
 double determinant(double **smatrix, int m) { 
   double **cofactor; // Pointer of the cofactor.
-  double det=0; // Determinant value. 
+  double det=0;// Determinant value.
   int j, p, q; // Loop variables.
   
   if (m == 1) {det = smatrix[0][0];} // Base case: when m is 1.
