@@ -40,7 +40,7 @@ int main()
     scanf ("%d %d" , &r , &s) ;
     // Set the random seed to 0.
     srand (0) ;
-    //Generate and print the matrix A.
+    // Generate and print the matrix A.
     printf ("\nMatrix A:\n") ;
     for (int i=0 ; i<n ; ++i)
     {
