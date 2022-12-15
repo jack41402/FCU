@@ -5,27 +5,38 @@
 // Set a queue to empty, i.e., reset head and tail of a queue.
 void initial_queue(Queue *que)
 {
+    que->elem = (int *) malloc (SEGMENT * sizeof (int)) ;
     que->head = 0 ; // Head index is where the next element will be deleted if not empty.
     que->tail = 0 ; // Tail index is where the next element will be placed.
-    que->capacity = 0 ; // When capacity==0, the queue is empty.
+    que->capacity = SEGMENT ; // When capacity==0, the queue is empty.
 }
 
 // Add an element to the tail of a queue.
 // The elements are placed in the queue circularly.
 void enqueue(Queue *que , int e)
 {
-    // Increase the capacity if the queue is full.
-    printf ("%d %d\n" , que->tail , que->capacity) ;
-    if (que->tail>que->capacity)
+    // Expand the capacity if the queue is full.
+    printf ("%d %d\n" , get_size (*que) , que->capacity) ;
+    if (get_size (*que)==que->capacity)
     {
+        que->elem = (int *) realloc (que->elem , (que->capacity+SEGMENT) * sizeof (int)) ;
+        // Update queue capacity.
         que->capacity += SEGMENT ;
-        que->elem = (int *) calloc (que->capacity , sizeof (int)) ;
+        que->tail = get_size(*que);
     }
     // If the queue is not full.
-    *(que->elem+que->tail) = e ; // Place the element at the tail.
+    *(que->elem+que->tail++) = e ; // Place the element at the tail.
 //    printf ("%d %d\n" , *(que->elem+que->tail) , que->tail) ;
-    que->tail++ ; // Increment tail index.
+//    que->tail++ ; // Increment tail index.
 }
+//    S->elem[++S->top] = e; // Insert an element and increment the top index.
+//    if (get_size(*S)==S->capacity) {// If the stack is full, expand the stack capacity.
+//        // Reallocate memory space, add one more segement.
+//        S->elem = (ElemType *) realloc(S->elem,
+//                                       (S->capacity+SEGMENT)*sizeof(ElemType));
+//        S->capacity += SEGMENT; // Update stack capacity.
+//    }
+
 
 // Remove an element from the head of a queue.
 // The elements are placed in the queue circularly.
