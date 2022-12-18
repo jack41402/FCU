@@ -31,13 +31,13 @@ void enqueue (Queue *que , int e)
 // The elements are placed in the queue circularly.
 int dequeue (Queue *que)
 {
+    if (is_empty (*que)) return -1;
+
     // FREE THE MEMORY!!!
     int e=-1 ; // Head element.
-    if (!is_empty (*que))
-    {
-        e = *(que->elem+que->head++) ; // Get the element at the head of queue. Increment head index.
+    e = *(que->elem+que->head++) ; // Get the element at the head of queue. Increment head index.
+//        e = que->elem[que->head++];
 //        printf ("%4d\n" , e) ;
-    }
     if (que->capacity-SEGMENT>get_size (*que))
     {
         que->capacity -= SEGMENT ;
@@ -50,10 +50,13 @@ int dequeue (Queue *que)
 // Reset the head of queue to the beginning position and shift the elements in the queue.
 void reset (Queue *que)
 {
-    int count=0 , size=get_size (*que);
+    Queue temp ;
+    temp.elem = (int *) calloc (que->capacity , sizeof (int)) ;
+    temp.elem = que->elem , temp.capacity = que->capacity , temp.head = que->head , temp.tail = que->tail ;
+    int count=0 , size=get_size (*que) ;
     for (int i=que->head ; i<que->tail ; ++i , ++count)
     { // Print all elements in queue.
-        *(que->elem+count) = *(que->elem+i%size) ; // Print an element.
+        *(que->elem+count) = *(temp.elem+i%temp.capacity) ; // Print an element.
     }
     que->head=0 , que->tail = count ;
 }
