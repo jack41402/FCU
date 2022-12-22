@@ -10,7 +10,7 @@ int main(void)
     // Declare trail_count , enqueue_count , dequeue_count.
     int trail_count , enqueue_count , dequeue_count ;
     int e ; // Queue element.
-    srand (time (NULL)) ;
+    srand (1000) ;
     initial_queue(&Q) ; // Initial queue q.
     trail_count = rand()%10 + 1 ;
     trail_count = 10 ;

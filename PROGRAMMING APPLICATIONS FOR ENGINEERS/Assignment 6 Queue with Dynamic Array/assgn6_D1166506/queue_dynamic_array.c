@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "queue_dynamic_array.h"
 
 // Set a queue to empty, i.e., reset head and tail of a queue.
@@ -24,6 +25,7 @@ void enqueue (Queue *que , int e)
     }
     // If the queue is not full.
     *(que->elem+(que->tail%que->capacity)) = e ; // Place the element at the tail.
+//    printf ("%4d %4d || %4d %4d\n" , *(que->elem+(que->tail%que->capacity)), e , que->tail%que->capacity , que->tail) ;
     que->tail++ ;
 }
 
@@ -36,8 +38,7 @@ int dequeue (Queue *que)
     // FREE THE MEMORY!!!
     int e=-1 ; // Head element.
     e = *(que->elem+que->head++) ; // Get the element at the head of queue. Increment head index.
-//        e = que->elem[que->head++];
-//        printf ("%4d\n" , e) ;
+//    printf ("%3d %3d\n" , e , que->head) ;
     if (que->capacity-SEGMENT>get_size (*que))
     {
         que->capacity -= SEGMENT ;
@@ -52,13 +53,18 @@ void reset (Queue *que)
 {
     Queue temp ;
     temp.elem = (int *) calloc (que->capacity , sizeof (int)) ;
-    temp.elem = que->elem , temp.capacity = que->capacity , temp.head = que->head , temp.tail = que->tail ;
-    int count=0 , size=get_size (*que) ;
+    memcpy (temp.elem , que->elem , que->capacity * sizeof (int)) ;
+    temp.capacity = que->capacity , temp.head = que->head , temp.tail = que->tail ;
+    printf ("TEMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP\n") ;
+    print_queue (temp) ;
+    int count=0 ;
     for (int i=que->head ; i<que->tail ; ++i , ++count)
     { // Print all elements in queue.
         *(que->elem+count) = *(temp.elem+i%temp.capacity) ; // Print an element.
+//        printf ("%3d %3d %3d %3d\n" , *(que->elem+count) , *(temp.elem+i%temp.capacity) , i , i%que->capacity) ;
     }
     que->head=0 , que->tail = count ;
+    free (temp.elem) ;
 }
 
 // Get the element at the head of a queue.
@@ -104,7 +110,7 @@ void print_queue (Queue que)
         for (int i=que.head , count=1 , size=get_size (que) ; i<que.tail ; ++i, ++count)
         { // Print all elements in queue.
             printf("%4d i=%3d" , *(que.elem+i%que.capacity) , i) ; // Print an element.
-            if (count%20==0) printf ("\n") ;
+            if ((i-que.head+1)%20==0) printf ("\n") ;
         }
         printf("\n") ;
     }
