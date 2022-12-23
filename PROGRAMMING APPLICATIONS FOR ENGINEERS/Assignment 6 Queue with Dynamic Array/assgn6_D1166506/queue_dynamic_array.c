@@ -19,9 +19,9 @@ void enqueue (Queue *que , int e)
     // Increase the capacity if the queue is full.
     if (get_size (*que)+1==que->capacity)
     {
+        reset (que) ;
         que->capacity += SEGMENT ;
         que->elem = (int *) realloc (que->elem , que->capacity * sizeof (int)) ;
-        reset (que) ;
     }
     // If the queue is not full.
     *(que->elem+(que->tail%que->capacity)) = e ; // Place the element at the tail.
@@ -41,8 +41,8 @@ int dequeue (Queue *que)
 //    printf ("%3d %3d\n" , e , que->head) ;
     if (que->capacity-SEGMENT>get_size (*que))
     {
-        que->capacity -= SEGMENT ;
         reset (que) ;
+        que->capacity -= SEGMENT ;
         que->elem = (int *) realloc (que->elem , que->capacity * sizeof (int)) ;
     }
     return e; // Return the head element.
@@ -55,8 +55,8 @@ void reset (Queue *que)
     temp.elem = (int *) calloc (que->capacity , sizeof (int)) ;
     memcpy (temp.elem , que->elem , que->capacity * sizeof (int)) ;
     temp.capacity = que->capacity , temp.head = que->head , temp.tail = que->tail ;
-    printf ("TEMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP\n") ;
-    print_queue (temp) ;
+//    printf ("TEMPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP\n") ;
+//    print_queue (temp) ;
     int count=0 ;
     for (int i=que->head ; i<que->tail ; ++i , ++count)
     { // Print all elements in queue.
@@ -109,7 +109,7 @@ void print_queue (Queue que)
         printf("****Queue elements from head to tail:\n") ;
         for (int i=que.head , count=1 , size=get_size (que) ; i<que.tail ; ++i, ++count)
         { // Print all elements in queue.
-            printf("%4d i=%3d" , *(que.elem+i%que.capacity) , i) ; // Print an element.
+            printf("%4d" , *(que.elem+i%que.capacity)) ; // Print an element.
             if ((i-que.head+1)%20==0) printf ("\n") ;
         }
         printf("\n") ;
