@@ -35,4 +35,4 @@ int get_size (Queue);
 void clear (Queue *);
 
 // Print elements of a queue from the head to the tail.
-void print_queue (Queue); 
+void print_queue (Queue);
