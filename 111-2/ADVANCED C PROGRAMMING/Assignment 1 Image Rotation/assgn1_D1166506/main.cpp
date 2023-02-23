@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define swap(a , b) temp=b ; b=a ; a=temp ;
+
 
 typedef struct
 {
@@ -20,18 +22,29 @@ typedef struct
     unsigned ImportantColors ;
 } Header ;
 
+void WriteFile (char *filename , Header header , unsigned char *palette , unsigned char *imageData)
+{
+    FILE *fptr ;
+    fptr = fopen("Rotate_Image.bmp" , "wb") ;
+    printf("\nThe horizontal mirror reflection image is \"horizontal_mirror_reflection.bmp\".\n\n") ;
+    fwrite(&header.Type , 1 , 2 , fptr) ;
+    fwrite(&header , 4 , 1 , fptr) ;
+    fwrite(palette , 1 , header.OffsetBits - header.InfoSize - 14 , fptr) ;
+    fwrite(imageData , 1 , header.ImageSize , fptr) ;
+    fclose(fptr) ;
+}
 
 int main(int argc , char *argv[])
 {
     FILE *fptr ;
     Header header ;
     unsigned char *palette ;
-    unsigned char *imageData ;
-    int rowSize ;
-    int fillings ;
-    int k_low ;
-    int k_up ;
-    unsigned int temp ;
+    unsigned char *imageData , *RotateImage ;
+    int rotate ;
+    int rowSize , RotateRowSize ;
+    int fillings , RotateFillings ;
+    int k_low , k_up ;
+    unsigned int temp , now , RotateNow ;
 
     if (argc==1)
     {
@@ -52,7 +65,9 @@ int main(int argc , char *argv[])
         printf("File %s does not exist.\n" , argv[1]) ;
         return 1 ;
     }
-    
+
+    scanf ("%d" , &rotate) ;
+
     fread(&header.Type , 1 , 2 , fptr) ;
     fread(&header.Size , 4 , 1 , fptr) ;
     fread(&header.Reserved , 1 , 4 , fptr) ;
@@ -73,62 +88,78 @@ int main(int argc , char *argv[])
     palette = (unsigned char *) malloc(header.OffsetBits - header.InfoSize - 14) ;
     fread(palette , header.OffsetBits - header.InfoSize - 14 , 1 , fptr) ;
 
-
     imageData = (unsigned char *) malloc(header.ImageSize) ;
     fread(imageData , header.ImageSize , 1 , fptr) ;
 
     fclose(fptr) ;
 
-    fillings = (4 - (header.Width * 3) % 4) % 4 ;
-    rowSize = header.Width * 3 + fillings ;
-    for (int i=0 ; i<header.Height / 2 ; ++i)
+    if (rotate==1 || rotate==3)
     {
-        for (int j=0 ; j<header.Width ; j++)
+        fillings = (4 - (header.Width * 3) % 4) % 4 ;
+        RotateFillings = (4 - (header.Height * 3) % 4) % 4 ;
+        rowSize = header.Width * 3 + fillings ;
+        RotateRowSize = header.Height * 3 + RotateFillings ;
+        RotateImage = (unsigned char *) malloc(RotateRowSize*header.Width) ;
+        printf ("%d" , RotateRowSize*header.Width) ;
+    }
+    else if (rotate==2)
+    {
+        fillings = (4 - (header.Width * 3) % 4) % 4 ;
+        rowSize = header.Width * 3 + fillings ;
+    }
+    switch (0<=rotate && rotate<=3)
+    {
+        case (1) :
         {
-            k_low = i * rowSize + j * 3 ;
-            k_up = (header.Height - 1 - i) * rowSize + j * 3 ;
-            temp = imageData[k_low] ;
-            imageData[k_low] = imageData[k_up] ;
-            imageData[k_up] = temp ;
-            temp = imageData[k_low+1] ;
-            imageData[k_low+1] = imageData[k_up+1] ;
-            imageData[k_up+1] = temp ;
-            temp = imageData[k_low+2] ;
-            imageData[k_low+2] = imageData[k_up+2] ;
-            imageData[k_up+2] = temp ;
+            for (int i=0 ; i<header.Height ; ++i)
+            {
+                for (int j=0 ; j<header.Width ; ++j)
+                {
+                    now = i * rowSize + j * 3 ;
+                    RotateNow = (header.Width - j) * RotateRowSize + i * 3 ;
+                    RotateImage[RotateNow] = imageData[now] ;
+                    RotateImage[RotateNow+1] = imageData[now+1] ;
+                    RotateImage[RotateNow+2] = imageData[now+2] ;
+                }
+            }
+            break ;
         }
+        case (2) :
+        {
+            for (int i=0 ; i<header.Height / 2 ; ++i)
+            {
+                for (int j=0 ; j<header.Width ; j++)
+                {
+                    k_low = i * rowSize + j * 3 ;
+                    k_up = (header.Height - 1 - i) * rowSize + j * 3 ;
+                    swap (imageData[k_low] , imageData[k_up]) ;
+                    swap (imageData[k_low+1] , imageData[k_up+1]) ;
+                    swap (imageData[k_low+2] , imageData[k_up+2]) ;
+                }
+            }
+            break ;
+        }
+        case (3) :
+        {
+            for (int i=0 ; i<header.Height ; ++i)
+            {
+                for (int j=0 ; j<header.Width ; j++)
+                {
+                    now = i * rowSize + j * 3 ;
+                    RotateNow = (header.Height - j) * RotateRowSize + i * 3 ;
+                    RotateImage[RotateNow] = imageData[now] ;
+                    RotateImage[RotateNow+1] = imageData[now+1] ;
+                    RotateImage[RotateNow+2] = imageData[now+2] ;
+                }
+            }
+            break ;
+        }
+        // Remember to test the case '0'
     }
-    
-    if (argc==3)
-    {
-        fptr = fopen(argv[2] , "wb") ;
-        printf("\nThe horizontal mirror reflection image is \"%s\".\n\n" , argv[2]) ;
-    }
-    else
-    {
-        fptr = fopen("horizontal_mirror_reflection.bmp" , "wb") ;
-        printf("\nThe horizontal mirror reflection image is \"horizontal_mirror_reflection.bmp\".\n\n") ;
-    }
-    fwrite(&header.Type , 1 , 2 , fptr) ;
-    fwrite(&header.Size , 4 , 1 , fptr) ;
-    fwrite(&header.Reserved , 1 , 4 , fptr) ;
-    fwrite(&header.OffsetBits , 4 , 1 , fptr) ;
-    fwrite(&header.InfoSize , 4 , 1 , fptr) ;
-    fwrite(&header.Width , 4 , 1 , fptr) ;
-    fwrite(&header.Height , 4 , 1 , fptr) ;
-    fwrite(&header.Planes , 2 , 1 , fptr) ;
-    fwrite(&header.BitPerPixel , 2 , 1 , fptr) ;
-    fwrite(&header.Compression , 4 , 1 , fptr) ;
-    fwrite(&header.ImageSize , 4 , 1 , fptr) ;
-    fwrite(&header.XResolution , 4 , 1 , fptr) ;
-    fwrite(&header.YResolution , 4 , 1 , fptr) ;
-    fwrite(&header.Colors , 4 , 1 , fptr) ;
-    fwrite(&header.ImportantColors , 4 , 1 , fptr) ;
 
-    fwrite(palette , 1 , header.OffsetBits - header.InfoSize - 14 , fptr) ;
-    fwrite(imageData , 1 , header.ImageSize , fptr) ;
-    fclose(fptr) ;
-    
+    if (rotate==1 || rotate==3) swap (header.Width , header.Height) ;
+    WriteFile ("RotateImage.bmp" , header , palette , imageData) ;
+
     printf("Type:             %c%c\n" , header.Type[0] , header.Type[1]) ;
     printf("Size:             %u\n" , header.Size) ;
     printf("Resserved:        %c%c%c%c\n" , header.Reserved[0] , header.Reserved[1] , header.Reserved[2] , header.Reserved[3]) ;
@@ -144,7 +175,6 @@ int main(int argc , char *argv[])
     printf("YResolution:      %u\n" , header.YResolution) ;
     printf("Colors:           %u\n" , header.Colors) ;
     printf("ImportantColors:  %u\n" , header.ImportantColors) ;
-    
 
     free(palette) ;
     free(imageData) ;
