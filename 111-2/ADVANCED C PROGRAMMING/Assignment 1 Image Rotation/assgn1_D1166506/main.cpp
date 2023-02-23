@@ -99,7 +99,7 @@ int main(int argc , char *argv[])
         RotateFillings = (4 - (header.Height * 3) % 4) % 4 ;
         rowSize = header.Width * 3 + fillings ;
         RotateRowSize = header.Height * 3 + RotateFillings ;
-        RotateImage = (unsigned char *) malloc(RotateRowSize*header.Width) ;
+        RotateImage = (unsigned char *) malloc(RotateRowSize*header.Height) ;
         printf ("%d" , RotateRowSize*header.Width) ;
     }
     else if (rotate==2)
