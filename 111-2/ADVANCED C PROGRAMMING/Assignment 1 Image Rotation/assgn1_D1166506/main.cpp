@@ -21,32 +21,34 @@ typedef struct
 } Header ;
 
 
-int main(int argc  , char *argv[])
+int main(int argc , char *argv[])
 {
     FILE *fptr ;
-    Header	header ;
-    unsigned char	*palette ;
-    unsigned char	*imageData ;
+    Header header ;
+    unsigned char *palette ;
+    unsigned char *imageData ;
     int rowSize ;
     int fillings ;
-    int i  , j ;
     int k_low ;
     int k_up ;
     unsigned int temp ;
 
-    if (argc==1) {
+    if (argc==1)
+    {
         printf("Please enter the image file name.\n") ;
         system("pause") ;
         return 1 ;
     }
-    else if (argc>3) {
+    else if (argc>3)
+    {
         printf("Too many image file names entered.\n") ;
         system("pause") ;
         return 1 ;
     }
     
-    fptr = fopen(argv[1]  , "rb") ;
-    if (fptr==NULL) {
+    fptr = fopen(argv[1] , "rb") ;
+    if (fptr==NULL)
+    {
         printf("File %s does not exist.\n" , argv[1]) ;
         return 1 ;
     }
@@ -79,8 +81,10 @@ int main(int argc  , char *argv[])
 
     fillings = (4 - (header.Width * 3) % 4) % 4 ;
     rowSize = header.Width * 3 + fillings ;
-    for (i = 0 ; i < header.Height / 2 ; i++) {
-        for (j = 0 ; j < header.Width ; j++) {
+    for (int i=0 ; i<header.Height / 2 ; ++i)
+    {
+        for (int j=0 ; j<header.Width ; j++)
+        {
             k_low = i * rowSize + j * 3 ;
             k_up = (header.Height - 1 - i) * rowSize + j * 3 ;
             temp = imageData[k_low] ;
@@ -95,11 +99,13 @@ int main(int argc  , char *argv[])
         }
     }
     
-    if (argc==3) {
+    if (argc==3)
+    {
         fptr = fopen(argv[2] , "wb") ;
         printf("\nThe horizontal mirror reflection image is \"%s\".\n\n" , argv[2]) ;
     }
-    else {
+    else
+    {
         fptr = fopen("horizontal_mirror_reflection.bmp" , "wb") ;
         printf("\nThe horizontal mirror reflection image is \"horizontal_mirror_reflection.bmp\".\n\n") ;
     }
@@ -125,8 +131,7 @@ int main(int argc  , char *argv[])
     
     printf("Type:             %c%c\n" , header.Type[0] , header.Type[1]) ;
     printf("Size:             %u\n" , header.Size) ;
-    printf("Resserved:        %c%c%c%c\n" , header.Reserved[0] , header.Reserved[1] ,
-           header.Reserved[2] , header.Reserved[3]) ;
+    printf("Resserved:        %c%c%c%c\n" , header.Reserved[0] , header.Reserved[1] , header.Reserved[2] , header.Reserved[3]) ;
     printf("OffsetBits:       %u\n" , header.OffsetBits) ;
     printf("InfoSize:         %u\n" , header.InfoSize) ;
     printf("Width:            %u\n" , header.Width) ;
