@@ -99,7 +99,7 @@ int main(int argc , char *argv[])
         RotateFillings = (4 - (header.Height * 3) % 4) % 4 ;
         rowSize = header.Width * 3 + fillings ;
         RotateRowSize = header.Height * 3 + RotateFillings ;
-        RotateImage = (unsigned char *) malloc(RotateRowSize*header.Height) ;
+        RotateImage = (unsigned char *) malloc(RotateRowSize*header.Width) ;
         printf ("%d" , RotateRowSize*header.Width) ;
     }
     else if (rotate==2)
@@ -107,7 +107,7 @@ int main(int argc , char *argv[])
         fillings = (4 - (header.Width * 3) % 4) % 4 ;
         rowSize = header.Width * 3 + fillings ;
     }
-    switch (0<=rotate && rotate<=3)
+    switch (rotate)
     {
         case (1) :
         {
@@ -116,7 +116,7 @@ int main(int argc , char *argv[])
                 for (int j=0 ; j<header.Width ; ++j)
                 {
                     now = i * rowSize + j * 3 ;
-                    RotateNow = (header.Width - j) * RotateRowSize + i * 3 ;
+                    RotateNow = (header.Width - j - 1) * RotateRowSize + i * 3 ;
                     RotateImage[RotateNow] = imageData[now] ;
                     RotateImage[RotateNow+1] = imageData[now+1] ;
                     RotateImage[RotateNow+2] = imageData[now+2] ;
@@ -162,7 +162,7 @@ int main(int argc , char *argv[])
 
     printf("Type:             %c%c\n" , header.Type[0] , header.Type[1]) ;
     printf("Size:             %u\n" , header.Size) ;
-    printf("Resserved:        %c%c%c%c\n" , header.Reserved[0] , header.Reserved[1] , header.Reserved[2] , header.Reserved[3]) ;
+    printf("Reserved:         %c%c%c%c\n" , header.Reserved[0] , header.Reserved[1] , header.Reserved[2] , header.Reserved[3]) ;
     printf("OffsetBits:       %u\n" , header.OffsetBits) ;
     printf("InfoSize:         %u\n" , header.InfoSize) ;
     printf("Width:            %u\n" , header.Width) ;
