@@ -203,7 +203,7 @@ int main(int argc, char *argv[]) {
   // Compute the row size of the reduced image.
   fillings = (4 - (reduced_header.Width * 3) % 4) % 4; // The number of filling bytes at the end of a row.
   rowSize_reduced = reduced_header.Width * 3 + fillings; // The number of bytes in a row of the reduced image.
-  // Copy even rows and enen columns of the original input image data to the reduced image.
+  // Copy even rows and even columns of the original input image data to the reduced image.
   for (i = 0; i < reduced_header.Height; i++) // Go through all rows of the reduced image.
     for (j = 0; j < reduced_header.Width; j++) { // Go through all pixels in each of the reduced image.
       k = i * 2 * rowSize + j * 2 * 3; // Pixel index of the original input image.
@@ -223,7 +223,7 @@ int main(int argc, char *argv[]) {
   // The file name is reused and the palette is the same as the original image.
   write_image_file(file_name, reduced_header, io_palette, reduced_imageData);
   
-  // Peform the merge operation.
+  // Perform the merge operation.
   // Reuse rowSize and rowSize_reduced computed earlier.
   for (i = 0; i < reduced_header.Height; i++) { // Go through all rows of the reduced image.
     for (j = 0; j < reduced_header.Width; j++) { // Go through all pixels in each row of the reduced image.

@@ -109,7 +109,7 @@ int main(int argc, char *argv[]) {
   } while (first_filter<0 || first_filter>3);  
   printf("\n");
   
-  // Set the bandwdth.
+  // Set the bandwidth.
   do {
     printf("Enter the bandwidth (between 1 and %d): ", header.Width);
     scanf("%d", &bandwidth);
