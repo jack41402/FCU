@@ -5,13 +5,14 @@
 // Initialize a linear list, set its size to 0.
 void initial (List *L)
 {
-    (*L)->next = NULL ;
+    *L = NULL ;
 }
 
 // The length of a linear list, returns the number of elements, namely size.
 int getSize (List L)
 {
-    int size=0 ;
+    if (L==NULL) return 0;
+    int size=1 ;
     while (L->next!=NULL)
     {
         L = L->next ;
@@ -23,6 +24,7 @@ int getSize (List L)
 // Get the element at a position from a linear list, return the designated element.
 ElemType getElem (List L , int pos)
 {
+    if (L==NULL) return -1;
     int i=0 ;
     while (i<pos)
     {
@@ -35,11 +37,11 @@ ElemType getElem (List L , int pos)
 // Set the element at a position in a linear list to a specific element.
 ElemType setElem (List L , ElemType e , int pos)
 {
-    int i=0 ;
+    if (L==NULL || getSize(L)<=pos) return -1;
+    int i=1 ;
     while (i<pos)
     {
         L = L->next ;
-        if (L->next==NULL) return -1;
         i++ ;
     }
     L->elem = e ;
@@ -50,12 +52,12 @@ ElemType setElem (List L , ElemType e , int pos)
 // If successful, return the position of the element; otherwise, returns -1.
 int search (List L , ElemType e)
 {
-    int pos=0 , size=getSize(L);
-    while (pos<size)
+    if (L==NULL) return -1;
+    int size= getSize(L) ;
+    for (int pos=1 ; pos<=size ; ++pos)
     {
         if (L->elem==e) return pos;
         L = L->next ;
-        pos++ ;
     }
     return -1 ;
 }
@@ -68,29 +70,54 @@ int insertElem (List *L , ElemType e)
     Node *node=(Node *) malloc(sizeof(Node)) ;
     node->elem = e ;
     node->next = NULL ;
-    while ((*L)->next!=NULL) *L = (*L)->next ;
-    (*L)->next = node ;
+    if (*L==NULL) *L = node ;
+    else
+    {
+        List temp=*L ;
+        while (temp->next!=NULL) temp = temp->next ;
+        temp->next = node ;
+    }
     return getSize(*L)-1;
 }
 
 // Delete an element from a list. If the element is in the linear list, delete it and return its position; otherwise, return -1.
 int deleteElem (List *L , ElemType e)
 {
-    if (search(*L , e)==-1) return -1;
-    int pos=search(*L , e) , i=0 ;
-    List *now=L , *dist ;
-    while ((*L)->next!=NULL)
+    if (L==NULL || search(*L , e)==-1) return -1;
+    int pos=search(*L , e) ;
+    List now=*L , cur=*L , dist ;
+    if (pos==1)
     {
-        if (i==pos-1) now = L ;
+        cur = *L ;
+        *L = (*L)->next ;
+        free(cur) ;
+        return pos;
+    }
+    else if (pos==getSize(*L))
+    {
+        for (int i=1 ; i<pos ; ++i)
+        {
+            if (i==pos-1)
+            {
+                dist = cur ;
+                cur->next = NULL ;
+                free (dist->next) ;
+                return pos+1;
+            }
+            cur = cur->next ;
+        }
+    }
+    for (int i=1 ; i<=pos ; ++i)
+    {
+        if (i==pos-1) now = cur ;
         else if (i==pos)
         {
             dist = now ;
-            (*now)->next = (*L)->next ;
-            free ((*dist)->next) ;
+            now->next = cur->next ;
+            free (dist->next) ;
             return pos;
         }
-        *L = (*L)->next ;
-        i++ ;
+        cur = cur->next ;
     }
     return -1;
 }
@@ -98,14 +125,16 @@ int deleteElem (List *L , ElemType e)
 // Print all elements of the linear list starting from the head.
 void printList (List L)
 {
-    int count=0 ;
-    while (L->next!=NULL)
+    int count=0 , size=getSize(L) ;
+    printf("The linear list has %d element%s.\n\n" , size , ((size==1) ? "" : "s")) ;
+    for (int i=0 ; i<size ; ++i)
     {
         printf(" %3d" , L->elem) ;
+        L = L->next ;
         count++ ;
         if (count%20==0) printf("\n") ;
     }
-    if (getSize(L)%20!=0) printf("\n") ;
+    if (size%20!=0) printf("\n") ;
 }
 
 // Append list L2 at the end of L1.
@@ -113,18 +142,102 @@ void printList (List L)
 // Return the result of append() operation.
 List append (List L1 , List L2)
 {
-    List L3 ;
+    int size ;
+    List L3 , cur , temp=L1 ;
     initial(&L3) ;
-    while (L1->next!=NULL)
+    size = getSize(L1) ;
+    for (int i=0 ; i<size ; ++i)
     {
-        L3
+        Node *node=(Node *) malloc(sizeof(Node)) ;
+        node->elem = L1->elem ;
+        node->next = NULL ;
+        if (L3==NULL)
+        {
+            L3 = node ;
+            cur = L3 ;
+        }
+        else
+        {
+            cur->next = node ;
+            cur = cur->next ;
+        }
+        L1 = L1->next ;
     }
+    size = getSize(L2) , L1 = temp ;
+    for (int i=0 ; i<size ; ++i)
+    {
+        if (search(L1 , L2->elem)==-1)
+        {
+            Node *node=(Node *) malloc(sizeof(Node)) ;
+            node->elem = L2->elem ;
+            node->next = NULL ;
+            if (L3==NULL)
+            {
+                L3 = node ;
+                cur = L3 ;
+            }
+            else
+            {
+                cur->next = node ;
+                cur = cur->next ;
+            }
+        }
+        L2 = L2->next ;
+    }
+    return L3;
 }
 
 // Join two lists L1 and L2.
 // Return a list containing all common elements in L1 and L2.
 // The elements of the resulting list are stored in the order of list L1.
-List join (List , List);
+List join (List L1 , List L2)
+{
+    int size=getSize(L1) ;
+    List L4 , cur ;
+    initial(&L4) ;
+    for (int i=0 ; i<size ; ++i)
+    {
+        if (search(L2 , L1->elem)==-1)
+        {
+            L1 = L1->next ;
+            continue ;
+        }
+//        insertElem(&L4 , L1->elem) ;
+        Node *node=(Node *) malloc(sizeof(Node)) ;
+        node->elem = L1->elem ;
+        node->next = NULL ;
+        if (L4==NULL)
+        {
+            L4 = node ;
+            cur = L4 ;
+        }
+        else
+        {
+            cur->next = node ;
+            cur = cur->next ;
+        }
+        L1 = L1->next ;
+    }
+    return L4;
+}
 
 // Sort list L. The elements of L are rearranged into the ascending order.
-void sort (List *);
+void sort (List *L)
+{
+    int size=getSize(*L) , temp ;
+    List cur=*L ;
+    for (int i=0 ; i<size ; ++i)
+    {
+        cur = *L ;
+        for (int j=i ; j<size-1 ; ++j)
+        {
+            if (cur->elem>cur->next->elem)
+            {
+                temp = cur->elem ;
+                cur->elem = cur->next->elem ;
+                cur->next->elem = temp ;
+            }
+            cur = cur->next ;
+        }
+    }
+}
