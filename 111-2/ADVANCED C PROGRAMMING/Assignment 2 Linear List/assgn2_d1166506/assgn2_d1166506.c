@@ -11,9 +11,8 @@ void initial (List *L)
 // The length of a linear list, returns the number of elements, namely size.
 int getSize (List L)
 {
-    if (L==NULL) return 0;
-    int size=1 ;
-    while (L->next!=NULL)
+    int size=0 ;
+    while (L!=NULL)
     {
         L = L->next ;
         size++ ;
@@ -24,8 +23,8 @@ int getSize (List L)
 // Get the element at a position from a linear list, return the designated element.
 ElemType getElem (List L , int pos)
 {
-    if (L==NULL) return -1;
-    int i=0 ;
+    if (L==NULL || getSize(L)<pos) return -1;
+    int i=1 ;
     while (i<pos)
     {
         L = L->next ;
@@ -37,7 +36,7 @@ ElemType getElem (List L , int pos)
 // Set the element at a position in a linear list to a specific element.
 ElemType setElem (List L , ElemType e , int pos)
 {
-    if (L==NULL || getSize(L)<=pos) return -1;
+    if (L==NULL || getSize(L)<pos) return -1;
     int i=1 ;
     while (i<pos)
     {
@@ -52,12 +51,12 @@ ElemType setElem (List L , ElemType e , int pos)
 // If successful, return the position of the element; otherwise, returns -1.
 int search (List L , ElemType e)
 {
-    if (L==NULL) return -1;
-    int size= getSize(L) ;
-    for (int pos=1 ; pos<=size ; ++pos)
+    int pos=1 ;
+    while (L!=NULL)
     {
         if (L->elem==e) return pos;
         L = L->next ;
+        pos++ ;
     }
     return -1 ;
 }
@@ -83,41 +82,23 @@ int insertElem (List *L , ElemType e)
 // Delete an element from a list. If the element is in the linear list, delete it and return its position; otherwise, return -1.
 int deleteElem (List *L , ElemType e)
 {
-    if (L==NULL || search(*L , e)==-1) return -1;
-    int pos=search(*L , e) ;
-    List now=*L , cur=*L , dist ;
-    if (pos==1)
+    if (*L==NULL || search(*L , e)==-1) return -1;
+    int pos=1 ;
+    List cur=*L , prev=NULL ;
+    while (cur!=NULL)
     {
-        cur = *L ;
-        *L = (*L)->next ;
-        free(cur) ;
-        return pos;
-    }
-    else if (pos==getSize(*L))
-    {
-        for (int i=1 ; i<pos ; ++i)
+        if (cur->elem==e)
         {
-            if (i==pos-1)
-            {
-                dist = cur ;
-                cur->next = NULL ;
-                free (dist->next) ;
-                return pos+1;
-            }
-            cur = cur->next ;
-        }
-    }
-    for (int i=1 ; i<=pos ; ++i)
-    {
-        if (i==pos-1) now = cur ;
-        else if (i==pos)
-        {
-            dist = now ;
-            now->next = cur->next ;
-            free (dist->next) ;
+            // Delete the first node
+            if (prev==NULL) *L = cur->next ;
+            // Delete the other node
+            else  prev->next = cur->next ;
+            free(cur) ;
             return pos;
         }
+        prev = cur ;
         cur = cur->next ;
+        pos++ ;
     }
     return -1;
 }
@@ -127,7 +108,7 @@ void printList (List L)
 {
     int count=0 , size=getSize(L) ;
     printf("The linear list has %d element%s.\n\n" , size , ((size==1) ? "" : "s")) ;
-    for (int i=0 ; i<size ; ++i)
+    while (L!=NULL)
     {
         printf(" %3d" , L->elem) ;
         L = L->next ;
@@ -142,11 +123,9 @@ void printList (List L)
 // Return the result of append() operation.
 List append (List L1 , List L2)
 {
-    int size ;
     List L3 , cur , temp=L1 ;
     initial(&L3) ;
-    size = getSize(L1) ;
-    for (int i=0 ; i<size ; ++i)
+    while (L1!=NULL)
     {
         Node *node=(Node *) malloc(sizeof(Node)) ;
         node->elem = L1->elem ;
@@ -163,8 +142,8 @@ List append (List L1 , List L2)
         }
         L1 = L1->next ;
     }
-    size = getSize(L2) , L1 = temp ;
-    for (int i=0 ; i<size ; ++i)
+    L1 = temp ;
+    while (L2!=NULL)
     {
         if (search(L1 , L2->elem)==-1)
         {
@@ -192,10 +171,9 @@ List append (List L1 , List L2)
 // The elements of the resulting list are stored in the order of list L1.
 List join (List L1 , List L2)
 {
-    int size=getSize(L1) ;
     List L4 , cur ;
     initial(&L4) ;
-    for (int i=0 ; i<size ; ++i)
+    while (L1!=NULL)
     {
         if (search(L2 , L1->elem)==-1)
         {
@@ -224,9 +202,10 @@ List join (List L1 , List L2)
 // Sort list L. The elements of L are rearranged into the ascending order.
 void sort (List *L)
 {
-    int size=getSize(*L) , temp ;
-    List cur=*L ;
-    for (int i=0 ; i<size ; ++i)
+    int size=getSize(*L) ;
+    ElemType temp ;
+    List cur ;
+    for (int i=0 ; i<size-1 ; ++i)
     {
         cur = *L ;
         for (int j=i ; j<size-1 ; ++j)
