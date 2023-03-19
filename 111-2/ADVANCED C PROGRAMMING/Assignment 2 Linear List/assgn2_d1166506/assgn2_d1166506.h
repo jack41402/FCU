@@ -38,7 +38,6 @@ int insertElem (List * , ElemType);
 // return its position; otherwise, return -1.
 int deleteElem (List * , ElemType);
 
-
 // Print all elements of the linear list starting from the head.
 void printList (List);
 

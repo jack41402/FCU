@@ -63,6 +63,12 @@ int main ()
     printf(">>>> Sorted linear list of L4:\n") ;
     printList(L4) ;
 
+    // Free the List
+    while (deleteElem(&L1 , getElem(L1 , 1))!=-1) ;
+    while (deleteElem(&L2 , getElem(L2 , 1))!=-1) ;
+    while (deleteElem(&L3 , getElem(L3 , 1))!=-1) ;
+    while (deleteElem(&L4 , getElem(L4 , 1))!=-1) ;
+
     /*while (1)
     {
         int n , pos , elem , size=getSize(L1) ;
