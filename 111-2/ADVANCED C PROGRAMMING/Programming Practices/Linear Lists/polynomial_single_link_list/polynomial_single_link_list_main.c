@@ -39,7 +39,7 @@ int main(void) {
 	
 	coeff =  (rand() % 2001 - 1000) / 100.0; // Generate coefficient of the first term.
 	replaceTerm(&P, deg, coeff); // Insert the first term.
-	for (i=deg-1; i>=0; i--) { // Generate the remainding term. 
+	for (i=deg-1; i>=0; i--) { // Generate the remaining term.
 		if (rand()%3==0) { // Only 0.33% of terms have non-zero coefficient.
 			coeff =  (rand() % 2001 - 1000) / 100.0;
 			replaceTerm(&P, i, coeff);
@@ -49,7 +49,7 @@ int main(void) {
 	printf("\n>>>> Polynomial P(X) has %d non-zero coefficient terms.\n", getTerm(P)); // Print number of terms.
 	printPoly(P); // Print polynomial.
 	
-	// Evaluate the polynomial and print the vlaue of the polynomial.
+	// Evaluate the polynomial and print the value of the polynomial.
 	printf("\n>>>> a=%5.3f\n", a);
 	printf(">>>> Evaluation of Polynomial P(a): %6.4E\n", evalPolynomial(P, a));
 
