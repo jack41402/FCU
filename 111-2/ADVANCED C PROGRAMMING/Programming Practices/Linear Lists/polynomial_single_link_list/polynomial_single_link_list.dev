@@ -1,6 +1,6 @@
 [Project]
-FileName=linear_list_dynamic_set.dev
-Name=Ordered Linear List As Set Using Dynamic Array
+FileName=polynomial_single_link_list.dev
+Name=Polynomial Using Ordered Single Link List
 Type=1
 Ver=2
 ObjFiles=
@@ -19,7 +19,7 @@ ObjectOutput=
 LogOutput=
 LogOutputEnabled=0
 OverrideOutput=0
-OverrideOutputName=linear_list_dynamic_set.exe
+OverrideOutputName=ordered_list_single_list.exe
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=linear_list_dynamic_set.c
+FileName=polynomial_single_link_list.c
 CompileCpp=0
 Folder=
 Compile=1
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=linear_list_dynamic_set.h
+FileName=polynomial_single_link_list.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=linear_list_dynamic_set_main.c
+FileName=polynomial_single_link_list_main.c
 CompileCpp=0
 Folder=
 Compile=1
