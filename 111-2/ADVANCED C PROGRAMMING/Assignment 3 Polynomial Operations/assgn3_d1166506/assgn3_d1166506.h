@@ -55,3 +55,5 @@ Polynomial polyMinus (Polynomial , Polynomial);
 
 // Polynomial multiplication
 Polynomial polyTime (Polynomial , Polynomial);
+
+double power (double , Degree);

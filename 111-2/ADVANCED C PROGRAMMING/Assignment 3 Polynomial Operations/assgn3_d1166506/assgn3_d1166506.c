@@ -12,7 +12,7 @@ void initial (Polynomial *P)
 int getTerm (Polynomial P)
 {
     int term=0 ;
-    while (P->next!=NULL)
+    while (P!=NULL)
     {
         P = P->next ;
         term++ ;
@@ -24,7 +24,7 @@ int getTerm (Polynomial P)
 // If no term with the specified degree, return -99.
 Coeff getCoeff (Polynomial P , Degree degree)
 {
-    while (P->next!=NULL)
+    while (P!=NULL)
     {
         if (P->degree==degree) return P->coeff;
         P = P->next ;
@@ -36,7 +36,7 @@ Coeff getCoeff (Polynomial P , Degree degree)
 // If successful, return the degree of the term; otherwise, return -1.
 Degree searchTerm (Polynomial P , Degree degree)
 {
-    while (P->next!=NULL)
+    while (P!=NULL)
     {
         if (P->degree==degree) return P->degree;
         P = P->next ;
@@ -55,7 +55,7 @@ Degree replaceTerm (Polynomial *P , Degree degree , Coeff coeff)
         Term cur=*P , prev=NULL ;
         if (coeff==0.0)
         {
-            while (cur->next!=NULL)
+            while (cur!=NULL)
             {
                 if (cur->degree==degree)
                 {
@@ -70,7 +70,7 @@ Degree replaceTerm (Polynomial *P , Degree degree , Coeff coeff)
         }
         else
         {
-            while (cur->next!=NULL)
+            while (cur!=NULL)
             {
                 if (cur->degree==degree)
                 {
@@ -138,11 +138,10 @@ int is_empty (Polynomial P)
 // Print the polynomial.
 void printPoly (Polynomial P)
 {
-    if (P==NULL) return;
     int first=1 ;
-    while (P->next!=NULL)
+    while (P!=NULL)
     {
-        (first==1) ? printf("%.4f " , P->coeff) , first=0 : printf("%+.4f " , P->coeff) ;
+        (first==1) ? printf("%.3f " , P->coeff) , first=0 : printf("%+.3f " , P->coeff) ;
         if (P->degree>1) printf("X^%d" , P->degree) ;
         else if (P->degree==1) printf("X") ;
         P = P->next ;
@@ -157,12 +156,22 @@ Polynomial polyAdd (Polynomial P1 , Polynomial P2)
     initial(&P) ;
     while (P1!=NULL || P2!=NULL)
     {
-        if (P1==NULL || P1->degree<P2->degree)
+        if (P1==NULL)
         {
             replaceTerm (&P , P2->degree , P2->coeff) ;
             P2 = P2->next ;
         }
-        else if (P2==NULL || P1->degree>P2->degree)
+        else if (P2==NULL)
+        {
+            replaceTerm(&P , P1->degree , P1->coeff) ;
+            P1 = P1->next ;
+        }
+        else if (P1->degree<P2->degree)
+        {
+            replaceTerm (&P , P2->degree , P2->coeff) ;
+            P2 = P2->next ;
+        }
+        else if (P1->degree>P2->degree)
         {
             replaceTerm(&P , P1->degree , P1->coeff) ;
             P1 = P1->next ;
@@ -184,12 +193,22 @@ Polynomial polyMinus (Polynomial P1 , Polynomial P2)
     initial(&P) ;
     while (P1!=NULL || P2!=NULL)
     {
-        if (P1==NULL || P1->degree<P2->degree)
+        if (P1==NULL)
         {
             replaceTerm (&P , P2->degree , -P2->coeff) ;
             P2 = P2->next ;
         }
-        else if (P2==NULL || P1->degree>P2->degree)
+        else if (P2==NULL)
+        {
+            replaceTerm(&P , P1->degree , P1->coeff) ;
+            P1 = P1->next ;
+        }
+        else if (P1->degree<P2->degree)
+        {
+            replaceTerm (&P , P2->degree , -P2->coeff) ;
+            P2 = P2->next ;
+        }
+        else if (P1->degree>P2->degree)
         {
             replaceTerm(&P , P1->degree , P1->coeff) ;
             P1 = P1->next ;
@@ -207,18 +226,35 @@ Polynomial polyMinus (Polynomial P1 , Polynomial P2)
 // Polynomial multiplication
 Polynomial polyTime (Polynomial P1 , Polynomial P2)
 {
-    Polynomial P ;
+    Polynomial P , temp ;
+    Coeff coeff ;
     initial(&P) ;
-    while (P1!=NULL && P2!=NULL)
+    while (P1!=NULL)
     {
-        if (P1->degree<P2->degree) P2 = P2->next ;
-        else if (P1->degree>P2->degree) P1 = P1->next ;
-        else
+        temp = P2 ;
+        while (temp!=NULL)
         {
-            replaceTerm(&P , P1->degree , P1->coeff*P2->coeff) ;
-            P1 = P1->next ;
-            P2 = P2->next ;
+            coeff = getCoeff(P , P1->degree + temp->degree) ;
+            if (coeff!=-99) coeff += P1->coeff * temp->coeff ;
+            else coeff = P1->coeff * temp->coeff ;
+            replaceTerm(&P , P1->degree + temp->degree , coeff) ;
+            printf ("%d\n" , P1->degree + temp->degree) ;
+            temp = temp->next ;
         }
+        P1 = P1->next ;
     }
     return P;
+}
+
+double power (double base , Degree pow)
+{
+    if (base==0) return 0;
+    double ans=1 ;
+    while (pow)
+    {
+        if (pow&1) ans *= base ;
+        base *= base ;
+        pow >>= 1 ;
+    }
+    return ans;
 }
