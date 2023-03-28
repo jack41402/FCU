@@ -77,6 +77,7 @@ Degree replaceTerm (Polynomial *P , Degree degree , Coeff coeff)
                     cur->coeff = coeff ;
                     return degree;
                 }
+                cur = cur->next ;
             }
         }
     }
@@ -90,6 +91,7 @@ Degree replaceTerm (Polynomial *P , Degree degree , Coeff coeff)
         else
         {
             Term cur=*P , prev=NULL ;
+            // TO CHECK
             while (cur->next!=NULL)
             {
                 if (cur->degree<term->degree)
@@ -238,12 +240,23 @@ Polynomial polyTime (Polynomial P1 , Polynomial P2)
             if (coeff!=-99) coeff += P1->coeff * temp->coeff ;
             else coeff = P1->coeff * temp->coeff ;
             replaceTerm(&P , P1->degree + temp->degree , coeff) ;
-            printf ("%d\n" , P1->degree + temp->degree) ;
             temp = temp->next ;
         }
         P1 = P1->next ;
     }
     return P;
+}
+
+double evaluate (Polynomial P , double a)
+{
+    double sum=0 ;
+    Coeff coeff ;
+    for (int i=200 ; i>=0 ; --i)
+    {
+        coeff = getCoeff(P , i) ;
+        if (coeff!=-99) sum += coeff * power(a , i) ;
+    }
+    return sum;
 }
 
 double power (double base , Degree pow)

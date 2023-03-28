@@ -56,4 +56,6 @@ Polynomial polyMinus (Polynomial , Polynomial);
 // Polynomial multiplication
 Polynomial polyTime (Polynomial , Polynomial);
 
+double evaluate (Polynomial , double);
+
 double power (double , Degree);
