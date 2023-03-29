@@ -12,7 +12,7 @@ int main ()
     Degree deg1 , deg2 ;
     Coeff coeff ;
     double a , sum ;
-    srand(time(NULL)) ;
+    srand(0) ;
     do
     {
         printf("Enter degree of the polynomial P1 (between 0 and 100): ") ;

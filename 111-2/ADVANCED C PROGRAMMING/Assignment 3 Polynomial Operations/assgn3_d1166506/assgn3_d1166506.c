@@ -91,7 +91,7 @@ Degree replaceTerm (Polynomial *P , Degree degree , Coeff coeff)
         else
         {
             Term cur=*P , prev=NULL ;
-            while (cur->next!=NULL)
+            while (cur!=NULL)
             {
                 if (cur->degree<term->degree)
                 {
@@ -111,7 +111,7 @@ Degree replaceTerm (Polynomial *P , Degree degree , Coeff coeff)
                 prev = cur ;
                 cur = cur->next ;
            }
-            cur->next = term ;
+            prev->next = term ;
             return term->degree;
         }
     }
