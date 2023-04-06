@@ -1,4 +1,4 @@
-A = [1:3 ; 4:6 ; 7:9] ;
+A = [8 1 6 ; 3 5 7 ; 4 9 2] ;
 
 % Interchange 2nd and 3rd column
 A(:,[2 3]) = A(:,[3 2])
