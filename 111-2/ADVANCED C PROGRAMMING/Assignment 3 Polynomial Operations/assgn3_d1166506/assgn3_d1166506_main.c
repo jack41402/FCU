@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#include "assgn3_d1166506.h"
+#include "assgn3_D1166506.h"
 #define eps 1e-4
 
 int main ()

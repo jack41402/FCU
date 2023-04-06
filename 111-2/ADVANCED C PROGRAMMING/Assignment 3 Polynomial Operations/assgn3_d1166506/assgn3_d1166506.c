@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "assgn3_d1166506.h"
+#include "assgn3_D1166506.h"
 
 // Initialize polynomial.
 void initial (Polynomial *P)
@@ -250,7 +250,7 @@ double evaluate (Polynomial P , double a)
 {
     double sum=0 ;
     Coeff coeff ;
-    for (int i=200 ; i>=0 ; --i)
+    for (int i=P->degree ; i>=0 ; --i)
     {
         coeff = getCoeff(P , i) ;
         if (coeff!=-99) sum += coeff * power(a , i) ;
