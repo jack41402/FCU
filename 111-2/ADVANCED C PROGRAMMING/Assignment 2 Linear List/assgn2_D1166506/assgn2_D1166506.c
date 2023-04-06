@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "assgn2_d1166506.h"
+#include "assgn2_D1166506.h"
 
 // Initialize a linear list, set its size to 0.
 void initial (List *L)

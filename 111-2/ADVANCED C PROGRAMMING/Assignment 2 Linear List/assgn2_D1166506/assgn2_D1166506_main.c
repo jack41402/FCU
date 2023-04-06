@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "assgn2_d1166506.h"
+#include "assgn2_D1166506.h"
 
 int main ()
 {
