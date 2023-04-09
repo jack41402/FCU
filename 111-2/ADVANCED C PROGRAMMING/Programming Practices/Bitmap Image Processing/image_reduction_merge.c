@@ -164,7 +164,7 @@ int main(int argc, char *argv[]) {
   print_header(io_header);
   printf("******************************************************************\n\n"); // Print a separate line.
   
-  // Create file head of the quaterly reduced image.
+  // Create file head of the quarterly reduced image.
   // Copy the fields of the input image header.
   reduced_header.Type[0] = 'B'; // Two fixed characters, "BM".
   reduced_header.Type[1] = 'M';
@@ -183,7 +183,7 @@ int main(int argc, char *argv[]) {
   // Size of the actual pixel data, in bytes.
   // Compute the image size of the reduced image.
   // "ceil((float) reduced_header.Width * 3.0 / 4.0) * 4" makes the number of bytes of a row to be
-  // greater than or eqaul to width*3 and a multiple of 4.
+  // greater than or equal to width*3 and a multiple of 4.
   reduced_header.ImageSize = ceil((float) reduced_header.Width * 3.0 / 4.0) * 4 * reduced_header.Height; 
   // Compute the file size in bytes.
   reduced_header.Size = io_header.Size - io_header.ImageSize + reduced_header.ImageSize;
