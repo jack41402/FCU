@@ -14,12 +14,13 @@ int main ()
         IQueue q ;
         int enqueue_count=0 ;
         while (enqueue_count==0) enqueue_count = rand()%100 ;
+        int temp=enqueue_count ;
         printf("Enqueue %d element%s to the queue.\n" , enqueue_count , ((enqueue_count==1) ? "" : "s")) ;
         while (enqueue_count--) q.push(rand()%100) ;
         printf("Current queue size: %d. Content of queue from head to tail:\n" , q.getSize()) ;
         q.printHeadToTail() ;
         int dequeue_count=0 ;
-        while (dequeue_count==0) dequeue_count = rand()%100 ;
+        while (dequeue_count==0) dequeue_count = rand()%temp ;
         printf("\nDequeue %d element%s to the queue.\n" , dequeue_count , ((dequeue_count==1) ? "" : "s")) ;
         while (dequeue_count--) q.pop() ;
         printf("Current queue size: %d. Content of queue from head to tail:\n" , q.getSize()) ;
