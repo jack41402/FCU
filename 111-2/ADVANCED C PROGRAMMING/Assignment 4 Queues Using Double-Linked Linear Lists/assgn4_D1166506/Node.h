@@ -1,8 +1,13 @@
-//
-// Created by 周嘉禾 on 2023/5/1.
-//
+class Node
+{
+    friend class IQueue ; // Class IQueue can access the private data elements.
 
-#ifndef ASSGN4_D1166506_NODE_H
-#define ASSGN4_D1166506_NODE_H
+private :
+    int elem ; // Data of a node.
+    Node *prev ; // Previous of a node.
+    Node *next ; // Next of a node.
 
-#endif //ASSGN4_D1166506_NODE_H
+public :
+    Node() ; // Default constructor.
+    Node(int) ; // Constructor with data element.
+} ;
