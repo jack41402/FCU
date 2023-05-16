@@ -1,222 +1,323 @@
 #include <iomanip>
+#include <cmath>
 #include "Complex.h"
 
+// Default constructor
 Complex::Complex ()
 {
     real = 0.0 ;
     imaginary = 0.0 ;
 }
 
+// Assignment constructor
 Complex::Complex (const double &a , const double &b)
 {
     real = a ;
     imaginary = b ;
 }
 
+// Copy constructor
 Complex::Complex (const Complex &complex)
 {
     real = complex.real ;
     imaginary = complex.imaginary ;
 }
 
+// Destructor
 Complex::~Complex ()
 {
     return;
 }
 
+// ostream operator <<
 std::ostream& operator<< (std::ostream &output , const Complex &complex)
 {
     output << std::fixed << std::setprecision(4) ;
     if (complex.real!=0.0 && complex.imaginary!=0.0)
     {
-        output << complex.real << std::showpos << complex.imaginary << "i\n" ;
+        output << complex.real << std::showpos << complex.imaginary << 'i' ;
     }
     else if (complex.real!=0)
     {
-        output << complex.real << '\n' ;
+        output << complex.real ;
     }
     else if (complex.imaginary!=0)
     {
-        output << complex.imaginary
+        output << complex.imaginary ;
     }
     else
     {
-        output << 0 << '\n' ;
+        output << 0 ;
     }
     return output;
 }
 
-std::istream& operator>> (std::istream & , Complex &)
+// istream operator >>
+std::istream& operator>> (std::istream &input , Complex &complex)
 {
-    
+    input >> complex.real ;
+    // Check for positive case
+    input >> complex.imaginary ;
+    std::cin.ignore() ;
+    return input;
 }
 
-Complex operator+ (const double & , const Complex &)
+// double + Complex
+Complex operator+ (const double &num , const Complex &complex)
 {
-    
+    Complex temp ;
+    temp.real = num + complex.real ;
+    temp.imaginary = complex.imaginary ;
+    return temp;
 }
 
-Complex operator- (const double & , const Complex &)
+// double - Complex
+Complex operator- (const double &num , const Complex &complex)
 {
-    
+    Complex temp ;
+    temp.real = num - complex.real ;
+    temp.imaginary = -complex.imaginary ;
+    return temp;
 }
 
-Complex operator* (const double & , const Complex &)
+// double * Complex
+Complex operator* (const double &num , const Complex &complex)
 {
-    
+    Complex temp ;
+    temp.real = num * complex.real ;
+    temp.imaginary = num * complex.imaginary ;
+    return temp;
 }
 
-Complex operator/ (const double & , const Complex &)
+// double / Complex
+Complex operator/ (const double &num , const Complex &complex)
 {
-    
+    Complex temp ;
+    temp.real = (num * complex.real)/(complex.real*complex.real + complex.imaginary*complex.imaginary) ;
+    temp.imaginary = (-num * complex.imaginary)/(complex.real*complex.real + complex.imaginary*complex.imaginary) ;
+    return temp;
 }
 
-bool operator== (const double & , const Complex &)
+// double == Complex
+bool operator== (const double &num , const Complex &complex)
 {
-    
+    return (num==complex.real && complex.imaginary==0);
 }
 
-bool operator!= (const double & , const Complex &)
+// double != Complex
+bool operator!= (const double &num , const Complex &complex)
 {
-    
+    return (num!=complex.real || complex.imaginary!=0);
 }
 
+// Get real number of Complex
 double Complex::getRe () const
 {
-    return 0;
+    return this->real;
 }
 
+// Get imaginary number of Complex
 double Complex::getIm () const
 {
-    return 0;
+    return this->imaginary;
 }
 
-void Complex::setRe (const double &)
+// Set real number of Complex
+void Complex::setRe (const double &num)
 {
-
+    this->real = num ;
 }
 
-void Complex::setIm (const double &)
+// Set imaginary number of Complex
+void Complex::setIm (const double &num)
 {
-
+    this->imaginary = num ;
 }
 
+// -Complex
 Complex Complex::operator- () const
 {
-    
+    Complex temp ;
+    temp.real = -this->real ;
+    temp.imaginary = this->imaginary ;
+    return temp;
 }
 
-Complex Complex::operator+ (const Complex &) const
+// Complex + Complex
+Complex Complex::operator+ (const Complex &complex) const
 {
-    
+    Complex temp ;
+    temp.real = this->real + complex.real ;
+    temp.imaginary = this->imaginary + complex.imaginary ;
+    return temp;
 }
 
-Complex Complex::operator+ (const double &) const
+// Complex + double
+Complex Complex::operator+ (const double &num) const
 {
-    
+    Complex temp ;
+    temp.real = this->real + num ;
+    temp.imaginary = this->imaginary ;
+    return temp;
 }
 
-Complex Complex::operator- (const Complex &) const
+// Complex - Complex
+Complex Complex::operator- (const Complex &complex) const
 {
-    
+    Complex temp ;
+    temp.real = this->real - complex.real ;
+    temp.imaginary = this->imaginary - complex.imaginary ;
+    return temp;
 }
 
-Complex Complex::operator- (const double &) const
+// Complex - double
+Complex Complex::operator- (const double &num) const
 {
-    
+    Complex temp ;
+    temp.real = this->real - num ;
+    temp.imaginary = this->imaginary ;
+    return temp;
 }
 
-Complex Complex::operator* (const Complex &) const
+// Complex * Complex
+Complex Complex::operator* (const Complex &complex) const
 {
-    
+    Complex temp ;
+    temp.real = this->real * complex.real - this->imaginary * complex.imaginary ;
+    temp.imaginary = this->real * complex.imaginary + this->imaginary * complex.real ;
+    return temp;
 }
 
-Complex Complex::operator* (const double &) const
+// Complex * double
+Complex Complex::operator* (const double &num) const
 {
-    
+    Complex temp ;
+    temp.real = this->real * num ;
+    temp.imaginary = this->imaginary * num ;
+    return temp;
 }
 
-Complex Complex::operator/ (const Complex &) const
+// Complex / Complex
+Complex Complex::operator/ (const Complex &complex) const
 {
-    
+    Complex temp ;
+    temp.real = (this->real * complex.real + this->imaginary * complex.imaginary)/(complex.real*complex.real + complex.imaginary*complex.imaginary) ;
+    temp.imaginary = (-this->real * complex.imaginary + this->imaginary * complex.real)/(complex.real*complex.real + complex.imaginary*complex.imaginary) ;
+    return temp;
 }
 
-Complex Complex::operator/ (const double &) const
+// Complex / double
+Complex Complex::operator/ (const double &num) const
 {
-    
+    Complex temp ;
+    temp.real = (this->real * num)/(num*num) ;
+    temp.imaginary = (this->imaginary * num)/(num*num) ;
+    return temp;
 }
 
-bool Complex::operator== (const Complex &) const
+// Complex == Complex
+bool Complex::operator== (const Complex &complex) const
 {
-    return false;
+    return (this->real==complex.real && this->imaginary==complex.imaginary);
 }
 
-bool Complex::operator== (const double &) const
+// Complex == double
+bool Complex::operator== (const double &num) const
 {
-    return false;
+    return (this->real==num && this->imaginary==0);
 }
 
-bool Complex::operator!= (const Complex &) const
+// Complex != Complex
+bool Complex::operator!= (const Complex &complex) const
 {
-    return false;
+    return (this->real!=complex.real || this->imaginary!=complex.imaginary);
 }
 
-bool Complex::operator!= (const double &) const
+// Complex != double
+bool Complex::operator!= (const double &num) const
 {
-    return false;
+    return (this->real!=num || this->imaginary!=num);
 }
 
-Complex& Complex::operator= (const Complex &)
+// Complex = Complex
+Complex& Complex::operator= (const Complex &complex)
 {
-    
+    real = complex.real ;
+    imaginary = complex.imaginary ;
+    return *this;
 }
 
-Complex& Complex::operator= (const double &)
+// Complex = double
+Complex& Complex::operator= (const double &num)
 {
-    
+    real = num ;
+    imaginary = 0 ;
+    return *this;
 }
 
-Complex& Complex::operator+= (const Complex &)
+// Complex += Complex
+Complex& Complex::operator+= (const Complex &complex)
 {
-    
+    real = this->real + complex.real ;
+    imaginary = this->imaginary + complex.imaginary ;
+    return *this;
 }
 
-Complex& Complex::operator+= (const double &)
+// Complex += double
+Complex& Complex::operator+= (const double &num)
 {
-    
+    real = this->real + num ;
+    return *this;
 }
 
-Complex& Complex::operator-= (const Complex &)
+// Complex -= Complex
+Complex& Complex::operator-= (const Complex &complex)
 {
-    
+    real = this->real - complex.real ;
+    imaginary = this->imaginary - complex.imaginary ;
+    return *this;
 }
 
-Complex& Complex::operator-= (const double &)
+// Complex -= double
+Complex& Complex::operator-= (const double &num)
 {
-    
+    real = this->real - num ;
+    return *this;
 }
 
-Complex& Complex::operator*= (const Complex &)
+// Complex *= Complex
+Complex& Complex::operator*= (const Complex &complex)
 {
-    
+    real = this->real * complex.real - this->imaginary * complex.imaginary ;
+    imaginary = this->real * complex.imaginary + this->imaginary * complex.real ;
+    return *this;
 }
 
-Complex& Complex::operator*= (const double &)
+// Complex *= double
+Complex& Complex::operator*= (const double &num)
 {
-    
+    real = this->real * num ;
+    imaginary = this->imaginary * num ;
+    return *this;
 }
 
-Complex& Complex::operator/= (const Complex &)
+// Complex /= Complex
+Complex& Complex::operator/= (const Complex &complex)
 {
-    
+    real = (this->real * complex.real + this->imaginary * complex.imaginary)/(complex.real*complex.real + complex.imaginary*complex.imaginary) ;
+    imaginary = (-this->real * complex.imaginary + this->imaginary * complex.real)/(complex.real*complex.real + complex.imaginary*complex.imaginary) ;
+    return *this;
 }
 
-Complex& Complex::operator/= (const double &)
+// Complex /= double
+Complex& Complex::operator/= (const double &num)
 {
-    
+    real = (this->real * num)/(num*num) ;
+    imaginary = (this->imaginary * num)/(num*num) ;
+    return *this;
 }
 
-Complex Complex::abs () const
+double Complex::abs () const
 {
-    
+    return sqrt(real*real + imaginary*imaginary) ;
 }

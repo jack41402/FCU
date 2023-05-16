@@ -49,7 +49,7 @@ class Complex
         Complex& operator*= (const double &) ;
         Complex& operator/= (const Complex &) ;
         Complex& operator/= (const double &) ;
-        Complex abs () const ;
+        double abs () const ;
 } ;
 
 #endif //ASSGN5_D1166506_COMPLEX_H
