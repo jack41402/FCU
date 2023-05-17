@@ -48,7 +48,7 @@ std::ostream& operator<< (std::ostream &output , const Complex &complex)
     }
     else
     {
-        output << 0 ;
+        output << 0.0 ;
     }
     return output;
 }
