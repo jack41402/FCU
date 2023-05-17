@@ -1,5 +1,5 @@
-#ifndef ASSGN5_D1166506_COMPLEX_H
-#define ASSGN5_D1166506_COMPLEX_H
+#ifndef ASSGN5_D1166506_COMPLEX_OVERLOADING_H
+#define ASSGN5_D1166506_COMPLEX_OVERLOADING_H
 #include <iostream>
 
 class Complex
@@ -52,4 +52,4 @@ class Complex
         double cabs () const ;
 } ;
 
-#endif //ASSGN5_D1166506_COMPLEX_H
+#endif //ASSGN5_D1166506_COMPLEX_OVERLOADING_H
