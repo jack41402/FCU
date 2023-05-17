@@ -32,6 +32,7 @@ Complex::~Complex ()
 // ostream operator <<
 std::ostream& operator<< (std::ostream &output , const Complex &complex)
 {
+    output << std::resetiosflags(std::ios::showpos) ;
     output << std::fixed << std::setprecision(4) ;
     if (complex.real!=0.0 && complex.imaginary!=0.0)
     {
@@ -56,9 +57,8 @@ std::ostream& operator<< (std::ostream &output , const Complex &complex)
 std::istream& operator>> (std::istream &input , Complex &complex)
 {
     input >> complex.real ;
-    // Check for positive case
     input >> complex.imaginary ;
-    std::cin.ignore() ;
+    input.ignore(1) ;
     return input;
 }
 
@@ -317,7 +317,7 @@ Complex& Complex::operator/= (const double &num)
     return *this;
 }
 
-double Complex::abs () const
+double Complex::cabs () const
 {
     return sqrt(real*real + imaginary*imaginary) ;
 }
