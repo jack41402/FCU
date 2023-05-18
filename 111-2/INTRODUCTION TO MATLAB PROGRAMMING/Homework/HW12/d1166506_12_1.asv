@@ -1,0 +1,6 @@
+year = [2004 2005 2006 2007 2008 2009] ;
+population = [10 10.9 11.7 12.6 13.8 14.9] ;
+polyval(polyfit(year , population , 6) , population) ;
+plot(year , population , 'o') ;
+hold on
+plot(year, y1) ;
