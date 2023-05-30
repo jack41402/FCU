@@ -1,7 +1,7 @@
 #include <iostream>
 #include "square.h"
 #include "triangle.h"
-//#include "rhombus.h"
+#include "rhombus.h"
 
 int main ()
 {
@@ -36,11 +36,13 @@ int main ()
             triangle.printBoard() ;
             break ;
         }
-//        case 3:
-//        {
-//            Rhombus rhombus ;
-//            break ;
-//        }
+        case 3:
+        {
+            Rhombus rhombus(side) ;
+            rhombus.drawBoard() ;
+            rhombus.printBoard() ;
+            break ;
+        }
         default:
         {
             break ;

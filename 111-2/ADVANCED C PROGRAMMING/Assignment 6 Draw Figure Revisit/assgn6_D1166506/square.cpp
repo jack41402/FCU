@@ -39,7 +39,6 @@ void Square::drawBoard ()
             if (i==0 || j==0 || i==height-1 || j==width-1) board[i][j] = '*' ;
             else board[i][j] = '@' ;
         }
-        board[i][width] = '\0' ;
     }
 }
 

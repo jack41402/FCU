@@ -6,7 +6,7 @@ Triangle::Triangle (const int& value): side(value)
 {
     name = new char[10]() ;
     strcpy(name , "Triangle") ;
-    width = 2 * side ;
+    width = 2 * side - 1 ;
     height = side ;
     board = new char*[height]() ;
     for (int i=0 ; i<height ; ++i) board[i] = new char[width+1]() ;
@@ -40,10 +40,9 @@ void Triangle::drawBoard ()
         }
         for (int j=0 ; j<2*i-1 ; ++j)
         {
-            if (j==0 || j==2*i-2) board[i][side+i+j] = '*' ;
-            else board[i][side+i+j] = '@' ;
+            if (i==height-1 || j==0 || j==2*i-2) board[i][side-i+j] = '*' ;
+            else board[i][side-i+j] = '@' ;
         }
-        board[i][width] = '\0' ;
     }
 }
 
