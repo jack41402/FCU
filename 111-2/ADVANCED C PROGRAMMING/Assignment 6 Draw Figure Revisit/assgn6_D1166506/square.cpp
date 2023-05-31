@@ -2,32 +2,19 @@
 #include <cstring>
 #include "square.h"
 
-Square::Square (const int& value): side(value)
+Square::Square (const int& value): Draw("Square" , value , value) , side(value)
 {
-    name = new char[10]() ;
-    strcpy(name , "Square") ;
-    width = side ;
-    height = side ;
-    board = new char*[height]() ;
-    for (int i=0 ; i<height ; ++i) board[i] = new char[width+1]() ;
 
 }
 
-Square::Square (const Square &square): side(square.side)
+Square::Square (const Square &square): Draw(square.name , square.width , square.height) , side(square.side)
 {
-    name = new char[10]() ;
-    strcpy(name , "Square") ;
-    width = side ;
-    height = side ;
-    board = new char*[height]() ;
-    for (int i=0 ; i<height ; ++i) board[i] = new char[width+1]() ;
+
 }
 
 Square::~Square ()
 {
-    delete[] name ;
-    for (int i=0 ; i<height ; ++i) delete[] board[i] ;
-    delete[] board ;
+
 }
 
 void Square::drawBoard ()
@@ -42,10 +29,18 @@ void Square::drawBoard ()
     }
 }
 
+void Square::info () const
+{
+    std::cout << "\n**** Figure: " << name
+              << ", Side: " << side
+              << ", Board: " << height << 'X' << width << "\n\n" ;
+}
+
 void Square::printBoard () const
 {
     for (int i=0 ; i<height ; ++i)
     {
         std::cout << "    " << board[i] << '\n' ;
     }
+    std::cout << '\n' ;
 }

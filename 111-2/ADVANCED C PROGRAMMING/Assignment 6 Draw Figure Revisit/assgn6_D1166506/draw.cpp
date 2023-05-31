@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "draw.h"
 
 Draw::Draw ()
@@ -17,15 +18,19 @@ Draw::Draw (const Draw &draw)
     board = draw.board ;
 }
 
-void Draw::printBoard () const
+Draw::Draw (const std::string &FigureName , const int &FigureWidth , const int &FigureHeight)
 {
-    for (int i=0 ; i<width ; ++i)
-    {
-        for (int j=0 ; j<height ; ++j)
-        {
-            printf("%c" , board[i][j]) ;
-        }
-        printf("\n") ;
-    }
-    printf("\n") ;
+    name = new char[10]() ;
+    strcpy(name , FigureName.c_str()) ;
+    width = FigureWidth ;
+    height = FigureHeight ;
+    board = new char*[height]() ;
+    for (int i=0 ; i<height ; ++i) board[i] = new char[width+1]() ;
+}
+
+Draw::~Draw ()
+{
+    delete[] name ;
+    for (int i=0 ; i<height ; ++i) delete[] board[i] ;
+    delete[] board ;
 }

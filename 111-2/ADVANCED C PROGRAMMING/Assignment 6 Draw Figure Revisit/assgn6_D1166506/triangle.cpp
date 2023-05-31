@@ -2,48 +2,42 @@
 #include <cstring>
 #include "triangle.h"
 
-Triangle::Triangle (const int& value): side(value)
+Triangle::Triangle (const int& value): Draw("Triangle" , 2*value-1 , value) , side(value)
 {
-    name = new char[10]() ;
-    strcpy(name , "Triangle") ;
-    width = 2 * side - 1 ;
-    height = side ;
-    board = new char*[height]() ;
-    for (int i=0 ; i<height ; ++i) board[i] = new char[width+1]() ;
 
 }
 
-Triangle::Triangle (const Triangle &square): side(square.side)
+Triangle::Triangle (const Triangle &triangle): Draw(triangle.name , triangle.width , triangle.height) , side(triangle.side)
 {
-    name = new char[10]() ;
-    strcpy(name , "Triangle") ;
-    width = side ;
-    height = side ;
-    board = new char*[height]() ;
-    for (int i=0 ; i<height ; ++i) board[i] = new char[width+1]() ;
+
 }
 
 Triangle::~Triangle ()
 {
-    delete[] name ;
-    for (int i=0 ; i<height ; ++i) delete[] board[i] ;
-    delete[] board ;
+
 }
 
 void Triangle::drawBoard ()
 {
     for (int i=0 ; i<height ; ++i)
     {
-        for (int j=0 ; j<side-i ; ++j)
+        for (int j=0 ; j<side-i-1 ; ++j)
         {
             board[i][j] = ' ' ;
         }
-        for (int j=0 ; j<2*i-1 ; ++j)
+        for (int j=0 ; j<2*i+1 ; ++j)
         {
-            if (i==height-1 || j==0 || j==2*i-2) board[i][side-i+j] = '*' ;
-            else board[i][side-i+j] = '@' ;
+            if (i==height-1 || j==0 || j==2*i) board[i][side-i+j-1] = '*' ;
+            else board[i][side-i+j-1] = '@' ;
         }
     }
+}
+
+void Triangle::info () const
+{
+    std::cout << "\n**** Figure: " << name
+              << ", Side: " << side
+              << ", Board: " << height << 'X' << width << "\n\n" ;
 }
 
 void Triangle::printBoard () const
@@ -52,4 +46,5 @@ void Triangle::printBoard () const
     {
         std::cout << "    " << board[i] << '\n' ;
     }
+    std::cout << '\n' ;
 }

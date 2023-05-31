@@ -12,6 +12,7 @@ class Triangle: public Draw
         Triangle (const int& =0) ; // Default constructor.
         Triangle (const Triangle &) ;
         ~Triangle() ;
+        void info () const ;
         void drawBoard () ; // Filling the drawing board. Concrete method.
         void printBoard () const ; // Print drawing board. Override printBoard in Draw.
 };

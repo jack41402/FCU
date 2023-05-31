@@ -6,46 +6,51 @@
 int main ()
 {
     int figure , side ;
-    do
+    while (true)
     {
-        std::cout << "Enter figure code, 1: Square, 2: Triangle, 3: Rhombus: " ;
-        std::cin >> figure ;
-        if (figure==0) return 0;
-    }
-    while (figure<0 || 3<figure) ;
-    do
-    {
-        std::cout << "Enter side if figure (between 3 and 20): " ;
-        std::cin >> side ;
-    }
-    while (side<3 || side>20) ;
+        do
+        {
+            std::cout<<"Enter figure code, 1: Square, 2: Triangle, 3: Rhombus: " ;
+            std::cin>>figure ;
 
-    switch (figure)
-    {
-        case 1:
+        } while (figure<0 || 3<figure) ;
+        if (figure==0) return 0 ;
+        do
         {
-            Square square(side) ;
-            square.drawBoard() ;
-            square.printBoard() ;
-            break ;
-        }
-        case 2:
+            std::cout<<"Enter side if figure (between 3 and 20): " ;
+            std::cin>>side ;
+        } while (side<3 || side>20) ;
+
+        switch (figure)
         {
-            Triangle triangle(side) ;
-            triangle.drawBoard() ;
-            triangle.printBoard() ;
-            break ;
-        }
-        case 3:
-        {
-            Rhombus rhombus(side) ;
-            rhombus.drawBoard() ;
-            rhombus.printBoard() ;
-            break ;
-        }
-        default:
-        {
-            break ;
+            case 1:
+            {
+                Square square(side) ;
+                square.drawBoard() ;
+                square.info() ;
+                square.printBoard() ;
+                break ;
+            }
+            case 2:
+            {
+                Triangle triangle(side) ;
+                triangle.drawBoard() ;
+                triangle.info() ;
+                triangle.printBoard() ;
+                break ;
+            }
+            case 3:
+            {
+                Rhombus rhombus(side) ;
+                rhombus.drawBoard() ;
+                rhombus.info() ;
+                rhombus.printBoard() ;
+                break ;
+            }
+            default:
+            {
+                break ;
+            }
         }
     }
     return 0;

@@ -12,6 +12,7 @@ class Square: public Draw
         Square (const int& =0) ; // Default constructor.
         Square (const Square &) ;
         ~Square() ;
+        void info () const ;
         void drawBoard () ; // Filling the drawing board. Concrete method.
         void printBoard () const ; // Print drawing board. Override printBoard in Draw.
 };

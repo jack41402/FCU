@@ -12,7 +12,9 @@ class Draw
     public:
         Draw () ;
         Draw (const Draw &) ;
-//        ~Draw() ;
+        Draw(const std::string & , const int & , const int &) ;
+        ~Draw() ;
+        virtual void info () const = 0 ;
         virtual void drawBoard () = 0 ;
         virtual void printBoard () const = 0 ;
 };

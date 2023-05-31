@@ -12,6 +12,7 @@ class Rhombus: public Draw
         Rhombus (const int& =0) ; // Default constructor.
         Rhombus (const Rhombus &) ;
         ~Rhombus() ;
+        void info () const ;
         void drawBoard () ; // Filling the drawing board. Concrete method.
         void printBoard () const ; // Print drawing board. Override printBoard in Draw.
 };
