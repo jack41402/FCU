@@ -9,7 +9,7 @@ numTrainFiles = 750;
 % separate the images to 750images in one set to categorize the images
 [imdsTrain,imdsValidation] = splitEachLabel(imds,numTrainFiles,'randomized');
 %splits the image datastore into two new datasotres for training and validation.
-inputSize = [28 28 1]; %28by28by1 pixels 
+inputSize = [28 28 1]; %28by28by1 pixels
 numClasses = 10;
  layers = [ imageInputLayer(inputSize) 
 	convolution2dLayer(5,20) 
