@@ -13,35 +13,39 @@ def main():
     print("Starting up server on port: %s" % PORT)
     serverSocket.bind(('', PORT))
     serverSocket.listen(backlog)
-    print("Waiting to receive message from client")
+    print("Waiting to receive message from client\n")
     client, (rip, rport) = serverSocket.accept()
+    s = struct.Struct('!' + 'I')
     while True:
         client_msg = client.recv(BUF_SIZE)
+        if len(client_msg) < s.size:
+            break
         if client_msg:
-            msg = "Receive message from IP: " + str(rip) + " port: " + str(rport)
+            msg = "\nReceive message from IP: " + str(rip) + " port: " + str(rport)
             print(msg)
             print("Receive value: ", binascii.hexlify(client_msg))
             s = struct.Struct('!' + "I")
             unpacked_data = s.unpack(client_msg)
-            print("The data you receive:\n Integer=%d\n" % unpacked_data[0])
+            print("The data you receive: Integer=%d\n" % unpacked_data[0])
             if unpacked_data[0]-1 != 0:
-                record = tuple(unpacked_data[0]-1)
-                s = struct.Struct('!' + 'I')
-                packed_data = s.pack(*record)
+                packed_data = s.pack(unpacked_data[0]-1)
                 try:
-                    print('Send: %s' % packed_data)
-                    serverSocket.send(packed_data)
+                    print("Send: %s" % packed_data)
+                    print("The data you send: Integer=%d\n" % (unpacked_data[0]-1))
+                    client.send(packed_data)
                 except socket.error as e:
-                    print('Socket error: %s' % str(e))
+                    print("Socket error: %s" % str(e))
                 except Exception as e:
-                    print('Other exception: %s' % str(e))
-                finally:
-                    print('Closing connection.')
-                    # Close the TCP socket
-                    serverSocket.close()
-        else:
-            client.close()
-            serverSocket.close()
+                    print("Other exception: %s" % str(e))
+                # finally:
+                #     print("Closing connection.")
+                #     # Close the TCP socket
+                #     serverSocket.close()
+            else:
+                print("\n**** The number is zero. Closing the connection.\n")
+                break
+    client.close()
+    serverSocket.close()
 
 
 if __name__ == "__main__":
