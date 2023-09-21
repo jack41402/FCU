@@ -16,16 +16,20 @@ def main():
     print("Waiting to receive message from client\n")
     client, (rip, rport) = serverSocket.accept()
     s = struct.Struct('!' + 'I')
+    error = False
     while True:
         client_msg = client.recv(BUF_SIZE)
-        if len(client_msg) < s.size:
-            break
         if client_msg:
+            try:
+                unpacked_data = s.unpack(client_msg)
+            except Exception as e:
+                error = True
+            if error:
+                break
             msg = "\nReceive message from IP: " + str(rip) + " port: " + str(rport)
             print(msg)
             print("Receive value: ", binascii.hexlify(client_msg))
             s = struct.Struct('!' + "I")
-            unpacked_data = s.unpack(client_msg)
             print("The data you receive: Integer=%d\n" % unpacked_data[0])
             if unpacked_data[0]-1 != 0:
                 packed_data = s.pack(unpacked_data[0]-1)
@@ -44,6 +48,8 @@ def main():
             else:
                 print("\n**** The number is zero. Closing the connection.\n")
                 break
+        else:
+            break
     client.close()
     serverSocket.close()
 

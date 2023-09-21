@@ -23,8 +23,12 @@ def main():
     print("Connecting to %s port %s" % (server_IP, PORT))
     cSocket.connect((server_IP, PORT))
     s = struct.Struct('!' + "I")
+    error = False
     while True:
-        packed_data = s.pack(num-1)
+        if num - 1 == 0:
+            print("\n**** The number is zero. Closing the connection.\n")
+            break
+        packed_data = s.pack(num - 1)
         print("Packed value: ", binascii.hexlify(packed_data))
         try:
             print("Send: %s" % packed_data)
@@ -38,20 +42,21 @@ def main():
         #     print("Closing connection.")
         #     cSocket.close()
         server_msg = cSocket.recv(BUF_SIZE)
+        try:
+            unpacked_data = s.unpack(server_msg)
+        except BaseException as e:
+            error = True
+        if error:
+            break
         msg = "Receive message from IP: " + str(server_IP) + " port: " + str(PORT)
         print(msg)
         print("Receive value: ", binascii.hexlify(server_msg))
-        unpacked_data = s.unpack(server_msg)
         print("The data you receive: Integer=%d\n" % unpacked_data[0])
-        if len(server_msg) < s.size:
-            break
         if server_msg:
             unpacked_data = s.unpack(server_msg)
-            if unpacked_data[0] - 1 != 0:
-                num = unpacked_data[0] - 1
-            else:
-                print("\n**** The number is zero. Closing the connection.\n")
-                break
+            num = unpacked_data[0]
+        else:
+            break
     cSocket.close()
 
 
