@@ -4,7 +4,7 @@ int main(void)
 {
 	int i,j,k,m; 
 	int r_top , r_side , h_width , h_hieght ;
-	int r_bottom = r_top+2*r_side;
+	int r_bottom ;
 	do
 	{
 		printf("roof_top(10<=roof_top<=20):");
@@ -15,12 +15,13 @@ int main(void)
 		printf("roof_side(10<=roof_side<=25):");
 		scanf("%d", &r_side);
 	}while(r_side>25 || r_side<10);
+
 	r_bottom = r_top+2*r_side;
 	for(i = 0 ; i <= r_side ; i++)
 	{
 		if(i == 0)
 		{
-			for(j = 0 ; j < r_side ; j++)
+			for(j = 0 ; j <= r_side ; j++)
 			{
 				printf(" ");
 			}
@@ -31,13 +32,13 @@ int main(void)
 		}
 		else
 		{
-			for(j = r_top-i ; j > 0 ; j--)
+			for(j = r_side-i ; j >= 0 ; j--)
 			{
 				printf(" ");
 			}
 			printf("#");
 			
-			for(k = 0 ; k <= r_top+i*2 ; k++)
+			for(k = 0 ; k < r_top+i*2-2 ; k++)
 			{
 				printf("*");
 			}
