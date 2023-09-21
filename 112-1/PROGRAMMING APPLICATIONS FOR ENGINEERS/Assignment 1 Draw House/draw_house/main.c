@@ -2,8 +2,8 @@
 
 int main ()
 {
-    int roof_top , roof_side , roof_bottom , house_width , house_height , door_width , door_height ;
-    int window_width=9 , window_height=13 ;
+    int roof_top , roof_side , roof_bottom , house_width , house_height ;
+    int window_width=9 , window_height=13 , door_width , door_height ;
     // Input information
     do
     {
@@ -21,16 +21,18 @@ int main ()
     printf(">>> The width of the roof bottom r_bottom is r_top+2*r_side %d.\n" , roof_bottom) ;
     do
     {
-        printf(">>> Enter the width of the house (<44 and (r_bottom, h_width) both even or odd): ") ;
+        printf(">>> Enter the width of the house (<%d and (r_bottom, h_width) both even or odd): " , roof_bottom-4) ;
         scanf("%d" , &house_width) ;
+        door_width = house_width - 26 ;
     }
-    while (house_width<0 || house_width>44 || (house_width&1)!=(roof_bottom&1) || house_width>=roof_bottom-4) ;
+    while (house_width<0 || house_width>roof_bottom-4 || (house_width&1)!=(roof_bottom&1) || house_width>=roof_bottom-4) ;
     do
     {
-        printf(">>> Enter the height of the house (<42): ") ;
+        printf(">>> Enter the height of the house (<%d): " , house_width) ;
         scanf("%d" , &house_height) ;
     }
-    while (house_height<0 || house_height>42 || house_height>house_width) ;
+    while (house_height<0 || house_height>house_width) ;
+
 
     printf("\n\n") ;
     printf("***** Design parameters of the house:\n") ;
@@ -49,28 +51,6 @@ int main ()
     printf("   <<< The space between the floor and the door: %d" , roof_top) ;
     printf("\n\n") ;
 
-    for (int i=0 ; i<roof_top ; ++i)
-    {
-        printf("@") ;
-    }
-    printf("\n") ;
-    for (int i=1 ; i<=roof_side ; ++i)
-    {
-        for (int j=roof_side ; j>=i ; --i)
-        {
-            printf(" ") ;
-        }
-        printf("@") ;
-        for (int j=0 ; j<roof_top+2*roof_side ; ++j)
-        {
-            printf("*") ;
-        }
-        printf("@\n") ;
-    }
-    for (int i=0 ; i<roof_bottom ; ++i)
-    {
-        printf("@") ;
-    }
-    printf("\n") ;
+
     return 0;
 }

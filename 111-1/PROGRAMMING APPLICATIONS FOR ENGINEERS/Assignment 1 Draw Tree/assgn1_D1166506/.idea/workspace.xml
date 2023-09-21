@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -18,55 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e33247b8-b841-41c6-85e8-83ddf3b23842" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-206ecbec19c4e01098ed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-cd1986b18ce106774ebd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-05T02-43-17-0992.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-9b620ed1f760c4b64b3a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn1_D1166506.dir/assgn1_D1166506.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/assgn1_D1166506.dir/main.c.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assgn1_D1166506.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assgn1_D1166506.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/.cmake/api/v1/reply/cache-v2-447dd10dae7e8c5677c1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-75017d03d368b024797e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/.cmake/api/v1/reply/index-2022-10-17T01-06-29-0473.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-9b620ed1f760c4b64b3a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/assgn2_D1166506.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/assgn2_D1166506.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/assgn2_D1166506.c.obj.d" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/assgn2_D1166506.c.obj.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/assgn2_D1166506.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/assgn2_D1166506.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/assgn2_D1166506.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/assgn2_D1166506.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/assgn2_D1166506.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 2 Quadratic Equation Solver/assgn2_D1166506/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/PROGRAMMING APPLICATIONS FOR ENGINEERS/Assignment 1 Draw House/draw_house/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../112-1/PROGRAMMING APPLICATIONS FOR ENGINEERS/Assignment 1 Draw House/draw_house/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +33,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -88,29 +43,48 @@
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="2.3" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2FhI7QBPTPDM2MatLazKCgASRc8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "D:/GitHub/C/Others/zhiwei"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/FCU/112-1/PROGRAMMING APPLICATIONS FOR ENGINEERS/Assignment 1 Draw House/draw_house/main.c&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="assgn1_D1166506" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assgn1_D1166506" TARGET_NAME="assgn1_D1166506" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assgn1_D1166506" RUN_TARGET_NAME="assgn1_D1166506">
+}</component>
+  <component name="RunManager" selected="C/C++ File.assgn1_D1166506.c">
+    <configuration name="assgn1_D1166506" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assgn1_D1166506" TARGET_NAME="assgn1_D1166506" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assgn1_D1166506" RUN_TARGET_NAME="assgn1_D1166506">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="assgn1_D1166506.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assgn1_D1166506.c" TARGET_NAME="assgn1_D1166506.c" CONFIG_NAME="assgn1_D1166506.c">
+      <option name="sourceFile" value="assgn1_D1166506.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.assgn1_D1166506.c" />
+      <item itemvalue="CMake Application.assgn1_D1166506" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -124,6 +98,8 @@
       <workItem from="1664938534992" duration="8000" />
       <workItem from="1666012962851" duration="68000" />
       <workItem from="1666013870986" duration="14000" />
+      <workItem from="1695297852483" duration="878000" />
+      <workItem from="1695299550871" duration="20000" />
     </task>
     <servers />
   </component>
@@ -140,5 +116,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/assgn1_D1166506.c</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
