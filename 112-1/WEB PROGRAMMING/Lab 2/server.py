@@ -1,6 +1,7 @@
 import socket
 import struct
 import binascii
+from PyQt6 import *
 
 PORT = 8888
 backlog = 5
