@@ -25,15 +25,16 @@ def main():
         if num - 1 == 0:
             print("\n**** The number is zero. Closing the connection.\n")
             tcp.send_msg(cSocket, "END")
+            break
         else:
-            num = num - 1
+            num -= 1
             tcp.send_msg(cSocket, str(num))
 
-        server_msg = tcp.receive_msg(cSocket)
         msg = "Receive message from IP: " + str(server_IP) + " port: " + str(PORT)
         print(msg)
+        server_msg = tcp.receive_msg(cSocket)
         if server_msg == 0:
-            print("\n**** The number is zero. Closing the connection.\n")
+            print("Receive END message. Closing the connection.")
             break
         else:
             num = server_msg
