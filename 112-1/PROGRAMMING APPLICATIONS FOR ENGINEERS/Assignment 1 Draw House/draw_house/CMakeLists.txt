@@ -7,9 +7,11 @@ add_executable(draw_house main.c
         jason.c
         terry.c
         test.c
+        antonio.c
 )
 
 add_executable(corrine corrine.c)
 add_executable(jason jason.c)
 add_executable(terry terry.c)
 add_executable(test test.c)
+add_executable(antonio antonio.c)
