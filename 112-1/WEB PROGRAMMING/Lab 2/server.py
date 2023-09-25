@@ -16,8 +16,6 @@ def main():
     serverSocket.listen(backlog)
     print("Waiting to receive message from client\n")
     client, (rip, rport) = serverSocket.accept()
-    s = struct.Struct('!' + 'I')
-    error = False
     while True:
         client_msg = client.recv(BUF_SIZE)
         if client_msg:
@@ -29,14 +27,18 @@ def main():
                 break
             msg = "\nReceive message from IP: " + str(rip) + " port: " + str(rport)
             print(msg)
+            if unpacked_data[0].decode('utf-8') == "END":
+                print("Receive END message. Closing the connection.")
+                break
             print("Receive value: ", binascii.hexlify(client_msg))
-            s = struct.Struct('!' + "I")
-            print("The data you receive: Integer=%d\n" % unpacked_data[0])
-            if unpacked_data[0]-1 != 0:
-                packed_data = s.pack(unpacked_data[0]-1)
+            num = int(unpacked_data[0].decode('utf-8'))
+            print("The data you receive: Integer=%d\n" % num)
+            if num - 1 != 0:
+                num = num - 1
+                packed_data = s.pack(str(num).encode('utf-8'))
                 try:
                     print("Send: %s" % packed_data)
-                    print("The data you send: Integer=%d\n" % (unpacked_data[0]-1))
+                    print("The data you send: Integer=%d\n" % num)
                     client.send(packed_data)
                 except socket.error as e:
                     print("Socket error: %s" % str(e))
@@ -48,6 +50,15 @@ def main():
                 #     serverSocket.close()
             else:
                 print("\n**** The number is zero. Closing the connection.\n")
+                packed_data = s.pack("END".encode('utf-8'))
+                try:
+                    print("Send: %s" % packed_data)
+                    print("The data you send: String=\"END\"\n")
+                    client.send(packed_data)
+                except socket.error as e:
+                    print("Socket error: %s" % str(e))
+                except Exception as e:
+                    print("Other exception: %s" % str(e))
                 break
         else:
             break
