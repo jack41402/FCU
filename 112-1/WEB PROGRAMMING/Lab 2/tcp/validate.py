@@ -40,22 +40,14 @@ class Validate:
             print("[ERROR] PORT ISN'T A INTEGER.\n")
             print("[INFO] Port number should be 1~65535.\n")
             return False
-        if not 1 <= port <= 65535:
+        elif not 1 <= port <= 65535:
             print("[ERROR] PORT IS OUT OF RANGE.")
             print("[INFO] Port number should be 1~65535.\n")
             return False
-        s = socket.socket()
-        try:
-            s.connect((ip, port))
-            print("[INFO] Connect successfully.\n")
+        else:
+            print("[INFO] PORT is correct.\n")
             self.port = port
             return True
-        except Exception as e:
-            print("Other exception: %s" % str(e))
-            # print("PORT IS OCCUPIED. PLEASE INPUT AGAIN!\n")
-            return False
-        finally:
-            s.close()
 
     def check_number(self, number: int):
         if not number:
@@ -90,6 +82,7 @@ class Validate:
             ui.lineEdit_Number.setText("")
             return False
 
-        print("IP: %s\n" % self.ip)
-        print("PORT: %s\n" % self.port)
-        print("NUMBER: %d\n" % self.num)
+        print("IP: %s" % self.ip)
+        print("PORT: %s" % self.port)
+        print("NUMBER: %d" % self.num)
+        return True

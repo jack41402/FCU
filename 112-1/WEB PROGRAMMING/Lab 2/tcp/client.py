@@ -1,45 +1,45 @@
 import sys
 import socket
-import tcp
+import struct
+import binascii
+from PyQt6 import *
+from . import message
 
-PORT = 8888
-BUF_SIZE = 1024
 
+class Client:
+    def __init__(self, ip, port, number):
+        self.ip = ip
+        self.port = port
+        self.buf_size = 1024
+        self.number = number
+        self.clientSocket = None
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python3 client.py ServerIP")
-        exit(1)
-    while True:
-        num = input("Please input an positive integer: ")
-        if num.isdigit() and int(num) > 0:
-            break
-    num = int(num)
-    print("The data you input: Integer=%d" % num)
+    def run(self):
+        self.connection()
 
-    server_IP = socket.gethostbyname(sys.argv[1])
-    cSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    print("Connecting to %s port %s" % (server_IP, PORT))
-    cSocket.connect((server_IP, PORT))
-    while True:
-        if num - 1 == 0:
+    def connection(self):
+        self.clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        print("Connecting to %s port %s" % (self.ip, self.port))
+        self.clientSocket.connect((self.ip, self.port))
+        print("I am connected")
+
+    def send(self):
+        if self.number - 1 == 0:
             print("\n**** The number is zero. Closing the connection.\n")
-            tcp.send_msg(cSocket, "END")
-            break
+            message.send_msg(self.clientSocket, "END")
         else:
-            num -= 1
-            tcp.send_msg(cSocket, str(num))
+            self.number -= 1
+            message.send_msg(self.clientSocket, str(self.number))
 
-        msg = "Receive message from IP: " + str(server_IP) + " port: " + str(PORT)
+    def receive(self):
+        msg = "Receive message from IP: " + str(self.ip) + " port: " + str(self.port)
         print(msg)
-        server_msg = tcp.receive_msg(cSocket)
+        server_msg = message.receive_msg(self.clientSocket)
         if server_msg == 0:
             print("Receive END message. Closing the connection.")
-            break
+            return 0
         else:
             num = server_msg
-    cSocket.close()
 
-
-if __name__ == "__main__":
-    main()
+    def close(self):
+        self.clientSocket.close()
