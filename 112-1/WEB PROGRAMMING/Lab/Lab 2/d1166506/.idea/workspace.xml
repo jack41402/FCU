@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56852eb2-56b3-4f95-a0d9-3accb2f67a09" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab 2 copy.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 2 copy.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Lab 2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp/client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp/message.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp/server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp/thread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcp/validate.py" beforeDir="false" />
-    </list>
+    <list default="true" id="56852eb2-56b3-4f95-a0d9-3accb2f67a09" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/venv/tcp.py" root0="SKIP_INSPECTION" />
@@ -148,7 +124,9 @@
       <updated>1695501513713</updated>
       <workItem from="1695501515325" duration="2998000" />
       <workItem from="1695687622360" duration="26707000" />
-      <workItem from="1695739123518" duration="2204000" />
+      <workItem from="1695739123518" duration="1613000" />
+      <workItem from="1695743636823" duration="131000" />
+      <workItem from="1695743955339" duration="300000" />
     </task>
     <servers />
   </component>
@@ -176,6 +154,7 @@
     <SUITE FILE_PATH="coverage/Lab_2$client.coverage" NAME="client Coverage Results" MODIFIED="1695202232565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/controller_py$validate.coverage" NAME="validate Coverage Results" MODIFIED="1695726222360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tcp" />
     <SUITE FILE_PATH="coverage/server_py$pytest_in_bin.coverage" NAME="pytest in bin Coverage Results" MODIFIED="1695605770600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/client_py$start.coverage" NAME="start Coverage Results" MODIFIED="1695744259440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/server_py$Client.coverage" NAME="Client Coverage Results" MODIFIED="1695610012761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/home_py$home.coverage" NAME="home Coverage Results" MODIFIED="1695648291041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/controller_py$client.coverage" NAME="client Coverage Results" MODIFIED="1695728647702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tcp" />

@@ -15,7 +15,7 @@ class ServerThread(QThread):
 
     def run(self):
         self.server.run()
-        time.sleep(200)
+        # time.sleep(200)
         # ServerThread.server_started.emit()
 
         # self.server.close()

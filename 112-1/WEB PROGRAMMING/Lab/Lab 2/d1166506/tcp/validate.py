@@ -1,21 +1,22 @@
-from PyQt6 import QtCore, QtGui, QtWidgets
+from PyQt6.QtCore import pyqtSignal
 from home import Ui_MainWindow
-import socket
 import IPy
 
 ui = Ui_MainWindow()
 
 
 class Validate:
+    # valid_warning = pyqtSignal(str, str)
+
     def __init__(self):
         self.ip = None
         self.port = None
         self.num = None
 
     def check_ip(self, address: str):
-        global ui
         if not address:
             print("[ERROR] IP ADDRESS CAN'T BE EMPTY.\n")
+            # self.valid_warning.emit("critical", "[ERROR] IP ADDRESS CAN'T BE EMPTY.")
             return False
         if address == "localhost":
             address = "127.0.0.1"
@@ -29,7 +30,7 @@ class Validate:
             print("[ERROR] WRONG IP ADDRESS.\n")
             return False
 
-    def check_port(self, ip: str, port: int):
+    def check_port(self, port: int):
         if not port:
             print("[ERROR] PORT CAN'T BE EMPTY.\n")
             return False
@@ -75,7 +76,7 @@ class Validate:
         if not self.check_ip(msg_IP_Address):
             ui.lineEdit_IP_Address.setText("")
             return False
-        if not self.check_port(self.ip, msg_Server_Port):
+        if not self.check_port(msg_Server_Port):
             ui.lineEdit_Server_Port.setText("")
             return False
         if not self.check_number(msg_Number):
