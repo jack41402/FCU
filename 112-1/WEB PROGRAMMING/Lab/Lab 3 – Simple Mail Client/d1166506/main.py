@@ -7,10 +7,10 @@
 import sys
 import socket
 from getpass import getpass
-import command
+from tcp import mail
 
 PORT = 110
-BUFF_SIZE = 1024  # Receive buffer size
+BUF_SIZE = 1024  # Receive buffer size
 
 
 def ParseMessage(msg):
@@ -28,6 +28,7 @@ def ParseMessage(msg):
 # end ParseMessage
 
 def main():
+    mail =
     if len(sys.argv) < 2:
         print("Usage: python3 pop3client.py ServerIP")
         exit(1)
@@ -44,12 +45,12 @@ def main():
     print('Connecting to %s port %s' % (serverIP, PORT))
     cSocket.connect((serverIP, PORT))
 
-    mail = command.Command()
+    mail = command.Mail()
 
     for i in range(1):
         try:
             # receive server greeting message
-            reply = cSocket.recv(BUFF_SIZE).decode('utf-8')
+            reply = cSocket.recv(BUF_SIZE).decode('utf-8')
             print('Receive message: %s' % reply)
             if reply[0] != '+':
                 break
@@ -57,7 +58,7 @@ def main():
             # Username
             cmd = 'USER ' + name + '\r\n'
             cSocket.send(cmd.encode('utf-8'))
-            reply = cSocket.recv(BUFF_SIZE).decode('utf-8')
+            reply = cSocket.recv(BUF_SIZE).decode('utf-8')
             print('Receive message: %s' % reply)
             if reply[0] != '+':
                 break
@@ -65,7 +66,7 @@ def main():
             # Password
             cmd = 'PASS ' + password + '\r\n'
             cSocket.send(cmd.encode('utf-8'))
-            reply = cSocket.recv(BUFF_SIZE).decode('utf-8')
+            reply = cSocket.recv(BUF_SIZE).decode('utf-8')
             print('Receive message: %s' % reply)
             if reply[0] != '+':
                 break
@@ -73,7 +74,7 @@ def main():
             # List [Method 1]
             cmd = 'LIST\r\n'
             cSocket.send(cmd.encode('utf-8'))
-            reply = cSocket.recv(BUFF_SIZE).decode('utf-8')
+            reply = cSocket.recv(BUF_SIZE).decode('utf-8')
             print('Receive message: %s' % reply)
             if reply[0] != '+':
                 break
@@ -112,10 +113,13 @@ def main():
                         mail_number = int(mail_number)
                         break
                 cSocket.send(mail.retrive(mail_number).encode('utf-8'))
-                reply = cSocket.recv(BUFF_SIZE).decode('utf-8')
+                reply = cSocket.recv(BUF_SIZE).decode('utf-8')
                 print('Receive message: %s' % reply)
                 if reply[0] != '+':
                     break
+
+            # Parse mail
+
 
             # Quit
             cmd = 'QUIT\r\n'
