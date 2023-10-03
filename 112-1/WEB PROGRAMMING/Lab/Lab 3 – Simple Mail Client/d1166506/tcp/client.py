@@ -3,48 +3,42 @@
 import socket
 from PyQt6.QtCore import pyqtSignal, QThread
 import message
+from mail import Mail
 
 
 class Client(QThread):
-    client_signal = pyqtSignal(str)
+    client_error_signal = pyqtSignal(str)
 
-    def __init__(self, ip="10.0.1.3", port, number):
+    def __init__(self, username: str, password: str, ip: str = "140.134.135.41", port: int = 110, ):
         super().__init__()
         self.ip = ip
         self.port = port
+        self.username = username
+        self.password = password
         self.buf_size = 1024
-        self.number = number
         self.clientSocket = None
+        self.mail = None
 
     def run(self):
         self.connection()
-        while True:
-            if self.number - 1 == 0:
-                print("\n**** The number is zero. Closing the connection.\n")
-                self.client_signal.emit("[CLIENT] The number is zero. Closing the connection.")
-                self.send("END")
-                self.client_signal.emit("[CLIENT] Send: \"END\" message.")
-                break
-            else:
-                self.number -= 1
-                self.send(str(self.number))
-                self.client_signal.emit("[CLIENT] Send: %d" % self.number)
-            server_msg = self.receive()
-            if server_msg == 0:
-                print("Receive END message. Closing the connection.")
-                self.client_signal.emit("[CLIENT] Receive: \"END\" message.")
-                self.client_signal.emit("[CLIENT] Closing the connection.")
-                break
-            else:
-                self.number = server_msg
-                self.client_signal.emit("[CLIENT] Receive: %d" % server_msg)
+        self.mail = Mail(self.clientSocket)
+        error = self.mail.user(self.username)
+        if error[0] == '-':
+            self.client_error_signal.emit("USER ERROR")
+            return False
+        error = self.mail.password(self.password)
+        if error[0] == '-':
+            self.client_error_signal.emit("PASSWORD ERROR")
+            return False
+        self.mail.list()
+
 
     def connection(self):
         self.clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         print("Connecting to %s port %s" % (self.ip, self.port))
         self.clientSocket.connect((self.ip, self.port))
         self.receive()
-        self.client_signal.emit("[CLIENT] Connected successfully.")
+        print("[CLIENT] Connected successfully.")
 
     def send(self, msg: str):
         message.send_msg(self.clientSocket, str(msg))

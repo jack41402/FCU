@@ -82,8 +82,7 @@ class Mail:
 
     def user(self, name: str):
         try:
-            self.send_command("USER " + name + "\r\n")
-            return True
+            return self.send_command("USER " + name + "\r\n")
         except Exception as e:
             print("Other exception: %s" % str(e))
             return False
