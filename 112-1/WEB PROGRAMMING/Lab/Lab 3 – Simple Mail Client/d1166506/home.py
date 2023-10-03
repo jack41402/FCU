@@ -59,6 +59,11 @@ class Mailbox(object):
         self.mail_content = QTextBrowser(MainWindow)
         self.mail_content.setReadOnly(True)
 
+        # Set font
+        font = self.mail_content.font()
+        font.setPointSize(14)
+        self.mail_content.setFont(font)
+
         # Create horizontal layout to place checkbox and mail table
         horizontal_layout = QHBoxLayout()
         horizontal_layout.addWidget(self.select_all_checkbox)

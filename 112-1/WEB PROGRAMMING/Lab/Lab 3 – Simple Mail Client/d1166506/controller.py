@@ -73,10 +73,12 @@ class MainWindow_controller(QMainWindow):
         self.GetMail()
 
     def LoginExitClicked(self):
-        sys.exit(-1)
+        sys.exit()
 
     def MailboxExitClicked(self):
         self.mail.quit()
+        sys.exit()
+
 
     def GetMail(self):
         self.mail.content = {}

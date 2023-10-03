@@ -4,8 +4,6 @@ from .client import Client
 from PyQt6.QtCore import pyqtSignal, QThread
 from getpass import getpass
 
-BUF_SIZE = 1024
-
 
 class Mail(QThread):
     mail_error_signal = pyqtSignal(str)

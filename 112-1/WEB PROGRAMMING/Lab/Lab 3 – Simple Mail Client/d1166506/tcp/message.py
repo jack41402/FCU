@@ -3,7 +3,7 @@ import socket
 import struct
 import binascii
 
-BUF_SIZE = 1024
+BUF_SIZE = 32767
 
 
 def receive_msg(socket_stream: socket):
