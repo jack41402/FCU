@@ -31,7 +31,7 @@ class MainWindow_controller(QMainWindow):
         self.mailbox.select_all_checkbox.stateChanged.connect(self.SelectAll)
         self.mailbox.mail_table.doubleClicked.connect(self.ShowMailContent)
         self.mailbox.delete_button.clicked.connect(self.DeleteMail)
-        self.mailbox.exit_button.clicked.connect(self.ExitClicked())
+        self.mailbox.exit_button.clicked.connect(self.ExitClicked)
 
     def RunClicked(self):
         msg_IP_Address = self.login.lineEdit_IP_Address.text()
@@ -63,10 +63,13 @@ class MainWindow_controller(QMainWindow):
             return False
         self.close()
 
-        self.mailbox = Mailbox()
-        self.mailbox.setupUi(self)
-        self.mailbox_setup_control()
-        self.show()
+        try:
+            self.mailbox = Mailbox()
+            self.mailbox.setupUi(self)
+            self.mailbox_setup_control()
+            self.show()
+        except Exception as e:
+            print(e)
         self.start()
 
     def ExitClicked(self):
