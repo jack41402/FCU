@@ -24,14 +24,14 @@ class MainWindow_controller(QMainWindow):
 
     def login_setup_control(self):
         self.login.btn_Run.clicked.connect(self.RunClicked)
-        self.login.btn_Exit.clicked.connect(self.ExitClicked)
+        self.login.btn_Exit.clicked.connect(self.LoginExitClicked)
         print("[INFO] Login setup successfully.")
 
     def mailbox_setup_control(self):
         self.mailbox.select_all_checkbox.stateChanged.connect(self.SelectAll)
         self.mailbox.mail_table.doubleClicked.connect(self.ShowMailContent)
         self.mailbox.delete_button.clicked.connect(self.DeleteMail)
-        self.mailbox.exit_button.clicked.connect(self.ExitClicked)
+        self.mailbox.exit_button.clicked.connect(self.MailboxExitClicked)
 
     def RunClicked(self):
         msg_IP_Address = self.login.lineEdit_IP_Address.text()
@@ -69,13 +69,17 @@ class MainWindow_controller(QMainWindow):
             self.mailbox_setup_control()
             self.show()
         except Exception as e:
-            print(e)
-        self.start()
+            print("Other exception in MainWindow_controller.RunClicked: %s" % str(e))
+        self.GetMail()
 
-    def ExitClicked(self):
+    def LoginExitClicked(self):
         sys.exit(-1)
 
-    def start(self):
+    def MailboxExitClicked(self):
+        self.mail.quit()
+
+    def GetMail(self):
+        self.mail.content = {}
         self.mail.parseLength(self.mail.list(), False)
         for key in self.mail.content.keys():
             self.mail.retrive(key)
@@ -95,7 +99,7 @@ class MainWindow_controller(QMainWindow):
                 print("[ERROR] PASSWORD FAULT")
                 self.login.lineEdit_Password.setText("")
         except Exception as e:
-            print("Other exception: %s" % str(e))
+            print("Other exception in MainWindow_controller.ErrorHandler: %s" % str(e))
 
     def AddMail(self, msg):
         row_position = self.mailbox.mail_table.rowCount()
@@ -111,15 +115,18 @@ class MainWindow_controller(QMainWindow):
         self.mailbox.mail_table.setItem(row_position, 1, QTableWidgetItem(info["header"]["From"]))
         self.mailbox.mail_table.setItem(row_position, 2, QTableWidgetItem(info["header"]["Subject"]))
         self.mailbox.mail_table.setItem(row_position, 3, QTableWidgetItem(info["header"]["Date"]))
-        self.mailbox.mail_table.setItem(row_position, 4, QTableWidgetItem(info["header"]["Date"]))
+        self.mailbox.mail_table.setItem(row_position, 4, QTableWidgetItem(info["header"]["Time"]))
 
         # Save mail content at first column in each mail
         item = self.mailbox.mail_table.item(row_position, 1)
+        item.setData(Qt.ItemDataRole.UserRole, msg)
+
+        item = self.mailbox.mail_table.item(row_position, 2)
         item.setData(Qt.ItemDataRole.UserRole, info["content"])
 
     def ShowMailContent(self, index):
         row = index.row()
-        content_item = self.mailbox.mail_table.item(row, 1)
+        content_item = self.mailbox.mail_table.item(row, 2)
         content = content_item.data(Qt.ItemDataRole.UserRole)
         self.mailbox.mail_content.clear()
         self.mailbox.mail_content.insertPlainText(content)
@@ -135,7 +142,18 @@ class MainWindow_controller(QMainWindow):
                     item.setCheckState(Qt.CheckState.Unchecked)
 
     def DeleteMail(self):
-        pass
+        try:
+            for row in range(self.mailbox.mail_table.rowCount()):
+                item = self.mailbox.mail_table.item(row, 0)
+                msg = self.mailbox.mail_table.item(row, 1).data(Qt.ItemDataRole.UserRole)
+                if item is not None and item.checkState() == Qt.CheckState.Checked:
+                    print("Mail %s is checked!" % msg)
+                    self.mail.delete(msg)
+            self.mailbox.mail_table.setRowCount(0)
+            self.GetMail()
+        except Exception as e:
+            print("Other exception in MainWindow_controller.DeleteMail: %s" % str(e))
+
 
     # def MessageBox(self, msg_type: str, msg: str):
     #     print("WRONG")

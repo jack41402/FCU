@@ -10,7 +10,7 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QTableWidget, QTableWidg
 class Mailbox(object):
     def setupUi(self, MainWindow):
         MainWindow.setWindowTitle('Mailbox')
-        MainWindow.setGeometry(100, 100, 1000, 600)
+        MainWindow.setGeometry(100, 100, 1200, 600)
 
         # Create a vertical layout
         main_layout = QVBoxLayout()
@@ -38,20 +38,22 @@ class Mailbox(object):
         # Add the button layout to the main layout at the bottom
         main_layout.addLayout(button_layout)
 
-        # Create mail table
         self.mail_table = QTableWidget(MainWindow)
         self.mail_table.setShowGrid(False)
         self.mail_table.setSortingEnabled(True)
         self.mail_table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         self.mail_table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
 
-        # Hide horizontal header, and only show vertical header
+        # Create horizontal header
         header = QHeaderView(Qt.Orientation.Horizontal, self.mail_table)
-        self.mail_table.setHorizontalHeader(header)
         header.setSectionsClickable(True)  # 允許點擊表頭
+        self.mail_table.setHorizontalHeader(header)
 
         self.mail_table.setColumnCount(5)
         self.mail_table.setHorizontalHeaderLabels(['', 'From', 'Subject', 'Date', 'Time'])
+
+        # Set ResizeToContents for the first column
+        # self.mail_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
 
         # Create text browser to show mail content
         self.mail_content = QTextBrowser(MainWindow)
@@ -75,13 +77,12 @@ class Mailbox(object):
         central_widget.setLayout(main_layout)
         MainWindow.setCentralWidget(central_widget)
 
-        # Add example mails
-        # self.add_mail('Sender 1', 'Subject 1', 'Date 1', 'Time 1', 'Content 1')
-        # self.add_mail('Sender 2', 'Subject 2', 'Date 2', 'Time 2', 'Content 2')
-        # self.add_mail('Sender 3', 'Subject 3', 'Date 3', 'Time 3', 'Content 3')
-
         # Adjust checkbox width
         self.mail_table.setColumnWidth(0, 20)
+        self.mail_table.setColumnWidth(1, 180)
+        self.mail_table.setColumnWidth(2, 150)
+        self.mail_table.setColumnWidth(3, 100)
+        self.mail_table.setColumnWidth(4, 60)
 
 
 if __name__ == '__main__':

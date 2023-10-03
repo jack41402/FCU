@@ -64,6 +64,11 @@ class Mail(QThread):
                     if ':' in line:
                         key, value = line.split(':', 1)
                         self.content[msg]["header"][key.strip()] = value.strip()
+                time = self.content[msg]["header"]["Date"].split(' ', 4)
+                date = self.content[msg]["header"]["Date"][:-len(time[4])]
+                self.content[msg]["header"]["Date"] = date
+                time = time[4].split()[0]
+                self.content[msg]["header"]["Time"] = time
                 print("Subject: %s" % self.content[msg]["header"].get('Subject', ''))
                 print("From: %s" % self.content[msg]["header"].get('From', ''))
                 print("To: %s" % self.content[msg]["header"].get('To', ''))
