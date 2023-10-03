@@ -1,20 +1,25 @@
 import sys
 import socket
+from .client import Client
+from PyQt6.QtCore import pyqtSignal, QThread
 from getpass import getpass
 
 BUF_SIZE = 1024
 
 
-class Mail:
-    def __init__(self, client_socket: socket):
+class Mail(QThread):
+    mail_error_signal = pyqtSignal(str)
+
+    def __init__(self, ip, port):
+        super().__init__()
+        self.client = Client(ip, port)
+        self.clientSocket = self.client.clientSocket
         self.format = {
             "length": int,
-            "header": dict,
+            "header": {},
             "content": str
         }
         self.content = {}
-        self.parseLength(self.list(), False)
-        self.clientSocket = client_socket
 
     def parseLength(self, msg: str, with_number: bool = False):
         try:
@@ -24,7 +29,7 @@ class Mail:
                 for i in line:
                     mail_format = self.format
                     key, value = i.split(' ', 1)
-                    mail_format["length"] = value
+                    mail_format["length"] = int(value)
                     self.content[key] = mail_format
                 return True
             elif with_number:
@@ -39,22 +44,38 @@ class Mail:
             print("Other exception: %s" % str(e))
             return False
 
-    def parseContent(self, mail: str):
+    def parseContent(self, mail: str, msg: int):
         try:
-            header, _, body = mail.partition("\n\n")
-            header_lines = header.split('\n')
-            for line in header_lines:
-                if ':' in line:
-                    key, value = line.split(':', 1)
-                    self.content[][key.strip()] = value.strip()
-            print("Subject: %s" % header_dict.get('Subject', ''))
-            print("From: %s" % header_dict.get('From', ''))
-            print("To: %s" % header_dict.get('To', ''))
-            print("Date: %s" % header_dict.get('Date', ''))
-            print("\n\nContent:\n")
-            print(body)
+            # 找到 header 和 body 的分隔位置
+            separator = "\r\n\r\n"
+            separator_index = mail.find(separator)
+
+            # 檢查是否找到分隔符號
+            if separator_index != -1:
+                header = mail[1:separator_index]  # 提取 header 部分
+                self.content[msg]["content"] = mail[separator_index + len(separator):-3]  # 提取 body 部分
+                separator = "octets"
+                separator_index = header.find(separator)
+                header = header[separator_index + len("octets"):]  # 提取拿掉伺服器回應的 header 部分
+
+                header_lines = header.split('\n')
+
+                for line in header_lines:
+                    if ':' in line:
+                        key, value = line.split(':', 1)
+                        self.content[msg]["header"][key.strip()] = value.strip()
+                print("Subject: %s" % self.content[msg]["header"].get('Subject', ''))
+                print("From: %s" % self.content[msg]["header"].get('From', ''))
+                print("To: %s" % self.content[msg]["header"].get('To', ''))
+                print("Date: %s" % self.content[msg]["header"].get('Date', ''))
+                print("\n\nContent:\n")
+                print(self.content[msg]["content"])
+
+            else:
+                print("Separator not found in the mail content.")
+
         except Exception as e:
-            print("Other exception: %s" % str(e))
+            print("Other exception in mail.parseContent: %s" % str(e))
             return False
 
     def validate(self, msg: int):
@@ -68,31 +89,41 @@ class Mail:
             else:
                 return True
         except Exception as e:
-            print("Other exception: %s" % str(e))
+            print("Other exception in mail.validate: %s" % str(e))
             return False
 
-    def send_command(self, msg: str):
+    def send_command(self, command):
         try:
-            self.clientSocket.send(msg)
-            server_msg = self.clientSocket.receive()
-            return server_msg
+            self.client.send(command)
+            server_msg = self.client.receive()
+            if server_msg is not None:
+                return server_msg
         except Exception as e:
-            print("Other exception: %s" % str(e))
+            print("Other exception in mail.send_command: %s" % str(e))
             return False
 
     def user(self, name: str):
         try:
-            return self.send_command("USER " + name + "\r\n")
+            error = self.send_command("USER " + name + "\r\n")
+            if error[0] == '-':
+                self.mail_error_signal.emit("USER ERROR")
+                return False
+            elif error[0] == '+':
+                return error
         except Exception as e:
-            print("Other exception: %s" % str(e))
+            print("Other exception in mail.user: %s" % str(e))
             return False
 
     def password(self, password: str):
         try:
-            self.send_command("PASS " + password + "\r\n")
-            return True
+            error = self.send_command("PASS " + password + "\r\n")
+            if error[0] == '-':
+                self.mail_error_signal.emit("PASSWORD ERROR")
+                return False
+            elif error[0] == '+':
+                return error
         except Exception as e:
-            print("Other exception: %s" % str(e))
+            print("Other exception in mail.password: %s" % str(e))
             return False
 
     def quit(self):
@@ -126,7 +157,7 @@ class Mail:
         try:
             if self.validate(msg):
                 mail = self.send_command("RETR " + str(msg) + "\r\n")
-                self.parseContent(mail)
+                self.parseContent(mail, msg)
             return True
         except Exception as e:
             print("Other exception: %s" % str(e))

@@ -12,8 +12,7 @@ def receive_msg(socket_stream: socket):
         try:
             server_reply = server_msg.decode('utf-8')
             print('Receive message: %s' % server_reply)
-            if server_reply[0] != '+':
-                return False
+            return server_reply
         except socket.error as e:
             print("Socket error: %s" % str(e))
         except Exception as e:
