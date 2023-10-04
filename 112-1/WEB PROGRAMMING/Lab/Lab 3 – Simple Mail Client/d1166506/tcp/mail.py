@@ -22,12 +22,12 @@ class Mail(QThread):
     def parseLength(self, msg: str, with_number: bool = False):
         try:
             if not with_number:
-                line = msg.split('\n')
-                del line[0], line[-1]
+                line = msg.split('\r\n')
+                del line[0], line[-1], line[-1]
                 for i in line:
                     mail_format = self.format
                     key, value = i.split(' ', 1)
-                    mail_format["length"] = int(value)
+                    mail_format["length"] = value.strip()
                     self.content[key] = mail_format
                 return True
             elif with_number:
@@ -67,12 +67,12 @@ class Mail(QThread):
                 self.content[msg]["header"]["Date"] = date
                 time = time[4].split()[0]
                 self.content[msg]["header"]["Time"] = time
-                print("Subject: %s" % self.content[msg]["header"].get('Subject', ''))
-                print("From: %s" % self.content[msg]["header"].get('From', ''))
-                print("To: %s" % self.content[msg]["header"].get('To', ''))
-                print("Date: %s" % self.content[msg]["header"].get('Date', ''))
-                print("\n\nContent:\n")
-                print(self.content[msg]["content"])
+                # print("Subject: %s" % self.content[msg]["header"].get('Subject', ''))
+                # print("From: %s" % self.content[msg]["header"].get('From', ''))
+                # print("To: %s" % self.content[msg]["header"].get('To', ''))
+                # print("Date: %s" % self.content[msg]["header"].get('Date', ''))
+                # print("\n\nContent:\n")
+                # print(self.content[msg]["content"])
 
             else:
                 print("Separator not found in the mail content.")

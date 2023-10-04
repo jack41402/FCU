@@ -10,7 +10,7 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QTableWidget, QTableWidg
 class Mailbox(object):
     def setupUi(self, MainWindow):
         MainWindow.setWindowTitle('Mailbox')
-        MainWindow.setGeometry(100, 100, 1200, 600)
+        MainWindow.setGeometry(100, 100, 2200, 600)
 
         # Create a vertical layout
         main_layout = QVBoxLayout()
@@ -49,8 +49,8 @@ class Mailbox(object):
         header.setSectionsClickable(True)  # 允許點擊表頭
         self.mail_table.setHorizontalHeader(header)
 
-        self.mail_table.setColumnCount(5)
-        self.mail_table.setHorizontalHeaderLabels(['', 'From', 'Subject', 'Date', 'Time'])
+        self.mail_table.setColumnCount(6)
+        self.mail_table.setHorizontalHeaderLabels(['', 'From', 'To', 'Subject', 'Date', 'Time'])
 
         # Set ResizeToContents for the first column
         # self.mail_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeMode.ResizeToContents)
@@ -84,10 +84,11 @@ class Mailbox(object):
 
         # Adjust checkbox width
         self.mail_table.setColumnWidth(0, 20)
-        self.mail_table.setColumnWidth(1, 180)
-        self.mail_table.setColumnWidth(2, 150)
-        self.mail_table.setColumnWidth(3, 100)
-        self.mail_table.setColumnWidth(4, 60)
+        self.mail_table.setColumnWidth(1, 170)
+        self.mail_table.setColumnWidth(2, 230)
+        self.mail_table.setColumnWidth(3, 150)
+        self.mail_table.setColumnWidth(4, 100)
+        self.mail_table.setColumnWidth(5, 60)
 
 
 if __name__ == '__main__':

@@ -86,7 +86,9 @@ class MainWindow_controller(QMainWindow):
         for key in self.mail.content.keys():
             self.mail.retrive(key)
             self.AddMail(key)
-
+        for key in self.mail.content.keys():
+            print("\nKey: %s" % key)
+            print(f"{self.mail.content[key]}")
         # for info in self.mail.content["header"]:
         #     print(info)
 
@@ -111,13 +113,13 @@ class MainWindow_controller(QMainWindow):
         item.setCheckState(Qt.CheckState.Unchecked)
         self.mailbox.mail_table.setItem(row_position, 0, item)
         info = self.mail.content[msg]
-        print(info)
 
         # Create row item
         self.mailbox.mail_table.setItem(row_position, 1, QTableWidgetItem(info["header"]["From"]))
-        self.mailbox.mail_table.setItem(row_position, 2, QTableWidgetItem(info["header"]["Subject"]))
-        self.mailbox.mail_table.setItem(row_position, 3, QTableWidgetItem(info["header"]["Date"]))
-        self.mailbox.mail_table.setItem(row_position, 4, QTableWidgetItem(info["header"]["Time"]))
+        self.mailbox.mail_table.setItem(row_position, 2, QTableWidgetItem(info["header"]["To"]))
+        self.mailbox.mail_table.setItem(row_position, 3, QTableWidgetItem(info["header"]["Subject"]))
+        self.mailbox.mail_table.setItem(row_position, 4, QTableWidgetItem(info["header"]["Date"]))
+        self.mailbox.mail_table.setItem(row_position, 5, QTableWidgetItem(info["header"]["Time"]))
 
         # Save mail content at first column in each mail
         item = self.mailbox.mail_table.item(row_position, 1)
