@@ -81,5 +81,4 @@ class Server(QThread):
         pass
 
     def close(self):
-        self.client.close()
-        self.serverSocket.close()
+        pass
