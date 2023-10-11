@@ -1,10 +1,8 @@
-from PyQt6.QtCore import Qt, pyqtSignal
-from PyQt6.QtGui import QTextCursor
-from PyQt6.QtWidgets import QTableWidgetItem, QMainWindow
-from UI import login, register
-from database import sql
-from rpc import server, client, validate
-import sys
+from PyQt6.QtCore import pyqtSignal, Qt
+from PyQt6.QtWidgets import QMainWindow, QListWidgetItem
+from UI import login, register, forum, post
+from rpc import client
+import datetime
 
 
 class Login_controller(QMainWindow):
@@ -16,11 +14,11 @@ class Login_controller(QMainWindow):
         self.LoginWindow.setupUi(self)
         self.login_setup_control()
         self.RegisterWindow = None
+        self.ForumWindow = None
         self.client = None
         self.ip = "127.0.0.1"
         self.port = 6666
         self.start()
-        self.database = sql.SQL()
 
     def login_setup_control(self):
         try:
@@ -34,15 +32,17 @@ class Login_controller(QMainWindow):
         try:
             username = self.LoginWindow.Username_lineEdit.text()
             password = self.LoginWindow.Password_lineEdit.text()
-            try_login = self.server.login(username, password)
+            try_login = self.client.proxy.login(username, password)
             if try_login is False:
                 self.LoginWindow.Password_lineEdit.setText("")
             elif try_login is True:
                 self.close()
                 if self.RegisterWindow:
                     self.RegisterWindow.close()
-            else:
-                return False
+                self.client.username = username
+                self.ForumWindow = Forum_controller(self.client)
+                self.ForumWindow.show()
+                self.close()
         except Exception as e:
             print(f'[ERROR] Other exception in Login_controller.LoginClicked: {e}')
 
@@ -51,7 +51,7 @@ class Login_controller(QMainWindow):
             if not self.RegisterWindow:
                 self.RegisterWindow = Register_controller()
             self.RegisterWindow.LoginWindow = self
-            self.RegisterWindow.server = self.server
+            self.RegisterWindow.client = self.client
             self.hide()
             self.LoginWindow.Username_lineEdit.setText("")
             self.LoginWindow.Password_lineEdit.setText("")
@@ -85,8 +85,7 @@ class Register_controller(QMainWindow):
         self.register_setup_control()
 
         self.LoginWindow = None
-        self.server = None
-        self.database = sql.SQL()
+        self.client = None
 
     def register_setup_control(self):
         try:
@@ -101,7 +100,7 @@ class Register_controller(QMainWindow):
             username = self.RegisterWindow.Username_lineEdit.text()
             password = self.RegisterWindow.Password_lineEdit.text()
             confirm_password = self.RegisterWindow.Confirm_Password_lineEdit.text()
-            try_register = self.server.register(username, password, confirm_password)
+            try_register = self.client.register(username, password, confirm_password)
             if try_register is False:
                 self.RegisterWindow.Password_lineEdit.setText("")
                 self.RegisterWindow.Confirm_Password_lineEdit.setText("")
@@ -109,7 +108,7 @@ class Register_controller(QMainWindow):
                 self.close()
                 self.LoginWindow.show()
         except Exception as e:
-            print(f'[ERROR] Other exception in Login_controller.LoginClicked: {e}')
+            print(f'[ERROR] Other exception in Register_controller.RegisterClicked: {e}')
 
     def LoginClicked(self):
         try:
@@ -119,18 +118,88 @@ class Register_controller(QMainWindow):
             self.RegisterWindow.Confirm_Password_lineEdit.setText("")
             self.LoginWindow.show()
         except Exception as e:
-            print(f'[ERROR] Other exception in Login_controller.RegisterClicked: {e}')
+            print(f'[ERROR] Other exception in Register_controller.LoginClicked: {e}')
 
 
 class Forum_controller(QMainWindow):
-    def __init__(self):
+    def __init__(self, client):
         super(Forum_controller, self).__init__()
-        self.LoginWindow = login.Ui_Login()
-        self.LoginWindow.setupUi(self)
-        self.login_setup_control()
-        self.RegisterWindow = None
+        self.ForumWindow = forum.Ui_Forum()
+        self.ForumWindow.setupUi(self)
+        self.forum_setup_control()
+        self.client = client
+        self.PostWindow = None
+        self.updateArticle()
+
+    def forum_setup_control(self):
+        try:
+            self.ForumWindow.Post_pushButton.clicked.connect(self.PostClicked)
+            self.ForumWindow.Delete_pushButton.clicked.connect(self.DeleteClicked)
+            self.ForumWindow.Article_listWidget.itemClicked.connect(self.showArticle)
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.Forum_setup_control: {e}')
+
+    def PostClicked(self):
+        try:
+            self.PostWindow = Post_controller()
+            self.PostWindow.client = self.client
+            self.PostWindow.show()
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.PostClicked: {e}')
+
+    def DeleteClicked(self):
+        pass
+
+    def showArticle(self, item):
+        article = item.data(Qt.ItemDataRole.UserRole)
+        header = article.title + '\n' + article.author + '\n' + article.time.strftime("%Y-%m-%d %H:%M:%S")
+        print("Header: ", header)
+        self.ForumWindow.Header_textBrowser.setText(header)
+        self.ForumWindow.Content_textBrowser.setText(article.content)
+
+    def updateArticle(self):
+        result = self.client.subject()
+        if result is not None:
+            for row in result:
+                article = Article(row[0], row[1], row[2], row[3], row[4], self.client.user(row[4])[0][2])
+                # item["datetime"] = row[3].strftime("%Y-%m-%d %H:%M:%S")
+                item = QListWidgetItem(article.title)
+                item.setData(Qt.ItemDataRole.UserRole, article)
+                self.ForumWindow.Article_listWidget.addItem(item)
+
+class Post_controller(QMainWindow):
+    def __init__(self):
+        super(Post_controller, self).__init__()
+        self.PostWindow = post.Ui_Post()
+        self.PostWindow.setupUi(self)
+        self.post_setup_control()
         self.client = None
-        self.ip = "127.0.0.1"
-        self.port = 6666
-        self.start()
-        self.database = sql.SQL()
+
+    def post_setup_control(self):
+        try:
+            self.PostWindow.Post_pushButton.clicked.connect(self.PostClicked)
+            self.PostWindow.Cancel_pushButton.clicked.connect(self.CancelClicked)
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.Forum_setup_control: {e}')
+
+    def PostClicked(self):
+        try:
+            title = self.PostWindow.Title_lineEdit.text()
+            content = self.PostWindow.Content_textEdit.toPlainText()
+            self.client.post(title, content)
+            self.close()
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.PostClicked: {e}')
+
+    def CancelClicked(self):
+        pass
+
+
+class Article:
+    def __init__(self, id: int, title: str, content: str, time: datetime, author_id: int, author: str):
+        self.id = id
+        self.title = title
+        self.content = content
+        self.time = time
+        self.author_id = author_id
+        self.author = author

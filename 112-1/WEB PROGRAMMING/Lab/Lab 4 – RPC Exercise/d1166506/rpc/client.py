@@ -1,9 +1,7 @@
 # Student ID: D1166506
 # Name: 周嘉禾
-import socket
 import xmlrpc.client
 from PyQt6.QtCore import pyqtSignal, QThread
-from . import message
 
 
 class Client(QThread):
@@ -13,18 +11,47 @@ class Client(QThread):
         super().__init__()
         self.ip = ip
         self.port = port
-        self.address = f'https://{self.ip}:{self.port}/'
-        self.proxy = None
         # CHECK HTTPS
-        self.run()
+        self.address = f'http://{self.ip}:{self.port}/'
+        self.proxy = None
+        self.username = None
 
     def run(self):
         self.connection()
 
     def connection(self):
         print("Connecting to %s port %s" % (self.ip, self.port))
-        self.proxy = xmlrpc.client.ServerProxy(self.address)
+        self.proxy = xmlrpc.client.ServerProxy(self.address, allow_none=True)
         print("[CLIENT] Connected successfully.")
 
+    def login(self, username: str, password: str):
+        try:
+            self.proxy.login(username, password)
+            print(username)
+            self.username = username
+        except Exception as e:
+            print(f'[ERROR] Other exception in client.login: {e}')
+
+    def register(self, username: str, password: str, confirm_password: str):
+        try:
+            self.proxy.register(username, password, confirm_password)
+        except Exception as e:
+            print(f'[ERROR] Other exception in client.register: {e}')
+
+    def post(self, title: str, content: str):
+        try:
+            self.proxy.create(title, content, self.username)
+        except Exception as e:
+            print(f'[ERROR] Other exception in client.post: {e}')
+
+    def subject(self):
+        try:
+            return self.proxy.subject()
+        except Exception as e:
+            print(f'[ERROR] Other exception in client.subject: {e}')
+
+    def user(self, user_id: int):
+        return self.proxy.user(user_id)
+
     def close(self):
-        self.clientSocket.close()
+        pass

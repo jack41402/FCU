@@ -1,8 +1,6 @@
 # Student ID: D1166506
 # Name: 周嘉禾
-import socket
 from PyQt6.QtCore import pyqtSignal, QThread
-from . import message
 from database import sql
 from xmlrpc.server import SimpleXMLRPCServer, SimpleXMLRPCRequestHandler
 
@@ -20,21 +18,25 @@ class Server(QThread):
 
     def run(self):
         self.connection()
+        self.registry()
+        self.server.serve_forever()
 
     def connection(self):
         try:
             print("Starting up server on port: %s" % self.port)
-            self.server = SimpleXMLRPCServer(("localhost", self.port))
-            self.server.serve_forever()
+            self.server = SimpleXMLRPCServer(("localhost", self.port), allow_none=True)
             print("[SERVER] Waiting for connection...")
         except Exception as e:
             print(f'[ERROR] Other exception in server.connection: {e}')
 
     def registry(self):
-        self.server.registry(self.login, "login")
-        self.server.registry(self.register, "register")
-        self.server.registry(self.create, "create")
-        self.server.registry(self.subject, "subject")
+        print("Registry...")
+        self.server.register_function(self.login, "login")
+        self.server.register_function(self.register, "register")
+        self.server.register_function(self.create, "create")
+        self.server.register_function(self.subject, "subject")
+
+        self.server.register_function(self.user, "user")
 
     def login(self, username: str, password: str):
         try:
@@ -71,7 +73,7 @@ class Server(QThread):
                 print("[ERROR] PASSWORD DOESN'T MATCH.")
                 return False
             else:
-                maxId = self.database.findMaxId("user_information")
+                maxId = self.database.findMaxId("user_information", "id")
                 self.database.insertInfo("user_information",
                                          {"id": maxId, "username": username, "password": password})
                 print("[INFO] Register successfully.")
@@ -79,26 +81,24 @@ class Server(QThread):
         except Exception as e:
             print(f'[ERROR] Other exception in server.register: {e}')
 
-    def create(self, title: str, content: str, username: str):
+    def create(self, title: str, content: str, author: str):
         try:
             if not title:
                 print("[ERROR] TITLE CAN'T BE EMPTY.")
             elif not content:
                 print("[ERROR] CONTENT CAN'T BE EMPTY.")
             else:
-                maxId = self.database.findMaxId("forum")
-                user_id = self.database.findInfo("user_information", "username", username)
+                maxId = self.database.findMaxId("forum", "article_id")
+                user_id = self.database.findInfo("user_information", "username", author)
                 user_id = user_id[0][0]
                 self.database.insertInfo("forum",
-                                         {"id": maxId, "title": title, "content": content, "date": "NOW()", "user_id": user_id})
+                                         {"article_id": maxId, "title": title, "content": content, "user_id": user_id})
         except Exception as e:
             print(f'[ERROR] Other exception in server.create: {e}')
 
     def subject(self):
         try:
-            article = self.database.getTable("forum")
-            for row in article:
-                print(row)
+            return self.database.getTable("forum")
         except Exception as e:
             print(f'[ERROR] Other exception in server.subject: {e}')
 
@@ -113,3 +113,6 @@ class Server(QThread):
 
     def close(self):
         pass
+
+    def user(self, user_id: int):
+        return self.database.findInfo("user_information", "id", str(user_id))

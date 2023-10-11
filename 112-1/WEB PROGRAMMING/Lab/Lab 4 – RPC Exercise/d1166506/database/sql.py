@@ -41,25 +41,28 @@ class SQL:
             if table == "user_information":
                 command = "INSERT INTO user_information(id, username, password) VALUES(%s, %s, %s)"
                 self.command(command, (info["id"], info["username"], info["password"]))
+                print("[INFO] Insert into user_information successfully.")
             elif table == "forum":
-                command = "INSERT INTO forum(id, title, content, date, user_id) VALUES(%s, %s, %s, %s, %s)"
-                self.command(command, (info["id"], info["title"], info["content"]))
+                command = "INSERT INTO forum(article_id, title, content, time, user_id) VALUES(%s, %s, %s, NOW(), %s)"
+                self.command(command, (info["article_id"], info["title"], info["content"], info["user_id"]))
+                print("[INFO] Insert into forum successfully.")
             else:
                 return False
         except Exception as e:
             print(f'[ERROR] Other exception in sql.insertInfo: {e}')
 
-    def findMaxId(self, table: str):
+    def findMaxId(self, table: str, column: str):
         try:
-            command = "SELECT MAX(id) FROM %s"
-            result = self.command(command, (table, ))
-            print("result: %s" % result)
-            if not result:
+            command = "SELECT MAX(%s) FROM " + table
+            result = self.command(command, (column, ))
+            print("result in maxId: %s" % result)
+            result = result[0][0]
+            print("result in maxId: %s" % result)
+            if result is None:
                 result = 1
             else:
                 result += 1
-            print("maxId: %s" % result)
-            return result[0][0]
+            return result
         except Exception as e:
             print(f'[ERROR] Other exception in sql.findMax: {e}')
 
@@ -67,18 +70,17 @@ class SQL:
         try:
             command = '''SELECT * FROM %s WHERE %s="%s"'''
             command %= table, key, value
-            print(command)
             result = self.command(command, ())
-            print(result)
             return result
         except Exception as e:
             print(f'[ERROR] Other exception in sql.findInfo: {e}')
 
     def getTable(self, table: str):
         try:
-            command = "SELECT * FROM %s"
-            result = self.command(command, (table, ))
-            print(result)
+            command = "SELECT * FROM " + table
+            result = self.command(command, ())
+            if result:
+                print("result in getTable: %s" % result)
             return result
         except Exception as e:
             print(f'[ERROR] Other exception in sql.getTable: {e}')
