@@ -40,21 +40,25 @@ class SQL:
         try:
             if table == "user_information":
                 command = "INSERT INTO user_information(id, username, password) VALUES(%s, %s, %s)"
-                maxId = self.findMaxId()
-                if not maxId:
-                    maxId = 0
-                print("maxId: %s" % maxId)
-                self.command(command, (maxId + 1, info["username"], info["password"]))
+                self.command(command, (info["id"], info["username"], info["password"]))
+            elif table == "forum":
+                command = "INSERT INTO forum(id, title, content, date, user_id) VALUES(%s, %s, %s, %s, %s)"
+                self.command(command, (info["id"], info["title"], info["content"]))
             else:
                 return False
         except Exception as e:
             print(f'[ERROR] Other exception in sql.insertInfo: {e}')
 
-    def findMaxId(self):
+    def findMaxId(self, table: str):
         try:
-            command = "SELECT MAX(id) FROM user_information"
-            result = self.command(command, ())
-            print(result)
+            command = "SELECT MAX(id) FROM %s"
+            result = self.command(command, (table, ))
+            print("result: %s" % result)
+            if not result:
+                result = 1
+            else:
+                result += 1
+            print("maxId: %s" % result)
             return result[0][0]
         except Exception as e:
             print(f'[ERROR] Other exception in sql.findMax: {e}')
@@ -69,3 +73,12 @@ class SQL:
             return result
         except Exception as e:
             print(f'[ERROR] Other exception in sql.findInfo: {e}')
+
+    def getTable(self, table: str):
+        try:
+            command = "SELECT * FROM %s"
+            result = self.command(command, (table, ))
+            print(result)
+            return result
+        except Exception as e:
+            print(f'[ERROR] Other exception in sql.getTable: {e}')

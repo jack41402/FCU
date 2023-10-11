@@ -24,9 +24,7 @@ class Client(QThread):
     def connection(self):
         print("Connecting to %s port %s" % (self.ip, self.port))
         self.proxy = xmlrpc.client.ServerProxy(self.address)
-
-        self.receive()
         print("[CLIENT] Connected successfully.")
-    
+
     def close(self):
         self.clientSocket.close()

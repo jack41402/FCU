@@ -120,3 +120,17 @@ class Register_controller(QMainWindow):
             self.LoginWindow.show()
         except Exception as e:
             print(f'[ERROR] Other exception in Login_controller.RegisterClicked: {e}')
+
+
+class Forum_controller(QMainWindow):
+    def __init__(self):
+        super(Forum_controller, self).__init__()
+        self.LoginWindow = login.Ui_Login()
+        self.LoginWindow.setupUi(self)
+        self.login_setup_control()
+        self.RegisterWindow = None
+        self.client = None
+        self.ip = "127.0.0.1"
+        self.port = 6666
+        self.start()
+        self.database = sql.SQL()
