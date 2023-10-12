@@ -28,7 +28,6 @@ int main(void) {
 	const int wall_window = 2; // The space from the wall to left/right window, 2.
 	const int window_door = 4; // The space between the window and the door, 4.
 	
-	
 	int t_width, t_height; // Total width and height, including the roof, of the house.	
 	int e_width, e_height; // Exterior width and height of the house.
 	int i_width, i_height; // Interior width and height of the house.
