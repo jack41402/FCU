@@ -54,6 +54,7 @@ class SQL:
     def findMaxId(self, table: str, column: str):
         try:
             command = "SELECT MAX(%s) FROM " + table
+            print("Command in findMaxId: ", command)
             result = self.command(command, (column, ))
             print("result in maxId: %s" % result)
             result = result[0][0]
@@ -80,7 +81,7 @@ class SQL:
             command = "SELECT * FROM " + table
             result = self.command(command, ())
             if result:
-                print("result in getTable: %s" % result)
+                print("result in getTable: ",  result)
             return result
         except Exception as e:
             print(f'[ERROR] Other exception in sql.getTable: {e}')

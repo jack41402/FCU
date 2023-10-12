@@ -1,14 +1,37 @@
-from database import sql
+from PyQt6 import QtWidgets, QtCore, QtGui
+import sys
+app = QtWidgets.QApplication(sys.argv)
 
-user = sql.SQL()
-try:
-    username = "jack3"
-    password = "pass"
-    # user.insertInfo("user_information", {"username": username, "password": password})
-    result = user.findInfo("user_information", "username", "jack3")
-    if len(result) == 0:
-        print(f"Find result: {result}")
-    else:
-        print("Password: %s" % result[0][2])
-except Exception as e:
-    print(f'[ERROR] TEST: {e}')
+Form = QtWidgets.QWidget()
+Form.setWindowTitle('oxxo.studio')
+Form.resize(300, 200)
+
+def show():
+    print(listwidget.currentItem().text(), listwidget.currentIndex().row())
+
+def create_item(text):
+    item = QtWidgets.QListWidgetItem(listwidget)
+    item.setText(text)
+    item.setIcon(QtGui.QIcon('icon.png'))
+    return item
+
+listwidget = QtWidgets.QListWidget(Form)
+listwidget.addItems(['A','B','C','D'])
+listwidget.setGeometry(10,10,200,50)
+listwidget.addItem(create_item(''))
+# listwidget.setFlow(QtWidgets.QListView.LeftToRight)  # 改成水平顯示
+listwidget.setStyleSheet('''
+    QListWidget{
+        color:#00f;
+    }
+    QListWidget::item{
+        width:30px;
+    }
+    QListWidget::item:selected{
+        color:#f00;
+        background:#000;
+    }
+''')
+
+Form.show()
+sys.exit(app.exec())

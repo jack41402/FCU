@@ -151,21 +151,49 @@ class Forum_controller(QMainWindow):
         pass
 
     def showArticle(self, item):
-        article = item.data(Qt.ItemDataRole.UserRole)
-        header = article.title + '\n' + article.author + '\n' + article.time.strftime("%Y-%m-%d %H:%M:%S")
-        print("Header: ", header)
-        self.ForumWindow.Header_textBrowser.setText(header)
-        self.ForumWindow.Content_textBrowser.setText(article.content)
+        try:
+            article = item.data(Qt.ItemDataRole.UserRole)
+            print("Article: ", article)
+            print(article.title)
+            print(article.author)
+            print(article.time)
+            header = article.title + '\n' + article.author + '\n' + article.time.strftime("%Y-%m-%d %H:%M:%S")
+            print("Header: ", header)
+            self.ForumWindow.Header_textBrowser.setText(header)
+            self.ForumWindow.Content_textBrowser.setText(article.content)
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.showArticle: {e}')
 
     def updateArticle(self):
-        result = self.client.subject()
-        if result is not None:
-            for row in result:
-                article = Article(row[0], row[1], row[2], row[3], row[4], self.client.user(row[4])[0][2])
-                # item["datetime"] = row[3].strftime("%Y-%m-%d %H:%M:%S")
-                item = QListWidgetItem(article.title)
-                item.setData(Qt.ItemDataRole.UserRole, article)
-                self.ForumWindow.Article_listWidget.addItem(item)
+        try:
+            result = self.client.subject()
+            if result is not None:
+                for row in result:
+                    article = Article(row[0], row[1], row[2], row[3], row[4], self.client.user(row[4])[0][2])
+                    # item["datetime"] = row[3].strftime("%Y-%m-%d %H:%M:%S")
+
+
+                    # Convert the XML-RPC DateTime to a Python datetime object
+                    # standard_datetime = datetime.datetime.strptime(str(row[3].datetime), '%Y%m%dT%H:%M:%S')
+                    xmlrpc_datetime = row[3]
+
+                    # Convert the XML-RPC DateTime to a Python datetime object
+                    date_string = xmlrpc_datetime.isoformat()
+                    standard_datetime = datetime.fromisoformat(date_string)
+
+                    print(standard_datetime)
+                    print(type(row[3]))
+                    print(standard_datetime)
+                    print(type(standard_datetime))
+                    print("row[3]: ", row[3].strftime("%Y-%m-%d %H:%M:%S"))
+                    print("item.time: ", article.time.strftime("%Y-%m-%d %H:%M:%S"))
+                    item = QListWidgetItem(article.title)
+                    item.setData(Qt.ItemDataRole.UserRole, article)
+                    print("Item data: ", item.data(Qt.ItemDataRole.UserRole))
+                    self.ForumWindow.Article_listWidget.addItem(item)
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.updateArticle: {e}')
+
 
 class Post_controller(QMainWindow):
     def __init__(self):
@@ -196,8 +224,8 @@ class Post_controller(QMainWindow):
 
 
 class Article:
-    def __init__(self, id: int, title: str, content: str, time: datetime, author_id: int, author: str):
-        self.id = id
+    def __init__(self, article_id: int, title: str, content: str, time: datetime, author_id: int, author: str):
+        self.article = article_id
         self.title = title
         self.content = content
         self.time = time
