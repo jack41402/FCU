@@ -177,10 +177,10 @@ class Forum_controller(QMainWindow):
                     # standard_datetime = datetime.datetime.strptime(str(row[3].datetime), '%Y%m%dT%H:%M:%S')
                     xmlrpc_datetime = row[3]
 
-                    # Convert the XML-RPC DateTime to a Python datetime object
-                    date_string = xmlrpc_datetime.isoformat()
-                    standard_datetime = datetime.fromisoformat(date_string)
-
+                    # # Convert the XML-RPC DateTime to a Python datetime object
+                    # date_string = xmlrpc_datetime.isoformat()
+                    # standard_datetime = datetime.fromisoformat(date_string)
+                    standard_datetime = datetime.datetime.fromtimestamp(xmlrpc_datetime.timestamp())
                     print(standard_datetime)
                     print(type(row[3]))
                     print(standard_datetime)
