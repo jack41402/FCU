@@ -1,4 +1,5 @@
-from PyQt6.QtCore import pyqtSignal, Qt
+from PyQt6 import QtGui
+from PyQt6.QtCore import pyqtSignal, Qt, QSize
 from PyQt6.QtWidgets import QMainWindow, QListWidgetItem
 from UI import login, register, forum, post
 from rpc import client
@@ -153,14 +154,14 @@ class Forum_controller(QMainWindow):
     def showArticle(self, item):
         try:
             article = item.data(Qt.ItemDataRole.UserRole)
-            print("Article: ", article)
             print(article.title)
             print(article.author)
             print(article.time)
             header = article.title + '\n' + article.author + '\n' + article.time.strftime("%Y-%m-%d %H:%M:%S")
-            print("Header: ", header)
             self.ForumWindow.Header_textBrowser.setText(header)
             self.ForumWindow.Content_textBrowser.setText(article.content)
+            if article.author is not self.client.username:
+                self.ForumWindow.Delete_pushButton.hide()
         except Exception as e:
             print(f'[ERROR] Other exception in Forum_controller.showArticle: {e}')
 
@@ -170,26 +171,10 @@ class Forum_controller(QMainWindow):
             if result is not None:
                 for row in result:
                     article = Article(row[0], row[1], row[2], row[3], row[4], self.client.user(row[4])[0][2])
-                    # item["datetime"] = row[3].strftime("%Y-%m-%d %H:%M:%S")
-
-
-                    # Convert the XML-RPC DateTime to a Python datetime object
-                    # standard_datetime = datetime.datetime.strptime(str(row[3].datetime), '%Y%m%dT%H:%M:%S')
-                    xmlrpc_datetime = row[3]
-
-                    # # Convert the XML-RPC DateTime to a Python datetime object
-                    # date_string = xmlrpc_datetime.isoformat()
-                    # standard_datetime = datetime.fromisoformat(date_string)
-                    standard_datetime = datetime.datetime.fromtimestamp(xmlrpc_datetime.timestamp())
-                    print(standard_datetime)
-                    print(type(row[3]))
-                    print(standard_datetime)
-                    print(type(standard_datetime))
-                    print("row[3]: ", row[3].strftime("%Y-%m-%d %H:%M:%S"))
-                    print("item.time: ", article.time.strftime("%Y-%m-%d %H:%M:%S"))
                     item = QListWidgetItem(article.title)
                     item.setData(Qt.ItemDataRole.UserRole, article)
-                    print("Item data: ", item.data(Qt.ItemDataRole.UserRole))
+                    item.setFont(QtGui.QFont("Arial", 12))  # Set font and size
+                    item.setSizeHint(QSize(100, 25))
                     self.ForumWindow.Article_listWidget.addItem(item)
         except Exception as e:
             print(f'[ERROR] Other exception in Forum_controller.updateArticle: {e}')

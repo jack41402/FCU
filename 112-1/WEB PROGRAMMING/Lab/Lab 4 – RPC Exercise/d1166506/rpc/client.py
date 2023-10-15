@@ -2,6 +2,7 @@
 # Name: 周嘉禾
 import xmlrpc.client
 from PyQt6.QtCore import pyqtSignal, QThread
+import datetime
 
 
 class Client(QThread):
@@ -46,7 +47,10 @@ class Client(QThread):
 
     def subject(self):
         try:
-            return self.proxy.subject()
+            result = self.proxy.subject()
+            for row in result:
+                row[3] = datetime.datetime.strptime(str(row[3]), '%Y%m%dT%H:%M:%S')
+            return result
         except Exception as e:
             print(f'[ERROR] Other exception in client.subject: {e}')
 
