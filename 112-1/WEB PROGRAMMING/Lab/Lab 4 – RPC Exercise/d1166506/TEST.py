@@ -1,39 +1,44 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QScrollArea, QVBoxLayout, QSizePolicy
-from UI import comment
+import sys
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QScrollArea, QSizePolicy, QLayout
+from UI import comment  # Assuming you have saved the form in a file named comment_form.py
 
+app = QApplication(sys.argv)
+window = QWidget()
+window.setWindowTitle("Scroll Area Example")
+window.setGeometry(100, 100, 400, 400)
 
-class CommentWidget(QWidget):
-    def __init__(self, author, content, parent=None):
-        super().__init__(parent)
-        self.ui = comment.Ui_Form()
-        self.ui.setupUi(self)
-        self.initUI(author, content)
+# Create a container widget and layout to hold the forms
+container_widget = QWidget()
+container_layout = QVBoxLayout()
+container_layout.setSpacing(10)  # Adjust the spacing as needed
 
-    def initUI(self, author, content):
-        self.ui.Author_label.setText(author)
-        self.ui.Comment_label.setText(content)
-        self.ui.Comment_label.setMaximumWidth(300)
-        self.ui.Comment_label.setScaledContents(True)
-        self.ui.Comment_label.setFixedSize(self.ui.Comment_label.sizeHint())
+for i in range(10):
+    # Create instances of the Ui_Form
+    form = comment.Ui_Form()
+    form_widget = QWidget()
+    form.setupUi(form_widget)
+    form.Comment_label.setFixedWidth(300)
+    form.Comment_label.setText("Test message in scroll area" * i)
+    form.Floor_Time_label.setText("B%d, %d days ago" % (i, 10-i))
+    form_widget.setSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)  # Set the size policy
+    form_widget.setMinimumHeight(65+form.Comment_label.sizeHint().height())
+    print(65+form.Comment_label.sizeHint().height())
+    container_layout.addWidget(form_widget)
 
+container_layout.setSizeConstraint(QLayout.SizeConstraint.SetMaximumSize)
+container_widget.setLayout(container_layout)
 
-if __name__ == "__main__":
-    import sys
+# Create a scroll area and set the container widget as its content
+scroll_area = QScrollArea()
+scroll_area.setMinimumSize(350, 300)
+scroll_area.setWidgetResizable(True)  # Allows the scroll area to resize its contents
 
-    app = QApplication(sys.argv)
-    widget = CommentWidget("John Doe", "This is a very long comment. " * 20)
+scroll_area.setWidget(container_widget)
 
-    scroll_area = QScrollArea()
-    scroll_area.setWidget(widget)
-    scroll_area.setMinimumWidth(300)
-    scroll_area.setMinimumHeight(300)
-    scroll_area.setWidgetResizable(True)
+window_layout = QVBoxLayout()
+window_layout.addWidget(scroll_area)
+window.setLayout(window_layout)
 
-    layout = QVBoxLayout()
-    layout.addWidget(scroll_area)
-
-    main_widget = QWidget()
-    main_widget.setLayout(layout)
-    main_widget.show()
-
-    sys.exit(app.exec())
+window.show()
+sys.exit(app.exec())

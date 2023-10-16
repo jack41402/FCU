@@ -1,0 +1,7 @@
+|lab_4_step_1
+F <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+C => inst.IN0
+A => inst.IN1
+B => inst2.IN1
+
+
