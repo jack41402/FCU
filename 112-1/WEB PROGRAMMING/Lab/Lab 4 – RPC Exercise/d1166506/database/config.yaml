@@ -1,4 +1,4 @@
-host: "127.0.0.1"
+host: "203.217.102.49"
 port: 3306
 user: "user"
 password: "123"

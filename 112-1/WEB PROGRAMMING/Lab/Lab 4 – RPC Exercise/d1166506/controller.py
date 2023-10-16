@@ -158,8 +158,10 @@ class Forum_controller(QMainWindow):
             print(article.author)
             print(article.time)
             header = article.title + '\n' + article.author + '\n' + article.time.strftime("%Y-%m-%d %H:%M:%S")
-            self.ForumWindow.Header_textBrowser.setText(header)
-            self.ForumWindow.Content_textBrowser.setText(article.content)
+            self.ForumWindow.Header_label.setText(header)
+            self.ForumWindow.Header_label.adjustSize()
+            self.ForumWindow.Content_label.setText(article.content)
+            self.ForumWindow.Content_label.adjustSize()
             if article.author is not self.client.username:
                 self.ForumWindow.Delete_pushButton.hide()
         except Exception as e:

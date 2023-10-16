@@ -1,54 +1,39 @@
-from PyQt6 import QtCore
-from PyQt6.QtWidgets import QApplication, QMainWindow, QScrollArea, QWidget, QVBoxLayout, QLabel
+from PyQt6.QtWidgets import QApplication, QWidget, QScrollArea, QVBoxLayout, QSizePolicy
+from UI import comment
 
-class ScrollableLabelArea(QMainWindow):
-    def __init__(self):
-        super().__init__()
 
-        self.setWindowTitle("Scrollable Label Example")
-        self.setGeometry(100, 100, 400, 600)
+class CommentWidget(QWidget):
+    def __init__(self, author, content, parent=None):
+        super().__init__(parent)
+        self.ui = comment.Ui_Form()
+        self.ui.setupUi(self)
+        self.initUI(author, content)
 
-        main_widget = QWidget(self)
-        self.setCentralWidget(main_widget)
+    def initUI(self, author, content):
+        self.ui.Author_label.setText(author)
+        self.ui.Comment_label.setText(content)
+        self.ui.Comment_label.setMaximumWidth(300)
+        self.ui.Comment_label.setScaledContents(True)
+        self.ui.Comment_label.setFixedSize(self.ui.Comment_label.sizeHint())
 
-        # Create a scroll area
-        scroll_area = QScrollArea(main_widget)
-        scroll_area.setWidgetResizable(True)
-        main_layout = QVBoxLayout(main_widget)
-        main_layout.addWidget(scroll_area)
-
-        # Create a content widget within the scroll area
-        content_widget = QWidget()
-        scroll_area.setWidget(content_widget)
-        content_layout = QVBoxLayout(content_widget)
-
-        # Header label
-        header_label = QLabel("Header Text")
-        header_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(header_label)
-
-        # Content label
-        content_label = QLabel("Content Text")
-        content_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(content_label)
-
-        # Comment label
-        comment_label = QLabel("Comment Text")
-        comment_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(comment_label)
-
-        # Reply label
-        reply_label = QLabel("Reply Text")
-        reply_label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        content_layout.addWidget(reply_label)
-
-        # Adjust label text dynamically
-        # For example, change the content label text
-        new_content_text = "New Content Text"
-        content_label.setText(new_content_text)
 
 if __name__ == "__main__":
-    app = QApplication([])
-    window = ScrollableLabelArea()
-    window.show()
-    app.exec()
+    import sys
+
+    app = QApplication(sys.argv)
+    widget = CommentWidget("John Doe", "This is a very long comment. " * 20)
+
+    scroll_area = QScrollArea()
+    scroll_area.setWidget(widget)
+    scroll_area.setMinimumWidth(300)
+    scroll_area.setMinimumHeight(300)
+    scroll_area.setWidgetResizable(True)
+
+    layout = QVBoxLayout()
+    layout.addWidget(scroll_area)
+
+    main_widget = QWidget()
+    main_widget.setLayout(layout)
+    main_widget.show()
+
+    sys.exit(app.exec())
