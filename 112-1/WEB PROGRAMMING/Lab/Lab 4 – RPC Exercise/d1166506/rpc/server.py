@@ -35,6 +35,10 @@ class Server(QThread):
         self.server.register_function(self.register, "register")
         self.server.register_function(self.create, "create")
         self.server.register_function(self.subject, "subject")
+        self.server.register_function(self.comment, "comment")
+        self.server.register_function(self.reply, "reply")
+        self.server.register_function(self.discussion, "discussion")
+        self.server.register_function(self.delete, "delete")
 
         self.server.register_function(self.user, "user")
 
@@ -73,9 +77,8 @@ class Server(QThread):
                 print("[ERROR] PASSWORD DOESN'T MATCH.")
                 return False
             else:
-                maxId = self.database.findMaxId("user_information", "id")
                 self.database.insertInfo("user_information",
-                                         {"id": maxId, "username": username, "password": password})
+                                         {"username": username, "password": password})
                 print("[INFO] Register successfully.")
                 return True
         except Exception as e:
@@ -85,14 +88,19 @@ class Server(QThread):
         try:
             if not title:
                 print("[ERROR] TITLE CAN'T BE EMPTY.")
+                return False
             elif not content:
                 print("[ERROR] CONTENT CAN'T BE EMPTY.")
+                return False
             else:
-                maxId = self.database.findMaxId("forum", "article_id")
-                user_id = self.database.findInfo("user_information", "username", author)
-                user_id = user_id[0][0]
+                author_id = self.database.findInfo("user_information", "username", author)
+                if len(author_id) is not 0:
+                    author_id = author_id[0][0]
+                else:
+                    return False
                 self.database.insertInfo("forum",
-                                         {"article_id": maxId, "title": title, "content": content, "user_id": user_id})
+                                         {"title": title, "content": content, "author_id": author_id})
+                return True
         except Exception as e:
             print(f'[ERROR] Other exception in server.create: {e}')
 
@@ -102,17 +110,115 @@ class Server(QThread):
         except Exception as e:
             print(f'[ERROR] Other exception in server.subject: {e}')
 
-    def reply(self):
-        pass
+    def comment(self, content: str, author: str, post_id: int):
+        try:
+            floor = self.database.findInfo("comment", "post_id", post_id)
+            if len(floor) is 0:
+                floor = 1
+            else:
+                floor = floor[0][1] + 1
+            author_id = self.database.findInfo("user_information", "username", author)
+            if len(author_id) is not 0:
+                author_id = author_id[0][0]
+            else:
+                return False
+            self.database.insertInfo("comment",
+                                     {"floor": floor, "content": content, "author_id": author_id, "post_id": post_id})
+        except Exception as e:
+            print(f'[ERROR] Other exception in server.comment: {e}')
 
-    def discussion(self):
-        pass
+    def reply(self, content: str, author: str, comment_id: int):
+        try:
+            floor = self.database.findInfo("reply", "comment_id", comment_id)
+            if len(floor) is 0:
+                floor = 1
+            else:
+                floor = floor[0][1] + 1
+            author_id = self.database.findInfo("user_information", "username", author)
+            if len(author_id) is not 0:
+                author_id = author_id[0][0]
+            else:
+                return False
+            self.database.insertInfo("reply",
+                                     {"floor": floor, "content": content, "author_id": author_id,
+                                      "comment_id": comment_id})
+        except Exception as e:
+            print(f'[ERROR] Other exception in server.comment: {e}')
 
-    def delete(self):
-        pass
+    def discussion(self, post_id):
+        try:
+            discuss = []
+            comments = self.database.findInfo("comment", "post_id", post_id)
+            for comment in comments:
+                reply = self.database.findInfo("reply", "comment_id", comment[0])
+                discuss.append(Discuss(comment, reply))
+            discuss = tuple(discuss)
+            return discuss
+        except Exception as e:
+            print(f'[ERROR] Other exception in server.discussion: {e}')
+
+    def delete(self, target: str, target_id: int):
+        try:
+            if target is "post":
+                result = self.database.findInfo("comment", "post_id", target_id)
+                if len(result) is 0:
+                    self.database.deleteInfo("forum", "post_id", target_id)
+                    return True
+                else:
+                    return False
+            elif target is "comment":
+                result = self.database.findInfo("reply", "comment_id", target_id)
+                if len(result) is 0:
+                    self.database.deleteInfo("forum", "post_id", target_id)
+                    return True
+                else:
+                    return False
+            elif target is "reply":
+                comment_id = self.database.findInfo("reply", "reply_id", target_id)
+                if len(comment_id) is not 0:
+                    comment_id = comment_id[0][5]
+                else:
+                    return False
+                result = self.database.findReplyInfo("reply", "comment_id", comment_id, "reply_id", target_id)
+                if len(result) is 0:
+                    self.database.deleteInfo("forum", "post_id", target_id)
+                    return True
+                else:
+                    return False
+        except Exception as e:
+            print(f'[ERROR] Other exception in server.delete: {e}')
 
     def close(self):
         pass
 
     def user(self, user_id: int):
-        return self.database.findInfo("user_information", "id", str(user_id))
+        return self.database.findInfo("user_information", "id", user_id)
+
+
+class Discuss:
+    def __init__(self, comment, reply):
+        self.comment = Comment(comment)
+        self.reply = []
+        for row in reply:
+            self.reply.append(Reply(row))
+        self.reply = tuple(self.reply)
+
+
+class Comment:
+    def __init__(self, comment):
+        comment_id = comment[0]
+        floor = comment[1]
+        content = comment[2]
+        time = comment[3]
+        author_id = comment[4]
+        post_id = comment[5]
+
+
+class Reply:
+    def __init__(self, reply):
+        reply_id = reply[0]
+        floor = reply[1]
+        content = reply[2]
+        time = reply[3]
+        author_id = reply[4]
+        comment_id = reply[5]

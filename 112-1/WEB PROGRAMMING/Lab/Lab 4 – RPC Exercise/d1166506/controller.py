@@ -1,7 +1,9 @@
+import sys
+
 from PyQt6 import QtGui
 from PyQt6.QtCore import pyqtSignal, Qt, QSize
-from PyQt6.QtWidgets import QMainWindow, QListWidgetItem
-from UI import login, register, forum, post
+from PyQt6.QtWidgets import QMainWindow, QListWidgetItem, QLabel, QWidget, QVBoxLayout, QApplication
+from UI import login, register, forum, post, comment
 from rpc import client
 import datetime
 
@@ -131,6 +133,10 @@ class Forum_controller(QMainWindow):
         self.client = client
         self.PostWindow = None
         self.updateArticle()
+        self.scroll_area_layout = QVBoxLayout()
+        self.scroll_area_widget = QWidget()
+        self.scroll_area_layout.setSpacing(0)
+
 
     def forum_setup_control(self):
         try:
@@ -151,35 +157,63 @@ class Forum_controller(QMainWindow):
     def DeleteClicked(self):
         pass
 
-    def showArticle(self, item):
+    def showAll(self, item):
         try:
-            article = item.data(Qt.ItemDataRole.UserRole)
-            print(article.title)
-            print(article.author)
-            print(article.time)
-            header = article.title + '\n' + article.author + '\n' + article.time.strftime("%Y-%m-%d %H:%M:%S")
-            self.ForumWindow.Header_label.setText(header)
-            self.ForumWindow.Header_label.adjustSize()
-            self.ForumWindow.Content_label.setText(article.content)
-            self.ForumWindow.Content_label.adjustSize()
-            if article.author is not self.client.username:
-                self.ForumWindow.Delete_pushButton.hide()
+            post = item.data(Qt.ItemDataRole.UserRole)
+
+            self.showArticle(post)
+            self.showComment()
+            self.scroll_area_widget.setLayout(self.scroll_area_layout)
+            self.ForumWindow.scrollArea.setWidget(self.scroll_area_widget)
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.showAll: {e}')
+
+    def showArticle(self, post):
+        try:
+            print("show article", post)
+            form_widget = QWidget()
+            form = comment.Ui_Form()
+            form.setupUi(form_widget)
+            form.Reply_pushButton.setText("Comment")
+            form.Reply_pushButton.setProperty("info", {"type": "comment", "floor": 0})
+            form.Reply_pushButton.clicked.connect(self.comment)
+            form.Author_label.setText(post.header)
+            form.Comment_label.setText(post.content)
+            form.Comment_label.setFixedHeight(max(500, form.Comment_label.sizeHint().height()))
+            form.Floor_Time_label.setText("")
+            if post.author is not self.client.username:
+                form.Delete_pushButton.hide()
+            self.scroll_area_layout.addWidget(form_widget)
         except Exception as e:
             print(f'[ERROR] Other exception in Forum_controller.showArticle: {e}')
+
+    def showComment(self):
+        try:
+            pass
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.showComment: {e}')
 
     def updateArticle(self):
         try:
             result = self.client.subject()
             if result is not None:
                 for row in result:
-                    article = Article(row[0], row[1], row[2], row[3], row[4], self.client.user(row[4])[0][2])
-                    item = QListWidgetItem(article.title)
-                    item.setData(Qt.ItemDataRole.UserRole, article)
+                    post = Post(row[0], row[1], row[2], row[3], row[4], self.client.user(row[4])[0][2])
+                    item = QListWidgetItem(post.title)
+                    item.setData(Qt.ItemDataRole.UserRole, post)
+                    print(item.data(Qt.ItemDataRole.UserRole))
                     item.setFont(QtGui.QFont("Arial", 12))  # Set font and size
                     item.setSizeHint(QSize(100, 25))
                     self.ForumWindow.Article_listWidget.addItem(item)
         except Exception as e:
             print(f'[ERROR] Other exception in Forum_controller.updateArticle: {e}')
+
+    def comment(self):
+        try:
+            button = QApplication(sys.argv).sender()
+            print(button.property("info"))
+        except Exception as e:
+            print(f'[ERROR] Other exception in Forum_controller.comment: {e}')
 
 
 class Post_controller(QMainWindow):
@@ -210,11 +244,12 @@ class Post_controller(QMainWindow):
         pass
 
 
-class Article:
-    def __init__(self, article_id: int, title: str, content: str, time: datetime, author_id: int, author: str):
-        self.article = article_id
+class Post:
+    def __init__(self, post_id: int, title: str, content: str, time: datetime, author_id: int, author: str):
+        self.post_id = post_id
         self.title = title
         self.content = content
         self.time = time
         self.author_id = author_id
         self.author = author
+        self.header = title + '\n' + author + '\n' + time.strftime("%Y-%m-%d %H:%M:%S")
