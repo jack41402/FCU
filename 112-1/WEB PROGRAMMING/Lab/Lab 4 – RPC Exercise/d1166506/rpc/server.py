@@ -39,7 +39,7 @@ class Server(QThread):
         self.server.register_function(self.reply, "reply")
         self.server.register_function(self.discussion, "discussion")
         self.server.register_function(self.delete, "delete")
-
+        self.server.register_function(self.findReplyInfo, "findReplyInfo")
         self.server.register_function(self.user, "user")
 
     def login(self, username: str, password: str):
@@ -94,7 +94,7 @@ class Server(QThread):
                 return False
             else:
                 author_id = self.database.findInfo("user_information", "username", author)
-                if len(author_id) is not 0:
+                if len(author_id) != 0:
                     author_id = author_id[0][0]
                 else:
                     return False
@@ -110,83 +110,95 @@ class Server(QThread):
         except Exception as e:
             print(f'[ERROR] Other exception in server.subject: {e}')
 
-    def comment(self, content: str, author: str, post_id: int):
+    def comment(self, author: str, content: str, post_id: int):
         try:
             floor = self.database.findInfo("comment", "post_id", post_id)
-            if len(floor) is 0:
+            if len(floor) == 0:
                 floor = 1
             else:
                 floor = floor[0][1] + 1
             author_id = self.database.findInfo("user_information", "username", author)
-            if len(author_id) is not 0:
+            if len(author_id) != 0:
                 author_id = author_id[0][0]
             else:
                 return False
             self.database.insertInfo("comment",
                                      {"floor": floor, "content": content, "author_id": author_id, "post_id": post_id})
+            return True
         except Exception as e:
             print(f'[ERROR] Other exception in server.comment: {e}')
 
-    def reply(self, content: str, author: str, comment_id: int):
+    def reply(self, author: str, content: str, comment_id: int):
         try:
             floor = self.database.findInfo("reply", "comment_id", comment_id)
-            if len(floor) is 0:
+            if len(floor) == 0:
                 floor = 1
             else:
                 floor = floor[0][1] + 1
             author_id = self.database.findInfo("user_information", "username", author)
-            if len(author_id) is not 0:
+            if len(author_id) != 0:
                 author_id = author_id[0][0]
             else:
                 return False
             self.database.insertInfo("reply",
                                      {"floor": floor, "content": content, "author_id": author_id,
                                       "comment_id": comment_id})
+            return True
         except Exception as e:
-            print(f'[ERROR] Other exception in server.comment: {e}')
+            print(f'[ERROR] Other exception in server.reply: {e}')
 
     def discussion(self, post_id):
         try:
             discuss = []
             comments = self.database.findInfo("comment", "post_id", post_id)
             for comment in comments:
+                print(comment)
                 reply = self.database.findInfo("reply", "comment_id", comment[0])
                 discuss.append(Discuss(comment, reply))
             discuss = tuple(discuss)
-            return discuss
+            for comment in discuss:
+                print(comment.comment)
+            return tuple(discuss)
         except Exception as e:
             print(f'[ERROR] Other exception in server.discussion: {e}')
 
     def delete(self, target: str, target_id: int):
         try:
-            if target is "post":
+            if target == "post":
                 result = self.database.findInfo("comment", "post_id", target_id)
-                if len(result) is 0:
+                if len(result) == 0:
                     self.database.deleteInfo("forum", "post_id", target_id)
                     return True
                 else:
                     return False
-            elif target is "comment":
+            elif target == "comment":
                 result = self.database.findInfo("reply", "comment_id", target_id)
-                if len(result) is 0:
+                if len(result) == 0:
                     self.database.deleteInfo("forum", "post_id", target_id)
                     return True
                 else:
                     return False
-            elif target is "reply":
+            elif target == "reply":
                 comment_id = self.database.findInfo("reply", "reply_id", target_id)
-                if len(comment_id) is not 0:
+                if len(comment_id) != 0:
                     comment_id = comment_id[0][5]
                 else:
                     return False
                 result = self.database.findReplyInfo("reply", "comment_id", comment_id, "reply_id", target_id)
-                if len(result) is 0:
+                if len(result) == 0:
                     self.database.deleteInfo("forum", "post_id", target_id)
                     return True
                 else:
                     return False
         except Exception as e:
             print(f'[ERROR] Other exception in server.delete: {e}')
+
+    def findReplyInfo(self, comment_id, reply_id):
+        try:
+            result = self.database.findReplyInfo("reply", "comment_id", comment_id, "reply_id", reply_id)
+            return result
+        except Exception as e:
+            print(f'[ERROR] Other exception in server.findReplyInfo: {e}')
 
     def close(self):
         pass
@@ -206,19 +218,19 @@ class Discuss:
 
 class Comment:
     def __init__(self, comment):
-        comment_id = comment[0]
-        floor = comment[1]
-        content = comment[2]
-        time = comment[3]
-        author_id = comment[4]
-        post_id = comment[5]
+        self.comment_id = comment[0]
+        self.floor = comment[1]
+        self.content = comment[2]
+        self.time = comment[3]
+        self.author_id = comment[4]
+        self.post_id = comment[5]
 
 
 class Reply:
     def __init__(self, reply):
-        reply_id = reply[0]
-        floor = reply[1]
-        content = reply[2]
-        time = reply[3]
-        author_id = reply[4]
-        comment_id = reply[5]
+        self.reply_id = reply[0]
+        self.floor = reply[1]
+        self.content = reply[2]
+        self.time = reply[3]
+        self.author_id = reply[4]
+        self.comment_id = reply[5]

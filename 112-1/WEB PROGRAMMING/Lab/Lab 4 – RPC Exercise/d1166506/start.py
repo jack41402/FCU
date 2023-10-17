@@ -10,7 +10,7 @@ if __name__ == '__main__':
     server = server.Server("127.0.0.1", 6666)
     server.start()
     app = QtWidgets.QApplication(sys.argv)
-    LoginWindow = Login_controller()
+    LoginWindow = Login_controller(app)
     LoginWindow.show()
     server.close()
     sys.exit(app.exec())
