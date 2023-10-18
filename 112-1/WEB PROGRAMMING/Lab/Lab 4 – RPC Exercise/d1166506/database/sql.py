@@ -59,18 +59,17 @@ class SQL:
         except Exception as e:
             print(f'[ERROR] Other exception in sql.insertInfo: {e}')
 
-    def findMaxId(self, table: str, column: str):
+    def findMaxFloor(self, table: str, target_key: str, target_value):
         try:
-            command = "SELECT MAX(%s) FROM " + table
+            command = '''SELECT MAX(floor) FROM %s WHERE %s="%s"'''
+            command %= table, target_key, target_value
+            result = self.command(command, ())
             print("Command in findMaxId: ", command)
-            result = self.command(command, (column, ))
             print("result in maxId: %s" % result)
             result = result[0][0]
             print("result in maxId: %s" % result)
-            if result is None:
-                result = 1
-            else:
-                result += 1
+            if not result:
+                result = 0
             return result
         except Exception as e:
             print(f'[ERROR] Other exception in sql.findMax: {e}')

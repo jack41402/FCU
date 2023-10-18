@@ -25,12 +25,6 @@ class Ui_Forum(object):
         font.setFamily("Arial")
         self.Post_pushButton.setFont(font)
         self.Post_pushButton.setObjectName("Post_pushButton")
-        self.Delete_pushButton = QtWidgets.QPushButton(parent=Forum)
-        self.Delete_pushButton.setGeometry(QtCore.QRect(110, 10, 91, 31))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        self.Delete_pushButton.setFont(font)
-        self.Delete_pushButton.setObjectName("Delete_pushButton")
         self.splitter = QtWidgets.QSplitter(parent=Forum)
         self.splitter.setGeometry(QtCore.QRect(10, 49, 981, 680))
         self.splitter.setMinimumSize(QtCore.QSize(100, 680))
@@ -77,7 +71,6 @@ class Ui_Forum(object):
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.splitter.raise_()
         self.Post_pushButton.raise_()
-        self.Delete_pushButton.raise_()
 
         self.retranslateUi(Forum)
         QtCore.QMetaObject.connectSlotsByName(Forum)
@@ -86,7 +79,6 @@ class Ui_Forum(object):
         _translate = QtCore.QCoreApplication.translate
         Forum.setWindowTitle(_translate("Forum", "Forum"))
         self.Post_pushButton.setText(_translate("Forum", "Post"))
-        self.Delete_pushButton.setText(_translate("Forum", "Delete"))
         self.Comment_textEdit.setPlaceholderText(_translate("Forum", "Write something..."))
         self.Send_pushButton.setText(_translate("Forum", "Send"))
 
