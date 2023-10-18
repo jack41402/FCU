@@ -27,21 +27,21 @@ class Client(QThread):
 
     def login(self, username: str, password: str):
         try:
-            self.proxy.login(username, password)
-            print(username)
+            print("Username: ", username)
             self.username = username
+            return self.proxy.login(username, password)
         except Exception as e:
             print(f'[ERROR] Other exception in client.login: {e}')
 
     def register(self, username: str, password: str, confirm_password: str):
         try:
-            self.proxy.register(username, password, confirm_password)
+            return self.proxy.register(username, password, confirm_password)
         except Exception as e:
             print(f'[ERROR] Other exception in client.register: {e}')
 
     def post(self, title: str, content: str):
         try:
-            self.proxy.create(title, content, self.username)
+            return self.proxy.create(title, content, self.username)
         except Exception as e:
             print(f'[ERROR] Other exception in client.post: {e}')
 
@@ -57,11 +57,11 @@ class Client(QThread):
     def send(self, info):
         try:
             if info["type"] == "comment":
-                self.proxy.comment(info["author"], info["content"], info["post_id"])
+                return self.proxy.comment(info["author"], info["content"], info["post_id"])
             elif info["type"] == "reply":
-                self.proxy.comment(info["author"], info["content"], info["reply_id"])
+                return self.proxy.reply(info["author"], info["content"], info["comment_id"])
         except Exception as e:
-            print(f'[ERROR] Other exception in client.comment: {e}')
+            print(f'[ERROR] Other exception in client.send: {e}')
 
     def comment(self, author: str, content: str, post_id: int):
         try:
@@ -77,12 +77,27 @@ class Client(QThread):
 
     def discussion(self, post_id):
         try:
-            return self.proxy.discussion(post_id)
+            result = self.proxy.discussion(post_id)
+            for row in result:
+                comment = row["comment"]
+                comment["time"] = datetime.datetime.strptime(str(comment["time"]), '%Y%m%dT%H:%M:%S')
+                for reply in row["reply"]:
+                    reply["time"] = datetime.datetime.strptime(str(reply["time"]), '%Y%m%dT%H:%M:%S')
+            return result
         except Exception as e:
             print(f'[ERROR] Other exception in client.discussion: {e}')
 
-    def delete(self, target: str, target_id: int):
+    def delete(self, info):
         try:
+            target = info["type"]
+            if target == "post":
+                target_id = info["post_id"]
+            elif target == "comment":
+                target_id = info["comment_id"]
+            elif target == "reply":
+                target_id = info["reply_id"]
+            else:
+                return False
             return self.proxy.delete(target, target_id)
         except Exception as e:
             print(f'[ERROR] Other exception in client.delete: {e}')

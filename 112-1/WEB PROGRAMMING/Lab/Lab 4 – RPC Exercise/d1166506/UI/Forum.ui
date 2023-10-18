@@ -40,24 +40,6 @@
     <string>Post</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Delete_pushButton">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>10</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Arial</family>
-    </font>
-   </property>
-   <property name="text">
-    <string>Delete</string>
-   </property>
-  </widget>
   <widget class="QSplitter" name="splitter">
    <property name="geometry">
     <rect>
@@ -157,7 +139,6 @@
   </widget>
   <zorder>splitter</zorder>
   <zorder>Post_pushButton</zorder>
-  <zorder>Delete_pushButton</zorder>
  </widget>
  <resources/>
  <connections/>
