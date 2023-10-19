@@ -228,7 +228,7 @@ class Forum_controller(QMainWindow):
 
             form.Author_label.setText(post.header)
             form.Comment_label.setMinimumHeight(150)
-            form.Comment_label.setText("\u200b".join(post.content))  # The magic is here.
+            form.Comment_label.setText("\u200b".join(post.content))
 
             font.setPointSize(14)
             form.Comment_label.setFont(font)
