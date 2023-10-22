@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.24)
+project(Assignment1)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -UTF8")
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
+
+file(GLOB SUBDIRECTORIES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *)
+
+foreach(SUBDIR ${SUBDIRECTORIES})
+    if(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${SUBDIR})
+        foreach(FILENAME ${CMAKE_CURRENT_SOURCE_DIR}/${SUBDIR})
+            file(${CMAKE_CURRENT_SOURCE_DIR}/${SUBDIR}/FILENAME)
+            if(EXISTS FILE)
+                set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${SUBDIR})
+                add_executable(${SUBDIR} ${CMAKE_CURRENT_SOURCE_DIR}/${SUBDIR}/*.c)
+            endif()
+        endforeach ()
+    endif()
+endforeach()
