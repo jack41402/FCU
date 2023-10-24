@@ -7,7 +7,7 @@ from . import message
 
 
 class Server(QThread):
-    server_signal = pyqtSignal(str)
+    server_signal = pyqtSignal(int, str)
 
     def __init__(self, ip, port):
         super().__init__()
@@ -24,25 +24,25 @@ class Server(QThread):
 
     def run(self):
         try:
-            self.connection()
             with QMutexLocker(self.lock):
+                self.connection()
                 print("Inside!!!")
                 while True:
                     self.number = self.receive()
                     if self.number == 0:
                         print("Receive END message. Closing the connection.")
-                        self.server_signal.emit("[SERVER] Receive: \"END\" message.")
-                        self.server_signal.emit("[SERVER] Closing the connection.")
+                        self.server_signal.emit(self.client.index, "[SERVER] Receive: \"END\" message.")
+                        self.server_signal.emit(self.client.index, "[SERVER] Closing the connection.")
                         break
                     if self.number - 1 != 0:
                         self.number -= 1
                         self.send(str(self.number))
-                        self.server_signal.emit("[SERVER] Send: %d" % self.number)
+                        self.server_signal.emit(self.client.index, "[SERVER] Send: %d" % self.number)
                     else:
                         print("\n**** The number is zero. Closing the connection.\n")
-                        self.server_signal.emit("[SERVER] The number is zero. Closing the connection.")
+                        self.server_signal.emit(self.client.index, "[SERVER] The number is zero. Closing the connection.")
                         self.send("END")
-                        self.server_signal.emit("[SERVER] Send: \"END\" message.")
+                        self.server_signal.emit(self.client.index, "[SERVER] Send: \"END\" message.")
                         break
         except Exception as e:
             print(f'[ERROR] Other exception in server.run: {e}, line ', e.__traceback__.tb_lineno)
@@ -57,7 +57,7 @@ class Server(QThread):
                 self.serverSocket.listen(self.backlog)
                 print("Waiting to receive message from client\n")
                 self.client, (self.rip, self.rport) = self.serverSocket.accept()
-                self.server_signal.emit("[SERVER] Waiting for connection...")
+                self.server_signal.emit(self.client.index, "[SERVER] Waiting for connection...")
         except Exception as e:
             print(f'[ERROR] Other exception in server.connection: {e}, line ', e.__traceback__.tb_lineno)
 

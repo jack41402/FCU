@@ -207,6 +207,7 @@ class Forum_controller(QMainWindow):
             self.scroll_area_layout.setSpacing(0)
             self.showArticle(post)
             self.showComment(post)
+            self.scroll_area_layout.addStretch()
             self.scroll_area_widget.setLayout(self.scroll_area_layout)
             self.ForumWindow.scrollArea.setWidget(self.scroll_area_widget)
         except Exception as e:

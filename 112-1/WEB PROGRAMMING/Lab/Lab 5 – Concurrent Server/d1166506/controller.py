@@ -43,21 +43,27 @@ class MainWindow_controller(QMainWindow):
         sys.exit(-1)
 
     def start(self):
-        if not self.server:
-            self.server = server.Server(self.ip, self.port)
-        self.server.start()
-        self.client_list.append(client.Client(self.ip, self.port, self.num, len(self.client_list) + 1))
-        self.client_list[-1].start()
-        print(self.client_list[-1])
-        self.createBrowser()
+        try:
+            if not self.server:
+                self.server = server.Server(self.ip, self.port)
+            self.server.start()
+            self.client_list.append(client.Client(self.ip, self.port, self.num, len(self.client_list) + 1))
+            self.client_list[-1].start()
+            self.createBrowser()
+        except Exception as e:
+            print(f'[ERROR] Other exception in MainWindow_controller.start: {e}, line ', e.__traceback__.tb_lineno)
 
     # callback of a custom singal in server thread
     def createBrowser(self):
-        text_browser = TextBrowser()
-        widget = text_browser
-        self.ui.tabWidget.addTab(widget, f"Client {len(self.client_list)}")
-        self.server.server_signal.connect(text_browser.updateBrowser)
-        self.client_list[-1].client_signal.connect(text_browser.updateBrowser)
+        try:
+            text_browser = TextBrowser(len(self.client_list))
+            widget = text_browser
+            self.ui.tabWidget.addTab(widget, f"Client {len(self.client_list)}")
+            print(self.ui.tabWidget.currentIndex())
+            self.server.server_signal.connect(text_browser.updateBrowser)
+            self.client_list[-1].client_signal.connect(text_browser.updateBrowser)
+        except Exception as e:
+            print(f'[ERROR] Other exception in MainWindow_controller.createBrowser: {e}, line ', e.__traceback__.tb_lineno)
 
     # def MessageBox(self, msg_type: str, msg: str):
     #     print("WRONG")
@@ -73,15 +79,18 @@ class MainWindow_controller(QMainWindow):
 
 
 class TextBrowser(QWidget):
-    update_signal = pyqtSignal(str)
-
-    def __init__(self):
+    def __init__(self, index):
         super().__init__()
         self.text_browser = QTextBrowser()
         layout = QVBoxLayout()
         layout.addWidget(self.text_browser)
         self.setLayout(layout)
-        self.update_signal.connect(self.text_browser.append)
+        self.text_browser.setProperty("index", index)
 
-    def updateBrowser(self, text):
-        self.text_browser.append(text)
+    def updateBrowser(self, index: int, text: str):
+        try:
+            if index == self.property("index"):
+                self.text_browser.append(text)
+        except Exception as e:
+            print(f'[ERROR] Other exception in TextBrowser.updateBrowser: {e}, line ', e.__traceback__.tb_lineno)
+
