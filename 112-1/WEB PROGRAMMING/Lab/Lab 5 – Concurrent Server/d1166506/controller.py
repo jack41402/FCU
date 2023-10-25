@@ -59,7 +59,6 @@ class MainWindow_controller(QMainWindow):
             text_browser = TextBrowser(len(self.client_list))
             widget = text_browser
             self.ui.tabWidget.addTab(widget, f"Client {len(self.client_list)}")
-            print(self.ui.tabWidget.currentIndex())
             self.server.server_signal.connect(text_browser.updateBrowser)
             self.client_list[-1].client_signal.connect(text_browser.updateBrowser)
         except Exception as e:
@@ -89,7 +88,7 @@ class TextBrowser(QWidget):
 
     def updateBrowser(self, index: int, text: str):
         try:
-            if index == self.property("index"):
+            if index == self.text_browser.property("index"):
                 self.text_browser.append(text)
         except Exception as e:
             print(f'[ERROR] Other exception in TextBrowser.updateBrowser: {e}, line ', e.__traceback__.tb_lineno)

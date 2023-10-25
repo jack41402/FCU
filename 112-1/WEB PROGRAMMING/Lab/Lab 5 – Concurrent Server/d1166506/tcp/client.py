@@ -21,7 +21,7 @@ class Client(QThread):
     def run(self):
         try:
             self.connection()
-            print("Connected!!!")
+            self.send(str(self.index))
             while True:
                 if self.number - 1 == 0:
                     print("\n**** The number is zero. Closing the connection.\n")
@@ -42,6 +42,7 @@ class Client(QThread):
                 else:
                     self.number = server_msg
                     self.client_signal.emit(self.index, "[CLIENT] Receive: %d" % server_msg)
+            self.close()
         except Exception as e:
             print(f'[ERROR] Other exception in client.run: {e}, line ', e.__traceback__.tb_lineno)
 
