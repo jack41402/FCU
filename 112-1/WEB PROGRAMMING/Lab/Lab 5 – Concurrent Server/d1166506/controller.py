@@ -1,3 +1,5 @@
+import threading
+
 from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import QWidget, QMainWindow, QTextBrowser, QVBoxLayout
 from home import Ui_MainWindow
@@ -17,7 +19,7 @@ class MainWindow_controller(QMainWindow):
         self.ip = None
         self.port = None
         self.num = None
-        self.backlog = 5
+        self.backlog = 15
 
     def setup_control(self):
         self.ui.btn_Run.clicked.connect(self.RunClicked)
@@ -46,10 +48,12 @@ class MainWindow_controller(QMainWindow):
         try:
             if not self.server:
                 self.server = server.Server(self.ip, self.port)
-            self.server.start()
+                self.server.start()
+                print(self.server.serverSocket)
             self.client_list.append(client.Client(self.ip, self.port, self.num, len(self.client_list) + 1))
             self.client_list[-1].start()
             self.createBrowser()
+            self.server.counter()
         except Exception as e:
             print(f'[ERROR] Other exception in MainWindow_controller.start: {e}, line ', e.__traceback__.tb_lineno)
 
@@ -59,8 +63,8 @@ class MainWindow_controller(QMainWindow):
             text_browser = TextBrowser(len(self.client_list))
             widget = text_browser
             self.ui.tabWidget.addTab(widget, f"Client {len(self.client_list)}")
-            self.server.server_signal.connect(text_browser.updateBrowser)
             self.client_list[-1].client_signal.connect(text_browser.updateBrowser)
+            self.server.server_signal.connect(text_browser.updateBrowser)
         except Exception as e:
             print(f'[ERROR] Other exception in MainWindow_controller.createBrowser: {e}, line ', e.__traceback__.tb_lineno)
 
@@ -85,6 +89,7 @@ class TextBrowser(QWidget):
         layout.addWidget(self.text_browser)
         self.setLayout(layout)
         self.text_browser.setProperty("index", index)
+        self.lock = threading.Lock()
 
     def updateBrowser(self, index: int, text: str):
         try:
@@ -92,4 +97,3 @@ class TextBrowser(QWidget):
                 self.text_browser.append(text)
         except Exception as e:
             print(f'[ERROR] Other exception in TextBrowser.updateBrowser: {e}, line ', e.__traceback__.tb_lineno)
-

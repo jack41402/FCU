@@ -51,6 +51,7 @@ class Client(QThread):
             self.clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             print("Connecting to %s port %s\n" % (self.ip, self.port))
             self.clientSocket.connect((self.ip, self.port))
+            self.clientSocket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
             self.client_signal.emit(self.index, "[CLIENT] Connected successfully.")
         except Exception as e:
             print(f'[ERROR] Other exception in client.connection: {e}, line ', e.__traceback__.tb_lineno)

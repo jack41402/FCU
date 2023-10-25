@@ -1,8 +1,6 @@
-# Student ID: D1166506
-# Name: 周嘉禾
 import socket
 import threading
-from PyQt6.QtCore import pyqtSignal, QThread, QMutex, QMutexLocker
+from PyQt6.QtCore import pyqtSignal, QThread
 from . import message
 
 
@@ -11,39 +9,34 @@ class Server(QThread):
 
     def __init__(self, ip, port):
         super().__init__()
+        self.serverSocket = None
+        self.client = None
         self.ip = ip
         self.port = port
         self.backlog = 15
-        self.buf_size = 4096
-        self.number = None
-        self.serverSocket = None
-        self.client = None
-        self.rip = None
-        self.rport = None
-        self.lock = QMutex()
+        self.buf_size = 1024
+        self.lock = threading.Lock()
         self.client_index = None
         self.startup()
 
-    def run(self):
+    def counter(self):
         try:
-            self.connection()
-            self.client_index = int(self.receive())
-            print("Client index: ", self.client_index)
+            with self.lock:
+                self.connection()
+                self.client_index = self.receive()
+                print("Client index: ", self.client_index)
 
-            with QMutexLocker(self.lock):
-                print("Connect to ", self.client)
                 while True:
-                    self.number = self.receive()
-                    print("self.number: ", self.number)
-                    if self.number == 0:
+                    number = self.receive()
+                    if number == 0:
                         print("Receive END message. Closing the connection.")
                         self.server_signal.emit(self.client_index, "[SERVER] Receive: \"END\" message.")
                         self.server_signal.emit(self.client_index, "[SERVER] Closing the connection.")
                         break
-                    if self.number - 1 != 0:
-                        self.number -= 1
-                        self.send(str(self.number))
-                        self.server_signal.emit(self.client_index, "[SERVER] Send: %d" % self.number)
+                    if number - 1 != 0:
+                        number -= 1
+                        self.send(str(number))
+                        self.server_signal.emit(self.client_index, "[SERVER] Send: %d" % number)
                     else:
                         print("\n**** The number is zero. Closing the connection.\n")
                         self.server_signal.emit(self.client_index, "[SERVER] The number is zero. Closing the connection.")
@@ -61,14 +54,14 @@ class Server(QThread):
             print("Starting up server on port: %s\n" % self.port)
             self.serverSocket.bind(('', self.port))
             self.serverSocket.listen(self.backlog)
+            # self.serverSocket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
             print("Waiting to receive message from client\n")
         except Exception as e:
             print(f'[ERROR] Other exception in server.startup: {e}, line ', e.__traceback__.tb_lineno)
 
     def connection(self):
         try:
-            with QMutexLocker(self.lock):
-                self.client, (self.rip, self.rport) = self.serverSocket.accept()
+            self.client, (self.rip, self.rport) = self.serverSocket.accept()
         except Exception as e:
             print(f'[ERROR] Other exception in server.connection: {e}, line ', e.__traceback__.tb_lineno)
 
@@ -84,10 +77,15 @@ class Server(QThread):
             num = message.receive_msg(self.client)
             msg = "\nReceive message from IP: " + str(self.rip) + " port: " + str(self.rport)
             print(msg)
-            print("number: ", num)
             return num
         except Exception as e:
             print(f'[ERROR] Other exception in server.receive: {e}, line ', e.__traceback__.tb_lineno)
 
     def close(self):
         self.serverSocket.close()
+
+
+class Thread(threading.Thread):
+    def __init__(self, t, *args):
+        threading.Thread.__init__(self, target=t, args=args)
+        self.start()

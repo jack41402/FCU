@@ -3,8 +3,6 @@ import socket
 import struct
 import binascii
 
-BUF_SIZE = 1024
-
 
 def analyze_msg(msg: str):
     try:
@@ -20,36 +18,39 @@ def analyze_msg(msg: str):
         print(f'[ERROR] Other exception in message.analyze_msg: {e}, line ', e.__traceback__.tb_lineno)
 
 
-def receive_msg(socket_stream: socket):
+def receive_msg(socket_stream: socket, socket_object=None):
     try:
-        server_msg = socket_stream.recv(BUF_SIZE)
-        if server_msg:
-            msg_type = analyze_msg(server_msg[:4])
+        msg_header = socket_stream.recv(4)
+        if msg_header:
+            msg_type = analyze_msg(msg_header)
             if msg_type == "int":
+                receive_msg = socket_stream.recv(4)
                 s = struct.Struct('!' + 'I')
                 try:
-                    unpacked_data = s.unpack(server_msg[4:8])
+                    unpacked_data = s.unpack(receive_msg)
                 except socket.error as e:
                     print("Socket error: %s" % str(e))
                 except Exception as e:
                     print("Other exception: %s" % str(e))
 
-                print("Receive value: ", binascii.hexlify(server_msg))
+                print("Receive value: ", binascii.hexlify(receive_msg))
                 num = unpacked_data[0]
                 print("The data you receive: Integer=%d\n" % num)
                 return int(num)
             elif msg_type == "str":
+                receive_msg = socket_stream.recv(4)
                 s = struct.Struct('!' + 'I')
-                str_length = s.unpack(server_msg[4:8])[0]
+                str_length = s.unpack(receive_msg)[0]
+                receive_msg = socket_stream.recv(str_length)
                 s = struct.Struct('!' + '%ds' % str_length)
                 try:
-                    unpacked_data = s.unpack(server_msg[8:8 + str_length])
+                    unpacked_data = s.unpack(receive_msg)
                 except socket.error as e:
                     print("Socket error: %s" % str(e))
                 except Exception as e:
                     print("Other exception: %s" % str(e))
 
-                print("Receive value: ", binascii.hexlify(server_msg))
+                print("Receive value: ", binascii.hexlify(receive_msg))
                 msg = unpacked_data[0].decode('utf-8')
                 print("The data you receive: String=%s\n" % msg)
                 if msg == "END":
