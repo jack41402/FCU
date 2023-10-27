@@ -1,0 +1,19 @@
+Input three integers x, y, and z: 
+reuslt of x+y*z is 26
+reuslt of y+z*x is 16
+reuslt of z+x*y is 14
+the descending order of x+y*z,y+z*x,z+x*y is 26 > 16 > 14the ascending order of x+y*z,y+z*x,z+x*y is 14 < 16 < 26
+-----------------------------------------------
+Input three integers x, y, and z: 
+reuslt of x+y*z is -2
+reuslt of y+z*x is 8
+reuslt of z+x*y is -22
+the descending order of x+y*z,y+z*x,z+x*y is 8 > -2 > -22the ascending order of x+y*z,y+z*x,z+x*y is -22 < -2 < 8
+-----------------------------------------------
+Input three integers x, y, and z: 
+reuslt of x+y*z is 0
+reuslt of y+z*x is 0
+reuslt of z+x*y is 0
+the descending order of x+y*z,y+z*x,z+x*y is the ascending order of x+y*z,y+z*x,z+x*y is 
+-----------------------------------------------
+End of program execution.

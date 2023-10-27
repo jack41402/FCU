@@ -1,0 +1,11 @@
+Enter top, an integer between 3 and 29 (including): Enter side, an integer between 2 and 20 (including): Enter 0 for left-tilt or 1 for right-tilt of the side:                 ####################
+               #@@@@@@@@@@@@@@@@@@#
+              #@@@@@@@@@@@@@@@@@@#
+             #@@@@@@@@@@@@@@@@@@#
+            #@@@@@@@@@@@@@@@@@@#
+           #@@@@@@@@@@@@@@@@@@#
+          #@@@@@@@@@@@@@@@@@@#
+         ####################
+The number of character on the perimeter: 52
+The number of character in the interior: 108
+The number of character of the parallelogram: 160
