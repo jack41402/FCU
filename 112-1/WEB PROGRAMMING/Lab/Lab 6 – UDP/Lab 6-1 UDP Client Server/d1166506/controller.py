@@ -1,6 +1,6 @@
 from PyQt6 import QtWidgets
 from home import Ui_MainWindow
-from tcp import validate, server, client
+from udp import validate, server, client
 import sys
 
 

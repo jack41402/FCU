@@ -24,7 +24,7 @@ def receive_msg(socket_stream: socket):
         if msg_header:
             msg_type = analyze_msg(msg_header)
             if msg_type == "int":
-                receive_msg = socket_stream.recv(4)
+                receive_msg, (rip, rport) = socket_stream.recv(4)
                 s = struct.Struct('!' + 'I')
                 try:
                     unpacked_data = s.unpack(receive_msg)
@@ -36,12 +36,12 @@ def receive_msg(socket_stream: socket):
                 print("Receive value: ", binascii.hexlify(receive_msg))
                 num = unpacked_data[0]
                 print("The data you receive: Integer=%d\n" % num)
-                return int(num)
+                return int(num), (rip, rport)
             elif msg_type == "str":
-                receive_msg = socket_stream.recv(4)
+                receive_msg, (rip, rport) = socket_stream.recv(4)
                 s = struct.Struct('!' + 'I')
                 str_length = s.unpack(receive_msg)[0]
-                receive_msg = socket_stream.recv(str_length)
+                receive_msg, (rip, rport) = socket_stream.recv(str_length)
                 s = struct.Struct('!' + '%ds' % str_length)
                 try:
                     unpacked_data = s.unpack(receive_msg)
@@ -54,7 +54,7 @@ def receive_msg(socket_stream: socket):
                 msg = unpacked_data[0].decode('utf-8')
                 print("The data you receive: String=%s\n" % msg)
                 if msg == "END":
-                    return 0
+                    return 0, (rip, rport)
             else:
                 print("Error: Unknown data type. Ending the process.\n")
                 exit(1)
@@ -83,7 +83,7 @@ def send_msg(socket_stream: socket, msg: str, address: tuple):
             else:
                 print("Type error: Unknown data type. Ending the process.\n")
                 exit(1)
-            socket_stream.sendto(packed_data)
+            socket_stream.sendto(packed_data, address)
         except socket.error as e:
             print("Socket error: %s" % str(e))
             return 1
