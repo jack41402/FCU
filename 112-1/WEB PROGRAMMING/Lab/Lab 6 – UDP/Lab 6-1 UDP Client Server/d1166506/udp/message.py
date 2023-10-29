@@ -3,6 +3,8 @@ import socket
 import struct
 import binascii
 
+BUFF_SIZE = 1024
+
 
 def analyze_msg(msg: str):
     try:
@@ -20,37 +22,34 @@ def analyze_msg(msg: str):
 
 def receive_msg(socket_stream: socket):
     try:
-        msg_header, (rip, rport) = socket_stream.recvfrom(4)
-        if msg_header:
-            msg_type = analyze_msg(msg_header)
+        server_msg, (rip, rport) = socket_stream.recvfrom(BUFF_SIZE)
+        if server_msg:
+            msg_type = analyze_msg(server_msg[:4])
             if msg_type == "int":
-                receive_msg, (rip, rport) = socket_stream.recv(4)
                 s = struct.Struct('!' + 'I')
                 try:
-                    unpacked_data = s.unpack(receive_msg)
+                    unpacked_data = s.unpack(server_msg[4:8])
                 except socket.error as e:
                     print("Socket error: %s" % str(e))
                 except Exception as e:
                     print("Other exception: %s" % str(e))
 
-                print("Receive value: ", binascii.hexlify(receive_msg))
+                print("Receive value: ", binascii.hexlify(server_msg))
                 num = unpacked_data[0]
                 print("The data you receive: Integer=%d\n" % num)
                 return int(num), (rip, rport)
             elif msg_type == "str":
-                receive_msg, (rip, rport) = socket_stream.recv(4)
                 s = struct.Struct('!' + 'I')
-                str_length = s.unpack(receive_msg)[0]
-                receive_msg, (rip, rport) = socket_stream.recv(str_length)
+                str_length = s.unpack(server_msg[4:8])[0]
                 s = struct.Struct('!' + '%ds' % str_length)
                 try:
-                    unpacked_data = s.unpack(receive_msg)
+                    unpacked_data = s.unpack(server_msg[8:8 + str_length])
                 except socket.error as e:
                     print("Socket error: %s" % str(e))
                 except Exception as e:
                     print("Other exception: %s" % str(e))
 
-                print("Receive value: ", binascii.hexlify(receive_msg))
+                print("Receive value: ", binascii.hexlify(server_msg))
                 msg = unpacked_data[0].decode('utf-8')
                 print("The data you receive: String=%s\n" % msg)
                 if msg == "END":
@@ -58,6 +57,11 @@ def receive_msg(socket_stream: socket):
             else:
                 print("Error: Unknown data type. Ending the process.\n")
                 exit(1)
+        else:
+            # Handle the case when no data is received
+            return None, (rip, rport)
+    except socket.timeout:
+        raise TimeoutError("Receive operation timed out in message.receive_msg")
     except Exception as e:
         print(f'[ERROR] Other exception in message.receive_msg: {e}, line ', e.__traceback__.tb_lineno)
 

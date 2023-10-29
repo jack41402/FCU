@@ -17,27 +17,37 @@ class Server(QThread):
         self.serverSocket = None
         self.rip = None
         self.rport = None
+        self.timeout = 0.01
 
     def run(self):
         try:
             self.connection()
+            self.serverSocket.settimeout(self.timeout)
             while True:
-                self.number = self.receive()
-                if self.number == 0:
+                try:
+                    number = self.receive()
+                except socket.timeout:
+                    self.server_signal.emit("[SERVER] Timeout. Retransmitting message: %d..." % number)
+                    continue
+                if number == 0:
                     print("Receive END message. Closing the connection.")
                     self.server_signal.emit("[SERVER] Receive: \"END\" message.")
                     self.server_signal.emit("[SERVER] Closing the connection.")
                     break
-                if self.number - 1 != 0:
-                    self.number -= 1
-                    self.send(str(self.number))
-                    self.server_signal.emit("[SERVER] Send: %d" % self.number)
-                else:
+                if number - 1 != 0 and number != self.number:
+                    self.server_signal.emit("[SERVER] Receive: %d" % number)
+                    number -= 1
+                    self.number = number
+                    self.send(str(number))
+                    self.server_signal.emit("[SERVER] Send: %d" % number)
+                elif number - 1 == 0 and number != self.number:
                     print("\n**** The number is zero. Closing the connection.\n")
                     self.server_signal.emit("[SERVER] The number is zero. Closing the connection.")
                     self.send("END")
                     self.server_signal.emit("[SERVER] Send: \"END\" message.")
                     break
+                else:
+                    continue
             self.close()
         except Exception as e:
             print(f'[ERROR] Other exception in server.run: {e}, line ', e.__traceback__.tb_lineno)
@@ -53,17 +63,19 @@ class Server(QThread):
 
     def send(self, msg: str):
         try:
-            message.send_msg(self.serverSocket, str(msg), (self.ip, self.port))
+            message.send_msg(self.serverSocket, str(msg), (self.rip, self.rport))
             return True
         except Exception as e:
             print(f'[ERROR] Other exception in server.send: {e}, line ', e.__traceback__.tb_lineno)
 
     def receive(self):
         try:
-            num, (self.rip, self.rport) = message.receive_msg(self.serverSocket)
-            msg = "\nReceive message from IP: " + str(self.rip) + " port: " + str(self.rport)
+            client_msg, (self.rip, self.rport) = message.receive_msg(self.serverSocket)
+            msg = "Receive message from IP: " + str(self.rip) + " port: " + str(self.rport)
             print(msg)
-            return num
+            return client_msg
+        except socket.timeout:
+            raise TimeoutError("Receive operation timed out in server.receive")
         except Exception as e:
             print(f'[ERROR] Other exception in server.receive: {e}, line ', e.__traceback__.tb_lineno)
 

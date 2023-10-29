@@ -14,30 +14,44 @@ class Client(QThread):
         self.port = port
         self.buf_size = 1024
         self.number = number
+        self.timeout = 0.01
         self.clientSocket = None
 
     def run(self):
         try:
             self.connection()
+            self.clientSocket.settimeout(self.timeout)
+            number = self.number
+            is_receive = True
             while True:
-                if self.number - 1 == 0:
+                if not is_receive:
+                    self.send(str(number))
+                elif number - 1 == 0:
                     print("\n**** The number is zero. Closing the connection.\n")
                     self.client_signal.emit("[CLIENT] The number is zero. Closing the connection.")
                     self.send("END")
                     self.client_signal.emit("[CLIENT] Send: \"END\" message.")
                     break
-                else:
-                    self.number -= 1
-                    self.send(str(self.number))
-                    self.client_signal.emit("[CLIENT] Send: %d" % self.number)
-                server_msg = self.receive()
+                elif number - 1 != 0:
+                    number -= 1
+                    self.send(str(number))
+                    self.client_signal.emit("[CLIENT] Send: %d" % number)
+                try:
+                    server_msg = self.receive()
+                    print("RECEIVED!!!")
+                    is_receive = True
+                except socket.timeout:
+                    print("TIMEOUT!!!")
+                    self.client_signal.emit("[CLIENT] Timeout. Retransmitting message: %d..." % number)
+                    is_receive = False
+                    continue
                 if server_msg == 0:
                     print("Receive END message. Closing the connection.")
                     self.client_signal.emit("[CLIENT] Receive: \"END\" message.")
                     self.client_signal.emit("[CLIENT] Closing the connection.")
                     break
-                else:
-                    self.number = server_msg
+                elif server_msg != 0 and server_msg is not None:
+                    number = server_msg
                     self.client_signal.emit("[CLIENT] Receive: %d" % server_msg)
         except Exception as e:
             print(f'[ERROR] Other exception in client.run: {e}, line ', e.__traceback__.tb_lineno)
@@ -58,10 +72,12 @@ class Client(QThread):
 
     def receive(self):
         try:
-            msg = "Receive message from IP: " + str(self.ip) + " port: " + str(self.port)
+            server_msg, (rip, rport) = message.receive_msg(self.clientSocket)
+            msg = "Receive message from IP: " + str(rip) + " port: " + str(rport)
             print(msg)
-            server_msg = message.receive_msg(self.clientSocket)
             return server_msg
+        except socket.timeout:
+            raise TimeoutError("Receive operation timed out in client.receive")
         except Exception as e:
             print(f'[ERROR] Other exception in client.receive: {e}, line ', e.__traceback__.tb_lineno)
 

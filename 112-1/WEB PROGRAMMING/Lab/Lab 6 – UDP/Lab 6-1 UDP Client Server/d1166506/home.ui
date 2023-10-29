@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>933</width>
+    <width>1000</width>
     <height>700</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <string>UDP</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="gridLayout" columnminimumwidth="0,0,0,0">
     <item row="0" column="0">
      <spacer name="horizontalSpacer">
       <property name="orientation">
@@ -41,6 +41,12 @@
       </property>
       <item>
        <widget class="QTextBrowser" name="textBrowser">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="palette">
          <palette>
           <active>
@@ -475,6 +481,9 @@
       <property name="spacing">
        <number>0</number>
       </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
       <item>
        <spacer name="verticalSpacer_2">
         <property name="orientation">
@@ -485,7 +494,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>20</width>
+          <width>0</width>
           <height>40</height>
          </size>
         </property>
@@ -501,7 +510,7 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>30</height>
          </size>
         </property>
@@ -523,9 +532,15 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_IP_Address">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>40</height>
          </size>
         </property>
@@ -544,7 +559,7 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>30</height>
          </size>
         </property>
@@ -566,9 +581,15 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_Server_Port">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>40</height>
          </size>
         </property>
@@ -590,7 +611,7 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>30</height>
          </size>
         </property>
@@ -612,9 +633,15 @@
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_Number">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>40</height>
          </size>
         </property>
@@ -636,7 +663,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>20</width>
+          <width>0</width>
           <height>15</height>
          </size>
         </property>
@@ -644,9 +671,15 @@
       </item>
       <item>
        <widget class="QPushButton" name="btn_Run">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>40</height>
          </size>
         </property>
@@ -668,7 +701,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>20</width>
+          <width>0</width>
           <height>15</height>
          </size>
         </property>
@@ -676,9 +709,15 @@
       </item>
       <item>
        <widget class="QPushButton" name="btn_Exit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="minimumSize">
          <size>
-          <width>0</width>
+          <width>400</width>
           <height>40</height>
          </size>
         </property>
@@ -700,7 +739,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>20</width>
+          <width>0</width>
           <height>40</height>
          </size>
         </property>

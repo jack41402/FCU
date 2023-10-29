@@ -24,20 +24,30 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         self.ui.btn_Clear.clicked.connect(self.ClearClicked)
 
     def RunClicked(self):
-        msg_IP_Address = self.ui.lineEdit_IP_Address.text()
-        msg_Server_Port = self.ui.lineEdit_Server_Port.text()
-        msg_Number = self.ui.lineEdit_Number.text()
-        validator = validate.Validate()
-        # validator.valid_warning.connect(self.MessageBox)
-        if validator.checker(msg_IP_Address, msg_Server_Port, msg_Number):
-            print("[INFO] Validation success.")
-        else:
-            print("[INFO] Validation Failed")
+        try:
+            self.ui.textBrowser.setText("")
 
-        self.ip = validator.ip
-        self.port = validator.port
-        self.num = validator.num
-        self.start()
+            msg_IP_Address = self.ui.lineEdit_IP_Address.text()
+            msg_Server_Port = self.ui.lineEdit_Server_Port.text()
+            msg_Number = self.ui.lineEdit_Number.text()
+
+            msg_IP_Address = msg_IP_Address if msg_IP_Address else "127.0.0.1"
+            msg_Server_Port = msg_Server_Port if msg_Server_Port else 8888
+            msg_Number = msg_Number if msg_Number else 10
+
+            validator = validate.Validate()
+            # validator.valid_warning.connect(self.MessageBox)
+            if validator.checker(msg_IP_Address, msg_Server_Port, msg_Number):
+                print("[INFO] Validation success.")
+            else:
+                print("[INFO] Validation Failed")
+
+            self.ip = validator.ip
+            self.port = validator.port
+            self.num = validator.num
+            self.start()
+        except Exception as e:
+            print(f'[ERROR] Other exception in MainWindow_controller.RunClicked: {e}, line ', e.__traceback__.tb_lineno)
 
     def ExitClicked(self):
         sys.exit(-1)
