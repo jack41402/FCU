@@ -1,3 +1,5 @@
+import time
+
 from PyQt6 import QtWidgets
 from home import Ui_MainWindow
 from udp import validate, server, client
@@ -25,15 +27,13 @@ class MainWindow_controller(QtWidgets.QMainWindow):
 
     def RunClicked(self):
         try:
-            self.ui.textBrowser.setText("")
-
             msg_IP_Address = self.ui.lineEdit_IP_Address.text()
             msg_Server_Port = self.ui.lineEdit_Server_Port.text()
             msg_Number = self.ui.lineEdit_Number.text()
 
             msg_IP_Address = msg_IP_Address if msg_IP_Address else "127.0.0.1"
             msg_Server_Port = msg_Server_Port if msg_Server_Port else 8888
-            msg_Number = msg_Number if msg_Number else 10
+            msg_Number = msg_Number if msg_Number else 1000
 
             validator = validate.Validate()
             # validator.valid_warning.connect(self.MessageBox)
@@ -56,10 +56,19 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         self.ui.textBrowser.setText("")
 
     def start(self):
+        if self.server is not None and self.server.isRunning():
+            self.server.requestInterruption()
+            self.server.wait()
+            self.server.quit()
+        if self.client is not None and self.client.isRunning():
+            self.client.requestInterruption()
+            self.client.wait()
+            self.client.quit()
         self.server = server.Server(self.ip, self.port)
-        self.client = client.Client(self.ip, self.port, self.num)
         self.server.server_signal.connect(self.UpdateBrowser)
+        self.client = client.Client(self.ip, self.port, self.num)
         self.client.client_signal.connect(self.UpdateBrowser)
+        self.ui.textBrowser.setText("")
         self.server.start()
         self.client.start()
 

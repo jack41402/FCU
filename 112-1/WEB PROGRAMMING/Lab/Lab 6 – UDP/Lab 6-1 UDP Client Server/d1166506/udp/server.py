@@ -1,6 +1,7 @@
 # Student ID: D1166506
 # Name: 周嘉禾
 import socket
+import time
 from PyQt6.QtCore import pyqtSignal, QThread
 from . import message
 
@@ -17,24 +18,22 @@ class Server(QThread):
         self.serverSocket = None
         self.rip = None
         self.rport = None
-        self.timeout = 0.01
 
     def run(self):
         try:
             self.connection()
-            self.serverSocket.settimeout(self.timeout)
-            while True:
-                try:
-                    number = self.receive()
-                except socket.timeout:
-                    self.server_signal.emit("[SERVER] Timeout. Retransmitting message: %d..." % number)
+            while not self.isInterruptionRequested():
+                number = self.receive()
+                if number is None:
                     continue
+                elif self.number is not None and number > self.number:
+                    self.clear()
                 if number == 0:
                     print("Receive END message. Closing the connection.")
                     self.server_signal.emit("[SERVER] Receive: \"END\" message.")
                     self.server_signal.emit("[SERVER] Closing the connection.")
                     break
-                if number - 1 != 0 and number != self.number:
+                elif number - 1 != 0 and number != self.number:
                     self.server_signal.emit("[SERVER] Receive: %d" % number)
                     number -= 1
                     self.number = number
@@ -46,8 +45,6 @@ class Server(QThread):
                     self.send("END")
                     self.server_signal.emit("[SERVER] Send: \"END\" message.")
                     break
-                else:
-                    continue
             self.close()
         except Exception as e:
             print(f'[ERROR] Other exception in server.run: {e}, line ', e.__traceback__.tb_lineno)
@@ -78,6 +75,21 @@ class Server(QThread):
             raise TimeoutError("Receive operation timed out in server.receive")
         except Exception as e:
             print(f'[ERROR] Other exception in server.receive: {e}, line ', e.__traceback__.tb_lineno)
+
+    def clear(self):
+        try:
+            start_time = time.time()
+            self.serverSocket.settimeout(0.5)
+            while time.time() - start_time < 0.5:
+                self.receive()
+            self.serverSocket.settimeout(None)
+            time.sleep(0.5)
+        except socket.timeout:
+            self.serverSocket.settimeout(None)
+            time.sleep(0.5)
+            print(f'[ERROR] Timeout in server.clear')
+        except Exception as e:
+            print(f'[ERROR] Other exception in server.clear: {e}, line ', e.__traceback__.tb_lineno)
 
     def close(self):
         self.serverSocket.close()
