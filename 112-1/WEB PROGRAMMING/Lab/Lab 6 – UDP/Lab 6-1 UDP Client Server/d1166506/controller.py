@@ -33,7 +33,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
 
             msg_IP_Address = msg_IP_Address if msg_IP_Address else "127.0.0.1"
             msg_Server_Port = msg_Server_Port if msg_Server_Port else 8888
-            msg_Number = msg_Number if msg_Number else 1000
+            msg_Number = msg_Number if msg_Number else 100
 
             validator = validate.Validate()
             # validator.valid_warning.connect(self.MessageBox)
