@@ -1,0 +1,71 @@
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+00000000 00000000 00000000 00000001 
+
+hexadecimal representation of num:
+00 00 00 01 
+
+Binary representation of rev:
+10000000 00000000 00000000 00000000 
+
+hexadecimal representation of rev:
+80 00 00 00 
+
+
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+11111111 11111111 11111111 11111111 
+
+hexadecimal representation of num:
+FF FF FF FF 
+
+Binary representation of rev:
+11111111 11111111 11111111 11111111 
+
+hexadecimal representation of rev:
+FF FF FF FF 
+
+
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+01111111 11111111 11111111 11111111 
+
+hexadecimal representation of num:
+7F FF FF FF 
+
+Binary representation of rev:
+11111111 11111111 11111111 11111110 
+
+hexadecimal representation of rev:
+FF FF FF FE 
+
+
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+00000000 00000000 00000100 00000000 
+
+hexadecimal representation of num:
+00 00 04 00 
+
+Binary representation of rev:
+00000000 00100000 00000000 00000000 
+
+hexadecimal representation of rev:
+00 20 00 00 
+
+
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+00000000 00000000 00000000 00000010 
+
+hexadecimal representation of num:
+00 00 00 02 
+
+Binary representation of rev:
+01000000 00000000 00000000 00000000 
+
+hexadecimal representation of rev:
+40 00 00 00 
+
+
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 

@@ -1,0 +1,41 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 2 coefficients and a constant for Equation 0 (btween -99 to 99):
+>>>> Enter 2 coefficients and a constant for Equation 1 (btween -99 to 99):
+<<<<Coefficient of equation 2 are all zero. Stop!<<<< The liner equation system of rank 2 is:
++128 X00 X1 = 5374021
+0 X0-1418932919 X1 = 6029395
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 1 coefficients and a constant for Equation 0 (btween -99 to 99):
+<<<<Coefficient of equation 1 are all zero. Stop!<<<< The liner equation system of rank 1 is:
++128 X0 = 5374021
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 5 coefficients and a constant for Equation 0 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 1 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 2 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 3 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 4 (btween -99 to 99):
+<<<<Coefficient of equation 5 are all zero. Stop!<<<< The liner equation system of rank 5 is:
++128 X00 X10 X20 X3+8 X4 = 5374021
+0 X0-1418932919 X1+32762 X2+10420224 X30 X4 = 6029395
++128 X00 X1+10421104 X20 X3+6421808 X4 = 6881357
+0 X0+6982352 X10 X2-1452020276 X3+32762 X4 = 7602276
++6982352 X00 X1+268501009 X20 X3+10422104 X4 = 7471205
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 6 coefficients and a constant for Equation 0 (btween -99 to 99):
+>>>> Enter 6 coefficients and a constant for Equation 1 (btween -99 to 99):
+>>>> Enter 6 coefficients and a constant for Equation 2 (btween -99 to 99):
+>>>> Enter 6 coefficients and a constant for Equation 3 (btween -99 to 99):
+>>>> Enter 6 coefficients and a constant for Equation 4 (btween -99 to 99):
+>>>> Enter 6 coefficients and a constant for Equation 5 (btween -99 to 99):
+<<<<Coefficient of equation 6 are all zero. Stop!<<<< The liner equation system of rank 6 is:
++128 X00 X10 X20 X3+8 X40 X5 = 5374021
+0 X0-1418932919 X1+32762 X2+10420224 X30 X4+2 X5 = 6029395
++128 X00 X1+10421104 X20 X3+6421808 X40 X5 = 6881357
+0 X0+6982352 X10 X2-1452020276 X3+32762 X4+2 X5 = 7602276
++6982352 X00 X1+268501009 X20 X3+10422104 X40 X5 = 7471205
+0 X00 X10 X2+4199744 X30 X4+8 X5 = 6029421
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): 

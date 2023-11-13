@@ -1,0 +1,33 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 5 coefficients and a constant for Equation 0 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 1 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 2 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 3 (btween -99 to 99):
+>>>> Enter 5 coefficients and a constant for Equation 4 (btween -99 to 99):
+<<<<Coefficient of equation 5 are all zero. Stop!<<<< The liner equation system of rank 5 is:
++128 X00 X10 X20 X3+8 X4 = 5374021
+0 X0-1418932919 X1+32762 X2+11075584 X30 X4 = 6029395
++128 X00 X1+11076464 X20 X3+6421808 X4 = 6881357
+0 X0+7310032 X10 X2-1452020276 X3+32762 X4 = 7602276
++7310032 X00 X1+268501009 X20 X3+11077464 X4 = 7471205
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 8 coefficients and a constant for Equation 0 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 1 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 2 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 3 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 4 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 5 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 6 (btween -99 to 99):
+>>>> Enter 8 coefficients and a constant for Equation 7 (btween -99 to 99):
+<<<<Coefficient of equation 8 are all zero. Stop!<<<< The liner equation system of rank 8 is:
++128 X00 X10 X20 X3+8 X40 X50 X60 X7 = 5374021
+0 X0-1418932919 X1+32762 X2+11075584 X30 X4+2 X5+3014705 X6+115 X7 = 6029395
++128 X00 X1+11076464 X20 X3+6421808 X40 X5+3 X60 X7 = 6881357
+0 X0+7310032 X10 X2-1452020276 X3+32762 X4+2 X50 X60 X7 = 7602276
++7310032 X00 X1+268501009 X20 X3+11077464 X40 X5-1452090106 X6+32762 X7 = 7471205
+0 X00 X10 X2+4199744 X30 X4+8 X50 X60 X7 = 6029421
++268501009 X00 X1+11077472 X20 X3-1452090106 X4+32762 X5+8 X60 X7 = 7667795
+0 X0+4200320 X10 X2+16 X30 X40 X50 X60 X7 = 7143522
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): 

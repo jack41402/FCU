@@ -1,0 +1,5 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 17 (between -99 and 99 ): 1The linear equation system of rank 1 is: 4199367X0-1451652560X2-1451652560X3-1451652560X4
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 17 (between -99 and 99 ): 1The linear equation system of rank 1 is: 4199367X0-1451652560X2-1451652560X3-1451652560X4
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): 

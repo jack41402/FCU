@@ -1,0 +1,6 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>> Enter 1 coefficients and a constant for Equation 0 (btween -99 to 99):
+<<<<Coefficient of equation 1 are all zero. Stop!<<<< The liner equation system of rank 1 is:
++128 X0 = 5374021
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): 

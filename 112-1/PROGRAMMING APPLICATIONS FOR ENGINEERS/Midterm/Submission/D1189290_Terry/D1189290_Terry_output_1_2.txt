@@ -1,0 +1,1 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 0 (between -99 and 99): Coefficients of Equation 0 are all zeros. Stop!
