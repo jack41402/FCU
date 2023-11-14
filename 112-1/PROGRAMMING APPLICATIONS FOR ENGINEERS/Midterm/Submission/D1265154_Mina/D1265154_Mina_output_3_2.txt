@@ -1,7 +1,7 @@
 Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num: 
 000000000000000000000000000000000
 Hexadecimal representation of num: 
-                                                                  
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
 Decimal representation of rev: 
 Binary representation of rev: 
 Hexadecimal representation of rev: 
@@ -10,7 +10,7 @@ Hexadecimal representation of rev:
 Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num: 
 000000000000000000000000000000000
 Hexadecimal representation of num: 
-                                                                  
+  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF  FFFFFFFF
 Decimal representation of rev: 
 Binary representation of rev: 
 Hexadecimal representation of rev: 
@@ -19,7 +19,7 @@ Hexadecimal representation of rev:
 Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num: 
 000000000000000000000000000000000
 Hexadecimal representation of num: 
-                                                                  
+  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF  7FFFFFFF
 Decimal representation of rev: 
 Binary representation of rev: 
 Hexadecimal representation of rev: 
@@ -28,7 +28,7 @@ Hexadecimal representation of rev:
 Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num: 
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 Hexadecimal representation of num: 
-                                                                                                   
+  400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400   400 
 Decimal representation of rev: 
 Binary representation of rev: 
 Hexadecimal representation of rev: 
@@ -37,7 +37,7 @@ Hexadecimal representation of rev:
 Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num: 
 111111111111111111111111111111111
 Hexadecimal representation of num: 
-                                                                                                   
+  2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2   2 
 Decimal representation of rev: 
 Binary representation of rev: 
 Hexadecimal representation of rev: 

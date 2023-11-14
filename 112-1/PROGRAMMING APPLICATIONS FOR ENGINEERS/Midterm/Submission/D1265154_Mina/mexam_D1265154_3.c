@@ -27,7 +27,7 @@ int main(void) {
 			
 			
 			num>>1;
-			printf("  %",num);
+			printf("  %X",num);
 			
 			
 			if(num%2 == 0)printf(" ");

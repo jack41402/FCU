@@ -1,0 +1,23 @@
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+       1       1        1       1        1       1        1       1 
+1
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+ffffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffff 
+FFFFFFFF
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+7fffffff7fffffff 7fffffff7fffffff 7fffffff7fffffff 7fffffff7fffffff 
+7FFFFFFF
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+     400     400      400     400      400     400      400     400 
+400
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+       2       2        2       2        2       2        2       2 
+2
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+       0       0        0       0        0       0        0       0 
+0

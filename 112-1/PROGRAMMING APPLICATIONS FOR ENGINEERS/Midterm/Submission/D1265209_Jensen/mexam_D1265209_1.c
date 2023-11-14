@@ -28,8 +28,9 @@ int main(void) {
 		for(i=0;i<n;++i)
 		{
 			printf(">>>> Enter %d coefficients and a constant for Equation %d (btween -99 to 99):\n",n,i);
+			for (j=0 ; j<n ; ++j) scanf("%d", &A[i][j]) ;
+			scanf("%d",&C[i]);
 		}
-		scanf("",A[i][j],C[i]);
 		printf("<<<<Coefficient of equation %d are all zero. Stop!",i);
 		// (4) Print the linear equation one equation in a line, leave 10 leading blanks before
 		//     each equation. For each equation, print all terms in the way that 

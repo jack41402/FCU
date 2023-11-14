@@ -29,7 +29,7 @@ int main(){
 	}
 	printf("\n\n");
 	printf("Hexadecimal representation of num: \n    %08X\n\n",num);
-	unsigned int rev = reversen(num);
+	unsigned int rev = reverseb(num);
 	printf("Decimal representation of rev: %u\n\n",rev);
 	printf("Binary representation of rev: \n    ");
 	for(i=31;i>=0;i--){

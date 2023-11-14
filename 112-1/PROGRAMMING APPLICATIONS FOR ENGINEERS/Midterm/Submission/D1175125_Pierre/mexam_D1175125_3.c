@@ -36,12 +36,12 @@ int main(void) {
 		}		
 		for(i=7;i>=0;i--){
 			if(num%16<10)hexi[i]=num%16;
-			else if(num%16=10)hexi[i]='A';
-			else if(num%16=11)hexi[i]='B';
-			else if(num%16=12)hexi[i]='C';
-			else if(num%16=13)hexi[i]='D';
-			else if(num%16=14)hexi[i]='E';
-			else if(num%16=15)hexi[i]='F';
+			else if(num%16==10)hexi[i]='A';
+			else if(num%16==11)hexi[i]='B';
+			else if(num%16==12)hexi[i]='C';
+			else if(num%16==13)hexi[i]='D';
+			else if(num%16==14)hexi[i]='E';
+			else if(num%16==15)hexi[i]='F';
 			num/=16;
 		}
 		for(i=0;i<8;i++){

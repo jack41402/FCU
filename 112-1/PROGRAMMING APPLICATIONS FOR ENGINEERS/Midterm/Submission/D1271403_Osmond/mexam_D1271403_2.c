@@ -16,13 +16,13 @@ int main(void) {
   int i; // Loop variable
   
   printf("Labor day of a given leap year: %s, %s %d\n\n", days_of_week[ww], name_of_month[mm-1], dd);
-  scanf("%s, %s %d", &days_of_week[ww], &name_of_month[mm-1], &dd);
+//  scanf("%s, %s %d", &days_of_week[ww], &name_of_month[mm-1], &dd);
   printf("Independence day: %s, %s %d\n", days_of_week[ww], name_of_month[mm-1], dd);
-  scanf("%s, %s %d", &days_of_week[ww], &name_of_month[mm-1], &dd);
+//  scanf("%s, %s %d", &days_of_week[ww], &name_of_month[mm-1], &dd);
 	ww= ((ww-dd+1)%7+7)%7;
   count=1;
   
-  else if (mm>0 && mm<12){
+  if (mm>0 && mm<12){
   	count=1;
   	ww= ((ww-dd+1)%7+7)%7;
   	

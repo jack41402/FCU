@@ -61,7 +61,7 @@ int main(void)
 		
 		if(leading_term!=0)
 		{
-			if(leadinf_term>0)
+			if(leading_term>0)
 			{
 				printf("X");
 			}
