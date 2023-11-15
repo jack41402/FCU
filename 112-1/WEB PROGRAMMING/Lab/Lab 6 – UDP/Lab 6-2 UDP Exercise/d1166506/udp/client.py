@@ -9,7 +9,7 @@ from . import message
 class Client(QThread):
     client_signal = pyqtSignal(str)
 
-    def __init__(self, ip, port, number):
+    def __init__(self, ip, port, number, SlidingWindow):
         super().__init__()
         self.ip = ip
         self.port = port
@@ -17,6 +17,7 @@ class Client(QThread):
         self.number = number
         self.timeout = 0.01
         self.clientSocket = None
+        self.SlidingWindow = SlidingWindow
 
     def run(self):
         try:
@@ -32,9 +33,13 @@ class Client(QThread):
                     self.client_signal.emit("[CLIENT] Send: \"END\" message.")
                     break
                 elif number - 1 != 0 and is_receive:
-                    number -= 1
-                    self.send(str(number))
-                    self.client_signal.emit("[CLIENT] Send: %d" % number)
+                    for i in range(self.SlidingWindow):
+                        if number - 1 != 0:
+                            number -= 1
+                            self.send(str(number))
+                            self.client_signal.emit("[CLIENT] Send: %d" % number)
+                        else:
+                            continue
                 try:
                     server_msg = self.receive()
                 except socket.timeout:

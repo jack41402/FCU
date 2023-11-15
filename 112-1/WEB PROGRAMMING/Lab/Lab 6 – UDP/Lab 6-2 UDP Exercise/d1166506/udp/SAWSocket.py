@@ -14,11 +14,18 @@ import random
 BufSize = 1024
 DEBUG = True
 
+# Define TCP flags as macros/constants
+URG = 0b100000
+ACK = 0b010000
+PSH = 0b001000
+RST = 0b000100
+SYN = 0b000010
+FIN = 0b000001
+
 
 class SAWSocket:
     def __init__(self, port, addr='', SlidingWindow=1):  # addr == '' if server
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.SlidingWindow = SlidingWindow
         if addr == '':  # Server side
             self.isServer = True
             self.PeerAddr = ''
@@ -47,7 +54,15 @@ class SAWSocket:
         self.BufSize = BufSize
         self.lock = threading.Lock()  # for synchronization
         self.condition = threading.Condition()
-        self.ReceiveDaemon = 0  # receive daemon
+        self.ReceiveDaemon = None  # receive daemon
+
+        # Sliding Window
+        self.window_size = SlidingWindow
+        self.send_window = []  # To track sent packets and their status
+        self.receive_window = []  # To track received packets and their status
+        self.send_status = []
+        self.next_sequence_to_send = 0
+        self.expected_sequence_to_receive = 0
 
     # end of __init__()
 
@@ -69,7 +84,7 @@ class SAWSocket:
 
     def add_sn_receive(self):
         self.lock.acquire()
-        self.CS_sn_receive = (self.CS_sn_receive + 1) % 2
+        self.CS_sn_receive = (self.CS_sn_receive + 1) % self.window_size
         sn_receive = self.CS_sn_receive
         self.lock.release()
         return sn_receive
@@ -78,7 +93,7 @@ class SAWSocket:
 
     def add_sn_send(self):
         self.lock.acquire()
-        self.CS_sn_send = (self.CS_sn_send + 1) % 2
+        self.CS_sn_send = (self.CS_sn_send + 1) % self.window_size
         sn_send = self.CS_sn_send
         self.lock.release()
         return sn_send
@@ -157,26 +172,33 @@ class SAWSocket:
         if not self.isServer:
             print('accept() can only be called by server!!')
             exit(1)
-        # end if
 
         # Wait for SYN
-        recv_msg, (rip, rport) = self.socket.recvfrom(self.BufSize)
+        syn_data, (rip, rport) = self.socket.recvfrom(self.BufSize)
+        syn_packet = Protocol()
+        syn_packet.parse(syn_data)
+        # if not syn_packet.is_flag_set(SYN) and syn_packet.count_flags() is 1:
+        #     print("[ERROR] Server accept failed.")
         self.PeerAddr = rip
         self.PeerPort = rport
+
         if DEBUG:
             print('Connect from IP: ' + str(self.PeerAddr) + ' port: ' + str(self.PeerPort))
 
         # Send SYN/ACK
-        reply = 'SYN/ACK'
-        self.socket.sendto(reply.encode('utf-8'), (self.PeerAddr, self.PeerPort))
+        syn_ack_packet = Protocol(flags=SYN | ACK, sequence=syn_packet.sequence + 1, ack_number=syn_packet.sequence + 1)
+        syn_ack_data = syn_ack_packet.pack()
+        self.socket.sendto(syn_ack_data, (self.PeerAddr, self.PeerPort))
 
         # Wait for ACK
-        recv_msg, (rip, rport) = self.socket.recvfrom(self.BufSize)
+        ack_data, _ = self.socket.recvfrom(self.BufSize)
+        ack_packet = Protocol()
+        ack_packet.parse(ack_data)
 
         if DEBUG:
             print('Connection from: ' + str(self.PeerAddr) + ':' + str(self.PeerPort) + ' established')
 
-        # Create ReceiveD
+        # Create ReceiveDaemon
         self.ReceiveDaemon = ReceiveDaemon(self.socket, self.PeerAddr, self.PeerPort, self)
 
     # end of accept()
@@ -185,53 +207,60 @@ class SAWSocket:
         if self.isServer:
             print('connect() can only be called by client!!')
             exit(1)
-        # end if
 
-        # send SYN
-        message = 'SYN'
-        self.socket.sendto(message.encode('utf-8'), (self.PeerAddr, self.PeerPort))
+        # Sending SYN
+        syn_packet = Protocol(flags=SYN, sequence=0, ack_number=0)
+        syn_data = syn_packet.pack()
+        self.socket.sendto(syn_data, (self.PeerAddr, self.PeerPort))
+
         if DEBUG:
             print('Connect to: ' + str(self.PeerAddr) + ' port: ' + str(self.PeerPort))
 
-        # Receive SYN/ACK
-        recv_msg, (rip, rport) = self.socket.recvfrom(self.BufSize)
+        # Receiving SYN/ACK
+        syn_ack_data, _ = self.socket.recvfrom(self.BufSize)
+        syn_ack_packet = Protocol()
+        syn_ack_packet.parse(syn_ack_data)
 
-        # send ACK
-        message = 'ACK'
-        self.socket.sendto(message.encode('utf-8'), (self.PeerAddr, self.PeerPort))
+        # Sending ACK
+        ack_packet = Protocol(flags=ACK, sequence=syn_ack_packet.sequence, ack_number=syn_ack_packet.ack_number + 1)
+        ack_data = ack_packet.pack()
+        self.socket.sendto(ack_data, (self.PeerAddr, self.PeerPort))
+
         if DEBUG:
             print('Connection to: ' + str(self.PeerAddr) + ':' + str(self.PeerPort) + ' established')
 
-        # Create ReceiveD
-        self.ReceiveDaemon = ReceiveDaemon(self.socket, self.PeerAddr, self.PeerPort, self, SlidingWindow)
+        # Create ReceiveDaemon
+        self.ReceiveDaemon = ReceiveDaemon(self.socket, self.PeerAddr, self.PeerPort, self, self.window_size)
 
-    # end of connect()
+    def send(self, msg, enforce=False):
+        if len(self.send_window) < self.window_size:
+            self.send_window.append(msg)
+        elif len(self.send_window) == self.window_size or enforce:
+            self.send_status = [False * len(self.send_window)]
+            size = self.window_size if not enforce else len(self.send_window)
+            for i in range(size):
+                packed_data = Protocol(flags=PSH | ACK, dest_port=self.PeerPort, ack_number=i)
+                packet = (packed_data, (self.PeerAddr, self.PeerPort))
+                self.socket.sendto(*packet)
+                ack_thread = threading.Thread(target=self.send_packet, args=(packet, i,), name="send"+str(i))
+                ack_thread.start()
+            self.send_window.clear()
+        # end while
 
-    def send(self, buf):
-        length = len(buf)
-        sn_send = self.get_sn_send()
-        msg_type = ord('M')
-        value = (msg_type, sn_send, buf)
-        msg_format = '!' + 'B I ' + str(length) + 's'
-        s = struct.Struct(msg_format)
-        packed_data = s.pack(*value)
+    # end of send()
 
-        success = False
-        while not success:
-            # send message
-            self.socket.sendto(packed_data, (self.PeerAddr, self.PeerPort))
-
+    def send_packet(self, packet, ack_number):
+        while not self.send_status[ack_number]:
             # wait ACK
             self.wait_ack()
 
             ack_sn = self.get_ack_sn()
-            if ack_sn != sn_send:
-                success = True
+            if ack_sn == ack_number + 1:
+                self.send_status[ack_number] = True
             elif DEBUG:
-                print('Send failed !! SN = ' + str(sn_send))
-
-    # end while
-    # end of send()
+                # send message
+                self.socket.sendto(*packet)
+                print('Send failed !! SN = ' + str(ack_number+1))
 
     def receive(self):
         sn = self.get_sn_receive()
@@ -243,93 +272,187 @@ class SAWSocket:
 
     # end of receive()
 
-    def close(self):
-        # Send Finish
-        sn = self.get_sn_send()
-        msg_format1 = '!' + 'B I '  # !: network order
-        s = struct.Struct(msg_format1)
-        value = (ord('F'), sn)
-        packed_data = s.pack(*value)
-        self.socket.sendto(packed_data, (self.PeerAddr, self.PeerPort))
+    def close(self, msg_FIN=None):
+        if self.isServer:
+            # Server-side: Receive FIN
+            # fin_data, _ = self.socket.recvfrom(self.BufSize)
+            # fin_packet = Protocol()
+            # fin_packet.parse(fin_data)
+
+            # Send ACK for received FIN
+            ack_fin_packet = Protocol(flags=ACK, dest_port=self.PeerPort, ack_number=msg_FIN.sequence + 1)
+            ack_fin_data = ack_fin_packet.pack()
+            self.socket.sendto(ack_fin_data, (self.PeerAddr, self.PeerPort))
+
+            # Send FIN
+            fin_packet = Protocol(flags=FIN, dest_port=self.PeerPort)
+            fin_data = fin_packet.pack()
+            self.socket.sendto(fin_data, (self.PeerAddr, self.PeerPort))
+
+            # Wait for ACK
+            ack_data, _ = self.socket.recvfrom(self.BufSize)
+            ack_packet = Protocol()
+            ack_packet.parse(ack_data)
+        else:
+            # Client-side: Send FIN
+            fin_packet = Protocol(flags=FIN, dest_port=self.PeerPort)
+            fin_data = fin_packet.pack()
+            self.socket.sendto(fin_data, (self.PeerAddr, self.PeerPort))
+
+            # Wait for ACK
+            ack_fin_received = False
+            while not ack_fin_received:
+                ack_fin_data, _ = self.socket.recvfrom(self.BufSize)
+                ack_fin_packet = Protocol()
+                ack_fin_packet.parse(ack_fin_data)
+                if ack_fin_packet.is_flag_set(ACK):
+                    ack_fin_received = True
+
+            # Wait for FIN
+            ack_fin_received = False
+            while not ack_fin_received:
+                ack_fin_data, _ = self.socket.recvfrom(self.BufSize)
+                ack_fin_packet = Protocol()
+                ack_fin_packet.parse(ack_fin_data)
+                if ack_fin_packet.is_flag_set(FIN):
+                    ack_fin_received = True
+
+            # Send ACK for received FIN
+            ack_packet = Protocol(flags=ACK, dest_port=self.PeerPort, ack_number=ack_fin_packet.sequence + 1)
+            ack_data = ack_packet.pack()
+            self.socket.sendto(ack_data, (self.PeerAddr, self.PeerPort))
         self.CS_running = False
         time.sleep(1)
         self.socket.close()
-        self.ReceiveDaemon.join()  # Waiting receive daemon closed
-# end of close()
+        self.ReceiveDaemon.join()
+
+    # end of close()
 
 
 # end of class SAWSocket
 
+
 class ReceiveDaemon(threading.Thread):
     def __init__(self, socket, sAddr, sPort, SAWSocket, SlidingWindow=1):
-        super().__init__(name='ReceiveD')
+        super().__init__(name='ReceiveDaemon')
         self.socket = socket
         self.peerAddr = sAddr
         self.peerPort = sPort
-        self.UDPSocket = SAWSocket
+        self.SAWSocket = SAWSocket
+        self.SlidingWindow = SlidingWindow
         self.running = True
         self.start()
 
     # end of __init__()
 
     def run(self):
-        while self.UDPSocket.is_running():
+        while self.SAWSocket.is_running():
             # Receive a message
-            recv_msg, (rip, rport) = self.socket.recvfrom(self.UDPSocket.BufSize)
-            length = len(recv_msg) - 5  # B(1) + I(4)
-            msg_format1 = '!' + 'B I ' + str(length) + 's'  # !: network order
-            msg_format2 = '!' + str(length) + 's'
-            s = struct.Struct(msg_format1)
-            data = s.unpack(recv_msg)
-            msg_type = data[0]
-            msg_serial_number = data[1]
-            msg_value = (data[2],)
-            s = struct.Struct(msg_format2)
-            msg_receive = s.pack(*msg_value)
+            recv_msg, (rip, rport) = self.socket.recvfrom(self.SAWSocket.BufSize)
 
-            if msg_type == ord('M'):    # MSG
-                if msg_serial_number == self.UDPSocket.get_sn_receive():  # receive a new message
-                    while self.UDPSocket.has_data():  # data still in CS_buf
-                        time.sleep(self.UDPSocket.SleepIdle)
+            received_packet = Protocol()
+            received_packet.parse(recv_msg)  # Parse the received bytes into the Protocol object
 
-                    self.UDPSocket.copy2CS_buf(msg_receive)
-                    self.UDPSocket.data_ready()  # notify
-                    msg_serial_number = (msg_serial_number + 1) % 2  # for acknowledgement
-                elif DEBUG:
-                    print('Duplicate message. SN = ' + str(msg_serial_number))
-                # This program does not consider the case that the system lost the ACK message.
-                # if (msg_serial_number != self.data.get_sn_receive()), this is a reply message
-                # 		 that is, sender losts the previous acknowledgement message
+            if received_packet.is_flag_set(FIN) and received_packet.count_flags() is 1:
+                self.clear()
+                self.SAWSocket.close()
 
-                # Reply ACK
-                msg_format1 = '!' + 'B I '  # !: network order
-                s = struct.Struct(msg_format1)
-                value = (ord('A'), msg_serial_number)
-                packed_data = s.pack(*value)
-                self.socket.sendto(packed_data, (self.peerAddr, self.peerPort))
-            elif msg_type == ord('A'):  # ACK
-                if msg_serial_number != self.UDPSocket.get_sn_send():
-                    self.UDPSocket.receive_ack(msg_serial_number)
-                    self.UDPSocket.add_sn_send()
-                elif DEBUG:
-                    print('Duplicate ACK. SN = ' + str(msg_serial_number))
-            elif msg_type == ord('F'):  # FIN
-                # Reply ACK
-                msg_format1 = '!' + 'B I '  # !: network order
-                s = struct.Struct(msg_format1)
-                value = (ord('A'), msg_serial_number)
-                packed_data = s.pack(*value)
-                self.socket.sendto(packed_data, (self.peerAddr, self.peerPort))
-            else:
-                if DEBUG:
-                    print('Message error. SN = ' + str(msg_serial_number))
+            if received_packet.is_flag_set(PSH | ACK) and received_packet.count_flags() is 2:
+                if len(self.SAWSocket.receive_window) < self.SlidingWindow:
+                    self.SAWSocket.receive_window.append(received_packet.message)
+                    msg = Protocol(flags=ACK, ack_number=received_packet.ack_number+1)
+                    self.SAWSocket.send(msg)
+            if len(self.SAWSocket.receive_window) == self.SlidingWindow or received_packet.is_flag_set(URG | ACK):
+                self.clear()
+
+            ack_packet = Protocol(flags=ACK, ack_number=received_packet.ack_number+1)
+            ack_packet.sequence = received_packet.ack_number
+            ack_packet.ack_number = received_packet.sequence + len(received_packet.message)
+            ack_bytes = ack_packet.pack()
+            self.socket.sendto(ack_bytes, (self.peerAddr, self.peerPort))
         # end of while
         if DEBUG:
             print('Receive daemon closed()')
-# end of run()
+
+        # end of run()
+
+    def clear(self):
+        self.SAWSocket.copy2CS_buf(self.SAWSocket.receive_window)
+        self.SAWSocket.receive_window.clear()
+        print("Buffer flush\n")
 
 
 # end of class ReceiveD
+
+
+class Protocol:
+    def __init__(self, source_port=0, dest_port=0, sequence=0, ack_number=0, data_offset=5, flags=0, window=0,
+                 urgent_ptr=0, options=b'', message=None):
+        self.source_port = source_port
+        self.dest_port = dest_port
+        self.sequence = sequence
+        self.ack_number = ack_number
+        self.data_offset = data_offset
+        self.flags = flags
+        self.window = window
+        self.checksum = 0  # Placeholder for checksum
+        self.urgent_ptr = urgent_ptr
+        self.options = options
+        self.message = message.encode('utf-8') if isinstance(message, str) else message  # Encode string to bytes
+
+    def pack(self):
+        tcp_header = struct.pack('!HHIIHHHH',
+                                 self.source_port, self.dest_port,
+                                 self.sequence, self.ack_number,
+                                 (self.data_offset << 12) | self.flags,
+                                 self.window, self.checksum,
+                                 self.urgent_ptr)
+
+        packet = tcp_header + self.options + self.message
+        self.checksum = self.calculate_checksum(packet)  # Calculate checksum
+        tcp_header = struct.pack('!HHIIHHHH',
+                                 self.source_port, self.dest_port,
+                                 self.sequence, self.ack_number,
+                                 (self.data_offset << 12) | self.flags,
+                                 self.window, self.checksum,
+                                 self.urgent_ptr)
+        packet = tcp_header + self.options + self.message
+        return packet
+
+    def parse(self, data):
+        tcp_header = struct.unpack('!HHIIHHHH', data[:20])
+        self.source_port = tcp_header[0]
+        self.dest_port = tcp_header[1]
+        self.sequence = tcp_header[2]
+        self.ack_number = tcp_header[3]
+        self.data_offset = (tcp_header[4] >> 12) & 0x0F
+        self.flags = tcp_header[4] & 0x3FF
+        self.window = tcp_header[5]
+        self.checksum = tcp_header[6]
+        self.urgent_ptr = tcp_header[7]
+        # self.options = data[20:40]  # Assuming options are between 0 and 320 bits (40 bytes)
+        self.message = data[20:].decode('utf-8')  # Message starts after header and options
+
+    def calculate_checksum(self, data):
+        # Implementation of checksum calculation
+        # Placeholder implementation, replace with actual checksum calculation logic
+        return 0xFFFF  # Return a placeholder checksum value
+
+    # Helper methods to control flags using defined constants
+    def set_flag(self, flag):
+        self.flags |= flag
+
+    def clear_flag(self, flag):
+        self.flags &= ~flag
+
+    def is_flag_set(self, flag):
+        return (self.flags & flag) == flag
+
+    def count_flags(self):
+        # Check flags number
+        flags = bin(self.flags).count('1')
+        return flags
+
 
 if __name__ == '__main__':
     print('Hello!!')

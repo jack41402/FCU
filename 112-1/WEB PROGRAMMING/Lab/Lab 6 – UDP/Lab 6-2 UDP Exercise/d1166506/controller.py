@@ -19,6 +19,7 @@ class MainWindow_controller(QtWidgets.QMainWindow):
         self.port = None
         self.num = None
         self.backlog = 5
+        self.SlidingWindow = None
 
     def setup_control(self):
         self.ui.btn_Run.clicked.connect(self.RunClicked)
@@ -30,10 +31,12 @@ class MainWindow_controller(QtWidgets.QMainWindow):
             msg_IP_Address = self.ui.lineEdit_IP_Address.text()
             msg_Server_Port = self.ui.lineEdit_Server_Port.text()
             msg_Number = self.ui.lineEdit_Number.text()
+            SlidingWindow = self.ui.lineEdit_Sliding_Window_Size.text()
 
             msg_IP_Address = msg_IP_Address if msg_IP_Address else "127.0.0.1"
             msg_Server_Port = msg_Server_Port if msg_Server_Port else 8888
             msg_Number = msg_Number if msg_Number else 100
+            self.SlidingWindow = int(SlidingWindow) if SlidingWindow else 5
 
             validator = validate.Validate()
             # validator.valid_warning.connect(self.MessageBox)
@@ -64,9 +67,9 @@ class MainWindow_controller(QtWidgets.QMainWindow):
             self.client.requestInterruption()
             self.client.wait()
             self.client.quit()
-        self.server = server.Server(self.ip, self.port)
+        self.server = server.Server(self.ip, self.port, self.SlidingWindow)
         self.server.server_signal.connect(self.UpdateBrowser)
-        self.client = client.Client(self.ip, self.port, self.num)
+        self.client = client.Client(self.ip, self.port, self.num, self.SlidingWindow)
         self.client.client_signal.connect(self.UpdateBrowser)
         self.ui.textBrowser.setText("")
         self.server.start()

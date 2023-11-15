@@ -9,7 +9,7 @@ from . import message
 class Server(QThread):
     server_signal = pyqtSignal(str)
 
-    def __init__(self, ip, port):
+    def __init__(self, ip, port, SlidingWindow):
         super().__init__()
         self.ip = ip
         self.port = port
@@ -18,29 +18,46 @@ class Server(QThread):
         self.serverSocket = None
         self.rip = None
         self.rport = None
+        self.SlidingWindow = SlidingWindow
+        self.receive_msg = []
 
     def run(self):
         try:
             self.connection()
+            count = 1
             while not self.isInterruptionRequested():
                 number = self.receive()
+                self.receive_msg.append("[SERVER] Receive: %d" % number)
                 if number is None:
                     continue
                 elif self.number is not None and number > self.number:
                     self.clear()
                 if number == 0:
                     print("Receive END message. Closing the connection.")
+                    for i in range(len(self.receive_msg)):
+                        self.server_signal.emit(self.receive_msg[i])
+                    self.receive_msg.clear()
                     self.server_signal.emit("[SERVER] Receive: \"END\" message.")
                     self.server_signal.emit("[SERVER] Closing the connection.")
                     break
                 elif number - 1 != 0 and number != self.number:
-                    self.server_signal.emit("[SERVER] Receive: %d" % number)
-                    number -= 1
-                    self.number = number
-                    self.send(str(number))
-                    self.server_signal.emit("[SERVER] Send: %d" % number)
+                    if count % self.SlidingWindow == 0:
+                        for i in range(len(self.receive_msg)):
+                            self.server_signal.emit(self.receive_msg[i])
+                        self.receive_msg.clear()
+                        if number - 1 != 0:
+                            number -= 1
+                            self.number = number
+                            self.send(str(number))
+                            self.server_signal.emit("[SERVER] Send: %d" % number)
+                        else:
+                            continue
+                    count += 1
                 elif number - 1 == 0 and number != self.number:
                     print("\n**** The number is zero. Closing the connection.\n")
+                    for i in range(len(self.receive_msg)):
+                        self.server_signal.emit(self.receive_msg[i])
+                    self.receive_msg.clear()
                     self.server_signal.emit("[SERVER] The number is zero. Closing the connection.")
                     self.send("END")
                     self.server_signal.emit("[SERVER] Send: \"END\" message.")
