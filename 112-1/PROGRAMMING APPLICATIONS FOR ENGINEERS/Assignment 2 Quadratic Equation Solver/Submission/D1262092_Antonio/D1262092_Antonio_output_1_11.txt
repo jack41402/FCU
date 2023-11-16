@@ -1,0 +1,4 @@
+Solving roots of equation a*X^2+b*X+c = 0
+
+Please enter three integer coefficients a, b, and c (a!=0):
+The complex roots of the equation  `¾23170X^2+46340X+23170=0 are -1.0000+0.0001i and -1.0000-0.0001i.

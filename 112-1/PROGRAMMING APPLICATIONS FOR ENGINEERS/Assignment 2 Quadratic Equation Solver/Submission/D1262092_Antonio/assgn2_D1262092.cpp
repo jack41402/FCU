@@ -7,7 +7,7 @@ int main(void) {
     float a, b, c;
     
     printf("Solving roots of equation a*X^2+b*X+c = 0\n\n");
-    printf("Please enter three integer coefficients a, b, and c (a¡Ú0):");
+    printf("Please enter three integer coefficients a, b, and c (a!=0):");
     scanf("%f %f %f", &a, &b, &c);
     if(a == 0){// if a equal to 0 then shut down the program
     	printf("\na can not be equal to 0");

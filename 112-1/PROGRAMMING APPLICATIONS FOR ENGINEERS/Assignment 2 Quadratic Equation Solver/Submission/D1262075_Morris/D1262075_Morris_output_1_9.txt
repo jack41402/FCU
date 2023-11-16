@@ -1,0 +1,4 @@
+Solving roots of equation a*X^2+b*X+c = 0.
+
+Please enter three integers a,b and c:
+The real roots of equation X**2+100000000.0000X= 0 are 0.0000 and -100000000.0000

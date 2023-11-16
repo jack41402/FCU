@@ -26,13 +26,13 @@ void print_equation(float a,float b,float c){
     printf("=0");
 }
 int main(void) {
-  float a ,b ,c ,d;
-  float r1 ,r2;
+  int a ,b ,c ,d;
+  double r1 ,r2;
   float real_root ,imaginary_root;
   printf("Solving roots of equation a*X^2+b*X+c = 0.\n\n");
   do {
     printf("Please enter three coefficients a, b, and c: \n");
-    scanf("%f %f %f",&a ,&b ,&c);
+    scanf("%d %d %d",&a ,&b ,&c);
     if(a==0.0)
         printf("The coefficient of X^2 cannot be zero.\n\n");
     }
@@ -48,7 +48,7 @@ int main(void) {
       r2=0;
     printf("The real roots of equation ");
     print_equation(a ,b ,c);
-    printf(" are %.4f and %.4f.\n",r1 ,r2);
+    printf(" are %.4lf and %.4lf.\n",r1 ,r2);
     }
   else if(d==0){
     r1=-b/(2*a);

@@ -1,0 +1,2 @@
+Sloving roots of equation a*X^2+b*X+c =0
+Please enter three integer coefficients a, b and c: Two complex roots of x^2 - 2x + 3 = 0 are 1.0000 + 1.4142i, 1.0000 - 1.4142i

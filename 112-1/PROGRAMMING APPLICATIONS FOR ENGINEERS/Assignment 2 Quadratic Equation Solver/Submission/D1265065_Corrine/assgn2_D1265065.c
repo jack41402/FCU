@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<math.h>
 int main(void){
-	float a, b, c;// declared three floating coefficients parameters
+	int a, b, c;// declared three floating coefficients parameters
 	printf("Solving roots of equation a*X^2+b*X+c = 0\n\n");// Print out the title of assignments
 	// Use the Do-While loop to make the coefficient of X^2 not to be 0.
 	do{
 	printf("Please enter three integer coefficients a, b, and c : ");// Print out the text to ask the performer to enter three integers.
-	scanf("%f%f%f", &a, &b, &c);// to scan what number does the performer enter
+	scanf("%d%d%d", &a, &b, &c);// to scan what number does the performer enter
 	printf("\n");// print a newline
 	}while(a==0);// when a==0 computer will keep asking to enter the integers.
 	// Divide the last line of text into multiple parts to determine which kind of root.

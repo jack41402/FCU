@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6f438041-abbd-4363-b7d2-aa14c8136249" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Submission/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/.idea/Submission.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Submission/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/assgn1_D1265686.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/何柏勳_5577562_assignsubmission_file/assgn1_D1265686.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/何柏勳_5577562_assignsubmission_file/assgn1_D1265686.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/佘峻宇_5577579_assignsubmission_file/assgn1_D1172268 (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/佘峻宇_5577579_assignsubmission_file/assgn1_D1172268.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/劉哲瑋_5577572_assignsubmission_file/assgn1_D1262032.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/劉哲瑋_5577572_assignsubmission_file/assgn1_D1262032.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/張子桓_5577583_assignsubmission_file/assgn1_D1265315.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/張子桓_5577583_assignsubmission_file/assgn1_D1265315.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/張宇呈_5577566_assignsubmission_file/assgn1_ D1262015.c.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/張宇呈_5577566_assignsubmission_file/assgn1_D1262015.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/曾語晨_5577563_assignsubmission_file/assign1_D1265065.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/曾語晨_5577563_assignsubmission_file/assign1_D1265065.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/曾郁珊_5577581_assignsubmission_file/assgn1_D1265154.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/曾郁珊_5577581_assignsubmission_file/assgn1_D1265154.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/李宇恩_5577568_assignsubmission_file/assgn1_D1271450.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/李宇恩_5577568_assignsubmission_file/assgn1_D1271450.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/李皓鈞_5577578_assignsubmission_file/assgn1_D1262028.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/李皓鈞_5577578_assignsubmission_file/assgn1_D1262028.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/楊智臣_5577576_assignsubmission_file/assgn1_D1228792.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/楊智臣_5577576_assignsubmission_file/assgn1_D1228792.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/王子宸_5577567_assignsubmission_file/assgn1_D1265209.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/王子宸_5577567_assignsubmission_file/assgn1_D1265209.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/王崧喻_5577564_assignsubmission_file/assign1_D1265672.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/王崧喻_5577564_assignsubmission_file/assign1_D1265672.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/王祺_5577565_assignsubmission_file/assgn1_D1271403.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/王祺_5577565_assignsubmission_file/assgn1_D1271403.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/葉緯圻_5577574_assignsubmission_file/Assignment1_D1265273.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/葉緯圻_5577574_assignsubmission_file/Assignment1_D1265273.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/蔡睿宇_5577573_assignsubmission_file/assgn1_D1262089.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/蔡睿宇_5577573_assignsubmission_file/assgn1_D1262089.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/許博琮_5577560_assignsubmission_file/assgn1_D1189290.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/許博琮_5577560_assignsubmission_file/assgn1_D1189290.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/謝柏尉_5577559_assignsubmission_file/assgn1_D1262058.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/謝柏尉_5577559_assignsubmission_file/assgn1_D1262058.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/邱畇諠_5577561_assignsubmission_file/assgn1_D1262062.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/邱畇諠_5577561_assignsubmission_file/assgn1_D1262062.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/陳宣妤_5577571_assignsubmission_file/assgn1_D1228803.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/陳宣妤_5577571_assignsubmission_file/assgn1_D1228803.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/陳彥勻_5577575_assignsubmission_file/Draw House Programing Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/陳彥勻_5577575_assignsubmission_file/DrawHouse.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/陳映聿_5577580_assignsubmission_file/assign1_D1262075.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/陳映聿_5577580_assignsubmission_file/assign1_D1262075.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/黃品喆_5577569_assignsubmission_file/assgn_D1175125.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/黃品喆_5577569_assignsubmission_file/report1.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/黃政睿_5577577_assignsubmission_file/assgn1_D1228817.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submission/黃政睿_5577577_assignsubmission_file/assgn1_D1228817.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_house.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_house.exe" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2WkUPvf1QHQPx8o2S47ELcJ1ryU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/GitHub/FCU/112-1/PROGRAMMING APPLICATIONS FOR ENGINEERS/Assignment 1 Draw House",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="draw_house.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Assignment 1 Draw House" TARGET_NAME="draw_house.c" CONFIG_NAME="draw_house.c">
+      <option name="sourceFile" value="draw_house.c" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f438041-abbd-4363-b7d2-aa14c8136249" name="Changes" comment="" />
+      <created>1697276051082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697276051082</updated>
+      <workItem from="1697276053235" duration="198000" />
+      <workItem from="1697280197398" duration="32000" />
+      <workItem from="1697280233888" duration="1236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

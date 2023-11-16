@@ -1,0 +1,3 @@
+Solving roots equation aX^2+bX+c=0
+Please enter three integer coefficients a, b and c: 
+The complex roots of equation 5X**2+6=0 are 1.0954i and -1.0954i

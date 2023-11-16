@@ -1,0 +1,2 @@
+Sloving roots of equation a*X^2+b*X+c =0
+Please enter three integer coefficients a, b and c: Two complex roots of -2x^2 - 5 = 0 are -0.0000 + -1.5811i, -0.0000 - -1.5811i
