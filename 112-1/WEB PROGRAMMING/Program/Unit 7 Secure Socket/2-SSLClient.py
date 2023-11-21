@@ -15,7 +15,7 @@ CLIENT_CERT_PATH = './Openssl/'
 
 def main():
 	if(len(sys.argv) < 2):
-		print("Usage: python3 2-SSLClient.py ServerIP Client_Sertificate")
+		print("Usage: python3 2-SSLClient.py ServerIP Client_Certificate")
 		exit(1)
 
 	# Get server IP

@@ -1,4 +1,4 @@
 Solving roots of equation a*X^2+b*X+c = 0
 
 Please enter three integer coefficients a, b, and c (a!=0):
-The real roots of the equation  `¾-5X^2+2X=0 are 0.0000 and 0.4000.
+The real roots of the equation  `±-5X^2+2X=0 are 0.0000 and 0.4000.

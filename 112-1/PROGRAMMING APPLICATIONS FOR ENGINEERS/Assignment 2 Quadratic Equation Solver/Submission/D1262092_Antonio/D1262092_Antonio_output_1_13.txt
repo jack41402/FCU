@@ -1,4 +1,4 @@
 Solving roots of equation a*X^2+b*X+c = 0
 
 Please enter three integer coefficients a, b, and c (a!=0):
-The real roots of the equation  `µX^2-1=0 are 1.0000 and -1.0000.
+The real roots of the equation  `ÄX^2-1=0 are 1.0000 and -1.0000.

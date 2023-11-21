@@ -79,7 +79,6 @@ class MainWindow_controller(QMainWindow):
         self.mail.quit()
         sys.exit()
 
-
     def GetMail(self):
         self.mail.content = {}
         self.mail.parseLength(self.mail.list(), False)
@@ -157,7 +156,6 @@ class MainWindow_controller(QMainWindow):
             self.GetMail()
         except Exception as e:
             print("Other exception in MainWindow_controller.DeleteMail: %s" % str(e))
-
 
     # def MessageBox(self, msg_type: str, msg: str):
     #     print("WRONG")

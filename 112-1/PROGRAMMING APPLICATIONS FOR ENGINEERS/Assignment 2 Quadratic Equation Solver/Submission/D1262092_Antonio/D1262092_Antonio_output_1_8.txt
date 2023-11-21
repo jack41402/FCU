@@ -1,4 +1,4 @@
 Solving roots of equation a*X^2+b*X+c = 0
 
 Please enter three integer coefficients a, b, and c (a!=0):
-The complex roots of the equation  `vX^2+5X+7=0 are -2.5000+0.8660i and -2.5000-0.8660i.
+The complex roots of the equation  `°X^2+5X+7=0 are -2.5000+0.8660i and -2.5000-0.8660i.

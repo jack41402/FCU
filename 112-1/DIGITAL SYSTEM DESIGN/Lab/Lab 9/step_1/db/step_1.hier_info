@@ -1,0 +1,21 @@
+|step1
+v[0] => Decoder0.IN3
+v[1] => Decoder0.IN2
+v[2] => Decoder0.IN1
+v[3] => Decoder0.IN0
+d0[6] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+d0[5] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+d0[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+d0[3] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d0[2] <= d0.DB_MAX_OUTPUT_PORT_TYPE
+d0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+d0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+d1[6] <= <VCC>
+d1[5] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+d1[4] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+d1[3] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+d1[2] <= <GND>
+d1[1] <= <GND>
+d1[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
