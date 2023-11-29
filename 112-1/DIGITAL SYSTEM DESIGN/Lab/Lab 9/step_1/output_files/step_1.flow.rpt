@@ -1,5 +1,5 @@
 Flow report for step_1
-Wed Nov 22 02:15:09 2023
+Tue Nov 28 23:07:10 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 22 02:15:09 2023      ;
+; Flow Status                        ; Successful - Tue Nov 28 23:07:10 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; step_1                                     ;
 ; Top-level Entity Name              ; step1                                      ;
@@ -99,7 +99,11 @@ applicable agreement for further details.
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4596 MB             ; 00:00:00                           ;
 ; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4772 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4547 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:05     ; --                      ; --                  ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4560 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4560 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4560 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4559 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:07     ; --                      ; --                  ; 00:00:00                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,6 +117,10 @@ applicable agreement for further details.
 ; Assembler                 ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -124,6 +132,10 @@ quartus_fit --read_settings_files=off --write_settings_files=off step_1 -c step_
 quartus_asm --read_settings_files=off --write_settings_files=off step_1 -c step_1
 quartus_sta step_1 -c step_1
 quartus_eda --read_settings_files=off --write_settings_files=off step_1 -c step_1
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog step_1 -c step_1 --vector_source=D:/altera/Project/step_1/Waveform.vwf --testbench_file=D:/altera/Project/step_1/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/altera/Project/step_1/simulation/qsim/ step_1 -c step_1
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog step_1 -c step_1 --vector_source=D:/altera/Project/step_1/Waveform.vwf --testbench_file=D:/altera/Project/step_1/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=D:/altera/Project/step_1/simulation/qsim/ step_1 -c step_1
 
 
 

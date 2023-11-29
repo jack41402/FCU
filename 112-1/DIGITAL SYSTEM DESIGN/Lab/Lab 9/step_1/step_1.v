@@ -25,7 +25,5 @@ module step1(v, d0, d1);
 			4'b1101, 4'b1110, 4'b1111			 : d1 = 7'b1001111;	// 1
 			default			 						 : d1 = 7'b1111111;	// default
 		endcase
-		$display("d0: %b\n", d0);
-		$display("d1: %b\n", d1);
 	end
 endmodule
