@@ -9,21 +9,23 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
-        self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
-        self.horizontalLayout.setSpacing(0)
+class Ui_Producer(object):
+    def setupUi(self, Producer):
+        Producer.setObjectName("Producer")
+        Producer.resize(400, 300)
+        self.horizontalLayout = QtWidgets.QHBoxLayout(Producer)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        spacerItem = QtWidgets.QSpacerItem(54, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.textBrowser = QtWidgets.QTextBrowser(parent=Producer)
+        self.textBrowser.setObjectName("textBrowser")
+        self.horizontalLayout.addWidget(self.textBrowser)
+        spacerItem = QtWidgets.QSpacerItem(24, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
         self.verticalLayout_5 = QtWidgets.QVBoxLayout()
         self.verticalLayout_5.setSpacing(6)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.MinimumExpanding)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 20, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
         self.verticalLayout_5.addItem(spacerItem1)
-        self.label_Number = QtWidgets.QLabel(parent=Form)
+        self.label_Number = QtWidgets.QLabel(parent=Producer)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -38,7 +40,7 @@ class Ui_Form(object):
         self.label_Number.setAlignment(QtCore.Qt.AlignmentFlag.AlignBottom|QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_Number.setObjectName("label_Number")
         self.verticalLayout_5.addWidget(self.label_Number)
-        self.lineEdit_Number = QtWidgets.QLineEdit(parent=Form)
+        self.lineEdit_Number = QtWidgets.QLineEdit(parent=Producer)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -47,12 +49,12 @@ class Ui_Form(object):
         self.lineEdit_Number.setMinimumSize(QtCore.QSize(0, 30))
         self.lineEdit_Number.setObjectName("lineEdit_Number")
         self.verticalLayout_5.addWidget(self.lineEdit_Number)
-        self.btn_Produce = QtWidgets.QPushButton(parent=Form)
+        self.btn_Produce = QtWidgets.QPushButton(parent=Producer)
         self.btn_Produce.setMinimumSize(QtCore.QSize(0, 30))
         self.btn_Produce.setFlat(False)
         self.btn_Produce.setObjectName("btn_Produce")
         self.verticalLayout_5.addWidget(self.btn_Produce)
-        self.btn_Close = QtWidgets.QPushButton(parent=Form)
+        self.btn_Close = QtWidgets.QPushButton(parent=Producer)
         self.btn_Close.setMinimumSize(QtCore.QSize(0, 30))
         self.btn_Close.setFlat(False)
         self.btn_Close.setObjectName("btn_Close")
@@ -60,29 +62,30 @@ class Ui_Form(object):
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.MinimumExpanding)
         self.verticalLayout_5.addItem(spacerItem2)
         self.horizontalLayout.addLayout(self.verticalLayout_5)
-        spacerItem3 = QtWidgets.QSpacerItem(54, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        spacerItem3 = QtWidgets.QSpacerItem(10, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout.addItem(spacerItem3)
-        self.horizontalLayout.setStretch(0, 2)
-        self.horizontalLayout.setStretch(1, 9)
-        self.horizontalLayout.setStretch(2, 2)
+        self.horizontalLayout.setStretch(0, 15)
+        self.horizontalLayout.setStretch(1, 1)
+        self.horizontalLayout.setStretch(2, 10)
+        self.horizontalLayout.setStretch(3, 1)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(Producer)
+        QtCore.QMetaObject.connectSlotsByName(Producer)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, Producer):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Producer"))
-        self.label_Number.setText(_translate("Form", "Number"))
-        self.lineEdit_Number.setPlaceholderText(_translate("Form", "10"))
-        self.btn_Produce.setText(_translate("Form", "Produce"))
-        self.btn_Close.setText(_translate("Form", "Close"))
+        Producer.setWindowTitle(_translate("Producer", "Producer"))
+        self.label_Number.setText(_translate("Producer", "Number"))
+        self.lineEdit_Number.setPlaceholderText(_translate("Producer", "10"))
+        self.btn_Produce.setText(_translate("Producer", "Produce"))
+        self.btn_Close.setText(_translate("Producer", "Close"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    Producer = QtWidgets.QWidget()
+    ui = Ui_Producer()
+    ui.setupUi(Producer)
+    Producer.show()
     sys.exit(app.exec())

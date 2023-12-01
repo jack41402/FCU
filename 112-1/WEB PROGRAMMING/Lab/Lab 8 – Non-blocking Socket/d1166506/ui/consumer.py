@@ -9,44 +9,44 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(400, 300)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+class Ui_Consumer(object):
+    def setupUi(self, Consumer):
+        Consumer.setObjectName("Consumer")
+        Consumer.resize(400, 300)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Consumer)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
+        self.textBrowser = QtWidgets.QTextBrowser(parent=Consumer)
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout.addWidget(self.textBrowser)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.btn_Consume = QtWidgets.QPushButton(parent=Form)
+        self.btn_Consume = QtWidgets.QPushButton(parent=Consumer)
         font = QtGui.QFont()
         font.setFamily("Microsoft JhengHei UI")
         self.btn_Consume.setFont(font)
         self.btn_Consume.setObjectName("btn_Consume")
         self.horizontalLayout.addWidget(self.btn_Consume)
-        self.btn_Close = QtWidgets.QPushButton(parent=Form)
+        self.btn_Close = QtWidgets.QPushButton(parent=Consumer)
         self.btn_Close.setObjectName("btn_Close")
         self.horizontalLayout.addWidget(self.btn_Close)
         self.verticalLayout.addLayout(self.horizontalLayout)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(Consumer)
+        QtCore.QMetaObject.connectSlotsByName(Consumer)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, Consumer):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Consumer"))
-        self.btn_Consume.setText(_translate("Form", "Consume"))
-        self.btn_Close.setText(_translate("Form", "Close"))
+        Consumer.setWindowTitle(_translate("Consumer", "Consumer"))
+        self.btn_Consume.setText(_translate("Consumer", "Consume"))
+        self.btn_Close.setText(_translate("Consumer", "Close"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    Consumer = QtWidgets.QWidget()
+    ui = Ui_Consumer()
+    ui.setupUi(Consumer)
+    Consumer.show()
     sys.exit(app.exec())

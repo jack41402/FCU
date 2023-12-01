@@ -1,0 +1,8 @@
+|step_1
+Q <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+D => inst4.IN0
+D => inst.IN1
+CLK => inst1.IN1
+CLK => inst.IN0
+
+

@@ -10,7 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4f26526-318f-4f5d-abfc-67e82b2ffc83" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Lab 5 – Concurrent Server/d1166506.zip" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/tcp/producer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tcp/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcp/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/tcp/consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcp/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/tcp/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tcp/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/tcp/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/consumer.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/consumer.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/producer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/producer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/producer.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/producer.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/server.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/server.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Program/Unit 8 Nonblocking Socket/2-MultiPortServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Program/Unit 8 Nonblocking Socket/2-MultiPortServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +57,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/FCU/112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/FCU/112-1/WEB PROGRAMMING/Lab/d1166506&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,6 +66,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\FCU\112-1\WEB PROGRAMMING\Lab\Lab 8 – Non-blocking Socket\d1166506\tcp" />
+      <recent name="D:\GitHub\FCU\112-1\WEB PROGRAMMING\Lab\Lab 8 – Non-blocking Socket\d1166506\ui" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="d1166506" />
@@ -96,7 +118,8 @@
       <workItem from="1699910907668" duration="8000" />
       <workItem from="1699910921115" duration="11000" />
       <workItem from="1700339690725" duration="364000" />
-      <workItem from="1701165477485" duration="975000" />
+      <workItem from="1701165477485" duration="20110000" />
+      <workItem from="1701250329031" duration="14852000" />
     </task>
     <servers />
   </component>
@@ -104,8 +127,9 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/start_py$controller.coverage" NAME="controller Coverage Results" MODIFIED="1701167206297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/start_py$home.coverage" NAME="home Coverage Results" MODIFIED="1701167054455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/start_py$start.coverage" NAME="start Coverage Results" MODIFIED="1700339888510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$controller.coverage" NAME="controller Coverage Results" MODIFIED="1701225752496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$home.coverage" NAME="home Coverage Results" MODIFIED="1701223510742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/start_py$producer.coverage" NAME="producer Coverage Results" MODIFIED="1701225778891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ui" />
+    <SUITE FILE_PATH="coverage/start_py$start.coverage" NAME="start Coverage Results" MODIFIED="1701404551330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

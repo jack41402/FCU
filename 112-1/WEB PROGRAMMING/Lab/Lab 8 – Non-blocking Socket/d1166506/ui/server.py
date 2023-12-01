@@ -12,9 +12,12 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(400, 349)
+        Form.resize(599, 349)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(Form)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
+        self.textBrowser.setObjectName("textBrowser")
+        self.horizontalLayout_2.addWidget(self.textBrowser)
         spacerItem = QtWidgets.QSpacerItem(54, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem)
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -113,9 +116,10 @@ class Ui_Form(object):
         self.horizontalLayout_2.addLayout(self.verticalLayout)
         spacerItem3 = QtWidgets.QSpacerItem(54, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
         self.horizontalLayout_2.addItem(spacerItem3)
-        self.horizontalLayout_2.setStretch(0, 2)
-        self.horizontalLayout_2.setStretch(1, 9)
-        self.horizontalLayout_2.setStretch(2, 2)
+        self.horizontalLayout_2.setStretch(0, 15)
+        self.horizontalLayout_2.setStretch(1, 1)
+        self.horizontalLayout_2.setStretch(2, 10)
+        self.horizontalLayout_2.setStretch(3, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
