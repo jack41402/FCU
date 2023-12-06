@@ -34,13 +34,13 @@ class Producer(QThread):
     def produce(self, num):
         try:
             with self.lock:
-
                 self.send(num)
                 self.producer_signal.emit("[PRODUCER] Send: %d" % num)
+                error = False
                 while True:
                     print("[INFO] Try to fetch message.\n")
                     try:
-                        readable, writable, exceptional = select.select(self.input, self.output, self.input, 2)
+                        readable, writable, exceptional = select.select(self.input, self.output, self.input, 1)
                     except select.error as e:
                         print(f'[ERROR] Catch select.error in producer.select: {e}, line ', e.__traceback__.tb_lineno)
                         break
@@ -49,7 +49,7 @@ class Producer(QThread):
                         break
                     if not (readable or writable or exceptional):
                         print("[INFO] Send message successfully. Timeout without fetching message.\n")
-                        self.producer_signal.emit("[PRODUCER] Send number successfully. Timeout without fetching message.\n")
+                        self.producer_signal.emit("[PRODUCER] Send number successfully.")
                         break
                     for s in readable:
                         try:
@@ -59,8 +59,11 @@ class Producer(QThread):
                                 if msg_type == "ERR":
                                     print("[ERROR] Server queue is full.")
                                     self.producer_signal.emit("[PRODUCER] ERROR. Server queue is full.")
+                                    error = True
+                                    break
                                 else:
                                     print("[ERROR] Unexpected message type.")
+                                    break
                             else:
                                 # Close connection
                                 print("[INFO] Close connection from: ", s.getpeername())
@@ -77,6 +80,9 @@ class Producer(QThread):
                         print("[ERROR] Close : ", s)
                         self.input.remove(s)
                         s.close()
+
+                    if error:
+                        break
         except Exception as e:
             print(f'[ERROR] Other exception in producer.push: {e}, line ', e.__traceback__.tb_lineno)
 
@@ -94,7 +100,10 @@ class Producer(QThread):
 
     def send(self, msg: str):
         try:
-            message.send_msg(self.producer, str(msg))
+            msg = str(msg)
+            if msg.isdigit():
+                self.producer.send(f"PRO {msg}".encode('utf-8'))
+            # message.send_msg(self.producer, str(msg))
             return True
         except Exception as e:
             print(f'[ERROR] Other exception in producer.send: {e}, line ', e.__traceback__.tb_lineno)
@@ -103,10 +112,16 @@ class Producer(QThread):
         try:
             raddr = client.getpeername()
             laddr = client.getsockname()
-            data = message.receive_msg(client)
+            # data = message.receive_msg(client)
             msg = "\nReceive message on :" + str(laddr) + " from : " + str(raddr)
             print(msg)
-            return data
+            data = client.recv(self.buf_size)
+            if data:
+                data = data.decode('utf-8').split(' ')
+                if data[0] == "ERR":
+                    return data
+            else:
+                return False
         except Exception as e:
             print(f'[ERROR] Other exception in producer.receive: {e}, line ', e.__traceback__.tb_lineno)
 

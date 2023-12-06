@@ -130,7 +130,12 @@ class Server(QThread):
 
     def send(self, client, msg: str):
         try:
-            message.send_msg(client, str(msg), server=True)
+            msg = str(msg)
+            if msg.isdigit():
+                client.send(f"SRV {msg}".encode('utf-8'))
+            else:
+                client.send(msg.encode('utf-8'))
+            # message.send_msg(client, str(msg), server=True)
             return True
         except Exception as e:
             print(f'[ERROR] Other exception in server.send: {e}, line ', e.__traceback__.tb_lineno)
@@ -139,9 +144,16 @@ class Server(QThread):
         try:
             raddr = client.getpeername()
             laddr = client.getsockname()
-            data = message.receive_msg(client)
+            # data = message.receive_msg(client)
             msg = "\nReceive message on :" + str(laddr) + " from : " + str(raddr)
             print(msg)
+            data = client.recv(self.buf_size)
+            if data:
+                data = data.decode('utf-8').split(' ')
+                if len(data) == 2:
+                    data = (data[0], int(data[1]))
+            else:
+                return False
             return data
         except Exception as e:
             print(f'[ERROR] Other exception in server.receive: {e}, line ', e.__traceback__.tb_lineno)

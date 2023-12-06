@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="844fcc2b-5462-4822-9969-8cb171627ec1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/multicasting/border_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multicasting/broadcast_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.asm.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.asm.qmsg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.asm.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.asm.rdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.bpm" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.bpm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cmp.rdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cuda_io_sim_cache.31um_ff_1200mv_0c_fast.hsd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cuda_io_sim_cache.31um_ff_1200mv_0c_fast.hsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cuda_io_sim_cache.31um_tt_1200mv_85c_slow.hsd" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.cuda_io_sim_cache.31um_tt_1200mv_85c_slow.hsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.db_info" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.db_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.eda.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.eda.qmsg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.fit.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.fit.qmsg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.hier_info" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.hier_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.qmsg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.rdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map.rdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map_bb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map_bb.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map_bb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.map_bb.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.pre_map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.pre_map.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.rtlv.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.rtlv.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.rtlv_sg.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.rtlv_sg.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.sgdiff.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.sgdiff.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.sgdiff.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.sgdiff.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.sta.qmsg" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.sta.qmsg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.tmw_info" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/db/step_2.tmw_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.cmp.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.cmp.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.cmp.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.cmp.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.hbdb.cdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.hbdb.cdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.hbdb.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.hbdb.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.hdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/incremental_db/compiled_partitions/step_2.root_partition.map.hdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.asm.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.asm.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.done" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.done" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.eda.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.eda.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.fit.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.fit.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.fit.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.fit.summary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.flow.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.flow.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.map.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.map.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.map.summary" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.map.summary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.sta.rpt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/output_files/step_2.sta.rpt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2.vho" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_0c_slow.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_0c_slow.vho" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_0c_vhd_slow.sdo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_0c_vhd_slow.sdo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_85c_slow.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_85c_slow.vho" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_85c_vhd_slow.sdo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_6_1200mv_85c_vhd_slow.sdo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_min_1200mv_0c_fast.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_min_1200mv_0c_fast.vho" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_min_1200mv_0c_vhd_fast.sdo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_min_1200mv_0c_vhd_fast.sdo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_vhd.sdo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/simulation/modelsim/step_2_vhd.sdo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/step_2.qws" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../DIGITAL SYSTEM DESIGN/Lab/Lab 8/step_2/step_2.qws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/tcp/consumer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/tcp/consumer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/tcp/producer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/tcp/producer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/tcp/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab 8 – Non-blocking Socket/d1166506/tcp/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/d1166506.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/d1166506.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multicasting/BC.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multicasting/BR.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multicasting/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/multicasting/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multicasting/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/multicasting/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multicasting/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/multicasting/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Program/Unit 9 Multicasting/1-MulticastReceiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Program/Unit 9 Multicasting/1-MulticastReceiver.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2Z9FxWO0ts6RFhVft6ypnry4Rkv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GitHub/FCU/112-1/WEB PROGRAMMING/Lab/Lab 8 – Non-blocking Socket/test&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="d1166506" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="844fcc2b-5462-4822-9969-8cb171627ec1" name="Changes" comment="" />
+      <created>1701826635063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701826635063</updated>
+      <workItem from="1701826636069" duration="9598000" />
+      <workItem from="1701841491657" duration="4416000" />
+      <workItem from="1701851913819" duration="675000" />
+      <workItem from="1701852937998" duration="2092000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/d1166506$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1701826782599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/multicasting" />
+    <SUITE FILE_PATH="coverage/d1166506$controller.coverage" NAME="controller Coverage Results" MODIFIED="1701826797495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/d1166506$start.coverage" NAME="start Coverage Results" MODIFIED="1701853368318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

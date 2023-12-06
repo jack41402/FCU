@@ -3,13 +3,13 @@ from PyQt6.QtCore import pyqtSignal
 from PyQt6.QtWidgets import QWidget, QMainWindow, QTextBrowser, QVBoxLayout
 from PyQt6 import uic
 from home import Ui_MainWindow
-from multicasting import validate, server, producer, consumer
+from multicasting import validate, server, border_router, broadcast_controller, client
 import sys
-
 
 MULTICAST_GROUP1 = '225.3.2.1'
 MULTICAST_GROUP2 = '225.6.7.8'
 PORT = 6666
+
 
 class MainWindow_controller(QMainWindow):
     def __init__(self):
@@ -17,9 +17,14 @@ class MainWindow_controller(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.server = None
+        self.border_router = None
+        self.broadcast_controller = None
+        self.client = None
         self.client_list = []
         self.ip = None
         self.port = None
+        self.group_ip = None
+        self.group_port = None
         self.backlog = 15
 
         self.setup_control()
@@ -28,6 +33,8 @@ class MainWindow_controller(QMainWindow):
         self.ui.treeWidget.itemClicked.connect(self.display)
         self.ui.btn_Run.clicked.connect(self.RunClicked)
         self.ui.btn_Exit.clicked.connect(self.ExitClicked)
+        self.ui.btn_Join.clicked.connect(self.JoinClicked)
+        self.ui.btn_Close.clicked.connect(self.CloseClicked)
 
     def RunClicked(self):
         try:
@@ -41,9 +48,22 @@ class MainWindow_controller(QMainWindow):
         except Exception as e:
             print(f'[ERROR] Other exception in MainWindow_controller.RunClicked: {e}, line ', e.__traceback__.tb_lineno)
 
-
     def ExitClicked(self):
         sys.exit(-1)
+
+    def JoinClicked(self):
+        msg_IP_Address = self.ui.lineEdit_Multicasting_IP.text()
+        msg_Port = self.ui.lineEdit_Multicasting_Port.text()
+
+        self.group_ip = msg_IP_Address if msg_IP_Address != "" else MULTICAST_GROUP2
+        self.group_port = msg_Port if msg_Port != "" else 6666
+        if not self.client:
+            self.client = client.Client(self.group_ip, self.group_port)
+            self.client.client_signal.connect(self.updateClient)
+            self.client.start()
+
+    def CloseClicked(self):
+        self.client.close()
 
     def start(self):
         try:
@@ -51,42 +71,37 @@ class MainWindow_controller(QMainWindow):
                 self.server = server.Server(self.ip, self.port)
                 self.server.server_signal.connect(self.updateServer)
                 self.server.start()
-
+            if not self.border_router:
+                self.border_router = border_router.BorderRouter(self.ip, self.port)
+                self.border_router.border_router_signal.connect(self.updateBorderRouter)
+                self.border_router.start()
+            if not self.broadcast_controller:
+                self.broadcast_controller = broadcast_controller.BroadcastController()
+                self.broadcast_controller.broadcast_controller_signal.connect(self.updateBroadcastController)
+                self.broadcast_controller.start()
         except Exception as e:
             print(f'[ERROR] Other exception in MainWindow_controller.start: {e}, line ', e.__traceback__.tb_lineno)
 
-    def Produce(self):
-        number = self.ui.lineEdit_Number.text() if self.ui.lineEdit_Number.text() != "" else 10
-        number = int(number)
-        self.producer_thread = threading.Thread(target=self.producer.produce, args=(number,))
-        self.producer_thread.start()
-
-    def Consume(self):
-        self.consumer_thread = threading.Thread(target=self.consumer.consume)
-        self.consumer_thread.start()
-
-    def display(self, item, column):
+    def display(self, item):
         index = self.ui.treeWidget.indexOfTopLevelItem(item)
         self.ui.stackedWidget.setCurrentIndex(index)
 
     def updateServer(self, msg):
-        self.ui.textBrowser.append(msg)
+        self.ui.textBrowser_Server.append(msg)
 
-    def updateProducer(self, msg):
-        self.ui.textBrowser_2.append(msg)
+    def updateBorderRouter(self, msg):
+        self.ui.textBrowser_Border_Router.append(msg)
 
-    def updateConsumer(self, msg):
-        self.ui.textBrowser_3.append(msg)
+    def updateBroadcastController(self, msg):
+        self.ui.textBrowser_Broadcast_Controller.append(msg)
+
+    def updateClient(self, msg):
+        self.ui.textBrowser_Client.append(msg)
 
     def closeEvent(self, event):
-        if self.producer_thread.is_alive():
-            self.producer_thread.exit()
-        if self.consumer_thread.is_alive():
-            self.consumer_thread.exit()
-        if self.server.thread.is_alive():
-            self.server.thread.exit()
+        if self.server.send_thread.is_alive():
+            self.server.send_thread.exit()
         event.accept()
-
 
     # def createProducerTab(self):
     #     try:
@@ -122,8 +137,8 @@ class MainWindow_controller(QMainWindow):
             if index == self.textBrowser.property("index") and send_type == self.textBroser.property("type"):
                 self.textBrowser.append(text)
         except Exception as e:
-            print(f'[ERROR] Other exception in MainWindow_controller.updateBrowser: {e}, line ', e.__traceback__.tb_lineno)
-
+            print(f'[ERROR] Other exception in MainWindow_controller.updateBrowser: {e}, line ',
+                  e.__traceback__.tb_lineno)
 
     # callback of a custom singal in server thread
     # def createBrowser(self):

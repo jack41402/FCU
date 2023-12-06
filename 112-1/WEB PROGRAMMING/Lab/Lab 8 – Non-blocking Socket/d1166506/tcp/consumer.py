@@ -49,10 +49,10 @@ class Consumer(QThread):
                     print(f'[ERROR] Other exception in consumer.select: {e}, line ', e.__traceback__.tb_lineno)
                     continue
                 if not (readable or writable or exceptional):
-                    self.enable += 1
                     if not self.timeout_thread.is_alive():
+                        self.timeout_thread = threading.Thread(target=self.timeout)
                         self.timeout_thread.start()
-                else:
+                elif self.enable > 0:
                     self.enable -= 1
                     print("Enable: ", self.enable)
                 for s in readable:
@@ -83,10 +83,10 @@ class Consumer(QThread):
                     self.input.remove(s)
                     s.close()
         except Exception as e:
-            print(f'[ERROR] Other exception in consumer.pull: {e}, line ', e.__traceback__.tb_lineno)
+            print(f'[ERROR] Other exception in consumer.consume: {e}, line ', e.__traceback__.tb_lineno)
 
     def timeout(self):
-        while self.enable:
+        while self.enable != 0:
             print("[INFO] Timeout without fetching message.\n")
             self.consumer_signal.emit("[CONSUMER] TIMEOUT. Waiting for data...")
             time.sleep(2)
@@ -102,19 +102,29 @@ class Consumer(QThread):
 
     def send(self, msg: str):
         try:
-            message.send_msg(self.consumer, str(msg))
+            self.consumer.send(msg.encode('utf-8'))
+            # message.send_msg(self.consumer, str(msg))
             return True
         except Exception as e:
             print(f'[ERROR] Other exception in consumer.send: {e}, line ', e.__traceback__.tb_lineno)
 
     def receive(self, client):
         try:
+
             raddr = client.getpeername()
             laddr = client.getsockname()
-            data = message.receive_msg(client)
+            # data = message.receive_msg(client)
             msg = "\nReceive message on :" + str(laddr) + " from : " + str(raddr)
             print(msg)
-            return data
+            data = client.recv(self.buf_size)
+            if data:
+                data = data.decode('utf-8').split(' ')
+                print(data)
+                if data[0] == "SRV":
+                    data = (data[0], int(data[1]))
+                    return data
+            else:
+                return False
         except Exception as e:
             print(f'[ERROR] Other exception in consumer.receive: {e}, line ', e.__traceback__.tb_lineno)
 

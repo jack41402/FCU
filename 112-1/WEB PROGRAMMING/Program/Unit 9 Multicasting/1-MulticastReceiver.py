@@ -16,7 +16,7 @@ BUFF_SIZE = 1024  # Buffer size
 
 
 def JoinGroup(s, group_addr, flag):  # flag = True (join) / False (leave)
-    # Join the multicast group, a socket can joun multiple multicast group
+    # Join the multicast group, a socket can join multiple multicast group
     # Join the multicast group by using setsockopt() to change the IP_ADD_MEMBERSHIP option
     # Leave the multicast group by using setsockopt() to change the IP_DROP_MEMBERSHIP option
     # Convert an IPv4 address from dotted-quad string format to 32-bit packed binary format, as a bytes object four characters in length.
