@@ -55,12 +55,12 @@
         </item>
         <item>
          <property name="text">
-          <string>BR</string>
+          <string>Border Router</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>BC</string>
+          <string>Broadcast Controller</string>
          </property>
         </item>
         <item>
@@ -73,10 +73,10 @@
       <item>
        <widget class="QStackedWidget" name="stackedWidget">
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page_Server">
-         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1,10,1">
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="10,1,7,1">
           <item>
            <widget class="QTextBrowser" name="textBrowser_Server"/>
           </item>
@@ -271,22 +271,22 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_BR">
+        <widget class="QWidget" name="page_Border_Router">
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="0" column="0">
-           <widget class="QTextBrowser" name="textBrowser_BR"/>
+           <widget class="QTextBrowser" name="textBrowser_Border_Router"/>
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_BC">
+        <widget class="QWidget" name="page_Broadcast_Controller">
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="0" column="0">
-           <widget class="QTextBrowser" name="textBrowser_BC"/>
+           <widget class="QTextBrowser" name="textBrowser_Broadcast_Controller"/>
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page">
-         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1,10,1">
+        <widget class="QWidget" name="page_Client">
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="10,1,7,1">
           <item>
            <widget class="QTextBrowser" name="textBrowser_Client"/>
           </item>

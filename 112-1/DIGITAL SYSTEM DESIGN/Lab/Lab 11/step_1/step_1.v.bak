@@ -1,0 +1,13 @@
+module step_1(clk, reset, led)
+	input clk;
+	input reset;
+	output reg[6:0] led;
+	led = 7'b1111111
+	
+	always @(posedge clk or negedge reset) begin
+		if (clk)
+			led <= led{1'b0, led[6:1]};
+		if (reset)
+			led = 7'b1111111
+
+endmodule

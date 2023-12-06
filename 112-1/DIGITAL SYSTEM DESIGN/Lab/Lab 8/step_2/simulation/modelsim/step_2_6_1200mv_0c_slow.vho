@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/08/2023 12:01:34"
+-- DATE "12/06/2023 11:53:18"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -41,13 +41,13 @@ ENTITY 	step2 IS
 	I5 : IN std_logic;
 	I6 : IN std_logic;
 	I7 : IN std_logic;
-	a : OUT std_logic;
-	b : OUT std_logic;
-	c : OUT std_logic;
-	d : OUT std_logic;
-	e : OUT std_logic;
-	f : OUT std_logic;
-	g : OUT std_logic
+	a : BUFFER std_logic;
+	b : BUFFER std_logic;
+	c : BUFFER std_logic;
+	d : BUFFER std_logic;
+	e : BUFFER std_logic;
+	f : BUFFER std_logic;
+	g : BUFFER std_logic
 	);
 END step2;
 
