@@ -1,9 +1,0 @@
-vendor_name = ModelSim
-source_file = 1, D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 10/step_1/step_1.bdf
-source_file = 1, D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 10/step_1/output_files/Chain1.cdf
-source_file = 1, D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 10/step_1/db/step_1.cbx.xml
-design_name = step_1
-instance = comp, \Q~output\, Q~output, step_1, 1
-instance = comp, \D~input\, D~input, step_1, 1
-instance = comp, \CLK~input\, CLK~input, step_1, 1
-instance = comp, \inst2~1\, inst2~1, step_1, 1
