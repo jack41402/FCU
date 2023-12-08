@@ -1,0 +1,24 @@
+|step_3
+EO => Decoder0.IN0
+clk => count.CLK
+reset => count.ALOAD
+led[6] <= convert:convert_inst.led
+led[5] <= convert:convert_inst.led
+led[4] <= convert:convert_inst.led
+led[3] <= convert:convert_inst.led
+led[2] <= convert:convert_inst.led
+led[1] <= convert:convert_inst.led
+led[0] <= convert:convert_inst.led
+
+
+|step_3|convert:convert_inst
+number => Decoder0.IN0
+led[6] <= <VCC>
+led[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= <GND>
+led[1] <= <GND>
+led[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -12,10 +12,10 @@ module step_2(dir, clk, reset, led);
 		if (!reset) begin
 			led <= 4'b1000; // Reset the shift register
 		end
-		else if (clk) begin
+		else begin
 			case (dir)
 				1'b0:	led <= {led[0], led[3:1]}; // Shift right
-				1'b1:	led <= {led[3:1], led[0]}; // Shift left
+				1'b1:	led <= {led[2:0], led[3]}; // Shift left
 			endcase
 		end
 	end

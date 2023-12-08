@@ -1,5 +1,5 @@
 Assembler report for step_2
-Wed Dec 06 12:02:28 2023
+Fri Dec 08 06:57:07 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Dec 06 12:02:28 2023 ;
+; Assembler Status      ; Successful - Fri Dec 08 06:57:07 2023 ;
 ; Revision Name         ; step_2                                ;
 ; Top-level Entity Name ; step_2                                ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                      ;
 +----------------+----------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                 ;
-; JTAG usercode  ; 0x000C85A0                                                                                   ;
-; Checksum       ; 0x000C85A0                                                                                   ;
+; JTAG usercode  ; 0x000C86C3                                                                                   ;
+; Checksum       ; 0x000C86C3                                                                                   ;
 +----------------+----------------------------------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Dec 06 12:02:27 2023
+    Info: Processing started: Fri Dec 08 06:57:06 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off step_2 -c step_2
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4594 megabytes
-    Info: Processing ended: Wed Dec 06 12:02:28 2023
+    Info: Peak virtual memory: 4604 megabytes
+    Info: Processing ended: Fri Dec 08 06:57:07 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

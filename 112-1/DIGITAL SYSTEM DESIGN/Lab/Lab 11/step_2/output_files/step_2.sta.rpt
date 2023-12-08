@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for step_2
-Wed Dec 06 12:02:30 2023
+Fri Dec 08 06:57:10 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -102,15 +102,22 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 16     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ; < 0.1%      ;
+;     Processors 13-20       ;   0.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -122,13 +129,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                         ;
-+-------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+-------------+-----------------+------------+---------------------------------------------------------------+
-; 1351.35 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
-+-------------+-----------------+------------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 956.02 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -140,11 +147,11 @@ HTML report is unavailable in plain text report export.
 
 +-------------------------------------+
 ; Slow 1200mV 85C Model Setup Summary ;
-+-------+-------+---------------------+
-; Clock ; Slack ; End Point TNS       ;
-+-------+-------+---------------------+
-; clk   ; 0.260 ; 0.000               ;
-+-------+-------+---------------------+
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -0.046 ; -0.084             ;
++-------+--------+--------------------+
 
 
 +------------------------------------+
@@ -152,7 +159,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.411 ; 0.000              ;
+; clk   ; 0.417 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -177,16 +184,20 @@ No paths to report.
 +-------+--------+----------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'clk'                                                                      ;
-+-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.260 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.713      ;
-; 0.263 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.710      ;
-; 0.264 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.709      ;
-; 0.266 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.707      ;
-+-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                       ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; -0.046 ; led[0]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 1.019      ;
+; -0.038 ; led[2]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 1.011      ;
+; 0.151  ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.822      ;
+; 0.154  ; led[3]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.819      ;
+; 0.252  ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.721      ;
+; 0.253  ; led[1]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.720      ;
+; 0.254  ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.719      ;
+; 0.256  ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.717      ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 
 
 +---------------------------------------------------------------------------------------------------------+
@@ -194,10 +205,14 @@ No paths to report.
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.411 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.610      ;
-; 0.413 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.612      ;
-; 0.413 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.612      ;
-; 0.414 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.613      ;
+; 0.417 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.616      ;
+; 0.421 ; led[1]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.620      ;
+; 0.421 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.620      ;
+; 0.422 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.621      ;
+; 0.520 ; led[3]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.719      ;
+; 0.521 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.720      ;
+; 0.601 ; led[0]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.800      ;
+; 0.640 ; led[2]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.839      ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -239,7 +254,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; dir       ; clk        ; 2.346 ; 2.733 ; Rise       ; clk             ;
+; dir       ; clk        ; 2.254 ; 2.687 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -248,7 +263,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; dir       ; clk        ; -2.105 ; -2.484 ; Rise       ; clk             ;
+; dir       ; clk        ; -1.796 ; -2.222 ; Rise       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -257,11 +272,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 6.164 ; 6.346 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 4.919 ; 4.981 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 4.920 ; 4.982 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 6.164 ; 6.346 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 4.996 ; 4.936 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 6.118 ; 6.290 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 4.933 ; 5.012 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 4.947 ; 5.018 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 6.118 ; 6.290 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 4.975 ; 4.916 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -270,11 +285,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 4.825 ; 4.842 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 4.825 ; 4.883 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 4.826 ; 4.884 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 6.069 ; 6.247 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 4.899 ; 4.842 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 4.839 ; 4.822 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 4.839 ; 4.913 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 4.852 ; 4.919 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 6.024 ; 6.193 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 4.878 ; 4.822 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -284,13 +299,13 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                         ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+------------+-----------------+------------+---------------------------------------------------------------+
-; 1508.3 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
-+------------+-----------------+------------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 1081.08 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -299,7 +314,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.337 ; 0.000              ;
+; clk   ; 0.075 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -308,7 +323,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.366 ; 0.000             ;
+; clk   ; 0.370 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -338,10 +353,14 @@ No paths to report.
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.337 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.641      ;
-; 0.340 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.638      ;
-; 0.349 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.629      ;
-; 0.351 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.627      ;
+; 0.075 ; led[0]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.903      ;
+; 0.076 ; led[2]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.902      ;
+; 0.236 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.742      ;
+; 0.239 ; led[3]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.739      ;
+; 0.332 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.646      ;
+; 0.338 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.640      ;
+; 0.339 ; led[1]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.639      ;
+; 0.342 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.636      ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -350,10 +369,14 @@ No paths to report.
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.366 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.547      ;
-; 0.368 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.549      ;
-; 0.375 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.556      ;
-; 0.376 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.557      ;
+; 0.370 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.551      ;
+; 0.381 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.562      ;
+; 0.381 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.562      ;
+; 0.382 ; led[1]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.563      ;
+; 0.462 ; led[3]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.643      ;
+; 0.463 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.644      ;
+; 0.541 ; led[0]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.722      ;
+; 0.568 ; led[2]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.749      ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -395,7 +418,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; dir       ; clk        ; 1.983 ; 2.315 ; Rise       ; clk             ;
+; dir       ; clk        ; 1.894 ; 2.259 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -404,7 +427,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; dir       ; clk        ; -1.775 ; -2.099 ; Rise       ; clk             ;
+; dir       ; clk        ; -1.499 ; -1.852 ; Rise       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -413,11 +436,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 5.989 ; 6.143 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 4.748 ; 4.784 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 4.749 ; 4.785 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 5.989 ; 6.143 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 4.797 ; 4.763 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 5.946 ; 6.092 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 4.760 ; 4.813 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 4.774 ; 4.819 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 5.946 ; 6.092 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 4.778 ; 4.744 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -426,11 +449,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 4.666 ; 4.681 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 4.666 ; 4.700 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 4.667 ; 4.701 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 5.906 ; 6.058 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 4.713 ; 4.681 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 4.677 ; 4.663 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 4.677 ; 4.728 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 4.691 ; 4.734 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 5.864 ; 6.009 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 4.695 ; 4.663 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -445,7 +468,7 @@ No synchronizer chains to report.
 +-------+-------+--------------------+
 ; Clock ; Slack ; End Point TNS      ;
 +-------+-------+--------------------+
-; clk   ; 0.598 ; 0.000              ;
+; clk   ; 0.423 ; 0.000              ;
 +-------+-------+--------------------+
 
 
@@ -454,7 +477,7 @@ No synchronizer chains to report.
 +-------+-------+-------------------+
 ; Clock ; Slack ; End Point TNS     ;
 +-------+-------+-------------------+
-; clk   ; 0.217 ; 0.000             ;
+; clk   ; 0.221 ; 0.000             ;
 +-------+-------+-------------------+
 
 
@@ -484,10 +507,14 @@ No paths to report.
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.598 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.385      ;
-; 0.599 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.384      ;
-; 0.599 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.384      ;
-; 0.602 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.381      ;
+; 0.423 ; led[0]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.560      ;
+; 0.426 ; led[2]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.557      ;
+; 0.544 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.439      ;
+; 0.546 ; led[3]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.437      ;
+; 0.592 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.391      ;
+; 0.593 ; led[1]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.390      ;
+; 0.594 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.389      ;
+; 0.597 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 1.000        ; -0.024     ; 0.386      ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -496,10 +523,14 @@ No paths to report.
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.217 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.325      ;
-; 0.217 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.325      ;
-; 0.222 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.330      ;
-; 0.224 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.332      ;
+; 0.221 ; led[1]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.329      ;
+; 0.222 ; led[2]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.330      ;
+; 0.222 ; led[1]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.330      ;
+; 0.225 ; led[0]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.333      ;
+; 0.280 ; led[3]~reg0 ; led[0]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.388      ;
+; 0.280 ; led[3]~reg0 ; led[2]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.388      ;
+; 0.323 ; led[0]~reg0 ; led[1]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.431      ;
+; 0.344 ; led[2]~reg0 ; led[3]~reg0 ; clk          ; clk         ; 0.000        ; 0.024      ; 0.452      ;
 +-------+-------------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -541,7 +572,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; dir       ; clk        ; 1.365 ; 1.923 ; Rise       ; clk             ;
+; dir       ; clk        ; 1.328 ; 1.898 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -550,7 +581,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; dir       ; clk        ; -1.226 ; -1.780 ; Rise       ; clk             ;
+; dir       ; clk        ; -1.069 ; -1.639 ; Rise       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -559,11 +590,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 3.767 ; 3.984 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 2.944 ; 2.993 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 2.945 ; 2.994 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 3.767 ; 3.984 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 3.004 ; 2.940 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 3.742 ; 3.948 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 2.954 ; 3.010 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 2.958 ; 3.017 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 3.742 ; 3.948 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 2.990 ; 2.929 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -572,11 +603,11 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 2.890 ; 2.887 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 2.890 ; 2.937 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 2.891 ; 2.938 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 3.713 ; 3.926 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 2.947 ; 2.887 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 2.900 ; 2.876 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 2.900 ; 2.953 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 2.904 ; 2.960 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 3.689 ; 3.892 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 2.934 ; 2.876 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -586,16 +617,16 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                         ;
-+------------------+-------+-------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 0.260 ; 0.217 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; 0.260 ; 0.217 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; -7.328              ;
-;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; -7.328              ;
-+------------------+-------+-------+----------+---------+---------------------+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.046 ; 0.221 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -0.046 ; 0.221 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -0.084 ; 0.0   ; 0.0      ; 0.0     ; -7.328              ;
+;  clk             ; -0.084 ; 0.000 ; N/A      ; N/A     ; -7.328              ;
++------------------+--------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -603,7 +634,7 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; dir       ; clk        ; 2.346 ; 2.733 ; Rise       ; clk             ;
+; dir       ; clk        ; 2.254 ; 2.687 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -612,7 +643,7 @@ No synchronizer chains to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; dir       ; clk        ; -1.226 ; -1.780 ; Rise       ; clk             ;
+; dir       ; clk        ; -1.069 ; -1.639 ; Rise       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -621,11 +652,11 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 6.164 ; 6.346 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 4.919 ; 4.981 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 4.920 ; 4.982 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 6.164 ; 6.346 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 4.996 ; 4.936 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 6.118 ; 6.290 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 4.933 ; 5.012 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 4.947 ; 5.018 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 6.118 ; 6.290 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 4.975 ; 4.916 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -634,11 +665,11 @@ No synchronizer chains to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; led[*]    ; clk        ; 2.890 ; 2.887 ; Rise       ; clk             ;
-;  led[0]   ; clk        ; 2.890 ; 2.937 ; Rise       ; clk             ;
-;  led[1]   ; clk        ; 2.891 ; 2.938 ; Rise       ; clk             ;
-;  led[2]   ; clk        ; 3.713 ; 3.926 ; Rise       ; clk             ;
-;  led[3]   ; clk        ; 2.947 ; 2.887 ; Rise       ; clk             ;
+; led[*]    ; clk        ; 2.900 ; 2.876 ; Rise       ; clk             ;
+;  led[0]   ; clk        ; 2.900 ; 2.953 ; Rise       ; clk             ;
+;  led[1]   ; clk        ; 2.904 ; 2.960 ; Rise       ; clk             ;
+;  led[2]   ; clk        ; 3.689 ; 3.892 ; Rise       ; clk             ;
+;  led[3]   ; clk        ; 2.934 ; 2.876 ; Rise       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -661,9 +692,9 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
+; dir                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; dir                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -703,7 +734,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 4        ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 8        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -713,7 +744,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 4        ; 0        ; 0        ; 0        ;
+; clk        ; clk      ; 8        ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -750,10 +781,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Dec 06 12:02:29 2023
+    Info: Processing started: Fri Dec 08 06:57:08 2023
 Info: Command: quartus_sta step_2 -c step_2
 Info: qsta_default_script.tcl version: #1
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (21077): Core supply voltage is 1.2V
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -765,18 +796,18 @@ Info (332143): No user constrained clock uncertainty found in the design. Callin
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
-Info (332146): Worst-case setup slack is 0.260
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.260               0.000 clk 
-Info (332146): Worst-case hold slack is 0.411
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.411               0.000 clk 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.046
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.046              -0.084 clk 
+Info (332146): Worst-case hold slack is 0.417
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.417               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -785,14 +816,14 @@ Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332146): Worst-case setup slack is 0.337
+Info (332146): Worst-case setup slack is 0.075
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.337               0.000 clk 
-Info (332146): Worst-case hold slack is 0.366
+    Info (332119):     0.075               0.000 clk 
+Info (332146): Worst-case hold slack is 0.370
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.366               0.000 clk 
+    Info (332119):     0.370               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -803,14 +834,14 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000              -7.000 clk 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332146): Worst-case setup slack is 0.598
+Info (332146): Worst-case setup slack is 0.423
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.598               0.000 clk 
-Info (332146): Worst-case hold slack is 0.217
+    Info (332119):     0.423               0.000 clk 
+Info (332146): Worst-case hold slack is 0.221
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.217               0.000 clk 
+    Info (332119):     0.221               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -821,10 +852,10 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000              -7.328 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4625 megabytes
-    Info: Processing ended: Wed Dec 06 12:02:30 2023
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Fri Dec 08 06:57:10 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:00
 
 

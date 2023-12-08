@@ -1,5 +1,5 @@
 Fitter report for step_2
-Wed Dec 06 12:02:25 2023
+Fri Dec 08 06:57:03 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -65,7 +65,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Wed Dec 06 12:02:25 2023      ;
+; Fitter Status                      ; Successful - Fri Dec 08 06:57:03 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; step_2                                     ;
 ; Top-level Entity Name              ; step_2                                     ;
@@ -73,7 +73,7 @@ applicable agreement for further details.
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
 ; Total logic elements               ; 4 / 15,408 ( < 1 % )                       ;
-;     Total combinational functions  ; 2 / 15,408 ( < 1 % )                       ;
+;     Total combinational functions  ; 4 / 15,408 ( < 1 % )                       ;
 ;     Dedicated logic registers      ; 4 / 15,408 ( < 1 % )                       ;
 ; Total registers                    ; 4                                          ;
 ; Total pins                         ; 7 / 347 ( 2 % )                            ;
@@ -145,15 +145,22 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 16     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ; < 0.1%      ;
+;     Processors 13-20       ;   0.0%      ;
++----------------------------+-------------+
 
 
 +-------------------------------------------------+
@@ -174,8 +181,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 31 ) ; 0.00 % ( 0 / 31 )          ; 0.00 % ( 0 / 31 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 31 ) ; 0.00 % ( 0 / 31 )          ; 0.00 % ( 0 / 31 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 33 ) ; 0.00 % ( 0 / 33 )          ; 0.00 % ( 0 / 33 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 33 ) ; 0.00 % ( 0 / 33 )          ; 0.00 % ( 0 / 33 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -198,7 +205,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 21 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 23 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -216,17 +223,17 @@ The pin-out file can be found in D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/L
 +---------------------------------------------+----------------------+
 ; Total logic elements                        ; 4 / 15,408 ( < 1 % ) ;
 ;     -- Combinational with no register       ; 0                    ;
-;     -- Register only                        ; 2                    ;
-;     -- Combinational with a register        ; 2                    ;
+;     -- Register only                        ; 0                    ;
+;     -- Combinational with a register        ; 4                    ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
 ;     -- 4 input functions                    ; 0                    ;
-;     -- 3 input functions                    ; 0                    ;
-;     -- <=2 input functions                  ; 2                    ;
-;     -- Register only                        ; 2                    ;
+;     -- 3 input functions                    ; 4                    ;
+;     -- <=2 input functions                  ; 0                    ;
+;     -- Register only                        ; 0                    ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 2                    ;
+;     -- normal mode                          ; 4                    ;
 ;     -- arithmetic mode                      ; 0                    ;
 ;                                             ;                      ;
 ; Total registers*                            ; 4 / 17,068 ( < 1 % ) ;
@@ -254,8 +261,8 @@ The pin-out file can be found in D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/L
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
 ; Maximum fan-out                             ; 4                    ;
 ; Highest non-global fan-out                  ; 4                    ;
-; Total fan-out                               ; 36                   ;
-; Average fan-out                             ; 1.13                 ;
+; Total fan-out                               ; 40                   ;
+; Average fan-out                             ; 1.25                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -270,17 +277,17 @@ The pin-out file can be found in D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/L
 ;                                             ;                     ;                                ;
 ; Total logic elements                        ; 4 / 15408 ( < 1 % ) ; 0 / 15408 ( 0 % )              ;
 ;     -- Combinational with no register       ; 0                   ; 0                              ;
-;     -- Register only                        ; 2                   ; 0                              ;
-;     -- Combinational with a register        ; 2                   ; 0                              ;
+;     -- Register only                        ; 0                   ; 0                              ;
+;     -- Combinational with a register        ; 4                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
 ;     -- 4 input functions                    ; 0                   ; 0                              ;
-;     -- 3 input functions                    ; 0                   ; 0                              ;
-;     -- <=2 input functions                  ; 2                   ; 0                              ;
-;     -- Register only                        ; 2                   ; 0                              ;
+;     -- 3 input functions                    ; 4                   ; 0                              ;
+;     -- <=2 input functions                  ; 0                   ; 0                              ;
+;     -- Register only                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 2                   ; 0                              ;
+;     -- normal mode                          ; 4                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 4                   ; 0                              ;
@@ -302,8 +309,8 @@ The pin-out file can be found in D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/L
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 31                  ; 5                              ;
-;     -- Registered Connections               ; 8                   ; 0                              ;
+;     -- Total Connections                    ; 35                  ; 5                              ;
+;     -- Registered Connections               ; 12                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
@@ -888,7 +895,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |step_2                    ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 7    ; 0            ; 0 (0)        ; 2 (2)             ; 2 (2)            ; |step_2             ; work         ;
+; |step_2                    ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 7    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |step_2             ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -902,9 +909,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[1] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led[2] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; led[3] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; dir    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; clk    ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; reset  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; dir    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +--------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -913,6 +920,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
+; dir                 ;                   ;         ;
+;      - led~0        ; 1                 ; 6       ;
+;      - led~1        ; 1                 ; 6       ;
+;      - led~2        ; 1                 ; 6       ;
+;      - led~3        ; 1                 ; 6       ;
 ; clk                 ;                   ;         ;
 ;      - led[0]~reg0  ; 0                 ; 0       ;
 ;      - led[1]~reg0  ; 0                 ; 0       ;
@@ -923,11 +935,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - led[1]~reg0  ; 1                 ; 6       ;
 ;      - led[2]~reg0  ; 1                 ; 6       ;
 ;      - led[3]~reg0  ; 1                 ; 6       ;
-; dir                 ;                   ;         ;
-;      - led[0]~reg0  ; 1                 ; 6       ;
-;      - led[3]~reg0  ; 1                 ; 6       ;
-;      - led[2]~reg0  ; 1                 ; 6       ;
-;      - led[1]~reg0  ; 1                 ; 6       ;
 +---------------------+-------------------+---------+
 
 
@@ -937,7 +944,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk   ; PIN_G3   ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; dir   ; PIN_J6   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; reset ; PIN_H2   ; 4       ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -947,15 +953,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------------------+
 ; Name        ; Fan-Out           ;
 +-------------+-------------------+
-; dir~input   ; 4                 ;
 ; reset~input ; 4                 ;
 ; clk~input   ; 4                 ;
-; led[3]~reg0 ; 2                 ;
-; led[2]~reg0 ; 2                 ;
-; led[1]~reg0 ; 2                 ;
-; led[0]~reg0 ; 2                 ;
-; led[3]~1    ; 1                 ;
-; led[2]~0    ; 1                 ;
+; dir~input   ; 4                 ;
+; led[3]~reg0 ; 3                 ;
+; led[2]~reg0 ; 3                 ;
+; led[1]~reg0 ; 3                 ;
+; led[0]~reg0 ; 3                 ;
+; led~3       ; 1                 ;
+; led~2       ; 1                 ;
+; led~1       ; 1                 ;
+; led~0       ; 1                 ;
 +-------------+-------------------+
 
 
@@ -1002,11 +1010,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 3.00) ; Number of LABs  (Total = 1) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 1) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 1                           ;
 ; 1 Clock                            ; 1                           ;
-; 1 Clock enable                     ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
@@ -1117,9 +1124,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; led[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; led[2]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; led[3]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; dir                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; reset              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; dir                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -1163,7 +1170,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
 Info (119006): Selected device EP3C16F484C6 for design "step_2"
 Info (21077): Core supply voltage is 1.2V
 Info (21077): Low junction temperature is 0 degrees C
@@ -1198,22 +1205,22 @@ Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y10 to location X9_Y19
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.00 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_2/output_files/step_2.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4949 megabytes
-    Info: Processing ended: Wed Dec 06 12:02:26 2023
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 5841 megabytes
+    Info: Processing ended: Fri Dec 08 06:57:04 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+
