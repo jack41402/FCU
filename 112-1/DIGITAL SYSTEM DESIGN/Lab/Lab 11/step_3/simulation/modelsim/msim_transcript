@@ -1,13 +1,13 @@
-# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
 # do step_3_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
 # vlog -vlog01compat -work work +incdir+D:/GitHub/FCU/112-1/DIGITAL\ SYSTEM\ DESIGN/Lab/Lab\ 11/step_3 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
@@ -18,3 +18,74 @@
 # Top level modules:
 # 	step_3
 # 
+vsim work.step_3
+# vsim work.step_3 
+# Loading work.step_3
+# Loading work.convert
+# ** Warning: (vsim-3015) D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v(10): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'number'. The port definition is at: D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v(41).
+# 
+#         Region: /step_3/convert_inst
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns sim:/step_3/EO
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ns -dutycycle 50 -starttime 0ns -endtime 1000ns sim:/step_3/clk
+wave create -driver freeze -pattern constant -value 1 -starttime 0ns -endtime 1000ns sim:/step_3/reset
+add wave -position insertpoint  \
+sim:/step_3/count
+add wave -position insertpoint  \
+sim:/step_3/led
+restart
+# ** Warning: (vsim-3015) D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v(10): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'number'. The port definition is at: D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v(41).
+# 
+#         Region: /step_3/convert_inst
+run
+# count:  1
+# Try to add count:  1
+# count after add:  3
+# Try to add count:  3
+# count after add:  5
+# Try to add count:  5
+# count after add:  7
+# Try to add count:  7
+# count after add:  9
+# Try to add count:  9
+# count after add:  1
+# Try to add count:  1
+# count after add:  3
+# Try to add count:  3
+# count after add:  5
+# Try to add count:  5
+# count after add:  7
+# Try to add count:  7
+# count after add:  9
+# Try to add count:  9
+# count after add:  1
+# Try to add count:  1
+# count after add:  3
+restart
+# ** Warning: (vsim-3015) D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v(10): [PCDPC] - Port size (1 or 1) does not match connection size (4) for port 'number'. The port definition is at: D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v(41).
+# 
+#         Region: /step_3/convert_inst
+run
+# count:  1
+# Try to add count:  1
+# count after add:  3
+# Try to add count:  3
+# count after add:  5
+# Try to add count:  5
+# count after add:  7
+# Try to add count:  7
+# count after add:  9
+# Try to add count:  9
+# count after add:  1
+# Try to add count:  1
+# count after add:  3
+# Try to add count:  3
+# count after add:  5
+# Try to add count:  5
+# count after add:  7
+# Try to add count:  7
+# count after add:  9
+# Try to add count:  9
+# count after add:  1
+# Try to add count:  1
+# count after add:  3
+wave editwrite -file {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/simulation/modelsim/wave.do}

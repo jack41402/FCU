@@ -1,5 +1,5 @@
 Flow report for step_3
-Fri Dec 08 14:54:36 2023
+Fri Dec 08 16:54:35 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 08 14:54:36 2023      ;
+; Flow Status                        ; Successful - Fri Dec 08 16:54:35 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; step_3                                     ;
 ; Top-level Entity Name              ; step_3                                     ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 3 / 15,408 ( < 1 % )                       ;
-;     Total combinational functions  ; 3 / 15,408 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 1 / 15,408 ( < 1 % )                       ;
-; Total registers                    ; 1                                          ;
+; Total logic elements               ; 18 / 15,408 ( < 1 % )                      ;
+;     Total combinational functions  ; 18 / 15,408 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 4 / 15,408 ( < 1 % )                       ;
+; Total registers                    ; 4                                          ;
 ; Total pins                         ; 10 / 347 ( 3 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                        ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/08/2023 14:54:19 ;
+; Start date & time ; 12/08/2023 16:54:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; step_3              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 193775440327135.170201845927040 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 123360451794079.170202566555228 ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; step_3                          ; --            ; --          ; --             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; step_3                          ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
@@ -102,12 +102,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4616 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 4936 MB             ; 00:00:03                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4586 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4534 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4670 MB             ; 00:00:00                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 5841 MB             ; 00:00:01                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4596 MB             ; 00:00:00                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4798 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4547 MB             ; 00:00:00                           ;
+; Total                     ; 00:00:06     ; --                      ; --                  ; 00:00:01                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,11 +116,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-LRCVD76  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-LRCVD76  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-LRCVD76  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-LRCVD76  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LRCVD76  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-AROFK36  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

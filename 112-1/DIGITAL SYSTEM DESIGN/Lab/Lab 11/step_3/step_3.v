@@ -4,7 +4,7 @@ module step_3(EO, clk, reset, led);
 	input reset;
 	output reg[0:6] led;
 	
-	reg count;
+	reg [3:0] count;
 	wire [0:6] converted_led; // Intermediate wire to store the converted LED value
 	
 	convert convert_inst (.number(count),.led(converted_led));
@@ -26,10 +26,11 @@ module step_3(EO, clk, reset, led);
 			endcase
 		end
 		else begin
+			$display("Try to add count: %d", count);
 			count = count + 2;
 			count = count % 10;
 		end
-		$display("count: %d", count);
+		$display("count after add: %d", count);
 	end
 	
 	always @* begin
@@ -38,7 +39,7 @@ module step_3(EO, clk, reset, led);
 endmodule
 
 module convert(number, led);
-	input number;
+	input [3:0] number;
 	output reg[0:6] led;
 	
 	always @(number, led) begin
