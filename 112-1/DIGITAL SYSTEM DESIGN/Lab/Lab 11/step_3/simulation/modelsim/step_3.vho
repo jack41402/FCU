@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "12/08/2023 08:17:51"
+-- DATE "12/08/2023 14:13:19"
 
 -- 
 -- Device: Altera EP3C16F484C6 Package FBGA484
@@ -76,13 +76,14 @@ SIGNAL \led[3]~output_o\ : std_logic;
 SIGNAL \led[2]~output_o\ : std_logic;
 SIGNAL \led[1]~output_o\ : std_logic;
 SIGNAL \led[0]~output_o\ : std_logic;
-SIGNAL \reset~input_o\ : std_logic;
 SIGNAL \EO~input_o\ : std_logic;
+SIGNAL \reset~input_o\ : std_logic;
 SIGNAL \count~1_combout\ : std_logic;
 SIGNAL \clk~input_o\ : std_logic;
 SIGNAL \count~3_combout\ : std_logic;
 SIGNAL \count~_emulated_q\ : std_logic;
 SIGNAL \count~2_combout\ : std_logic;
+SIGNAL \ALT_INV_clk~input_o\ : std_logic;
 
 BEGIN
 
@@ -93,6 +94,7 @@ led <= ww_led;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\ALT_INV_clk~input_o\ <= NOT \clk~input_o\;
 
 -- Location: IOOBUF_X39_Y29_N30
 \led[6]~output\ : cycloneiii_io_obuf
@@ -178,17 +180,6 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \led[0]~output_o\);
 
--- Location: IOIBUF_X0_Y21_N8
-\reset~input\ : cycloneiii_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_reset,
-	o => \reset~input_o\);
-
 -- Location: IOIBUF_X0_Y24_N1
 \EO~input\ : cycloneiii_io_ibuf
 -- pragma translate_off
@@ -200,19 +191,30 @@ PORT MAP (
 	i => ww_EO,
 	o => \EO~input_o\);
 
--- Location: LCCOMB_X1_Y21_N8
+-- Location: IOIBUF_X0_Y21_N8
+\reset~input\ : cycloneiii_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_reset,
+	o => \reset~input_o\);
+
+-- Location: LCCOMB_X1_Y21_N24
 \count~1\ : cycloneiii_lcell_comb
 -- Equation(s):
 -- \count~1_combout\ = (\reset~input_o\ & ((\count~1_combout\))) # (!\reset~input_o\ & (\EO~input_o\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111000011001100",
+	lut_mask => "1100110010101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \EO~input_o\,
-	datac => \count~1_combout\,
+	dataa => \EO~input_o\,
+	datab => \count~1_combout\,
 	datad => \reset~input_o\,
 	combout => \count~1_combout\);
 
@@ -250,7 +252,7 @@ GENERIC MAP (
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \clk~input_o\,
+	clk => \ALT_INV_clk~input_o\,
 	d => \count~3_combout\,
 	clrn => \reset~input_o\,
 	devclrn => ww_devclrn,
@@ -260,17 +262,17 @@ PORT MAP (
 -- Location: LCCOMB_X1_Y21_N18
 \count~2\ : cycloneiii_lcell_comb
 -- Equation(s):
--- \count~2_combout\ = (\reset~input_o\ & (\count~1_combout\ $ (((\count~_emulated_q\))))) # (!\reset~input_o\ & (((\EO~input_o\))))
+-- \count~2_combout\ = (\reset~input_o\ & ((\count~1_combout\ $ (\count~_emulated_q\)))) # (!\reset~input_o\ & (\EO~input_o\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111001011011000",
+	lut_mask => "0010111011100010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \reset~input_o\,
-	datab => \count~1_combout\,
-	datac => \EO~input_o\,
+	dataa => \EO~input_o\,
+	datab => \reset~input_o\,
+	datac => \count~1_combout\,
 	datad => \count~_emulated_q\,
 	combout => \count~2_combout\);
 

@@ -13,6 +13,7 @@ module step_3(EO, clk, reset, led);
 		case (EO)
 			1'b0:	count = 0;	// initialize to 0
 			1'b1:	count = 1;	// initialize to 1
+			default: count = -1;
 		endcase
 		$display("count: %d", count);
 	end

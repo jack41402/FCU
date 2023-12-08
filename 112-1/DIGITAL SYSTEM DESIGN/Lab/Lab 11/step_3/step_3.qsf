@@ -47,8 +47,8 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE step_3.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
@@ -64,4 +64,13 @@ set_location_assignment PIN_B19 -to led[3]
 set_location_assignment PIN_A19 -to led[2]
 set_location_assignment PIN_F15 -to led[1]
 set_location_assignment PIN_B18 -to led[0]
+set_global_assignment -name EDA_TIME_SCALE "1 us" -section_id eda_simulation
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS NOT_USED -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH step_3 -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME step_3 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME step_3 -section_id step_3
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1 us" -section_id step_3
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME step_3 -section_id step_3
+set_global_assignment -name EDA_TEST_BENCH_FILE step_3.v -section_id step_3
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

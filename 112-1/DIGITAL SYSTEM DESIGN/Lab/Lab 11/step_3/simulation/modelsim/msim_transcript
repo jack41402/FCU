@@ -1,0 +1,20 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do step_3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/GitHub/FCU/112-1/DIGITAL\ SYSTEM\ DESIGN/Lab/Lab\ 11/step_3 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+# 

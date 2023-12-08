@@ -1,5 +1,5 @@
 Analysis & Synthesis report for step_3
-Fri Dec 08 08:17:41 2023
+Fri Dec 08 14:54:21 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 08 08:17:41 2023      ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 08 14:54:20 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; step_3                                     ;
 ; Top-level Entity Name              ; step_3                                     ;
@@ -146,21 +146,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-20        ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -169,10 +163,10 @@ applicable agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 ; step_3.v                         ; yes             ; User Verilog HDL File        ; D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v                   ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                          ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                         ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                     ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                     ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                          ;         ;
 ; db/lpm_divide_68m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/db/lpm_divide_68m.tdf      ;         ;
 ; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/db/sign_div_unsign_7kh.tdf ;         ;
 ; db/alt_u_div_p2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/db/alt_u_div_p2f.tdf       ;         ;
@@ -274,19 +268,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Dec 08 08:17:41 2023
+    Info: Processing started: Fri Dec 08 14:54:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off step_3 -c step_3
-Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 12 of the 12 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 2 entities, in source file step_3.v
     Info (12023): Found entity 1: step_3
     Info (12023): Found entity 2: convert
 Info (12127): Elaborating entity "step_3" for the top level hierarchy
-Info (10648): Verilog HDL Display System Task info at step_3.v(17): count: 0
+Warning (10230): Verilog HDL assignment warning at step_3.v(16): truncated value with size 32 to match size of target (1)
+Info (10648): Verilog HDL Display System Task info at step_3.v(18): count: 0
 Warning (10855): Verilog HDL warning at step_3.v(12): initial value for variable count should be constant
-Warning (10230): Verilog HDL assignment warning at step_3.v(28): truncated value with size 32 to match size of target (1)
 Warning (10230): Verilog HDL assignment warning at step_3.v(29): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at step_3.v(30): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "convert" for hierarchy "convert:convert_inst"
-Warning (10199): Verilog HDL Case Statement warning at step_3.v(47): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at step_3.v(48): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at step_3.v(49): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at step_3.v(50): case item expression never matches the case expression
@@ -294,6 +288,7 @@ Warning (10199): Verilog HDL Case Statement warning at step_3.v(51): case item e
 Warning (10199): Verilog HDL Case Statement warning at step_3.v(52): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at step_3.v(53): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at step_3.v(54): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at step_3.v(55): case item expression never matches the case expression
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
 Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
@@ -325,10 +320,10 @@ Info (21057): Implemented 13 device resources after synthesis - the final resour
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 3 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4671 megabytes
-    Info: Processing ended: Fri Dec 08 08:17:41 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4627 megabytes
+    Info: Processing ended: Fri Dec 08 14:54:21 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

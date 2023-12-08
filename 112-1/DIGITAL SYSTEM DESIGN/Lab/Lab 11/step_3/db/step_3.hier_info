@@ -2,13 +2,13 @@
 EO => Decoder0.IN0
 clk => count.CLK
 reset => count.ALOAD
-led[6] <= convert:convert_inst.led
-led[5] <= convert:convert_inst.led
-led[4] <= convert:convert_inst.led
-led[3] <= convert:convert_inst.led
-led[2] <= convert:convert_inst.led
-led[1] <= convert:convert_inst.led
-led[0] <= convert:convert_inst.led
+led[6] << convert:convert_inst.led
+led[5] << convert:convert_inst.led
+led[4] << convert:convert_inst.led
+led[3] << convert:convert_inst.led
+led[2] << convert:convert_inst.led
+led[1] << convert:convert_inst.led
+led[0] << convert:convert_inst.led
 
 
 |step_3|convert:convert_inst
