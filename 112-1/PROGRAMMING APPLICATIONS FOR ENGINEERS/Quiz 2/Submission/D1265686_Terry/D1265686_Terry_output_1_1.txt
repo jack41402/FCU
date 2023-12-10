@@ -1,0 +1,13 @@
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 00006451 is of the decimal value: 6421968
+
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral ABC82DE3 is of the decimal value: 6421968
+
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral FFFFFFFF is of the decimal value: 6421968
+
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: 

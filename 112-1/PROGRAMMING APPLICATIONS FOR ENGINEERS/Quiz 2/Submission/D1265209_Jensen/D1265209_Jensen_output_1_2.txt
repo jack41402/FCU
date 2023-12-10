@@ -1,0 +1,37 @@
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 10000000 is of the decimal value: 268435456
+Binary number:      00010000000000000000000000000000
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 00000001 is of the decimal value: 1
+Binary number:      000000000000000000000000000000001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 11111111 is of the decimal value: 286331153
+Binary number:      100010001000100010001000100010001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 11110000 is of the decimal value: 286326784
+Binary number:      100010001000100010000000000000000
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 00001111 is of the decimal value: 4369
+Binary number:      000000000000000000001000100010001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 11001100 is of the decimal value: 285217024
+Binary number:      100010001000000000001000100000000
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 00110011 is of the decimal value: 1114129
+Binary number:      000000000000100010000000000010001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 01010101 is of the decimal value: 16843009
+Binary number:      100000001000000010000000100000001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 10101010 is of the decimal value: 269488144
+Binary number:      100010000000100000001000000010000
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: 
