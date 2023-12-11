@@ -1,3 +1,0 @@
-solving root of equation a*x**2+b*x+c=0
-please enter three integer coefficients a, b and c:
-The complex roots of the equation:-2x**2-5 are -1.5811i and 1.5811i

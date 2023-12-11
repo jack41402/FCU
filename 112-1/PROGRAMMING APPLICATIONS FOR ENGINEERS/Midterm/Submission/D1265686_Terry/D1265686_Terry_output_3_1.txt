@@ -1,7 +1,0 @@
-Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
-1 11111110 00000000 00000000 0000000
-----------------------------------
-Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
-1 01111110 10101110 10011001 1011000
-----------------------------------
-Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 

@@ -1,3 +1,0 @@
-solving root of equation a*x**2+b*x+c=0
-please enter three integer coefficients a, b and c:
-The multiple real root of the equation:X**2-12X+36 is 6.0000

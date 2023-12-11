@@ -1,4 +1,0 @@
-Solving roots of equation a*X^2+b*X+c = 0.
-
-Please enter three integers a,b and c:
-The multiple root of equation 23170.0000X**2+46340.0000X+23170.0000= 0 is -1.0000

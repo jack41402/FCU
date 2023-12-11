@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1262062_Aimee.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1262062_Aimee.dir/objects.a @CMakeFiles\D1262062_Aimee.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1262062_Aimee.dir/objects.a -Wl,--no-whole-archive -o D1262062_Aimee\D1262062_Aimee.exe -Wl,--out-implib,libD1262062_Aimee.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1262062_Aimee.dir\linklibs.rsp

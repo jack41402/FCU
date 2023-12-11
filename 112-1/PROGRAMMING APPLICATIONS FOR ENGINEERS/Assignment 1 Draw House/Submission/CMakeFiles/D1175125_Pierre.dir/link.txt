@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1175125_Pierre.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1175125_Pierre.dir/objects.a @CMakeFiles\D1175125_Pierre.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1175125_Pierre.dir/objects.a -Wl,--no-whole-archive -o D1175125_Pierre\D1175125_Pierre.exe -Wl,--out-implib,libD1175125_Pierre.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1175125_Pierre.dir\linklibs.rsp

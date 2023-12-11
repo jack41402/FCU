@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1265273_Joshua.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1265273_Joshua.dir/objects.a @CMakeFiles\D1265273_Joshua.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1265273_Joshua.dir/objects.a -Wl,--no-whole-archive -o D1265273_Joshua\D1265273_Joshua.exe -Wl,--out-implib,libD1265273_Joshua.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1265273_Joshua.dir\linklibs.rsp

@@ -1,4 +1,0 @@
-Enter top, an integer between 3 and 29 (including): Enter side, an integer between 2 and 20 (including): Enter 0 for left-tilt or 1 for right-tilt of the side: 
-         ###
-          #@#
-           ###

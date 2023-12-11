@@ -1,6 +1,0 @@
-host: "203.217.102.49"
-port: 3306
-user: "user"
-password: "123"
-database: "server"
-charset: "utf8"

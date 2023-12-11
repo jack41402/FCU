@@ -1,5 +1,0 @@
-Enter the rank of linear equation system (1 to 9 and 0 to stop): enter 2 coefficients and a constant for equation 0
-enter 2 coefficients and a constant for equation 1
-+-3X_1  +7X_3+5X_4+-15X_5+27X_6+-19X_7+-9X_8+8X_9=-99
-----------------------------------
-Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter the rank of linear equation system (1 to 9 and 0 to stop): +-3X_1  +7X_3+5X_4+-15X_5+27X_6+-19X_7+-9X_8+8X_9=-99

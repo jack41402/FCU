@@ -1,2 +1,0 @@
-Solving roots of equation aX^2+bX+c=0
-Please enter three integer coefficients a, b, and c : The real roots of equation X**2-1=0 are 1.0000 and -1.0000

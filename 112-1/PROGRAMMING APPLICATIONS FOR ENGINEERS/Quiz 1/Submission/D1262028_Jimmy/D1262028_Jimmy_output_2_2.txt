@@ -1,5 +1,0 @@
-Input three integers x, y, and z: 
-The value of expression x+y*z, y+z*x, and z+x*y: 0, 0, 0
-Expression x+y*z, y+z*x, and z+x*y in the ascend order: 
------------------------------------------------
-End of program execution.

@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1262015_Austin.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1262015_Austin.dir/objects.a @CMakeFiles\D1262015_Austin.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1262015_Austin.dir/objects.a -Wl,--no-whole-archive -o D1262015_Austin\D1262015_Austin.exe -Wl,--out-implib,libD1262015_Austin.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1262015_Austin.dir\linklibs.rsp

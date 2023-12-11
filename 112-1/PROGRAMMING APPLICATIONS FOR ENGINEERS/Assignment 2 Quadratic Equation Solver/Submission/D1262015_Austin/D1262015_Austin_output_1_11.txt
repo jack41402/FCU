@@ -1,4 +1,0 @@
-Please enter the coefficients of the quadratic equation:
-Please enter a, b, and c: The equation is 23170.000000 x^2 + 46340.000000 x + 23170.000000
-The equation has a real root:
-root = -1.0000

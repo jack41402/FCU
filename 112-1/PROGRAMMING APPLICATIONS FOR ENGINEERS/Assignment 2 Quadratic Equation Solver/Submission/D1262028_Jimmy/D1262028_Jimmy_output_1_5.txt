@@ -1,2 +1,0 @@
-Solving root of equation a*X^2+b*X+c = 0.
-Please enter three integer coefficient a, b, and c: The complex roots of equation -2X**2-5=0 are -1.#INDi and 1.#QNBi.

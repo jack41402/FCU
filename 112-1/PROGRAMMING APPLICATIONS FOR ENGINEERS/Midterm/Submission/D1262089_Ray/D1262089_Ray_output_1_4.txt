@@ -1,3 +1,0 @@
-Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>>Enter 5 coefficients and a constant for Equation 0 (between -99 and 99)>>>>Enter 5 coefficients and a constant for Equation 1 (between -99 and 99)>>>>Enter 5 coefficients and a constant for Equation 2 (between -99 and 99)>>>>Enter 5 coefficients and a constant for Equation 3 (between -99 and 99)>>>>Enter 5 coefficients and a constant for Equation 4 (between -99 and 99)<<<< The linear equation system of rank 5 is-15 X027 X0-19 X0-9 X08 X032 X10 X18 X1-15 X10 X11 X20 X20 X2-54 X220 X20 X3-1 X3-31 X30 X3-40 X30 X40 X456 X4-51 X412 X4
-----------------------------------
-Enter the rank of linear equation system (1 to 9 and 0 to stop): 

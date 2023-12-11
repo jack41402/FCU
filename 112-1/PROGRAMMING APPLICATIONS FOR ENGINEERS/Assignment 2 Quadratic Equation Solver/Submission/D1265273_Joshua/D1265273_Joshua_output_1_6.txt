@@ -1,3 +1,0 @@
-solving root of equation a*x**2+b*x+c=0
-please enter three integer coefficients a, b and c:
-The complex roots of the equation:5x**2+6 are 1.0954i and -1.0954i

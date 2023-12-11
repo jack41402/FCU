@@ -1,9 +1,0 @@
-The input original text:
-Programming Applications for Engineerÿ
--------------------------------------------------------------------------
-The encoded text:
-UV\MTHUMNRTGRWTIHEaOQU[FTVRTIPVEJV
--------------------------------------------------------------------------
-The decoded text:
-ZZiSVO]MSVaMT^\IMInUS\cFYZ_ZKW^EOZ
--------------------------------------------------------------------------

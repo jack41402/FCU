@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1262032_Derek.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1262032_Derek.dir/objects.a @CMakeFiles\D1262032_Derek.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1262032_Derek.dir/objects.a -Wl,--no-whole-archive -o D1262032_Derek\D1262032_Derek.exe -Wl,--out-implib,libD1262032_Derek.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1262032_Derek.dir\linklibs.rsp

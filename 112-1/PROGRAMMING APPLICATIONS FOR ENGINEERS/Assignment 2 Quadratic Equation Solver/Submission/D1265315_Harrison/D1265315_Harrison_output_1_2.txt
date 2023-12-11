@@ -1,2 +1,0 @@
-Sloving roots of equation a*X^2+b*X+c =0
-Please enter three integer coefficients a, b and c: Multiple root of x^2 - 12x + 36 = 0 is 6.0000

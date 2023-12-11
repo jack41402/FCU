@@ -1,2 +1,0 @@
-Sloving roots of equation a*X^2+b*X+c =0
-Please enter three integer coefficients a, b and c: Two complex roots of 5x^2 + 6 = 0 are 0.0000 + 1.0954i, 0.0000 - 1.0954i

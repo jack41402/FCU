@@ -1,2 +1,0 @@
-Solving root of equation a*X^2+b*X+c = 0.
-Please enter three integer coefficient a, b, and c: The real roots of equation -23170X**2+46340X-23170=0 are 0.9999 and 1.0001.

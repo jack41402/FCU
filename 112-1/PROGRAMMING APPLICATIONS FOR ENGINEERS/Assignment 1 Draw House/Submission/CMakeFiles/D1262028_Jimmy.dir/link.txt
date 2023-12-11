@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1262028_Jimmy.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1262028_Jimmy.dir/objects.a @CMakeFiles\D1262028_Jimmy.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1262028_Jimmy.dir/objects.a -Wl,--no-whole-archive -o D1262028_Jimmy\D1262028_Jimmy.exe -Wl,--out-implib,libD1262028_Jimmy.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1262028_Jimmy.dir\linklibs.rsp

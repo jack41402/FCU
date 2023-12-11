@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1271403_Osmond.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1271403_Osmond.dir/objects.a @CMakeFiles\D1271403_Osmond.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1271403_Osmond.dir/objects.a -Wl,--no-whole-archive -o D1271403_Osmond\D1271403_Osmond.exe -Wl,--out-implib,libD1271403_Osmond.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1271403_Osmond.dir\linklibs.rsp

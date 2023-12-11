@@ -1,5 +1,0 @@
-Please enter the coefficients of the quadratic equation:
-Please enter a, b, and c: The equation is -2.000000 x^2 + 0.000000 x + -5.000000
-The equation has two complex roots:
-root 1 = 0.0000 - 1.5811i
-root 2 = 0.0000 + 1.5811i

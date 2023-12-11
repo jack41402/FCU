@@ -1,3 +1,0 @@
-solving root of equation a*x**2+b*x+c=0
-please enter three integer coefficients a, b and c:
-The complex roots of the equation:X**2+5X+7 are -2.5000 + 0.8660i and -2.5000 -0.8660i

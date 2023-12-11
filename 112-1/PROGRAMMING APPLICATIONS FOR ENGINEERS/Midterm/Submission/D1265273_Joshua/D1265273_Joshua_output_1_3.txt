@@ -1,4 +1,0 @@
-Enter the rank of linear equation system (1 to 9 and 0 to stop): enter 1 coefficients and a constant for equation 0
-  +X_2+2X_3  +X_5+X_6  +X_8+X_9=3
-----------------------------------
-Enter the rank of linear equation system (1 to 9 and 0 to stop):   +X_2+2X_3  +X_5+X_6  +X_8+X_9=3

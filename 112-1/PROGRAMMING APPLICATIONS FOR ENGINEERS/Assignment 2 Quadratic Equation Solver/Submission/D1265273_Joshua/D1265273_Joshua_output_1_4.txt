@@ -1,3 +1,0 @@
-solving root of equation a*x**2+b*x+c=0
-please enter three integer coefficients a, b and c:
-The real root of the equation:X**2+6X-9 are 1.2426 and -7.2426.

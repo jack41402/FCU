@@ -1,4 +1,0 @@
-Solving roots of equation a*X^2+b*X+c = 0.
-
-Please enter three coefficients a, b, and c: 
-The real roots of equation X**2+6X-9=0 are -1.7574 and -10.2426.

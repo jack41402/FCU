@@ -1,3 +1,0 @@
-solving root of equation a*x**2+b*x+c=0
-please enter three integer coefficients a, b and c:
-The real root of the equation:X**2+46340X are -0.0001 and -46340.0000.

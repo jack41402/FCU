@@ -1,3 +1,0 @@
-C:\CMake\bin\cmake.exe -E rm -f CMakeFiles\D1189290_Terry.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\D1189290_Terry.dir/objects.a @CMakeFiles\D1189290_Terry.dir\objects1.rsp
-C:\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\D1189290_Terry.dir/objects.a -Wl,--no-whole-archive -o D1189290_Terry\D1189290_Terry.exe -Wl,--out-implib,libD1189290_Terry.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\D1189290_Terry.dir\linklibs.rsp

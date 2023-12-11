@@ -1,4 +1,0 @@
-Solving roots of equation a*X^2+b*X+c = 0.
-
-Please enter three integers a,b and c:
-The complex roots of the equation -2.0000X**2-5.0000= 0 are 0.0000+1.5811i and 0.0000-1.5811i
