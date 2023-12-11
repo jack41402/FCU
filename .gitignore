@@ -274,9 +274,9 @@ cython_debug/
 *.done
 *.eqn
 *.hex
-*.html
+# *.html
 *.jdi
-*.jpg
+# *.jpg
 # *.mif
 *.pin
 *.pof
@@ -305,5 +305,6 @@ cython_debug/
 */*_sim/
 incremental_db/
 db/
-_output_files/
+simulation/
+output_files/
 PLLJ_PLLSPE_INFO.txt
