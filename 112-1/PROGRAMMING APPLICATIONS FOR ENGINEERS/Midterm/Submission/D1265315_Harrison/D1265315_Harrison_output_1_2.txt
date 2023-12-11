@@ -1,0 +1,21 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 0 (between -99 and 99):The linear equation system of rank 1 is:
+          
+6421712 X0 = 5374021
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 1 (between -99 and 99):The linear equation system of rank 1 is:
+          
+6421712 X0 = 5374021
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 1 (between -99 and 99):The linear equation system of rank 1 is:
+          
+6421712 X0 = 5374021
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): Enter 1 coefficients and a constant for Equation 1 (between -99 and 99):The linear equation system of rank 1 is:
+          
+6421712 X0 = 5374021
+
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): 

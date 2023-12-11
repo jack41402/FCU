@@ -1,0 +1,13 @@
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+    
+Hexadecimal representation of num:
+    000000FF
+Decimal representation of rev:
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: Binary representation of num:
+    
+Hexadecimal representation of num:
+    1B32EAFD
+Decimal representation of rev:
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 

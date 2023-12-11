@@ -1,0 +1,3 @@
+solving root of equation a*x**2+b*x+c=0
+please enter three integer coefficients a, b and c:
+The real root of the equation:-5x**2+2Xare 0.0000 and 0.4000

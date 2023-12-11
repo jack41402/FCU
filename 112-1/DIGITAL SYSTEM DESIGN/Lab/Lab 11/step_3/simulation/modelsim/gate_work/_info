@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\GitHub\FCU\112-1\DIGITAL SYSTEM DESIGN\Lab\Lab 11\step_3\simulation\modelsim
+vstep_3
+!i10b 1
+!s100 L2fi7]S6ok`8gO6z<Fk6>1
+IWYAVOJe_69XmPeHBUS`;e2
+V4YKKYF_N4dakeg9dVH@bX2
+Z1 dD:\GitHub\FCU\112-1\DIGITAL SYSTEM DESIGN\Lab\Lab 11\step_3\simulation\modelsim
+w1702018419
+8step_3.vo
+Fstep_3.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1702018428.801000
+!s107 step_3.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|step_3.vo|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+. -O0

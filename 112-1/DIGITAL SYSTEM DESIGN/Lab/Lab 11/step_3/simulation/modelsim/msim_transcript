@@ -1,0 +1,1321 @@
+# Reading D:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do step_3_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/GitHub/FCU/112-1/DIGITAL\ SYSTEM\ DESIGN/Lab/Lab\ 11/step_3 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+# 
+vsim work.step_3
+# vsim work.step_3 
+# Loading work.step_3
+# Loading work.convert
+do {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/simulation/modelsim/wave.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+vsim work.step_3
+# vsim work.step_3 
+# Loading work.step_3
+# Loading work.convert
+do {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/simulation/modelsim/wave.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+add wave -position insertpoint  \
+sim:/step_3/EO \
+sim:/step_3/clk \
+sim:/step_3/reset \
+sim:/step_3/last_EO \
+sim:/step_3/count
+add wave -position insertpoint  \
+sim:/step_3/last_EO
+add wave -position insertpoint  \
+sim:/step_3/count
+run
+# count:  0
+# EO: 0
+# last_EO: x
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# EO: 1
+# last_EO: 0
+# count after add:  1
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# Try to add count:  0
+# count after add:  0
+# EO: z
+# last_EO: 0
+# A time value could not be extracted from the current line
+vlog -vlog01compat -work work {+incdir+D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3} -O0 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+restart
+# Loading work.step_3
+# Loading work.convert
+run
+# count:  0
+# EO: 0
+# last_EO: 
+# x
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# EO: 1
+# last_EO: 
+# 0
+# reset: 1
+# detect: 
+# 1
+# count after add:  1
+# reset: 1
+# detect: 
+# 1
+# count after add:  0
+# EO: 0
+# last_EO: 
+# 1
+# Try to add count:  0
+# count after add:  0
+# EO: z
+# last_EO: 
+# 0
+vlog -vlog01compat -work work {+incdir+D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3} -O0 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+restart
+# Loading work.step_3
+# Loading work.convert
+run
+# count:  0
+# EO: 0
+# last_EO: x
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# Try to add count:  0
+# count after add:  0
+# EO: z
+# last_EO: 0
+# 
+# 
+# A time value could not be extracted from the current line
+wave modify -driver freeze -pattern clock -initialvalue St0 -period 25ns -dutycycle 50 -starttime 0ns -endtime 1000ns Edit:/step_3/clk
+restart
+run
+# count:  0
+# EO: 0
+# last_EO: x
+# 
+# 
+# Try to add count:  0
+# count after add:  0
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: z
+# last_EO: 0
+# 
+# 
+# A time value could not be extracted from the current line
+restart
+run
+# count:  0
+# EO: 0
+# last_EO: x
+# 
+# 
+# Try to add count:  0
+# count after add:  0
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# 
+# 
+# count after add:  0
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: z
+# last_EO: 0
+# 
+# 
+vlog -vlog01compat -work work {+incdir+D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3} -O0 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+restart
+restart
+# Loading work.step_3
+# Loading work.convert
+run
+# count:  0
+# EO: 0
+# last_EO: x
+# 
+# 
+# Try to add count:  0
+# count after add:  0
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# 
+# 
+# reset: 1
+# detect: 1
+# EO: 0
+# last_EO: 1
+# 
+# 
+# EO: z
+# last_EO: 0
+# 
+# 
+vlog -vlog01compat -work work {+incdir+D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3} -O0 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1000ns Edit:/step_3/clk
+restart
+# Loading work.step_3
+# Loading work.convert
+run
+# count:  0
+# EO: 0
+# last_EO: x
+# detect: x
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO: z
+# last_EO: 0
+# detect: x
+# A time value could not be extracted from the current line
+vlog -vlog01compat -work work {+incdir+D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3} -O0 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+restart
+# Loading work.step_3
+# Loading work.convert
+run
+# count:  0
+# 
+# EO: 0
+# last_EO: x
+# detect: x
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# EO in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# EO in reset: 0
+# 
+# EO: 0
+# last_EO: 1
+# detect: 1
+# 
+# EO: z
+# last_EO: 0
+# detect: x
+vlog -vlog01compat -work work {+incdir+D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3} -O0 {D:/GitHub/FCU/112-1/DIGITAL SYSTEM DESIGN/Lab/Lab 11/step_3/step_3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module step_3
+# -- Compiling module convert
+# 
+# Top level modules:
+# 	step_3
+restart
+# Loading work.step_3
+# Loading work.convert
+run
+# count:  0
+# 
+# EO: 0
+# last_EO: x
+# detect: x
+# status in reset: x
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# status in reset: 1
+# 
+# EO: 1
+# last_EO: 0
+# detect: 1
+# 
+# EO: 0
+# last_EO: 0
+# detect: 0
+# Try to add count:  1
+# count after add:  1
+# 
+# EO: z
+# last_EO: 0
+# detect: x
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line

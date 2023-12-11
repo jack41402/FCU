@@ -1,0 +1,4 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+Principles[[:space:]]of[[:space:]]General[[:space:]]Chemistry.pdf filter=lfs diff=lfs merge=lfs -text
+Public[[:space:]]Speaking[[:space:]]Midterm.pptx filter=lfs diff=lfs merge=lfs -text

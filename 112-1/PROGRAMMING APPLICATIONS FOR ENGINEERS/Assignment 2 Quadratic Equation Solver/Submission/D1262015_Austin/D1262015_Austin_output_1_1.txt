@@ -1,0 +1,4 @@
+Please enter the coefficients of the quadratic equation:
+Please enter a, b, and c: The equation is 5.000000 x^2 + 0.000000 x + 0.000000
+The equation has a real root:
+root = 0.0000

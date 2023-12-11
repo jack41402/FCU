@@ -1,0 +1,21 @@
+Input a hexadecimal numeral string of length 8, including leading zeros: 
+Binary Numeral:        110010001010001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: 
+
+
+
+
+
+
+
+
+Binary Numeral:        10101011110010000010110111100011
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: 
+Binary Numeral:        11111111111111111111111111111111
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: 

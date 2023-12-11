@@ -1,0 +1,13 @@
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral 00006451 is of the decimal value: 25681
+Binary number:      00000000000000000110010001010001
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral ABC82DE3 is of the decimal value: 2882022883
+Binary number:      10/0/0/0000//0/////0/00/0000///0/
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: The input hexadecimal numeral FFFFFFFF is of the decimal value: 4294967295
+Binary number:      /0000000000000000000000000000000/
+
+---------------------
+Input a hexadecimal numeral string of length 8, including leading zeros: 

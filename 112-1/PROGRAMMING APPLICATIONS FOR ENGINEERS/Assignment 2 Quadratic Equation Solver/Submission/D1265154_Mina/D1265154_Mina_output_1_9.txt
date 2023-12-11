@@ -1,0 +1,2 @@
+Solving roots of equation a*X^2+b*X+c 
+Please enter three integer coefficients a, b, and c: The real roots of equation X**2+100000000X=0 are -49978349.8301 and -50021650.1699.

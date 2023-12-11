@@ -1,0 +1,2 @@
+Solving roots of equation a*X^2+b*X+c=0.
+Please enter three integer coefficients a, b, and c:multiple root of 5x**2=0 is 0.0000

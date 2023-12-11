@@ -1,0 +1,5 @@
+Enter the rank of linear equation system (1 to 9 and 0 to stop): >>>>Enter 2 coefficients and a constant for equation 0(between -99 and 99):
+>>>>Enter 2 coefficients and a constant for equation 1(between -99 and 99):
+5
+----------------------------------
+Enter the rank of linear equation system (1 to 9 and 0 to stop): 

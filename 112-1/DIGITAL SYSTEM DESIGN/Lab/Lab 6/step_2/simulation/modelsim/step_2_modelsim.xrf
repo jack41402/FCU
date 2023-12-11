@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, D:/altera/13.1/step_2/step_2.vwf
+source_file = 1, D:/altera/13.1/step_2/step_2.bdf
+source_file = 1, D:/altera/13.1/step_2/db/step_2.cbx.xml
+design_name = step_2
+instance = comp, \F_SOP~output\, F_SOP~output, step_2, 1
+instance = comp, \F_POS~output\, F_POS~output, step_2, 1
+instance = comp, \A~input\, A~input, step_2, 1
+instance = comp, \D~input\, D~input, step_2, 1
+instance = comp, \B~input\, B~input, step_2, 1
+instance = comp, \C~input\, C~input, step_2, 1
+instance = comp, \inst15~0\, inst15~0, step_2, 1

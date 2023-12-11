@@ -1,0 +1,2 @@
+Sloving roots of equation a*X^2+b*X+c =0
+Please enter three integer coefficients a, b and c: Multiple root of -23170x^2 + 46340x - 23170 = 0 is 1.0000

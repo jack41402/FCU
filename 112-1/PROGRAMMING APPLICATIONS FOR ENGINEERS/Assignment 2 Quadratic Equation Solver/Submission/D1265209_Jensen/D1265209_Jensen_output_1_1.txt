@@ -1,0 +1,4 @@
+Solving roots of equation a*X^2+b*X+c = 0.
+
+Please enter three integer coefficients a, b, and c: 
+The multiple real root of equation 5X**2 is 0.0000

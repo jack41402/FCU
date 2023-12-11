@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="assgn3_D1166506" targetName="assgn3_D1166506" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6e750540-8e31-4034-b7d3-fb0d9b2fb526" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/PROGRAMMING APPLICATIONS FOR ENGINEERS/Assignment 1 Draw House/aassignment1_grade_Purdue - 複製.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 5 – Concurrent Server/d1166506/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 5 – Concurrent Server/d1166506/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/.idea/d1166506.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/.idea/d1166506.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/udp/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/udp/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/udp/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/udp/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/udp/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../112-1/WEB PROGRAMMING/Lab/Lab 6 – UDP/Lab 6-1 UDP Client Server/d1166506/udp/server.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2GfOfAtBVuHDbrbqgBlDqGv38ov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/GitHub/C/TEST",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="assgn3_D1166506" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="assgn3_D1166506" TARGET_NAME="assgn3_D1166506" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="assgn3_D1166506" RUN_TARGET_NAME="assgn3_D1166506">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e750540-8e31-4034-b7d3-fb0d9b2fb526" name="Changes" comment="" />
+      <created>1666618962516</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666618962516</updated>
+      <workItem from="1666618964191" duration="1920000" />
+      <workItem from="1666628112624" duration="54000" />
+      <workItem from="1666776279619" duration="507000" />
+      <workItem from="1666882831959" duration="563000" />
+      <workItem from="1667151834171" duration="53000" />
+      <workItem from="1667806905220" duration="9000" />
+      <workItem from="1698503721584" duration="684000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 
+----------------------------------
+Input a 32-bit unsigned integer num, 0<=num<=4,294,967,295: 

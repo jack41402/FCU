@@ -1,0 +1,3 @@
+solving root of equation a*x**2+b*x+c=0
+please enter three integer coefficients a, b and c:
+The multiple real root of the equation:-23170x**2+46340X-23170 is 1.0000
