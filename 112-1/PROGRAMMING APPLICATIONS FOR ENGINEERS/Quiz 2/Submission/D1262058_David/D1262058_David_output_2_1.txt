@@ -1,7 +1,7 @@
 ****The keyword is: FENGCHIA 
 >>>>The input original text:
 
-Programming Applications for Engineer-------------------------------------------------------------------------
+Programming Applications for Engineerÿ-------------------------------------------------------------------------
 >>>>The encoded text is:
 KNBAPTEMDJTUNIDIXWGCMGKFJNRHEBFEZN
 -------------------------------------------------------------------------

@@ -2,15 +2,15 @@
 
 >>>> The input original text:
 
-Programming Applications for Engineer
+Programming Applications for Engineerÿ
 -------------------------------------------------------------------------
 >>>> The encoded text:
 
-KNBAPTEMDJTUNIDIXWGCMGKFJNRHEBFEZN4
+KNBAPTEMDJTUNIDIXWGCMGKFJNRHEBFEZN6
 
 -------------------------------------------------------------------------
 >>>> The decoded text:
 
-PROGRAMMINGAPPLICATIONSFORENGINEERA
+PROGRAMMINGAPPLICATIONSFORENGINEERC
 
 -------------------------------------------------------------------------

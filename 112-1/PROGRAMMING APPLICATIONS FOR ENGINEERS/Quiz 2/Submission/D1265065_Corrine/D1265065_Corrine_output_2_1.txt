@@ -2,16 +2,16 @@
 
 >>>> The input original text:
 
-Programming Applications for Engineer
+Programming Applications for Engineerÿ
 
 -------------------------------------------------------------------------
 >>>> The encoded text:
 
-U;@
+U;I
 
 -------------------------------------------------------------------------
 >>>> The decoded text:
 
-U;@
+U;I
 
 -------------------------------------------------------------------------
