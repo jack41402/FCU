@@ -1,6 +1,6 @@
 module step_3(EO, clk, reset, led);
 	input EO, clk;
-	input reg reset;
+	input reset;
 	output reg[0:6] led;
 	
 	reg [3:0] count;
@@ -19,19 +19,14 @@ module step_3(EO, clk, reset, led);
 				1'b1:	count = 1;	// reset to 1
 			endcase
 		end
-		else begin
-			count <= (count + 2) % 10;
-		end
+		else if (EO && !(count&1)) count <= 1;
+		else if (!EO && count&1) count <= 0;
+		else count <= (count + 2) % 10;
 	end
 	
 	always @* begin
 		led = converted_led(count);
    end
-	
-	always @(EO) begin
-		reset = 1;
-		reset = 0;
-	end
 	
 	function [0:6] converted_led;
 		input [3:0] number;
