@@ -290,9 +290,9 @@ cython_debug/
 *.sopc_builder
 *.summary
 *.tcl
-*.txt # Explicitly add any text files used
+# *.txt # Explicitly add any text files used
 *~
-*example*
+# *example*
 *sopc_*
 # *.sdc # I want those timing files
 
