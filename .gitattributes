@@ -1,4 +1,25 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Calculus,[[:space:]]Metric[[:space:]]Edition[[:space:]](James[[:space:]]Stewart,[[:space:]]Saleem[[:space:]]Watson,[[:space:]]Daniel[[:space:]]K.[[:space:]]Clegg)[[:space:]](z-lib.org).pdf filter=lfs diff=lfs merge=lfs -text
 Principles[[:space:]]of[[:space:]]General[[:space:]]Chemistry.pdf filter=lfs diff=lfs merge=lfs -text
 Public[[:space:]]Speaking[[:space:]]Midterm.pptx filter=lfs diff=lfs merge=lfs -text
+Fundamentals[[:space:]]of[[:space:]]Electric[[:space:]]Circuits_Charles[[:space:]]K.[[:space:]]Alexander,[[:space:]]Matthew[[:space:]]Sadiku_McGraw-Hill_ISE-7ed.pdf filter=lfs diff=lfs merge=lfs -text
+Microelectronic[[:space:]]Circuits_Adel[[:space:]]S.[[:space:]]Sedra[[:space:]],[[:space:]]Kenneth[[:space:]]C.[[:space:]]Smith_Oxford[[:space:]]University[[:space:]]Press_Scan-PDF-8ed.pdf filter=lfs diff=lfs merge=lfs -text
+Digital[[:space:]]Design_Principles[[:space:]]and[[:space:]]Practices_John[[:space:]]Wakerly_Pearson_5ed.pdf filter=lfs diff=lfs merge=lfs -text
+Fundamentals[[:space:]]of[[:space:]]Digital[[:space:]]Logic[[:space:]]with[[:space:]]Verilog[[:space:]]Design_Stephen[[:space:]]Brown,[[:space:]]Zvonko[[:space:]]Vranesic_McGraw-Hill_3ed.pdf filter=lfs diff=lfs merge=lfs -text
+Module[[:space:]]1[[:space:]]Switching[[:space:]]Algebra[[:space:]]and[[:space:]]CMOS[[:space:]]Logic[[:space:]]Gates.pdf filter=lfs diff=lfs merge=lfs -text
+Module[[:space:]]2[[:space:]]Combinational[[:space:]]Logic[[:space:]]Circuits.pdf filter=lfs diff=lfs merge=lfs -text
+Module[[:space:]]3[[:space:]]Sequential[[:space:]]Logic[[:space:]]Circuits.pdf filter=lfs diff=lfs merge=lfs -text
+Module[[:space:]]4[[:space:]]Arithmetic[[:space:]]and[[:space:]]Computer[[:space:]]Logic[[:space:]]Circuits.pdf filter=lfs diff=lfs merge=lfs -text
+module1a.pptx filter=lfs diff=lfs merge=lfs -text
+module1b.pptx filter=lfs diff=lfs merge=lfs -text
+module1c.pptx filter=lfs diff=lfs merge=lfs -text
+module2a.pptx filter=lfs diff=lfs merge=lfs -text
+module2b.pptx filter=lfs diff=lfs merge=lfs -text
+module2c.pptx filter=lfs diff=lfs merge=lfs -text
+module3a.pptx filter=lfs diff=lfs merge=lfs -text
+module3b.pptx filter=lfs diff=lfs merge=lfs -text
+module3c.pptx filter=lfs diff=lfs merge=lfs -text
+module4a.pptx filter=lfs diff=lfs merge=lfs -text
+module4b.pptx filter=lfs diff=lfs merge=lfs -text
+module4c.pptx filter=lfs diff=lfs merge=lfs -text
