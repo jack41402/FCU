@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+skinparam sequenceMessageAlign center
+skinparam responseMessageBelowArrow false
+skinparam style strictuml
+hide unlinked
+autonumber
+
+database "Database" as sql order 4
+participant "Server" as server order 3
+participant "RPC" as rpc order 2
+participant "Client" as client order 1
+participant "GUI" as gui order 0
+
+alt Register Button clicked
+    hnote over gui: switch to Register Window
+end
+hnote over gui: Login Button clicked
+gui -> client: send username, password
+client -> rpc: request login verify
+rpc -> server: request user information
+server -> sql: request user information
+server <- sql: return user information
+hnote over server: verify user information
+rpc <- server: return verification
+client <- rpc: return verification
+alt login successfully
+    gui <- client: verify successfully
+    hnote over gui: show Home Window
+else login failed
+    gui <- client: verify failed
+    hnote over gui: clear line edit
+end
+==Login Done==
+
+@enduml
