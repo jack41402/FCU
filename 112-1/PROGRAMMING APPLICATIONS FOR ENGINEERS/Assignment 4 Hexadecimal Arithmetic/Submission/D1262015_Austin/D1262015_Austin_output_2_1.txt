@@ -1,0 +1,43 @@
+Enter two hexadecimal numbers (or '0 0' to exit):      1
+* FFFF
+------
+  FFFF
+
+1 * 65535 = 65535
+
+Enter two hexadecimal numbers (or '0 0' to exit):      34A
+*    C51
+--------
+  28826A
+
+842 * 3153 = 2654826
+
+Enter two hexadecimal numbers (or '0 0' to exit):         C9A32
+*      5F0033
+-------------
+  4AD3B10B7F6
+
+825906 * 6225971 = 5142066804726
+
+Enter two hexadecimal numbers (or '0 0' to exit):        3DB3E21
+*        EAD22
+--------------
+  389911E88D62
+
+64699937 * 961826 = 62230081604962
+
+Enter two hexadecimal numbers (or '0 0' to exit):           55555555
+*         AAAAAAAA
+------------------
+  38E38E3871C71C72
+
+1431655765 * 2863311530 = 4099276458915470450
+
+Enter two hexadecimal numbers (or '0 0' to exit):           FFFFFFFF
+*         FFFFFFFF
+------------------
+  FFFFFFFE00000001
+
+4294967295 * 4294967295 = 18446744065119617025
+
+Enter two hexadecimal numbers (or '0 0' to exit): 
