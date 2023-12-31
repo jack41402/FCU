@@ -76,7 +76,7 @@ int main()
         transform(cal_n1), transform(cal_n2), transform(sum) ;
         for (int i=0 ; i< strlen(cal_n2) ; ++i)
         {
-            char temp[20], sum_copy[20] ;
+            char temp[20]={0}, sum_copy[20]={0} ;
             transform(temp) ;
             multiplication(cal_n1, cal_n2[i], i, temp) ;
 //            printf("temp: %s\n", temp) ;
