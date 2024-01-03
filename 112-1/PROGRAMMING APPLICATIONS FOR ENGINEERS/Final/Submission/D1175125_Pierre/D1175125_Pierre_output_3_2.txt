@@ -1,0 +1,4 @@
+Enter real number a for point A(a, 0), a>0: Enter real number b for point B(0, b), b>0: Enter real number c for point C(c, 0), c<0: Enter real number c for point D(0, d), d<0: 
+Points: A=(5.0000, 0), B=(0, 5.0000), C=(-5.0000, 0), D=(0, -5.0000)
+
+>>>> The result of 1/2|(a-c)(b-d)|is: 50

@@ -1,0 +1,37 @@
+Enter real number a for point A(a, 0), a>0: Enter real number b for point B(0, b), b>0: Enter real number c for point C(c, 0), c<0: Enter real number c for point D(0, d), d<0: 
+Points: A=(0.1000, 0), B=(0, 5.0000), C=(-0.1000, 0), D=(0, -5.0000)
+
+**** Compute the area of triangle BCD.
+Number of intervals: 1, interval size: 0.100000, area:  0.000000
+Number of intervals: 2, interval size: 0.050000, area:  0.750000
+Number of intervals: 4, interval size: 0.025000, area:  0.687500
+Number of intervals: 8, interval size: 0.012500, area:  0.484375
+Number of intervals: 16, interval size: 0.006250, area:  0.308594
+Number of intervals: 32, interval size: 0.003125, area:  0.186523
+Number of intervals: 64, interval size: 0.001563, area:  0.109131
+Number of intervals: 128, interval size: 0.000781, area:  0.062439
+Number of intervals: 256, interval size: 0.000391, area:  0.035141
+Number of intervals: 512, interval size: 0.000195, area:  0.019527
+Number of intervals: 1024, interval size: 0.000098, area:  0.010741
+The number of intervals: 1024
+
+
+**** Compute the area of triangle BAD.
+Number of intervals: 1, interval size: 0.100000, area:  0.000000
+Number of intervals: 2, interval size: 0.050000, area:  0.750000
+Number of intervals: 4, interval size: 0.025000, area:  0.687500
+Number of intervals: 8, interval size: 0.012500, area:  0.484375
+Number of intervals: 16, interval size: 0.006250, area:  0.308594
+Number of intervals: 32, interval size: 0.003125, area:  0.186523
+Number of intervals: 64, interval size: 0.001563, area:  0.109131
+Number of intervals: 128, interval size: 0.000781, area:  0.062439
+Number of intervals: 256, interval size: 0.000391, area:  0.035141
+Number of intervals: 512, interval size: 0.000195, area:  0.019527
+Number of intervals: 1024, interval size: 0.000098, area:  0.010741
+The number of intervals: 1024
+
+>>>> Area of triangle BCD:  0.010741
+>>>> Area of triangle BAD:  0.010741
+>>>> Area of the quadrilateral ABCD:  0.021482
+>>>> The result of 1/2|(a-c)(b-d)| is:  1.000000
+>>>> The error is: 0.978518

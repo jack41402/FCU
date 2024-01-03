@@ -1,0 +1,18 @@
+Enter real number a for point A(a, 0), a>0: Enter real number b for point B(0, b), b>0: Enter real number c for point C(c, 0), c<0: Enter real number c for point D(0, d), d<0: 
+Points: A=(5.3000, 0), B=(0, 4.2000), C=(-6.7000, 0), D=(0, -3.8000)
+
+**** Compute area the area of triangle BCD.
+Number of intervals: 1, interval size: 6.700000, area: 67.965119
+Number of intervals: 2, interval size: 3.350000, area: 67.965119
+The number of intervals: 2
+
+**** Compute area the area of triangle BAD.
+Number of intervals: 1, interval size: 5.300000, area: 21.200000
+Number of intervals: 2, interval size: 2.650000, area: 21.200000
+The number of intervals: 2
+
+>>>> Area of triangle BCD: 67.965119
+>>>> Area of triangle BAD: 21.200000
+>>>> Area of quadrilateral ABCD: 89.165119
+>>>> The result of 1/2|(a-c)(b-d)| is: 48.000000
+>>>> The error is: 41.165119

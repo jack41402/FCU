@@ -1,0 +1,43 @@
+Enter real number a for point A(a, 0), a>0: Enter real number b for point B(0, b), b>0: Enter real number c for point C(c, 0), c<0: Enter real number c for point D(0, d), d<0: 
+Points: A=(5.0000, 0), B=(0, 5.0000), C=(-5.0000, 0), D=(0, -5.0000)
+
+**** Compute the area of triangle BCD.
+Number of intervals: 1, interval size: 5.000000, area:  0.000000
+Number of intervals: 2, interval size: 2.500000, area: 37.500000
+Number of intervals: 4, interval size: 1.250000, area: 34.375000
+Number of intervals: 8, interval size: 0.625000, area: 24.218750
+Number of intervals: 16, interval size: 0.312500, area: 15.429688
+Number of intervals: 32, interval size: 0.156250, area:  9.326172
+Number of intervals: 64, interval size: 0.078125, area:  5.456543
+Number of intervals: 128, interval size: 0.039063, area:  3.121948
+Number of intervals: 256, interval size: 0.019531, area:  1.757050
+Number of intervals: 512, interval size: 0.009766, area:  0.976372
+Number of intervals: 1024, interval size: 0.004883, area:  0.537062
+Number of intervals: 2048, interval size: 0.002441, area:  0.292957
+Number of intervals: 4096, interval size: 0.001221, area:  0.158688
+Number of intervals: 8192, interval size: 0.000610, area:  0.085448
+The number of intervals: 8192
+
+
+**** Compute the area of triangle BAD.
+Number of intervals: 1, interval size: 5.000000, area:  0.000000
+Number of intervals: 2, interval size: 2.500000, area: 37.500000
+Number of intervals: 4, interval size: 1.250000, area: 34.375000
+Number of intervals: 8, interval size: 0.625000, area: 24.218750
+Number of intervals: 16, interval size: 0.312500, area: 15.429688
+Number of intervals: 32, interval size: 0.156250, area:  9.326172
+Number of intervals: 64, interval size: 0.078125, area:  5.456543
+Number of intervals: 128, interval size: 0.039063, area:  3.121948
+Number of intervals: 256, interval size: 0.019531, area:  1.757050
+Number of intervals: 512, interval size: 0.009766, area:  0.976372
+Number of intervals: 1024, interval size: 0.004883, area:  0.537062
+Number of intervals: 2048, interval size: 0.002441, area:  0.292957
+Number of intervals: 4096, interval size: 0.001221, area:  0.158688
+Number of intervals: 8192, interval size: 0.000610, area:  0.085448
+The number of intervals: 8192
+
+>>>> Area of triangle BCD:  0.085448
+>>>> Area of triangle BAD:  0.085448
+>>>> Area of the quadrilateral ABCD:  0.170897
+>>>> The result of 1/2|(a-c)(b-d)| is: 50.000000
+>>>> The error is: 49.829103

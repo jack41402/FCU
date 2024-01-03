@@ -1,0 +1,97 @@
+
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :25669
+binary numeral :
+hexadecimal numeral : 6445
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :80216419
+binary numeral :
+hexadecimal numeral : 4C80163
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :250676358319
+binary numeral :
+hexadecimal numeral : 3A5D79ACAF
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :783363619737694
+binary numeral :
+hexadecimal numeral : 2C8770E48D05E
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :2448011311680303944
+binary numeral :
+hexadecimal numeral : 21F915515ED7B348
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-5363441588514103571
+binary numeral :
+hexadecimal numeral : B5913A4ABF0F5EED
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :7335398895408752263
+binary numeral :
+hexadecimal numeral : 65CC926E46A1A687
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-6181335468621843494
+binary numeral :
+hexadecimal numeral : AA377C243345B3DA
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-2932294269360347854
+binary numeral :
+hexadecimal numeral : D74E65E5E1DCE532
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :4612212882560103346
+binary numeral :
+hexadecimal numeral : 4001DF2E1D79B3B2
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :6258136433163140598
+binary numeral :
+hexadecimal numeral : 56D95DEDCE9E7DF6
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :3127635502689650984
+binary numeral :
+hexadecimal numeral : 2B6797EB34B78928
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-2913413160903035661
+binary numeral :
+hexadecimal numeral : D7917A2A846D34F3
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :8275444590532055998
+binary numeral :
+hexadecimal numeral : 72D84902891753BE
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-1570845928116363563
+binary numeral :
+hexadecimal numeral : EA333BF379C15ED5
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-2059601756895407450
+binary numeral :
+hexadecimal numeral : E36AD31D457A92A6
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :1658191426485262928
+binary numeral :
+hexadecimal numeral : 1703145121409A50
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-1686876945937355152
+binary numeral :
+hexadecimal numeral : E897025AE99BAE70
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :4278349026696911745
+binary numeral :
+hexadecimal numeral : 3B5FBFC5A9685B81
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-4048745011575711406
+binary numeral :
+hexadecimal numeral : C7CFF7DCF6E51952
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :2138273390654271270
+binary numeral :
+hexadecimal numeral : 1DACAC51DA9E2F26
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :4382991111740028327
+binary numeral :
+hexadecimal numeral : 3CD38331ACF575A7
+Enter a numeral (a string of digits and English letters): 
+Base :5  decimal value :-9083622578608337369
+binary numeral :
+hexadecimal numeral : 81F07D6450550E27
+Enter a numeral (a string of digits and English letters): 
+Base :1  decimal value :-9083622578608337369
+binary numeral :
+hexadecimal numeral : 81F07D6450550E27

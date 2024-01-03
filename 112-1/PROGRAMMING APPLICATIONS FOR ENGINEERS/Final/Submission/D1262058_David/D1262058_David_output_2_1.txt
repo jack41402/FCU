@@ -1,0 +1,91 @@
+Enter a numeral (a string of digits and English letters): Base 8, Decimal value, 14113671
+Binary value: 00000000 00000000 00000000 00000000 00000000 11010111 01011011 10000111 
+Hexadecimal value: 0000 0000 00D7 5B87 
+
+
+Enter a numeral (a string of digits and English letters): Base 8, Decimal value, -2109392521
+Binary value: 11111111 11111111 11111111 11111111 10000010 01000101 00111001 01110111 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 74, Decimal value, -1256044869
+Binary value: 00000000 00000000 00000000 00000000 10110101 00100010 01000110 10111011 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 81, Decimal value, -1339334206
+Binary value: 11111111 11111111 11111111 11111110 10110000 00101011 01100001 11000010 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 81, Decimal value, -1562911618
+Binary value: 00000000 00000000 00000000 00000000 10100010 11010111 11011100 01111110 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 86, Decimal value, 1910692752
+Binary value: 00000000 00000000 00000000 00000001 01110001 11100010 11011011 10010000 
+Hexadecimal value: 0000 0000 71E2 DB90 
+
+
+Enter a numeral (a string of digits and English letters): Base 97, Decimal value, -375735164
+Binary value: 11111111 11111111 11111111 11111101 11101001 10011010 10111100 10000100 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 99, Decimal value, -11763925
+Binary value: 00000000 00000000 00000000 00000010 11111111 01001100 01111111 00101011 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 122, Decimal value, 2010561413
+Binary value: 00000000 00000000 00000000 00000000 01110111 11010110 10111011 10000101 
+Hexadecimal value: 0000 0000 77D6 BB85 
+
+
+Enter a numeral (a string of digits and English letters): Base 122, Decimal value, -286868603
+Binary value: 00000000 00000000 00000000 00000000 11101110 11100110 10111011 10000101 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 122, Decimal value, -1343833211
+Binary value: 00000000 00000000 00000000 00000000 10101111 11100110 10111011 10000101 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 124, Decimal value, 1501197847
+Binary value: 00000000 00000000 00000000 00000000 01011001 01111010 01110110 00010111 
+Hexadecimal value: 0000 0000 597A 7617 
+
+
+Enter a numeral (a string of digits and English letters): Base 124, Decimal value, 1501197847
+Binary value: 00000000 00000000 00000000 00000000 01011001 01111010 01110110 00010111 
+Hexadecimal value: 0000 0000 597A 7617 
+
+
+Enter a numeral (a string of digits and English letters): Base 128, Decimal value, 1583135091
+Binary value: 00000000 00000000 00000000 00000000 01011110 01011100 10111001 01110011 
+Hexadecimal value: 0000 0000 5E5C B973 
+
+
+Enter a numeral (a string of digits and English letters): Base 128, Decimal value, 1583135091
+Binary value: 00000000 00000000 00000000 00000000 01011110 01011100 10111001 01110011 
+Hexadecimal value: 0000 0000 5E5C B973 
+
+
+Enter a numeral (a string of digits and English letters): Base 128, Decimal value, 1382353559
+Binary value: 00000000 00000000 00000000 00000000 01010010 01100101 00001010 10010111 
+Hexadecimal value: 0000 0000 5265 0A97 
+
+
+Enter a numeral (a string of digits and English letters): Base 128, Decimal value, -1544098211
+Binary value: 11111111 11111111 11111111 11111111 10100011 11110110 11101110 01011101 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 128, Decimal value, -1012642917
+Binary value: 11111111 11111111 11111111 11111111 11000011 10100100 01001011 10011011 
+Hexadecimal value: 0000 0000 0000 0000 
+
+
+Enter a numeral (a string of digits and English letters): Base 128, Decimal value, -1175

@@ -1,0 +1,11 @@
+Enter a numeral (a string of digits and English letters): Base: 2, Decimal value: 0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexadecimal numeral: 0000 0000 0000 0000 Enter a numeral (a string of digits and English letters): Base: 8, Decimal value: 0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexadecimal numeral: 0000 0000 0000 0000 Enter a numeral (a string of digits and English letters): Base: 6, Decimal value: -1810890752
+Binary numeral: 00000000 01010010 01000011 11110101 10010100 00010000 00000000 00000000 
+Hexadecimal numeral: 0052 43F155 9410 0000 Enter a numeral (a string of digits and English letters): Base: 16, Decimal value: 0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexadecimal numeral: 0000 0000 0000 0000 Enter a numeral (a string of digits and English letters): Base: 1, Decimal value: 0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexadecimal numeral: 0000 0000 0000 0000 

@@ -1,0 +1,17 @@
+Enter a numeral (a string of digits and English letters): Base: 2, Deciaml value: 18446744073709551615
+Binary numeral: 11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111111 
+Hexadecimal numeral: FFFF FFFF FFFF FFFF 
+
+Enter a numeral (a string of digits and English letters): Base: 8, Deciaml value: 18446744073709551615
+Binary numeral: 11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111111 
+Hexadecimal numeral: FFFF FFFF FFFF FFFF 
+
+Enter a numeral (a string of digits and English letters): Base: 10, Deciaml value: 18446744073709551615
+Binary numeral: 11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111111 
+Hexadecimal numeral: FFFF FFFF FFFF FFFF 
+
+Enter a numeral (a string of digits and English letters): Base: 16, Deciaml value: 18446744073709551615
+Binary numeral: 11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111111 
+Hexadecimal numeral: FFFF FFFF FFFF FFFF 
+
+Enter a numeral (a string of digits and English letters): 

@@ -1,0 +1,42 @@
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value:194
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 11000010 
+hexadecimal numeral:0000 0000 0000 00122 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+Enter a numeral (a string of digits and English letters): Base: 1, Decimal value:0
+Binary numeral:00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+hexadecimal numeral:0000 0000 0000 0000 

@@ -1,0 +1,15 @@
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 8, Decimal value: 4194679
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 01000000 00000001 01110111 
+Hexidecimal numeral: 0000 0000 0040 0177 
+Enter a numeral (a string of digits and English letters): Base: 8, Decimal value: 342391
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000101 00111001 01110111 
+Hexidecimal numeral: 0000 0000 0005 3977 
+Enter a numeral (a string of digits and English letters): Base: 39, Decimal value: 2257737497
+Binary numeral: 00000000 00000000 00110010 00010110 10000110 10010010 01010111 00011001 
+Hexidecimal numeral: 0000 3216 8692 5719 
+Enter a numeral (a string of digits and English letters): Base: 61, Decimal value: 0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexidecimal numeral: 0000 0000 0000 0000 
+Enter a numeral (a string of digits and English letters): 

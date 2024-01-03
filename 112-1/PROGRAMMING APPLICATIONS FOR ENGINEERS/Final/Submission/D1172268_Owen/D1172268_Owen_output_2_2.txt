@@ -1,0 +1,119 @@
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 977
+Binary Numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000011 11010001 
+Hexadecinal Numeral: 0000 0000 0000 03681 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 3416851802
+Binary Numeral: 00000000 00000000 10000110 01111001 11001011 10101001 00000101 01011010 
+Hexadecinal Numeral: 0000 8679 6766659 05565 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 2235861965
+Binary Numeral: 00000000 00000000 11111000 00100010 10000101 01000100 10001011 11001101 
+Hexadecinal Numeral: 0000 70822 8544 8666768 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 1054872128
+Binary Numeral: 00000000 00000001 01101001 11001011 00111110 11100000 00010010 01000000 
+Hexadecinal Numeral: 0001 696766 369690 1240 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 4168849587
+Binary Numeral: 00000000 00000001 11011011 01110011 11111000 01111011 10011000 10110011 
+Hexadecinal Numeral: 0001 686673 708766 98663 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 2987859750
+Binary Numeral: 00000000 00000010 01001101 00011100 10110010 00010111 00011111 00100110 
+Hexadecinal Numeral: 0002 468167 66217 17026 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 1806869913
+Binary Numeral: 00000000 00000010 10111110 11000101 01101011 10110010 10100101 10011001 
+Hexadecinal Numeral: 0002 6669675 666662 65599 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 625880076
+Binary Numeral: 00000000 00000011 00110000 01101110 00100101 01001110 00101100 00001100 
+Hexadecinal Numeral: 0003 30669 25469 267067 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 3739857535
+Binary Numeral: 00000000 00000011 10100010 00010110 11011110 11101001 10110010 01111111 
+Hexadecinal Numeral: 0003 65216 6869699 662770 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 2558867698
+Binary Numeral: 00000000 00000100 00010011 10111111 10011000 10000101 00111000 11110010 
+Hexadecinal Numeral: 0004 136670 9885 38702 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 1377877861
+Binary Numeral: 00000000 00000100 10000101 01101000 01010010 00100000 10111111 01100101 
+Hexadecinal Numeral: 0004 8568 5220 667065 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 196888024
+Binary Numeral: 00000000 00000100 11110111 00010001 00001011 10111100 01000101 11011000 
+Hexadecinal Numeral: 0004 70711 0666667 45688 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 3310865483
+Binary Numeral: 00000000 00000101 01101000 10111001 11000101 01010111 11001100 01001011 
+Hexadecinal Numeral: 0005 68669 67557 6767466 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 2129875646
+Binary Numeral: 00000000 00000101 11011010 01100010 01111110 11110011 01010010 10111110 
+Hexadecinal Numeral: 0005 686562 769703 526669 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 948885809
+Binary Numeral: 00000000 00000110 01001100 00001011 00111000 10001110 11011001 00110001 
+Hexadecinal Numeral: 0006 467066 38869 68931 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 4062863268
+Binary Numeral: 00000000 00000110 10111101 10110011 11110010 00101010 01011111 10100100 
+Hexadecinal Numeral: 0006 6668663 702265 570654 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 2881873431
+Binary Numeral: 00000000 00000111 00101111 01011100 10101011 11000101 11100110 00010111 
+Hexadecinal Numeral: 0007 270567 6566675 69617 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 1700883594
+Binary Numeral: 00000000 00000111 10100001 00000101 01100101 01100001 01101100 10001010 
+Hexadecinal Numeral: 0007 65105 6561 667865 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 519893757
+Binary Numeral: 00000000 00001000 00010010 10101110 00011110 11111100 11110010 11111101 
+Hexadecinal Numeral: 0008 126569 1697067 7027068 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 3633871216
+Binary Numeral: 00000000 00001000 10000100 01010110 11011000 10011000 01111001 01110000 
+Hexadecinal Numeral: 0008 8456 68898 7970 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 2452881379
+Binary Numeral: 00000000 00001000 11110101 11111111 10010010 00110011 11111111 11100011 
+Hexadecinal Numeral: 0008 7057070 9233 7070693 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 1271891542
+Binary Numeral: 00000000 00001001 01100111 10101000 01001011 11001111 10000110 01010110 
+Hexadecinal Numeral: 0009 67658 4666770 8656 
+
+Enter a numeral (a string of digits and English letters): 
+ The input string is an invalid numeralBase: 5, Decimal value: 90901705
+Binary Numeral: 00000000 00001001 11011001 01010001 00000101 01101011 00001100 11001001 
+Hexadecinal Numeral: 0009 68951 05666 067679 
+
+Enter a numeral (a string of digits and English letters): Base: 1, Decimal value: 90901705
+Binary Numeral: 00000000 00001001 11011001 01010001 00000101 01101011 00001100 11001001 
+Hexadecinal Numeral: 0009 68951 05666 067679 
+

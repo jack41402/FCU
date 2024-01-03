@@ -1,0 +1,20 @@
+Enter a numeral (a string of digits and English letters): Base: 8, Decimal value:3638023554127
+Binary numeral: 00000000 00000000 00000011 01001111 00001011 00011010 00000100 01001111 
+Hexadecimal numeral: 0000 034F 0B1A 044F 
+
+Enter a numeral (a string of digits and English letters): Base: 8, Decimal value:58677803167
+Binary numeral: 00000000 00000000 00000000 00001101 10101001 01111000 00111000 10011111 
+Hexadecimal numeral: 0000 000D A978 389F 
+
+Enter a numeral (a string of digits and English letters): Base: 39, Decimal value:2222825118836476
+Binary numeral: 00000000 00000111 11100101 10100101 11001101 10011011 00100110 11111100 
+Hexadecimal numeral: 0007 E5A5 CD9B 26FC 
+
+Enter a numeral (a string of digits and English letters): Base: 61, Decimal value:13788225199766872195
+Binary numeral: 10111111 01011001 10011101 11000100 00011011 00110001 10100000 10000011 
+Hexadecimal numeral: BF59 9DC4 1B31 A083 
+
+Enter a numeral (a string of digits and English letters): Base: 1, Decimal value:0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexadecimal numeral: 0000 0000 0000 0000 
+

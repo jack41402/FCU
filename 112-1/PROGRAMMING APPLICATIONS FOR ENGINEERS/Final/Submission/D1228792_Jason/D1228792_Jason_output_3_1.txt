@@ -1,0 +1,13 @@
+Enter real number a for point A(a, 0), a>0: Enter real number b for point B(0, b), b>0: Enter real number c for point C(c, 0), c<0: Enter real number c for point D(0, d), d<0: 
+Points: A=(5.3000, 0), B=(0, 4.2000), C=(-6.7000, 0), D=(0, -3.8000)
+
+****Compute the area of traingle BAD.
+Number of intervals: 2, interval size:   0.0000, area: 8.4lf
+Number of intervals: 4, interval size:   0.0000, area: 8.4lf
+The number of intervals: 4
+
+****Compute the area of traingle BCD.
+Number of intervals: 2, interval size:   8.0000, area: 8.4lf
+Number of intervals: 4, interval size:   4.0000, area: 8.4lf
+The number of intervals: 4
+

@@ -1,0 +1,5 @@
+Enter a numeral (a string of digits and English letters): Base 1, Decimal value, 10621200
+Binary value: 00000000 00000000 00000000 00000000 00000000 10100010 00010001 00010000 
+Hexadecimal value: 0000 0000 00A2 1110 
+
+

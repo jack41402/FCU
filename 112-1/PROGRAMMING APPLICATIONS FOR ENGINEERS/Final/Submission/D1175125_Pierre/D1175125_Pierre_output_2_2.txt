@@ -1,0 +1,116 @@
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1269
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000100 11110101 
+Hexidecimal numeral: 0000 0000 0000 04705 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1269
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000100 11110101 
+Hexidecimal numeral: 0000 0000 0000 04705 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Base: 5, Decimal value: 1444
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000101 10100100 
+Hexidecimal numeral: 0000 0000 0000 05104 
+Enter a numeral (a string of digits and English letters): 

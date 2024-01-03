@@ -1,0 +1,47 @@
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): The input string is an invalid numeral.
+
+Enter a numeral (a string of digits and English letters): 

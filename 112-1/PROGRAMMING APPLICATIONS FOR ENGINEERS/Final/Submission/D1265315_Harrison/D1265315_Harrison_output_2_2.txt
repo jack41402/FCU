@@ -1,0 +1,49 @@
+Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 30625
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01110111 10100001 
+Hexadecimal numeral: 0000 0000 0000 77A101 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 33750
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10000011 11010110 
+Hexadecimal numeral: 0000 0000 0000 83D136 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 85000
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000001 01001100 00001000 
+Hexadecimal numeral: 0000 0000 0001 4C1208 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 26875
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01101000 11111011 
+Hexadecimal numeral: 0000 0000 0000 68F15B11 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 46250
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10110100 10101010 
+Hexadecimal numeral: 0000 0000 0000 B114A10A10 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 28125
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01101101 11011101 
+Hexadecimal numeral: 0000 0000 0000 6D13D13D13 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 28750
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01110000 01001110 
+Hexadecimal numeral: 0000 0000 0000 704E14 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 29375
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01110010 10111111 
+Hexadecimal numeral: 0000 0000 0000 72B11F15 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 65000
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 11111101 11101000 
+Hexadecimal numeral: 0000 0000 0000 F15D13E148 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 30000
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01110101 00110000 
+Hexadecimal numeral: 0000 0000 0000 7530 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 32500
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01111110 11110100 
+Hexadecimal numeral: 0000 0000 0000 7E14F154 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 31250
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01111010 00010010 
+Hexadecimal numeral: 0000 0000 0000 7A1012 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 31875
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01111100 10000011 
+Hexadecimal numeral: 0000 0000 0000 7C1283 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 34375
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10000110 01000111 
+Hexadecimal numeral: 0000 0000 0000 8647 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 44375
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10101101 01010111 
+Hexadecimal numeral: 0000 0000 0000 A10D1357 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 33125
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10000001 01100101 
+Hexadecimal numeral: 0000 0000 0000 8165 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 66250
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000001 00000010 11001010 
+Hexadecimal numeral: 0000 0000 0001 02C12A10 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 35000
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10001000 10111000 
+Hexadecimal numeral: 0000 0000 0000 88B118 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 35625
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10001011 00101001 
+Hexadecimal numeral: 0000 0000 0000 8B1129 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 43125
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10101000 01110101 
+Hexadecimal numeral: 0000 0000 0000 A10875 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 42500
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 10100110 00000100 
+Hexadecimal numeral: 0000 0000 0000 A10604 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 30625
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01110111 10100001 
+Hexadecimal numeral: 0000 0000 0000 77A101 Enter a numeral (a string of digits and English letters): Base: 5, Decimal value: 27500
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 01101011 01101100 
+Hexadecimal numeral: 0000 0000 0000 6B116C12 Enter a numeral (a string of digits and English letters): Base: 1, Decimal value: 0
+Binary numeral: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+Hexadecimal numeral: 0000 0000 0000 0000 

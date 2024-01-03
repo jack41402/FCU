@@ -1,0 +1,21 @@
+
+Enter a numeral (a string of digits and English letters): 
+Base :2  decimal value :-1
+binary numeral :
+hexadecimal numeral : FFFFFFFFFFFFFFFF
+Enter a numeral (a string of digits and English letters): 
+Base :8  decimal value :-1
+binary numeral :
+hexadecimal numeral : FFFFFFFFFFFFFFFF
+Enter a numeral (a string of digits and English letters): 
+Base :6  decimal value :-2151896894615509
+binary numeral :
+hexadecimal numeral : FFF85ADC7600D02B
+Enter a numeral (a string of digits and English letters): 
+Base :23  decimal value :-5029110574160120277
+binary numeral :
+hexadecimal numeral : BA3502940306762B
+Enter a numeral (a string of digits and English letters): 
+Base :1  decimal value :-5029110574160120277
+binary numeral :
+hexadecimal numeral : BA3502940306762B
