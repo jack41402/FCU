@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/state-diagram
+@startuml
+skinparam RoundCorner 100
+skinparam TextAlignment center
+skinparam defaultMessageAlignment center
+
+state "000" as S0 #99EBFF: 00
+state "001" as S1 #FFFF99: 00
+state "010" as S2 #FFFF99: 00
+state "011" as S3 #FFFF99: 00
+state "100" as S4 #FFFF99: 00
+state "101" as S5 #FFFF99: 00
+state "110" as S6 #ADDB7B: 10
+state "111" as S7 #FF6699: 01
+
+S0 -> S1: password[5]
+S1 -> S2: password[4]
+S2 -> S3: password[3]
+S3 -> S4: password[2]
+S4 -> S5: password[1]
+S5 --> S6: password[0]
+S6 --> S6: d
+
+S0 --> S7: !password[5]
+S1 --> S7: !password[4]
+S2 --> S7: !password[3]
+S3 --> S7: !password[2]
+S4 --> S7: !password[1]
+S5 --> S7: !password[0]
+S7 --> S7: d
+@enduml
+@enduml

@@ -10,7 +10,7 @@ module step_3(enable, control, clock, reset, data, relock, status, led, clock_50
 	reg [5:0] password=6'b111111;
 	reg [2:0] state=0, last_state=0;
 	integer count=0;
-	parameter open=6, error=7;
+	parameter open=6, alarm=7;
 	
 	always @(posedge clock or negedge reset) begin
 		if (!reset) state = 0;
@@ -42,13 +42,13 @@ module step_3(enable, control, clock, reset, data, relock, status, led, clock_50
 				4: begin HEX3 <= 7'b1001100; HEX2 <= 7'b1111111; HEX1 <= 7'b1111111; HEX0 <= 7'b1111111; end	// 4
 				5: begin HEX3 <= 7'b0100100; HEX2 <= 7'b1111111; HEX1 <= 7'b1111111; HEX0 <= 7'b1111111; end	// 5
 				6: begin HEX3 <= 7'b0000001; HEX2 <= 7'b0011000; HEX1 <= 7'b0110000; HEX0 <= 7'b1101010; end	// OPEN
-				7: begin HEX3 <= 7'b0110000; HEX2 <= 7'b1111010; HEX1 <= 7'b1111010; HEX0 <= 7'b1111110; end	// Error
+				7: begin HEX3 <= 7'b0110000; HEX2 <= 7'b1111010; HEX1 <= 7'b1111010; HEX0 <= 7'b1111110; end	// alarm
 				default: begin HEX3 <= 7'b1111111; HEX2 <= 7'b1111111; HEX1 <= 7'b1111111; HEX0 <= 7'b1111111; end	// default
 			endcase
 			last_state <= state;
 		end
 		if (change && (last_Q!=Q && Q)) begin HEX3 <= HEX0; HEX2 <= HEX3; HEX1 <= HEX2; HEX0 <= HEX1; end
-		if (change && (last_Q!=Q && Q) && state==error) status[0] = !status[0];
+		if (change && (last_Q!=Q && Q) && state==alarm) status[0] = !status[0];
 		last_Q <= Q;
 	end
 	

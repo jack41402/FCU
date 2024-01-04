@@ -1,0 +1,67 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+skinparam ConditionEndStyle hline
+skinparam SwitchEndStyle hline
+
+
+start
+fork
+:50 MHz Clock;
+-> divide frequency;
+:1 Hz Clock;
+
+    fork
+    if (reset) then (true)
+        :reset password;
+    (false) elseif (enable) then (true)
+        :password do LFSR;
+    endif
+
+    fork again
+    if (status is not change\nor last state != present state) then (true)
+        switch (state)
+            case (unlock)
+            :status unlocked
+            status changed;
+            case (alarm)
+            :status alarm
+            status changed;
+            case (default)
+            :status locked
+            status not changed;
+        endswitch
+        :update 7-segment display;
+        :last state = present state;
+    else (false)
+        if (status is change) then (true)
+            :right-shift 7-segment display;
+        else (false)
+        endif
+		if (status is change\nand state is alarm)
+		    :flash alarm led in 1 Hz;
+		else (false)
+        endif
+    endif
+end fork
+
+
+fork again
+if (control) then (true)
+    :show password;
+else (false)
+    :hide password;
+endif
+fork again
+if (reset) then (true)
+    :set state to 0;
+else (false)
+    if (relock and state is 6) then (true)
+        :set state to 0;
+    else (false)
+        : change state to next state;
+    endif
+endif
+end fork
+
+@enduml
