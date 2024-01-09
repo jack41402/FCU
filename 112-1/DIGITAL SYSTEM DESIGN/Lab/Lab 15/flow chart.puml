@@ -1,0 +1,52 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+skinparam ConditionEndStyle hline
+skinparam SwitchEndStyle hline
+
+
+start
+fork
+:50 MHz Clock;
+-> divide frequency;
+:1 Hz Clock;
+if (reset) then (true)
+    :set status to not changed;
+elseif (state<10) then (true)
+    :show state and point;
+elseif (status is not changed) then (true)
+    switch (point)
+        case (>=50)
+        :show YEAH;
+        case (<50)
+        :show LOSE;
+    endswitch
+else (false)
+    :right-shift 7-segment display;
+endif
+
+
+fork again
+if (control) then (true)
+    :show password;
+else (false)
+    :hide password;
+endif
+
+fork again
+if (reset) then (true)
+    :reset point to 0
+    reset password to 1000
+    set state to 1;
+else (false)
+    if (state<10) then (true)
+        :compare number and password
+        update point
+        update password
+        state + 1;
+    else (false)
+    endif
+endif
+end fork
+
+@enduml
