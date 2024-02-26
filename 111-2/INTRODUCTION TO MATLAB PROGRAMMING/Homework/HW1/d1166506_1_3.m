@@ -41,4 +41,4 @@ fprintf('the standard deviation score of eng class is %3.2f \n',eng_std);
 fprintf('the maximum score of eng class is %3.2f \n',eng_max);
 fprintf('the minimum score of eng class is %3.2f \n',eng_min);
 
-save score_data N score 
+save score_data N score

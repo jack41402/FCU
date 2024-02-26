@@ -1,0 +1,197 @@
+%2.1 
+%(a) Comma should be replaced by decimal point
+%(e) Asterisk should be omitted
+%(f) Exponent must be integer
+%(h) Comma should be replaced by decimal point
+
+%2.2 
+%(b) Decimal point not allowed
+%(c) First character must be letter
+%(d) Quotes not allowed
+%(h) Blanks not allowed
+%(i) Allowed but not recommended
+%(k) Asterisk not allowed
+%(l) Allowed but not recommended
+
+%2.3 
+%(a) p + w/u
+%(b) p + w/(u + v)
+%(c) (p + w/(u+v))/(p + w/(u-v))
+%(d) sqrt(x)
+%(e) y^(y+z)
+%(f) x^(y^z)
+%(g) (x^y)^z
+%(h) x - x^3/(3*2) + x^5/(5*4*3*2)
+
+%2.4 
+%(a) 
+i = i + 1
+%(b)
+i = i^3 +j
+%(c)
+if e > f
+    g = e
+else
+    g = f
+end
+%(d)
+if d > 0
+x = -b
+end
+%(e)
+x = (a + b)/(c * d);
+
+%2.5
+%(a) Expression not allowed on left-hand side
+%(b) Left-hand side must be valid variable name
+%(c) Left-hand side must be valid variable name
+
+%2.6 
+a = 2;
+b = -10;
+c = 12;
+x = (-b + sqrt(b ^ 2 - 4 * a * c)) / (2 * a)
+
+%2.7 
+gallons = input('Enter gallons: ');
+pints = input('Enter pints: ');
+pints = pints + 8 * gallons;
+litres = pints / 1.76
+
+%2.8 
+distance = 528;
+litres = 46.23;
+kml = distance / litres;
+l100km = 100 / kml;
+disp( 'Distance Litres used km/L L/100km' );
+disp( [distance litres kml l100km] );
+
+%2.9 
+t = a;
+a = b;
+b = t;
+
+%2.10 
+a = [a b]; % make ’a’ into a vector
+b = a(1);
+a(1) = [];
+
+%2.11 
+%(a)
+c = input('Enter Celsius temperature: ');
+f = 9 * c / 5 + 32;
+disp( ['The Fahrenheit temperature is:' num2str(f)] );
+%(b)
+c = 20 : 30;
+f = 9 * c / 5 + 32;
+format bank;
+disp(' Celsius Fahrenheit');
+disp([c' f']);
+
+%2.12 
+degrees = 0 : 10 : 360;
+radians = degrees / 180 * pi;
+format bank;
+disp(' Degrees Radians');
+disp([degrees' radians']);
+
+%2.13 
+degrees = 0 : 30 : 360;
+radians = degrees / 180 * pi;
+sines = sin(radians);
+cosines = cos(radians);
+tans = tan(radians);
+table = [degrees' sines' cosines' tans']
+
+%2.14 
+for int = 10 : 20
+disp( [int sqrt(int)] );
+end
+
+%2.15 
+sum(2 : 2 : 200)
+
+%2.16 
+m = [5 8 0 10 3 8 5 7 9 4];
+disp( mean(m) )
+
+%2.17 
+x = 2.0833, a = 4
+
+%2.18 
+% With for loop
+i = 1;
+x = 0;
+for a = i : i : 4
+x = x + i / a;
+end
+% With vectors
+i = 1;
+a = i : i : 4;
+x = i ./ a;
+sum(x)
+
+%2.19 
+n = input( 'Number of terms? ' );
+s = 0;
+for k = 1:n
+s = s + 1 / (k ^ 2);
+end
+disp(sqrt(6 * s))
+%(b)
+n = input('Number of terms? ');
+k = 1 : n;
+s = 1 ./ (k .^2);
+disp(sqrt(6 * sum(s)))
+
+%2.20
+clc;clear;close all
+v = [3 1 5];
+i = 1;
+for j = v
+    disp(j);
+    i = i + 1;
+    if i == 3
+        i = i + 2;
+        m = i + j;
+    end
+end
+
+%2.21 
+r = 5;
+c = 10;
+l = 4;
+e = 2;
+w = 2;
+i = e / sqrt(r ^ 2 + (2 * pi * w * l -1 / (2 * pi * w * c)) ^ 2)
+
+%2.22 
+con = [200 500 700 1000 1500];
+for units = con
+    if units <= 500
+        cost = 0.02 * units;
+    elseif units <= 1000
+        cost = 10 + 0.05 * (units - 500);
+    else
+        cost = 35 + 0.1 * (units - 1000);
+    end
+charge = 5 + cost;
+disp( charge )
+end
+
+%2.23
+clc;clear;close all
+
+money=50;%%本金
+newBalance = zeros(1,12);
+
+for k=1:12 %% 月份
+
+      money = money *1.01;%%本金加利息
+    newBalance(k)=money;%%每月存款結算
+    money=money+50;%%每月定存
+end
+
+display(['Month' ' New Balance']);
+display(num2str([ (1:12)' newBalance' ]));
+

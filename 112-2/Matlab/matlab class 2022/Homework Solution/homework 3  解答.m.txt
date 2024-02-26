@@ -1,0 +1,65 @@
+%3.3
+clc;clear;
+f=input('Enter Fahrenheit temperature:'); %輸入華氏溫度
+c=5/9*(f-32); %轉換公式
+disp(['The Celsius temperature is :' num2str(c) ]);
+
+% 3.7
+clear;clc
+t = 0:0.1:10;% t from0 to 10 in increments of 0.1
+k = 1;
+R = 0:0.5:2; %R from0 to 2 in increments of 0.5
+Ro2 = R./2; %帶入y的(R/2)
+omega0 = sqrt(k); %W0
+omega1 = sqrt(omega0.^2 - R.^2./4); %W1
+aa=['r', 'g', 'b', 'y', 'cm'];
+for iR = 1:length(R)
+y = exp(-Ro2(iR).*t).*sin(omega1(iR).*t);%公式
+plot(t,y, aa(iR)),hold on %畫圖
+end
+legend('R=0','R=0.5','R=1','R=1.5','R=2');%標籤
+
+%4.2
+clc;clear;
+x=1;a=2;t=3;
+%a
+A=log(x+x^2+a^2)
+%b
+B=(exp(3*t)+t^2*sin(4*t))*cos(3*t)^2
+%c
+C=4*atan(1) % atan()做tan的反函數 輸出單位為弧度
+%d
+D=sec(x)^2+cot(x)
+%e
+E=acot(abs(x/a)) %acot()做cot的反函數,輸出單位為弧度
+
+%4.3
+m=input('Enter length in metres:');
+inches=m*39.37;
+feet=fix(inches/12); % fix() 求無條件捨去
+inches=rem(inches,12);% rem() 求inches/12的餘
+yards=fix(feet/3);
+feet=rem(feet,3);
+disp([yards feet inches]);
+
+%4.4
+clc;clear;
+m1=1;
+m2=1;
+e=1;
+a=45;
+tanB=(m2*(1+e)*tand(a))/(m1-e*m2+(m1+m2)*tand(a)^2); % tand( ):   輸入單位為度數 degree
+B=atand(tanB);%  atand( ):  atand為tan的反函數, 輸出為度數
+disp(B);
+
+%4.5
+clc;clear;
+a=10;
+x=1;
+k=input('How many terms do you want?');
+for n=1:k %n=1到k時做x=a*x/n 運算
+    x=a*x/n;
+    if rem(n,10) == 0 %假如 n/10的餘數=0 顯示[n x]
+        disp([n x]);
+    end
+end
