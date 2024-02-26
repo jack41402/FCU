@@ -1,0 +1,58 @@
+%9.1
+clear
+t = 1790:2000;
+P = 197273000 ./ (1+exp(-0.03134*(t-1913.25)));
+plot(t, P), hold, xlabel('Year'), ylabel('Population size')
+census = [3929 5308 7240 9638 12866 17069 23192 31443 38558 50156 62948 75995 91972 105711 122775 131669 150697];
+census = 1000 * census;
+plot(1790:10:1950, census, 'o'), hold off
+
+%9.2
+clear
+a = 2;
+th = 0:pi/40:5*pi;
+figure, plot(a*th.*cos(th), a*th.*sin(th)),title('(a) Archimedes')
+figure, polar(th, a*th),title('(a) Archimedes') % or use polar
+
+%9.3
+clear
+a=2;
+q = 1.25;
+th = 0:pi/40:5*pi;
+figure, plot(a*q.^th.*cos(th), a*q.^th.*sin(th)),title('(b) Logarithmic')
+figure, polar(th, a*q.^th) ,title('(b) Logarithmic')% or use polar
+
+%9.4
+clear
+n=1:1000;
+for d = [137.51 137.45 137.65 137.92]
+    th = pi*d*n/180;
+    r = sqrt(n);
+    figure,plot(r.*cos(th), r.*sin(th), 'o')
+    title(['d=',num2str(d)]);
+end
+
+%9.6
+clear
+for r = [0.5 2 3.3, 3.5, 3.5668,3.575, 3.5766, 3.738, 3.8287  6]
+    y(1) = 0.2;
+    for k = 1:600
+        y(k+1) = r*y(k)*(1 - y(k));
+    end
+    figure,plot(y, '.')
+    title(['r=',num2str(r)]);
+end
+
+
+%9.7
+clear
+x(1)=0; y(1)=0;
+for k=1:10000
+    x(k+1) = y(k)*(1+sin(0.7*x(k)))-1.2*sqrt(abs(x(k)));
+    y(k+1) =0.21-x(k);    
+end
+figure,plot(x,y, '.')
+
+  
+  
+  

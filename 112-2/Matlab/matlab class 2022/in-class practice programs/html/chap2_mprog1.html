@@ -1,0 +1,958 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>chap2_mprog1</title><meta name="generator" content="MATLAB 9.0"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-03-25"><meta name="DC.source" content="chap2_mprog1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">A simple example using MATLAB</a></li><li><a href="#3">prog 2.3-1   Variable stored as array</a></li><li><a href="#4">chap2.5-1  Array operations</a></li><li><a href="#6">Prog 2.6 format , disp statement</a></li><li><a href="#7">Exercise For loop  p.78 translate between Celsius and Fahrenheit</a></li><li><a href="#8">Exercise</a></li><li><a href="#9">Exercise</a></li><li><a href="#10">Exercise answer</a></li></ul></div><pre class="codeinput">close <span class="string">all</span>; clear <span class="string">all</span>;
+</pre><h2>A simple example using MATLAB<a name="2"></a></h2><pre class="codeinput">load <span class="string">score_data</span> <span class="comment">% input N score</span>
+
+N=input(<span class="string">'   number of student:   '</span>);
+score=zeros(2,N);
+
+<span class="comment">% input the name and score of the student evaluate the average score</span>
+<span class="keyword">for</span> i=1:N
+    str1= input(<span class="string">'student name:'</span>,<span class="string">'s'</span>);
+    eval([<span class="string">'name'</span>,int2str(i),<span class="string">'=str1;'</span>]);
+<span class="comment">%     if (i==1)</span>
+<span class="comment">%         name=str1;</span>
+<span class="comment">%     else</span>
+<span class="comment">%         name=char(name,str1); % Create a character array.</span>
+<span class="comment">%     end</span>
+score(1,i)=input(<span class="string">'math score:   '</span>);
+score(2,i)=input(<span class="string">'english score:   '</span>);
+avg(i)=(score(1,i)+score(2,i))/2; <span class="comment">% avg(i) = sum(score(:,i))/2;</span>
+<span class="keyword">end</span>
+
+<span class="comment">% output value</span>
+<span class="keyword">for</span> i=1:N
+    eval([<span class="string">'str1=name'</span>,int2str(i),<span class="string">';'</span>]);
+ fprintf(<span class="string">'the average score of %s is %3.2f \n'</span>,str1,avg(i));
+<span class="keyword">end</span>
+save <span class="string">score_data</span> <span class="string">N</span> <span class="string">score</span>
+</pre><pre class="codeoutput error">Error using input
+Cannot call INPUT from EVALC.
+
+Error in chap2_mprog1 (line 6)
+N=input('   number of student:   ');
+</pre><h2>prog 2.3-1   Variable stored as array<a name="3"></a></h2><p>Array (scalar, vector, matrix0 in matlab vectors, and matrices...</p><pre class="codeinput">N	= 5				<span class="comment">% a scalar</span>
+v 	= [1 0 0]			<span class="comment">% a row vector</span>
+v 	= [1;2;3]			<span class="comment">% a column vector</span>
+v 	= v'				<span class="comment">% transpose a vector (row to column or column to row)</span>
+v	= [1:.5:3]			<span class="comment">% a vector in a specified range:</span>
+v	= pi*[-4:4]/4			<span class="comment">% 	[start:stepsize:end]</span>
+v	= []				<span class="comment">% empty vector</span>
+
+
+m 	= [1 2 3; 4 5 6]		<span class="comment">% a matrix: 1ST parameter is ROWS</span>
+					<span class="comment">% 	    2ND parameter is COLS</span>
+m	= zeros(2,3)   			<span class="comment">% a matrix of zeros</span>
+v	= ones(1,3)  			<span class="comment">% a matrix of ones</span>
+m	= eye(3)			<span class="comment">% identity matrix</span>
+v	= rand(3,1)			<span class="comment">% rand matrix (see also randn)</span>
+save <span class="string">matrix_data</span> <span class="string">m</span>      <span class="comment">% save the variable m to a file named matrix_data.mat</span>
+
+clear <span class="string">all</span>               <span class="comment">% clear all variables currently used by MATLAB</span>
+
+load <span class="string">matrix_data</span> 			<span class="comment">% read data from the saved file</span>
+m                           <span class="comment">% display it - it is still there!</span>
+
+v	= [1 2 3];			<span class="comment">% access a vector element</span>
+length(v)               <span class="comment">% length of a vector</span>
+v(2:3)					<span class="comment">%	vector(number)</span>
+
+
+<span class="comment">% 2.3.5 subscripts</span>
+a=[ 1 2 3 4 5 6 7 8];
+a(2:6)
+a(2:2:6)
+
+m 	= [1 2 3; 4 5 6;7 8 9]
+m(1,3)					<span class="comment">% access a matrix element</span>
+					<span class="comment">% 	matrix(rownumber, columnnumber)</span>
+m(2,:)    				<span class="comment">% access a matrix row (2nd row)</span>
+m(:,1)    				<span class="comment">% access a matrix column (1st row)</span>
+
+
+size(m)					<span class="comment">% size of a matrix</span>
+size(m,1)  				<span class="comment">% number rows</span>
+size(m,2)  				<span class="comment">% number of columns</span>
+
+
+<span class="comment">% to chane the value by finding the subscript</span>
+
+[i j]=find(m&gt;=3);
+disp([i j]);
+
+pp=find(m&gt;=3);
+m(pp)=0
+
+
+m1	= zeros(size(m))		<span class="comment">% create a new matrix with size of m</span>
+
+who					<span class="comment">% list of variables</span>
+whos					<span class="comment">% list/size/type of variables</span>
+</pre><h2>chap2.5-1  Array operations<a name="4"></a></h2><p>(A) Pointwise (element by element) Operations:</p><pre class="codeinput"><span class="comment">% addition of vectors/matrices and multiplication by a scalar</span>
+<span class="comment">% are done "element by element"</span>
+a	= [1 2 3 4];			<span class="comment">% vector</span>
+2 * a 					<span class="comment">% scalar multiplication</span>
+a / 4					<span class="comment">% scalar multiplication</span>
+b	= [5 6 7 8];			<span class="comment">% vector</span>
+a + b					<span class="comment">% pointwise vector addition</span>
+a - b					<span class="comment">% pointwise vector addition</span>
+a .^ 2					<span class="comment">% pointise vector squaring (note .)</span>
+a .* b					<span class="comment">% pointwise vector multiply (note .)</span>
+a ./ b					<span class="comment">% pointwise vector multiply (note .)</span>
+
+log( [1 2 3 4] )			<span class="comment">% pointwise arithmetic operation</span>
+round( [1.5 2; 2.2 3.1] )		<span class="comment">% pointwise arithmetic operation</span>
+
+
+<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="comment">% (B) Vector Operations (no for loops needed)</span>
+<span class="comment">% Built-in matlab functions operate on vectors, if a matrix is given,</span>
+<span class="comment">% then the function operates on each column of the matrix</span>
+
+a	= [1 4 6 3]			<span class="comment">% vector</span>
+sum(a)					<span class="comment">% sum of vector elements</span>
+mean(a)					<span class="comment">% mean of vector elements</span>
+var(a)					<span class="comment">% variance (sigma^{2})</span>
+std(a)					<span class="comment">% standard deviation (sigma)</span>
+max(a)					<span class="comment">% maximum</span>
+
+
+a 	= [1 2 3; 4 5 6]		<span class="comment">% matrix</span>
+mean(a)                      		<span class="comment">% mean of each column</span>
+max(a)                       		<span class="comment">% max of each column</span>
+max(max(a))		     		<span class="comment">% to obtain max of matrix</span>
+max(a(:))		     		<span class="comment">% another way to obtain max of matrix</span>
+
+
+xx = linspace(0, pi/2, 10)
+
+yy = logspace(0, 2, 10)
+<span class="comment">% ddy=diff(yy);</span>
+<span class="comment">% yy1=yy(1:end-1+ddy./2);</span>
+<span class="comment">% figure(1);plot(yy1,ddy)</span>
+
+<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="comment">% (C) Matrix Operations:</span>
+
+[1 2 3] * [4 5 6]'  			<span class="comment">% row vector 1x3 times column vector 3x1</span>
+                    			<span class="comment">% results in single number, also</span>
+                   			<span class="comment">% known as dot product or inner product</span>
+
+[1 2 3]' * [4 5 6]  			<span class="comment">% column vector 3x1 times row vector 1x3</span>
+                    			<span class="comment">% results in 3x3 matrix, also</span>
+                    			<span class="comment">% known as outer product</span>
+
+a	= rand(3,2)			<span class="comment">% 3x2 matrix</span>
+b	= rand(2,4)			<span class="comment">% 2x4 matrix</span>
+c	= a * b				<span class="comment">% 3x4 matrix</span>
+
+a	= [1 2; 3 4; 5 6]		<span class="comment">% 3 x 2 matrix</span>
+b	= [5 6 7];			<span class="comment">% 3 x 1 vector</span>
+b * a					<span class="comment">% matrix multiply</span>
+a' * b'					<span class="comment">% matrix multiply</span>
+</pre><pre class="codeinput"><span class="comment">%(D) Saving your work</span>
+
+save <span class="string">mysession</span>      			<span class="comment">% creates session.mat with all variables</span>
+save <span class="string">mysession</span> <span class="string">a</span> <span class="string">b</span>  			<span class="comment">% save only variables a and b</span>
+
+
+clear <span class="string">a</span> <span class="string">b</span>           			<span class="comment">% clear variables a and b</span>
+clear <span class="string">all</span>				<span class="comment">% clear all variables</span>
+
+load <span class="string">mysession</span>				<span class="comment">% load session</span>
+a
+b
+</pre><h2>Prog 2.6 format , disp statement<a name="6"></a></h2><pre class="codeinput">format <span class="string">long</span> <span class="comment">% (1) short e ; (2) bank (3) compact</span>
+x=[ 1e3 1 1e-4]
+
+<span class="comment">%   2.7-1  p. 58 square roots with newton's method</span>
+a = 2;
+<span class="comment">% a=input('input a number for the computation:');</span>
+x = a/2;
+<span class="comment">% display a variable</span>
+disp([<span class="string">'The approach to sqrt(a) for a ='</span>, num2str(a)]) <span class="comment">% an str variable</span>
+<span class="keyword">for</span> i = 1:6
+x = (x + a / x) / 2;
+disp( x )
+<span class="keyword">end</span>
+disp( <span class="string">'Matlab''s value: '</span> )
+disp( sqrt(a) )
+
+aa=[1:4]   <span class="comment">% row vector</span>
+bb=[5:8]
+disp([aa' bb']) <span class="comment">% a matrix variable of 4*2 matrix</span>
+
+aa=[-pi:0.25*pi:pi]
+disp([ aa' sin(aa)'] ) <span class="comment">% math. expression</span>
+
+format
+
+<span class="comment">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+<span class="comment">% 2.7 Prog 2.7-1 Repeating with for statements</span>
+
+<span class="comment">% Example: given a vector v, create a new vector with values equal to</span>
+<span class="comment">% v if they are greater than 0, and equal to 0 if they less than or</span>
+<span class="comment">% equal to 0.</span>
+
+
+v	= [3 5 -2 5 -1 0];		<span class="comment">% 1: FOR LOOPS</span>
+<span class="comment">%  initialize; generate zero matrix with same dimension</span>
+u 	= zeros( size(v) );
+<span class="keyword">for</span> i = 1:length(v)
+    disp([i v(i)]);   <span class="comment">% i=1 then [i v(i)]=[ 1 3 ]</span>
+	<span class="keyword">if</span>( v(i) &gt; 0 )
+		u(i) = v(i);
+	<span class="keyword">end</span>
+<span class="keyword">end</span>
+u
+
+v	= [3 5 -2 5 -1 0]		<span class="comment">% 2: NO FOR LOOPS</span>
+u2	= zeros( size(v) );		<span class="comment">% initialize</span>
+ind	= find( v&gt;0 )			<span class="comment">% index into &gt;0 elements</span>
+u2(ind)	= v( ind )
+</pre><h2>Exercise For loop  p.78 translate between Celsius and Fahrenheit<a name="7"></a></h2><pre class="codeinput"><span class="comment">% input</span>
+<span class="comment">%   the initial value of the temperture in degree C : 20</span>
+<span class="comment">%   the final value of the temperture in degree C : 30</span>
+<span class="comment">%   the step of the temperture in degree C f: 2</span>
+
+<span class="comment">% output using fprintf</span>
+<span class="comment">%    Celsius 20.00 Fahrenheit 68.00</span>
+<span class="comment">%    Celsius 22.00 Fahrenheit 71.60</span>
+<span class="comment">%    Celsius 24.00 Fahrenheit 75.20</span>
+<span class="comment">%    Celsius 26.00 Fahrenheit 78.80</span>
+<span class="comment">%    Celsius 28.00 Fahrenheit 82.40</span>
+<span class="comment">%    Celsius 30.00 Fahrenheit 86.00</span>
+
+
+<span class="comment">%%=========================================================================</span>
+Avoid <span class="string">"for"</span> <span class="string">loops</span> <span class="string">by</span> <span class="string">vectorizing</span>
+<span class="comment">%%=========================================================================</span>
+
+t0 = clock;
+s = 0;
+<span class="keyword">for</span> n = 1:100000
+s = s + n;
+<span class="keyword">end</span>
+etime(clock, t0)
+
+t0 = clock;
+n = 1:100000;
+s = sum( n );
+etime(clock, t0)
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">%%=========================================================================</span>
+<span class="comment">% pp. 62   :  sum(1/n^2) for n=1:100000</span>
+tic
+s = 0;
+<span class="keyword">for</span> n = 1:100000
+s = s + 1/n^2;
+<span class="keyword">end</span>
+toc
+
+<span class="comment">% n is a vector</span>
+tic
+n = 1:100000;
+s = sum( 1./n.^2 );
+toc
+
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">%%=========================================================================</span>
+
+<span class="comment">% p.63</span>
+sign = -1;
+s = 0;
+<span class="keyword">for</span> n = 1:9999
+sign = -sign;
+s = s + sign / n;
+<span class="keyword">end</span>
+display(s);
+
+<span class="comment">% n is a vector</span>
+n = 1:2:9999;
+s = sum( 1./n - 1./(n+1) )
+</pre><h2>Exercise<a name="8"></a></h2><pre class="codeinput"> <span class="comment">% input the number of the student</span>
+clear <span class="string">all</span>;close <span class="string">all</span>;
+N=input(<span class="string">'   number of student:   '</span>);
+score=zeros(2,N);
+<span class="comment">% input the name and score of the student evaluate the average score</span>
+MAXN=10;
+name=zeros(MAXN,10);
+<span class="keyword">for</span> i=1:N
+name(i,:)= input(<span class="string">'student name:'</span>,<span class="string">'s'</span>);
+score(1,i)=input(<span class="string">'math score:   '</span>);
+score(2,i)=input(<span class="string">'english score:   '</span>);
+avg(i)=(score(1,i)+score(2,i))/2; <span class="comment">% avg(i) = sum(score(:,i))/2;</span>
+<span class="keyword">end</span>
+<span class="comment">% output value</span>
+<span class="keyword">for</span> i=1:N
+ fprintf(<span class="string">'the average score of %s is %3.2f \n'</span>,name(i,:),avg(i));
+<span class="keyword">end</span>
+
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">% 2.8.2 p. 66 if-lese statement</span>
+<span class="comment">%%=========================================================================</span>
+<span class="comment">% Relational operations p.65 table 2,4</span>
+x= (3&gt;2)
+x= (2&gt;3)
+x= (3==3)
+
+bal = 10000 * rand;
+<span class="keyword">if</span> bal &lt; 5000  <span class="comment">% relational</span>
+    rate = 0.09;
+<span class="keyword">else</span>
+    rate = 0.12;
+<span class="keyword">end</span>
+newbal = bal + rate * bal;
+disp( <span class="string">'New balance after interest compounded is:'</span> )
+format <span class="string">bank</span>
+disp( newbal )
+
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">% 2.8.4 p. 67 elseif  statement</span>
+<span class="comment">%%=========================================================================</span>
+
+
+bal = 15000 * rand;
+<span class="keyword">if</span> bal &lt; 5000
+    rate = 0.09;
+<span class="keyword">elseif</span> bal &lt; 10000
+    rate = 0.12;
+<span class="keyword">else</span>
+    rate = 0.15;
+<span class="keyword">end</span>
+newbal = bal + rate * bal;
+format <span class="string">bank</span>
+disp( <span class="string">'New balance is:'</span> )
+disp( newbal )
+
+
+
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">% multiple logical condition</span>
+<span class="comment">%%=========================================================================</span>
+bal=7000;
+rate=0;
+<span class="keyword">if</span> ((5000 &lt; bal) &amp; (bal&lt; 10000)) <span class="comment">% if 5000 &lt; bal &lt; 10000 (wrong)</span>
+rate = 0.12;
+<span class="keyword">end</span>
+newbal = bal + rate * bal;
+format <span class="string">bank</span>
+disp( <span class="string">'New balance is:'</span> )
+disp( newbal )
+
+
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">% 2.8.9 p. 71 switsh elseif  statement</span>
+<span class="comment">%%=========================================================================</span>
+
+d = floor(3*rand) + 1
+<span class="keyword">switch</span> d
+<span class="keyword">case</span> 1
+disp(<span class="string">'That''s a 1!'</span> );
+<span class="keyword">case</span> 2
+disp( <span class="string">'That''s a 2!'</span>);
+<span class="keyword">otherwise</span>
+disp( <span class="string">'Must be 3!'</span>);
+<span class="keyword">end</span>
+
+
+
+d = floor(10*rand);
+<span class="keyword">switch</span> d
+<span class="keyword">case</span> {2, 4, 6, 8}
+disp( <span class="string">'Even'</span> );
+<span class="keyword">case</span> {1, 3, 5, 7, 9}
+disp( <span class="string">'Odd'</span> );
+<span class="keyword">otherwise</span>
+disp( <span class="string">'Zero'</span> );
+<span class="keyword">end</span>
+</pre><h2>Exercise<a name="9"></a></h2><p>(1) score case. (2) Hw. 1 (3) To write the code for the root of quadratic equation in p. 94</p><pre class="codeinput"><span class="comment">%%=========================================================================</span>
+<span class="comment">% complex number p. 72</span>
+<span class="comment">%%=========================================================================</span>
+
+i=sqrt(-1);
+circle = exp( 2*i*[1:360]*pi/360 );
+figure, plot(circle)
+<span class="comment">% axis([-1 1 -2 2])</span>
+axis(<span class="string">'equal'</span>)
+axis([-2 2 -2 2])
+
+a=3;
+b=5;
+a=[a b];
+b=a(1);
+a(1)=[]
+<span class="comment">%%=========================================================================</span>
+<span class="comment">%%=========================================================================</span>
+
+a = [1+i 2+2i; 3+3i 4+4i]
+a'
+a.'
+
+
+<span class="comment">%%=========================================================================</span>
+<span class="comment">%%=========================================================================</span>
+tic
+k=1:40000;
+s=sum(1./k.^2);
+disp(sqrt(6*s))
+toc
+
+
+clc;clear;close <span class="string">all</span>
+
+money=50;<span class="comment">%%&#26412;&#37329;</span>
+newBalance = zeros(1,12);
+
+<span class="keyword">for</span> k=1:12 <span class="comment">%% &#26376;&#20221;</span>
+   money = money *1.01;<span class="comment">%%&#26412;&#37329;&#21152;&#21033;&#24687;</span>
+    newBalance(k)=money;<span class="comment">%%&#27599;&#26376;&#23384;&#27454;&#32080;&#31639;</span>
+    money=money+50;<span class="comment">%%&#27599;&#26376;&#23450;&#23384;</span>
+<span class="keyword">end</span>
+
+display([<span class="string">'Month'</span> <span class="string">' New Balance'</span>]);
+display(num2str([ (1:12)' newBalance' ]));
+</pre><h2>Exercise answer<a name="10"></a></h2><pre class="codeinput">close <span class="string">all</span>;clear <span class="string">all</span>;
+
+aa = floor(100*rand(20,1)) + 1
+<span class="keyword">for</span> i=1:length(aa)
+    bb(i)=<span class="string">'n'</span>;
+    <span class="keyword">if</span> (aa (i) &gt;= 60)
+        bb(i)=<span class="string">'p'</span>;
+    <span class="keyword">end</span>
+    disp([ <span class="string">'      '</span> num2str(aa(i)) <span class="string">'   '</span> bb(i) ]);
+<span class="keyword">end</span>
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2016a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+close all; clear all;
+
+%% A simple example using MATLAB
+load score_data % input N score
+
+N=input('   number of student:   ');
+score=zeros(2,N);
+
+% input the name and score of the student evaluate the average score
+for i=1:N
+    str1= input('student name:','s');
+    eval(['name',int2str(i),'=str1;']);
+%     if (i==1)
+%         name=str1;
+%     else
+%         name=char(name,str1); % Create a character array.
+%     end
+score(1,i)=input('math score:   ');
+score(2,i)=input('english score:   ');
+avg(i)=(score(1,i)+score(2,i))/2; % avg(i) = sum(score(:,i))/2;
+end
+
+% output value
+for i=1:N
+    eval(['str1=name',int2str(i),';']);
+ fprintf('the average score of %s is %3.2f \n',str1,avg(i));
+end
+save score_data N score 
+
+%% prog 2.3-1   Variable stored as array
+% Array (scalar, vector, matrix0 in matlab 
+% vectors, and matrices...
+
+
+N	= 5				% a scalar
+v 	= [1 0 0]			% a row vector
+v 	= [1;2;3]			% a column vector
+v 	= v'				% transpose a vector (row to column or column to row)
+v	= [1:.5:3]			% a vector in a specified range: 
+v	= pi*[-4:4]/4			% 	[start:stepsize:end]
+v	= []				% empty vector
+
+
+m 	= [1 2 3; 4 5 6]		% a matrix: 1ST parameter is ROWS
+					% 	    2ND parameter is COLS 
+m	= zeros(2,3)   			% a matrix of zeros
+v	= ones(1,3)  			% a matrix of ones
+m	= eye(3)			% identity matrix
+v	= rand(3,1)			% rand matrix (see also randn)
+save matrix_data m      % save the variable m to a file named matrix_data.mat
+
+clear all               % clear all variables currently used by MATLAB
+
+load matrix_data 			% read data from the saved file				
+m                           % display it - it is still there!
+
+v	= [1 2 3];			% access a vector element
+length(v)               % length of a vector
+v(2:3)					%	vector(number) 
+
+
+% 2.3.5 subscripts
+a=[ 1 2 3 4 5 6 7 8];
+a(2:6)
+a(2:2:6)
+
+m 	= [1 2 3; 4 5 6;7 8 9]
+m(1,3)					% access a matrix element
+					% 	matrix(rownumber, columnnumber)
+m(2,:)    				% access a matrix row (2nd row)
+m(:,1)    				% access a matrix column (1st row)
+
+
+size(m)					% size of a matrix
+size(m,1)  				% number rows
+size(m,2)  				% number of columns
+
+
+% to chane the value by finding the subscript
+
+[i j]=find(m>=3);
+disp([i j]);
+
+pp=find(m>=3);
+m(pp)=0
+
+
+m1	= zeros(size(m))		% create a new matrix with size of m
+
+who					% list of variables
+whos					% list/size/type of variables
+
+%% chap2.5-1  Array operations 
+% (A) Pointwise (element by element) Operations:
+
+% addition of vectors/matrices and multiplication by a scalar
+% are done "element by element"
+a	= [1 2 3 4];			% vector
+2 * a 					% scalar multiplication
+a / 4					% scalar multiplication
+b	= [5 6 7 8];			% vector
+a + b					% pointwise vector addition
+a - b					% pointwise vector addition
+a .^ 2					% pointise vector squaring (note .)
+a .* b					% pointwise vector multiply (note .)
+a ./ b					% pointwise vector multiply (note .)
+
+log( [1 2 3 4] )			% pointwise arithmetic operation
+round( [1.5 2; 2.2 3.1] )		% pointwise arithmetic operation
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (B) Vector Operations (no for loops needed)
+% Built-in matlab functions operate on vectors, if a matrix is given,
+% then the function operates on each column of the matrix
+
+a	= [1 4 6 3]			% vector
+sum(a)					% sum of vector elements
+mean(a)					% mean of vector elements
+var(a)					% variance (sigma^{2})
+std(a)					% standard deviation (sigma)
+max(a)					% maximum
+
+
+a 	= [1 2 3; 4 5 6]		% matrix
+mean(a)                      		% mean of each column
+max(a)                       		% max of each column    
+max(max(a))		     		% to obtain max of matrix 
+max(a(:))		     		% another way to obtain max of matrix
+
+
+xx = linspace(0, pi/2, 10)
+
+yy = logspace(0, 2, 10)
+% ddy=diff(yy);
+% yy1=yy(1:end-1+ddy./2);
+% figure(1);plot(yy1,ddy)
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% (C) Matrix Operations:
+
+[1 2 3] * [4 5 6]'  			% row vector 1x3 times column vector 3x1 
+                    			% results in single number, also
+                   			% known as dot product or inner product
+
+[1 2 3]' * [4 5 6]  			% column vector 3x1 times row vector 1x3
+                    			% results in 3x3 matrix, also
+                    			% known as outer product
+
+a	= rand(3,2)			% 3x2 matrix
+b	= rand(2,4)			% 2x4 matrix
+c	= a * b				% 3x4 matrix
+
+a	= [1 2; 3 4; 5 6]		% 3 x 2 matrix
+b	= [5 6 7];			% 3 x 1 vector
+b * a					% matrix multiply
+a' * b'					% matrix multiply
+
+%%
+%(D) Saving your work
+
+save mysession      			% creates session.mat with all variables
+save mysession a b  			% save only variables a and b
+
+
+clear a b           			% clear variables a and b
+clear all				% clear all variables
+
+load mysession				% load session
+a
+b
+
+
+%%  Prog 2.6 format , disp statement 
+
+format long % (1) short e ; (2) bank (3) compact
+x=[ 1e3 1 1e-4]
+
+%   2.7-1  p. 58 square roots with newton's method
+a = 2;
+% a=input('input a number for the computation:');
+x = a/2;
+% display a variable
+disp(['The approach to sqrt(a) for a =', num2str(a)]) % an str variable
+for i = 1:6
+x = (x + a / x) / 2;
+disp( x )
+end
+disp( 'Matlab''s value: ' )
+disp( sqrt(a) )
+
+aa=[1:4]   % row vector
+bb=[5:8]
+disp([aa' bb']) % a matrix variable of 4*2 matrix
+
+aa=[-pi:0.25*pi:pi]
+disp([ aa' sin(aa)'] ) % math. expression 
+
+format
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2.7 Prog 2.7-1 Repeating with for statements
+
+% Example: given a vector v, create a new vector with values equal to
+% v if they are greater than 0, and equal to 0 if they less than or
+% equal to 0.
+
+
+v	= [3 5 -2 5 -1 0];		% 1: FOR LOOPS
+%  initialize; generate zero matrix with same dimension
+u 	= zeros( size(v) );		
+for i = 1:length(v)
+    disp([i v(i)]);   % i=1 then [i v(i)]=[ 1 3 ]
+	if( v(i) > 0 )
+		u(i) = v(i); 
+	end
+end
+u
+
+v	= [3 5 -2 5 -1 0]		% 2: NO FOR LOOPS
+u2	= zeros( size(v) );		% initialize
+ind	= find( v>0 )			% index into >0 elements 
+u2(ind)	= v( ind )
+
+%% Exercise For loop  p.78 translate between Celsius and Fahrenheit 
+
+% input
+%   the initial value of the temperture in degree C : 20
+%   the final value of the temperture in degree C : 30
+%   the step of the temperture in degree C f: 2
+
+% output using fprintf
+%    Celsius 20.00 Fahrenheit 68.00 
+%    Celsius 22.00 Fahrenheit 71.60 
+%    Celsius 24.00 Fahrenheit 75.20 
+%    Celsius 26.00 Fahrenheit 78.80 
+%    Celsius 28.00 Fahrenheit 82.40 
+%    Celsius 30.00 Fahrenheit 86.00 
+
+
+%%=========================================================================
+Avoid "for" loops by vectorizing 
+%%=========================================================================
+
+t0 = clock;
+s = 0;
+for n = 1:100000
+s = s + n;
+end
+etime(clock, t0)
+
+t0 = clock;
+n = 1:100000;
+s = sum( n );
+etime(clock, t0)
+
+%%=========================================================================
+%%=========================================================================
+% pp. 62   :  sum(1/n^2) for n=1:100000
+tic
+s = 0;
+for n = 1:100000
+s = s + 1/n^2;
+end
+toc
+
+% n is a vector
+tic
+n = 1:100000;
+s = sum( 1./n.^2 );
+toc
+
+
+%%=========================================================================
+%%=========================================================================
+
+% p.63 
+sign = -1;
+s = 0;
+for n = 1:9999
+sign = -sign;
+s = s + sign / n;
+end
+display(s);
+
+% n is a vector
+n = 1:2:9999;
+s = sum( 1./n - 1./(n+1) )
+
+%% Exercise 
+
+ % input the number of the student
+clear all;close all;
+N=input('   number of student:   ');
+score=zeros(2,N);
+% input the name and score of the student evaluate the average score
+MAXN=10;
+name=zeros(MAXN,10);
+for i=1:N
+name(i,:)= input('student name:','s');
+score(1,i)=input('math score:   ');
+score(2,i)=input('english score:   ');
+avg(i)=(score(1,i)+score(2,i))/2; % avg(i) = sum(score(:,i))/2;
+end
+% output value
+for i=1:N
+ fprintf('the average score of %s is %3.2f \n',name(i,:),avg(i));
+end
+
+
+%%=========================================================================
+% 2.8.2 p. 66 if-lese statement 
+%%=========================================================================
+% Relational operations p.65 table 2,4
+x= (3>2)
+x= (2>3)
+x= (3==3)
+
+bal = 10000 * rand;
+if bal < 5000  % relational 
+    rate = 0.09;
+else
+    rate = 0.12;
+end
+newbal = bal + rate * bal;
+disp( 'New balance after interest compounded is:' )
+format bank
+disp( newbal )
+
+
+%%=========================================================================
+% 2.8.4 p. 67 elseif  statement 
+%%=========================================================================
+
+
+bal = 15000 * rand;
+if bal < 5000
+    rate = 0.09;
+elseif bal < 10000
+    rate = 0.12;
+else
+    rate = 0.15;
+end
+newbal = bal + rate * bal;
+format bank
+disp( 'New balance is:' )
+disp( newbal )
+
+
+
+
+%%=========================================================================
+% multiple logical condition
+%%=========================================================================
+bal=7000;
+rate=0;
+if ((5000 < bal) & (bal< 10000)) % if 5000 < bal < 10000 (wrong)
+rate = 0.12;
+end
+newbal = bal + rate * bal;
+format bank
+disp( 'New balance is:' )
+disp( newbal )
+
+
+
+%%=========================================================================
+% 2.8.9 p. 71 switsh elseif  statement 
+%%=========================================================================
+
+d = floor(3*rand) + 1
+switch d
+case 1
+disp('That''s a 1!' );
+case 2
+disp( 'That''s a 2!');
+otherwise
+disp( 'Must be 3!');
+end
+
+
+
+d = floor(10*rand);
+switch d
+case {2, 4, 6, 8}
+disp( 'Even' );
+case {1, 3, 5, 7, 9}
+disp( 'Odd' );
+otherwise
+disp( 'Zero' );
+end
+
+%% Exercise
+% (1) score case.
+% (2) Hw. 1
+% (3) To write the code for the root of quadratic equation in p. 94
+%%=========================================================================
+% complex number p. 72
+%%=========================================================================
+
+i=sqrt(-1);
+circle = exp( 2*i*[1:360]*pi/360 );
+figure, plot(circle)
+% axis([-1 1 -2 2])
+axis('equal')
+axis([-2 2 -2 2])
+
+a=3;
+b=5;
+a=[a b];
+b=a(1);
+a(1)=[]
+%%=========================================================================
+%%=========================================================================
+
+a = [1+i 2+2i; 3+3i 4+4i]
+a'
+a.'
+
+
+%%=========================================================================
+%%=========================================================================
+tic
+k=1:40000;
+s=sum(1./k.^2);
+disp(sqrt(6*s))
+toc
+
+
+clc;clear;close all
+
+money=50;%%本金
+newBalance = zeros(1,12);
+
+for k=1:12 %% 月份
+   money = money *1.01;%%本金加利息
+    newBalance(k)=money;%%每月存款結算
+    money=money+50;%%每月定存
+end
+
+display(['Month' ' New Balance']);
+display(num2str([ (1:12)' newBalance' ]));
+
+
+%% Exercise answer
+close all;clear all;
+
+aa = floor(100*rand(20,1)) + 1
+for i=1:length(aa)
+    bb(i)='n';
+    if (aa (i) >= 60)
+        bb(i)='p';
+    end
+    disp([ '      ' num2str(aa(i)) '   ' bb(i) ]);
+end
+
+
+
+##### SOURCE END #####
+--></body></html>

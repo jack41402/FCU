@@ -1,0 +1,155 @@
+%2.24 
+money = 1000;
+for month = 1 : 12
+money = money * 1.01;
+end
+
+%2.25
+clc;clear;close all
+
+money=100000;%%本金
+interest_rate = zeros(1,12);
+interest = zeros(1,12);
+newBalance = zeros(1,12);
+
+for k=1:12 %% 月份
+    %%%利息計算法
+    if money<=110000
+        interest_rate(k)=0.01;
+        interest(k) = money * interest_rate(k);
+        money = money + interest(k);
+            
+    elseif   money>125000
+        interest_rate(k)=0.02;
+        interest(k) = money * interest_rate(k);
+        money = money + interest(k);
+               
+    else     
+        interest_rate(k)=0.015;
+        interest(k) = money * interest_rate(k);
+        money = money + interest(k);
+           
+    end
+         money=money+1000;%%每月定存
+         
+         newBalance(k)=money;%%每月存款結算
+end
+
+display(['Month' '     Interest Rate' '     Interest ' '      New Balance']);
+display(num2str([ (1:12)' interest_rate' interest' newBalance' ]));
+
+%ANS:
+%Month     Interest Rate     Interest       New Balance
+%1             0.01             1000           102000
+%2             0.01             1020           104020
+%.
+%.
+%.
+%12             0.02      2534.583929      130263.7804
+
+%2.26 
+t = 1790 : 10 : 2000;
+p = 197273000 ./ (1 + exp(-0.03134 * (t - 1913.25)));
+disp([t' p']);
+pause;
+plot(t,p);
+
+%3.4 
+a = input('Enter first number: ');
+b = input('Enter second number: ');
+if a < b
+    disp( [ num2str(b) ' is larger.'] );
+elseif a > b
+    disp( [ num2str(a) ' is larger.'] );
+else
+    disp( 'Numbers are equal.' );
+end
+
+
+%3.5
+
+function [x1,x2] = quadratic(a,b,c) %%副程式
+% Equation:
+% a*x^2 + b*x + c = 0
+% Input: a,b,c
+% Output: x = [x1 x2], the two solutions of
+% this eequation.
+if a==0 & b==0 & c==0     %%避免判斷是出錯
+    disp(' ')
+    disp('Solution indeterminate')
+    x1 = NaN;
+    x2 = NaN;
+elseif a==0 & b==0              %%避免判斷是出錯
+    disp(' ')
+    disp('There is no solution')
+    x1 = NaN;
+    x2 = NaN;
+elseif a==0                                %%只有單一解
+    disp('Only one root: equation is linear')
+    disp(' x ')
+    x1 = -c/b;
+    x2 = NaN;
+elseif b^2 < 4*a*c                    %% 解為虛數             
+    disp(' x1, x2 are complex roots ')
+    disp('x1 x2')
+    x1 = (-b + sqrt(b^2 - 4*a*c))/(2*a);
+    x2 = (-b - sqrt(b^2 - 4*a*c))/(2*a);
+elseif b^2 == 4*a*c                 %%相同解
+    x1 = -b/(2*a);
+    x2 = x1;
+    disp('equal roots')
+    disp('x1 x2')
+else
+    x1 = (-b + sqrt(b^2 - 4*a*c))/(2*a);
+    x2 = (-b - sqrt(b^2 - 4*a*c))/(2*a);
+    disp('x1 x2')
+end
+if a==0 & b==0 & c==0
+elseif a==0 & b==0
+else
+    disp([x1 x2]);
+end
+return;
+end %%副程式
+
+%將以上副程式部分存檔,檔名為quadratic，可用於下次呼叫
+
+[x1,x2]=quadratic(1,1,1);%%呼叫副函式
+
+%ANS:
+%(a)-0.5+0.886i,-0.5-0.886i 
+%(b)-1,-1
+%(c)2,-3
+
+%3.6 
+%1. Input a, b, c, d, e, f
+%2.u = ae - db, v = ec - bf
+%3. If u = 0 and v = 0, then
+%Lines coincide
+% then =========> 
+%Otherwise if u = 0 and v = 0, then
+%Lines are parallel
+%Otherwise
+%x = v/u, y = (af - dc)/u
+%Print x, y
+
+%4. Stop
+a = input('Enter a: ');
+b = input('Enter b: ');
+c = input('Enter c: ');
+d = input('Enter d: ');
+e = input('Enter e: ');
+f = input('Enter f: ');
+u = a * e - b * d;
+v = c * e - b * f;
+if u == 0
+    if v == 0
+        disp('Lines coincide.');
+    else
+        disp('Lines are parallel.');
+    end
+else
+    x = v / u;
+    y = (a * f - d * c) / u;
+    disp( [x y] );
+end

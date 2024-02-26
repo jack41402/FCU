@@ -1,0 +1,101 @@
+%2.27
+ %(a)
+r=0.15; %利率15%
+l=50000; %the bond
+n=20;
+p=r*l*(1+r/12)^(12*n)/...
+    (12*((1+r/12)^(12*n)-1));%公式
+disp(p);
+ %(b) 找不到 N 能使低於625
+n=input('Enter N:');%輸入N
+p=r*l*(1+r/12)^(12*n)/...
+    (12*((1+r/12)^(12*n)-1)); 
+disp(p);
+ %(c)
+r=0.15; %利率15%
+l=50000; %the bond
+n=20;
+p=r*l*(1+r/12)^(12*n)/...
+    (12*((1+r/12)^(12*n)-1));%公式
+disp(p);
+r=0.16;%利率提高1%=16%
+n=20;
+P=r*l*(1+r/12)^(12*n)/...
+    (12*((1+r/12)^(12*n)-1));
+disp(P) %利率提高1後
+delta=P-p; %利率提高1%-原本的=增加37美元
+disp(delta);
+
+%3.2
+clc;clear;
+ %(a)
+M=44;
+N=28;
+while M~=N % 當M不等於N
+    if M > N % 如果M>N做M = M-N ;否則做 N = N-M
+        M = M-N;
+    else
+        N = N-M;
+    end
+end
+display([M N])
+ %(b)
+M=14;
+N=24;
+while M~=N % 當M不等於N
+    if M > N % 如果M>N做M = M-N ;否則做 N = N-M
+        M = M-N;
+    else
+        N = N-M;
+    end
+end
+display([M N])
+  %(c)
+M=input('input M = ');
+N=input('input N = ');
+while M~=N % 當M不等於N
+    if M > N % 如果M>N做M = M-N ;否則做 N = N-M
+        M = M-N;
+    else
+        N = N-M;
+    end
+end
+display([M N])
+
+%3.8  
+x = -10:.1:10; % x為-10到10 間格為0.1
+c = 5;
+y = cosh(x/c); %cosh()餘弦函數 輸入為弧度
+plot(x,y) %畫圖
+  
+%4.1
+ %(a)
+A=3;B=4;
+C=sqrt(A^2+B^2)
+ %(b)
+D=90;%夾角 以度為單位
+C2=sqrt(A^2+ B^2-2*A*B*cosd(D)) %cosd()以度數為單位做cos
+
+%4.6
+secs =input('Enter seconds:');
+mins=fix(secs/60);%fix() 求無條件捨去
+secs=rem(secs,60);% rem() 求餘數
+hours=fix(mins/60);
+mins=rem(mins,60);
+disp([hours mins secs]);
+
+%4.7 給1000台幣大鈔  如物品價格為128元 找零為 872元 用最少的紙鈔張數與銅板數找零: 500   100   50  10   1
+clc;clear all;
+pay=1000;
+thing=128;
+money=pay-thing;
+hundred5=fix(money/500);%五百
+money=rem(money,500);
+hundred=fix(money/100);%百
+money=rem(money,100);
+fifty=fix(money/50);%五十
+money=rem(money,50);
+ten=fix(money/10);%十
+unit=rem(money,10);%個
+disp('　五百　一百　　五十   十　　一');
+disp([hundred5 hundred fifty ten unit]);
