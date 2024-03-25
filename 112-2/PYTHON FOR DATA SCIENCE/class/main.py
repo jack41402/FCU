@@ -1,10 +1,16 @@
-height = float(input("Height: "))
-weight = float(input("Weight: "))
-BMI = weight / (height ** 2)
+from functools import reduce
 
-if BMI < 18.5:
-    print("low BMI\n")
-elif BMI < 25:
-    print("normal BMI\n")
-else:
-    print("high BMI\n")
+
+def minimum(arr):
+    if isinstance(arr[0], str):
+        return reduce(lambda x, y: x if len(x) < len(y) else y, arr)
+        # return min(arr, key=len)
+    else:
+        return min(arr)
+
+
+result = minimum([45, 5, 4, 3])
+print(result)
+
+result = minimum(["red", "yellow", "green"])
+print(result)
