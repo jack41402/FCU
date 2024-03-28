@@ -1,0 +1,5 @@
+Enter cofficients a, b, and c for quadratic equation a X**2 + b x + c = 0: The quadratic equation is: X**2 + 9.0000 = 0.
+
+The two roots of the equation are:  and 
+
+Quadratic equation solution is a pair of valid roots. Verification succeeds.

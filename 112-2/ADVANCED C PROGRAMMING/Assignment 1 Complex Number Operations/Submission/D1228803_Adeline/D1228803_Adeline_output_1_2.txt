@@ -1,0 +1,2 @@
+Enter coefficient a, b, and c for quadratic equation a x**2 + bx + c =  0: The quadratic equation is: 4.0000X^2 -12.0000X + 19.0000 = 0 are 1.5000+0.0000i and 1.5000+0.0000i.
+Quadratic equation solution is a pair of valid roots. Verification succeeds.

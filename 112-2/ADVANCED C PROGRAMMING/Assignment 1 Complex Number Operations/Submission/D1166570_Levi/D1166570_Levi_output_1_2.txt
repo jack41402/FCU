@@ -1,0 +1,5 @@
+Enter coefficients a, b, and c for quadratic equation a*X^2 + b*X + c = 0: The quadratic equation is: 4.0000 X**2 - 12.0000 X + 9.0000 = 0 
+
+The two roots of the quadratic equation are: 1.5000 and 1.5000
+
+Quadratic equation solution is a pair of valid roots. Verification succeeds.

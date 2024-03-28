@@ -1,0 +1,5 @@
+Enter the coefficients a, b and c for quadratic equation a X**2 + b X + c = 0: The quadratic equation is: 3.0000 X**2 - 4.0000 X + 5.0000 = 0.
+
+The two roots of the quadratic equation are: 0.6667+1.1055 i and 0.6667-1.1055 i
+
+Quadratic equation is a pair of valid roots. Verification succeeds.

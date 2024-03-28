@@ -1,0 +1,3 @@
+Enter coefficients a, b, and c for the quadratic equation ax^2 + bx + c = 0: The quadratic equation is 4.0000X**2-12.0000X + 9.0000 = 0
+The two roots of the quadratic equation are: 1.5000 and 1.5000
+Quadratic equation solution is a pair of valid roots. Verification succeeds.
