@@ -1,2 +1,0 @@
-Enter coefficient a, b, and c for quadratic equation a x**2 + bx + c =  0: The quadratic equation is: 0.0000X^2 + 10.0000 = 0 are -1.#IND+0.0000i and -1.#IND+0.0000i.
-Quadratic equation solution is not valid. Verfication fails.

@@ -1,4 +1,0 @@
-Enter coefficients a, b, and c for quadraic equation a x**2 + b x + c = 0:The quadratic equation is: = 0.
-
-The two roots of the quadratic equation	are: -1.#IND and -1.#IND
-Verify failed!!!

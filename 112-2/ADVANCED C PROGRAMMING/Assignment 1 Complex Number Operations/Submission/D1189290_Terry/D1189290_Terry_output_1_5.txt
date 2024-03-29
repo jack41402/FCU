@@ -1,3 +1,0 @@
-Enter coefficients a, b, and c for the quadratic equation ax^2 + bx + c = 0: The quadratic equation is  = 0
-The two roots of the quadratic equation are: -1.#IND and -1.#IND
-Quadratic equation solution is not a pair of valid roots. Verification fails.

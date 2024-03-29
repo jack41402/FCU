@@ -1,5 +1,0 @@
-Enter coefficients a, b, and c for quadratic equation a x**2 + b x + c = 0: The quadratic equation is: 0.0000 X**2 = 0.
-
-The two roots of the quadratic equation are: 0.0000 and 0.0000
-
-Quadratic equation solution is a pair of valid roots. Verification succeeds.
