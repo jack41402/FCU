@@ -1,4 +1,7 @@
+format compact
 A = [8 1 6 ; 3 5 7 ; 4 9 2] ;
+fprintf("Example Matrix A:\n")
+disp(A)
 
 % Interchange 2nd and 3rd column
 A(:,[2 3]) = A(:,[3 2])

@@ -1,0 +1,33 @@
+A = [1 4 2; 2 4 100; 7 9 7; 3 pi 42];
+B = log(A');
+
+fprintf("a.\n");
+C = A'
+
+fprintf("b.\n");
+D = A([1, 3:end], :)
+
+fprintf("c.\n");
+D = [D(:, 1), ones(1, size(D, 1))', D(:, 2:end)]
+
+fprintf("d.\n");
+E = A(:, [1, 3])
+
+fprintf("e.\n");
+x = B(2, :)
+
+fprintf("f.\n");
+sum_x = sum(x)
+
+fprintf("g.\n");
+A(2, :)
+pointwise_multiplication = A(2, :) .* B(:, 3)
+
+fprintf("h.\n");
+pointwise_multiplication = A(1, :) .* B(:, 3);
+
+fprintf("i.\n");
+max_value = max(pointwise_multiplication);
+min_value = min(pointwise_multiplication);
+sum_value = sum(pointwise_multiplication);
+
