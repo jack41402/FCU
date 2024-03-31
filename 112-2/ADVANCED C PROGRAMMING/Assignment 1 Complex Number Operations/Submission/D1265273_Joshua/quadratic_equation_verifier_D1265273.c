@@ -118,5 +118,36 @@ int main(void) {
 	{
 		printf("\n\nQuadratic equation solution is a pair of valid roots. Verification unsucceeds.");
 	}
+	
+	complex test1, test2;
+    test1.re = 10, test1.im = -5;
+    test2.re = 10, test2.im = -5;
+    printf("test1: "), printcomplex(test1), printf("\n");
+    printf("test2: "), printcomplex(test2), printf("\n");
+    printcomplex(minus(test1, test2));
+    printf("\n");
+    printcomplex(divide(test1, test2));
+    printf("\n");
+    test2.re = 10, test2.im = 0;
+    printf("test1: "), printcomplex(test1), printf("\n");
+    printf("test2: "), printcomplex(test2), printf("\n");
+    printcomplex(minus(test1, test2));
+    printf("\n");
+    printcomplex(divide(test1, test2));
+    printf("\n");
+    test2.re = 0, test2.im = -5;
+    printf("test1: "), printcomplex(test1), printf("\n");
+    printf("test2: "), printcomplex(test2), printf("\n");
+    printcomplex(minus(test1, test2));
+    printf("\n");
+    printcomplex(divide(test1, test2));
+    printf("\n");
+    test2.re = 5, test2.im = 5;
+    printf("test1: "), printcomplex(test1), printf("\n");
+    printf("test2: "), printcomplex(test2), printf("\n");
+    printcomplex(minus(test1, test2));
+    printf("\n");
+    printcomplex(divide(test1, test2));
+    printf("\n");
 	return 0;
 }

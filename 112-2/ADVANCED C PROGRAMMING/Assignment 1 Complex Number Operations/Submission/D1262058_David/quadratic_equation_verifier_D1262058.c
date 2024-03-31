@@ -86,6 +86,36 @@ int main(){
 	else{
 		printf("\nVerification failed.");
 	}
+	complex test1, test2;
+    test1.re = 10, test1.im = -5;
+    test2.re = 10, test2.im = -5;
+    printf("test1: "), printComplex(test1), printf("\n");
+    printf("test2: "), printComplex(test2), printf("\n");
+    printComplex(minus(test1, test2));
+    printf("\n");
+    printComplex(divide(test1, test2));
+    printf("\n");
+    test2.re = 10, test2.im = 0;
+    printf("test1: "), printComplex(test1), printf("\n");
+    printf("test2: "), printComplex(test2), printf("\n");
+    printComplex(minus(test1, test2));
+    printf("\n");
+    printComplex(divide(test1, test2));
+    printf("\n");
+    test2.re = 0, test2.im = -5;
+    printf("test1: "), printComplex(test1), printf("\n");
+    printf("test2: "), printComplex(test2), printf("\n");
+    printComplex(minus(test1, test2));
+    printf("\n");
+    printComplex(divide(test1, test2));
+    printf("\n");
+    test2.re = 5, test2.im = 5;
+    printf("test1: "), printComplex(test1), printf("\n");
+    printf("test2: "), printComplex(test2), printf("\n");
+    printComplex(minus(test1, test2));
+    printf("\n");
+    printComplex(divide(test1, test2));
+    printf("\n");
 }
 
 
