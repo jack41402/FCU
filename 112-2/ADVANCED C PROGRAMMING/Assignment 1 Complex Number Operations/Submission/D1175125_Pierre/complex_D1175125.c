@@ -38,10 +38,8 @@ void printComplex(complex a) {
     if (a.re != 0) {
         printf("%.4f", a.re);
     }
-    
-    if (a.im != 0) {
-    	printf("%.4f i\n", a.im);
 
+    if (a.im != 0) {
         if (a.re != 0&&a.im>0) {
             printf(" + ");
             printf("%.4f i", a.im);
