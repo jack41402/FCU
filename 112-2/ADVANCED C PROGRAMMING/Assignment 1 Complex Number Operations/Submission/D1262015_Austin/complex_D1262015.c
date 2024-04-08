@@ -27,7 +27,7 @@ complex time(complex x, complex y){
 complex divide(complex x, complex y){
 	complex qout;
 	qout.re = (x.re*y.re + x.im*y.im)/(pow(y.re, 2)+pow(y.im, 2));
-      qout.im = (-(x.re*y.re) + x.im*y.im)/(pow(y.re, 2)+pow(y.im, 2));
+      qout.im = (-(x.re*y.im) + x.im*y.re)/(pow(y.re, 2)+pow(y.im, 2));
       return qout;
 }
 //Complex absolute value: |a+bi| = (a2+b2)**1/2

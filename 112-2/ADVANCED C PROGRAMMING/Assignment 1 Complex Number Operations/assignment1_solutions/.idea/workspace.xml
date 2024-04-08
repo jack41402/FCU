@@ -21,96 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e04d0b3-8f2d-4463-848b-3dc21fcc7cdc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Submission/D1166570_Levi/Quadratic_Equation_Verifier_D1166570.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1166570_Levi/quadratic_equation_verifier_D1166570.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1166570_Levi/quadratic_equation_verifier_D1166570.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1171708_Brian/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1171708_Brian/Quadratic_Equation_Verifier_D1171708.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1171708_Brian/complex_D1171708.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1171708_Brian/quadratic_equation_verifier_D1171708.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1171708_Brian/quadratic_equation_verifier_D1171708.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1172268_Owen/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1172268_Owen/Quadratic_Equation_Verifier_D1172268.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1172268_Owen/Quadratic_Equation_Verifier_D1172268.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1172268_Owen/Quadratic_Equation_Verifier_D1172268.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1172268_Owen/Quadratic_Equation_Verifier_D1172268.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1172268_Owen/Quadratic_Equation_Verifier_D1172268.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1172268_Owen/complex_D1172268.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1175125_Pierre/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1175125_Pierre/complex_D1175125.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1175125_Pierre/complex_D1175125.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1175125_Pierre/complex_D1175125.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1175125_Pierre/quadratic_equation_verifier_D1175125.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1175125_Pierre/quadratic_equation_verifier_D1175125.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1175125_Pierre/quadratic_equation_verifier_D1175125.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1189290_Terry/Quadratic_Equation_Verifier_D1189290.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228792_Jason/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228792_Jason/Quadratic_Equation_Verifier_D1228792.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228792_Jason/Quadratic_Equation_Verifier_D1228792.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228792_Jason/complex_D1228792.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228792_Jason/quadratic_equation_verifier_D1228792.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1228792_Jason/quadratic_equation_verifier_D1228792.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228792_Jason/quadratic_equation_verifier_D1228792.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228803_Adeline/Quadratic_Equation_Verifier_D1228803.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228817_Rey/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228817_Rey/Quadratic_Equation_Verifier_D1228817.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228817_Rey/Quadratic_Equation_Verifier_D1228817.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228817_Rey/complex_D1228817.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228817_Rey/quadratic_equation_verifier_D1228817.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1228817_Rey/quadratic_equation_verifier_D1228817.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1228817_Rey/quadratic_equation_verifier_D1228817.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262032_Derek/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262032_Derek/Quadratic_Equation_Verifier_D1262032.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262032_Derek/Quadratic_Equation_Verifier_D1262032.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262032_Derek/complex_D1262032.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262032_Derek/quadratic_equation_verifier_D1262032.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262032_Derek/quadratic_equation_verifier_D1262032.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262032_Derek/quadratic_equation_verifier_D1262032.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262058_David/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262058_David/Quadratic_Equation_Verifier_D1262058.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262058_David/Quadratic_Equation_Verifier_D1262058.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262058_David/complex_D1262058.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262058_David/quadratic_equation_verifier_D1262058.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262058_David/quadratic_equation_verifier_D1262058.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262058_David/quadratic_equation_verifier_D1262058.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262062_Aimee/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262062_Aimee/Quadratic_Equation_Verifier_D1262062.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262062_Aimee/Quadratic_Equation_Verifier_D1262062.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262062_Aimee/complex_D1262062.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262062_Aimee/quadratic_equation_verifier_D1262062.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262062_Aimee/quadratic_equation_verifier_D1262062.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262062_Aimee/quadratic_equation_verifier_D1262062.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262075_Morris/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262075_Morris/complex_D1262075.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262075_Morris/quadratic_equation_verifier_D1262075.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262075_Morris/quadratic_equation_verifier_D1262075.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262075_Morris/quadratic_equation_verifier_D1262075.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262075_Morris/quadratic_equation_verifier_D1262075.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262075_Morris/quadratic_equation_verifier_D1262075.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262089_Ray/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262089_Ray/Quadratic_Equation_Verifier_D1262089.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262089_Ray/Quadratic_Equation_Verifier_D1262089.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262089_Ray/Quadratic_Equation_Verifier_D1262089.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262089_Ray/Quadratic_Equation_Verifier_D1262089.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262089_Ray/Quadratic_Equation_Verifier_D1262089.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262089_Ray/complex_D1262089.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262092_Antonio/D1262092.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265065_Corrine/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265065_Corrine/Quadratic_Equation_Verifier_D1265065.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265065_Corrine/Quadratic_Equation_Verifier_D1265065.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265065_Corrine/complex_D1265065.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265065_Corrine/quadratic_equation_verifier_D1265065.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1265065_Corrine/quadratic_equation_verifier_D1265065.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265065_Corrine/quadratic_equation_verifier_D1265065.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265209_Jensen/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265209_Jensen/Quadratic_Equation_Verifier_D1265209.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265209_Jensen/Quadratic_Equation_Verifier_D1265209.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265209_Jensen/complex_D1265209.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265209_Jensen/quadratic_equation_verifier_D1265209.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1265209_Jensen/quadratic_equation_verifier_D1265209.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265209_Jensen/quadratic_equation_verifier_D1265209.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265273_Joshua/Makefile.win" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265273_Joshua/Quadratic_Equation_Verifier_D1265273.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265273_Joshua/Quadratic_Equation_Verifier_D1265273.layout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265273_Joshua/complex_D1265273.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265273_Joshua/quadratic_equation_verifier_D1265273.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1265273_Joshua/quadratic_equation_verifier_D1265273.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1265273_Joshua/quadratic_equation_verifier_D1265273.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1271403_Osmond/D1271403_Osmond_output_1_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/skip/D1262028_Jimmy/Quadratic_Equation_Verifier_D1262028.dev" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/skip/D1262028_Jimmy/Report_D1262028.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/skip/D1262028_Jimmy/complex_D1262028.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/skip/D1262028_Jimmy/complex_D1262028.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/skip/D1262028_Jimmy/quadratic_equation_verifier_D1262028.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignment1_grade.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../assignment1_grade.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignment4_grade_Purdue.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Submission/D1262015_Austin/Quadratic_Equation_Verifier_D1262015.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262015_Austin/Quadratic_Equation_Verifier_D1262015.layout" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Submission/D1262015_Austin/quadratic_equation_verifier_D1262015.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262015_Austin/quadratic_equation_verifier_D1262015.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ELECTRICAL ENGINEERING FUNDAMENTALS II/Lab/Lab 5/Lab 5.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ELECTRICAL ENGINEERING FUNDAMENTALS II/Lab/Lab 5/Lab 5.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/Fundamentals of Differential Equations and Boundary Value Problems 6th ed.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/Fundamentals of Differential Equations and Boundary Value Problems 6th ed.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
