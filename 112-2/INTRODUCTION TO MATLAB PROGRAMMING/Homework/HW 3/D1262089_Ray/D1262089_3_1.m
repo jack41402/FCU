@@ -1,0 +1,10 @@
+disp('Enter A=')
+a=input('');
+disp('Enter B=')
+b=input('');
+disp('Enter C=')
+c=input('');
+p=[a b c];
+root=roots(p);
+root1=root(1)
+root2=root(2)
