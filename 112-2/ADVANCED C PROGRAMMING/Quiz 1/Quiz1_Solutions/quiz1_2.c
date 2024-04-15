@@ -33,7 +33,7 @@ int main(void) {
 	// Read the data string dataIn character by character using function fgetc().
 	while (!feof(fileIn)) dataIn[i++] = fgetc(fileIn); 
 	fclose(fileIn); // Close input file FCU.txt.
-	dataIn[i] = '\0'; // Insert end of string.
+	dataIn[i-1] = '\0'; // Insert end of string.
 	printf(">>>> Input data string:\n%s", dataIn); // Print the input string dataIn.
 	
 	// 5. Remove all non-alphanumerical characters from string dataIn using functions strpbrk(), 
@@ -73,10 +73,10 @@ int main(void) {
 		if ((i+1)%80==0) printf("\n"); // For each 80 characters, print a newline.
 	}
 	if (i%80!=0) printf("\n"); // Print a newline, if the last line is less than 80 characters
-	
 	// 7. Write the data string dataOut to file ¡°Result.txt¡± character by character using function 
 	//    fputc() in <stdio.h>.
 	fileOut = fopen("Result.txt", "w"); // Open the result file for output text data.
+	if (fileOut==NULL) printf("Open file failed.\n\n");
 	i = 0; // Set data index to 0.
 	// Write the data string dataOut to file ¡°Result.txt¡± character by character using function fputc().
 	while (dataOut[i]!='\0') fputc(dataOut[i++], fileOut);

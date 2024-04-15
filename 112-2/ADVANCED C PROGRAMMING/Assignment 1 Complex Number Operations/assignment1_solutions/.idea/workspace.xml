@@ -21,10 +21,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e04d0b3-8f2d-4463-848b-3dc21fcc7cdc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262015_Austin/Quadratic_Equation_Verifier_D1262015.layout" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262015_Austin/Quadratic_Equation_Verifier_D1262015.layout" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Submission/D1262015_Austin/quadratic_equation_verifier_D1262015.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Submission/D1262015_Austin/quadratic_equation_verifier_D1262015.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ELECTRICAL ENGINEERING FUNDAMENTALS II/Lab/Lab 5/Lab 5.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ELECTRICAL ENGINEERING FUNDAMENTALS II/Lab/Lab 5/Lab 5.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/Fundamentals of Differential Equations and Boundary Value Problems 6th ed.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/Fundamentals of Differential Equations and Boundary Value Problems 6th ed.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 2/Gift_of_Magi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 2/assgn2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 2/assignment2_grade_purdue.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 2/assignment2_vowel_count.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +93,7 @@
       <workItem from="1711824717038" duration="1503000" />
       <workItem from="1711911075846" duration="627000" />
       <workItem from="1711914155180" duration="166000" />
+      <workItem from="1713003089166" duration="1669000" />
     </task>
     <servers />
   </component>

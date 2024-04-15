@@ -1,0 +1,22 @@
+Tests of string comparison with length n:
+
+The library version:
+  strncmp("abc", "abc", 4) returns 0
+  strncmp("abcde", "abc", 4) returns 1
+  strncmp("abcde", "abc", 3) returns 0
+  strncmp("abc", "abcde", 4) returns -1
+  strncmp("abc", "abcde", 3) returns 0
+  strncmp("xyz", "XYZ", 4) returns 1
+  strncmp("abc", "XYZ", 4) returns 1
+  strncmp("abc", "xYZ", 4) returns -1
+  --------------------------------------------------
+The recursive version:
+  strncmp_rec("abc", "abc", 4) returns 550924790
+  strncmp_rec("abcde", "abc", 4) returns 550924843
+  strncmp_rec("abcde", "abc", 3) returns 550924843
+  strncmp_rec("abc", "abcde", 4) returns 550924790
+  strncmp_rec("abc", "abcde", 3) returns 550924790
+  strncmp_rec("xyz", "XYZ", 4) returns 550925049
+  strncmp_rec("abc", "XYZ", 4) returns 550924790
+  strncmp_rec("abc", "xYZ", 4) returns 550924790
+

@@ -1,0 +1,5 @@
+>>>>Input data string:
+
+>>>>Output data stream:
+pqQêß
+paQêß

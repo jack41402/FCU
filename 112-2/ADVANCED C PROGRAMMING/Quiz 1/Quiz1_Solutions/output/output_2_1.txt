@@ -1,0 +1,17 @@
+>>>> Input data string:
+Advanced C Programming
+FCU-Purdue 2+2 ECE Program
+Spring Semester, 2024
+International School of Technology and Management
+Feng Chia University
+
+>>>> Modified data string:
+AdvancedCProgrammingFCUPurdue22ECEProgramSpringSemester2024InternationalSchoolof
+TechnologyandManagementFengChiaUniversity
+
+
+>>>> Output data string:
+AdvancedCProgrammingFCUPurdue22ECEProgramSpringSemester2024InternationalSchoolof
+TechnologyandManagementFengChiaUniversity#####ytisrevinUaihCgneFtnemeganaMdnaygo
+lonhceTfoloohcSlanoitanretnI4202retsemeSgnirpSmargorPECE22eudruPUCFgnimmargorPCd
+ecnavdA

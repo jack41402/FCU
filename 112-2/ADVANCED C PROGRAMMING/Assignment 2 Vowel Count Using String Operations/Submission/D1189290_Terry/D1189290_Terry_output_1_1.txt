@@ -1,0 +1,34 @@
+>>>> Toal input English characters: 6161
+**************************************************
+The Gift of the Magi
+by O Henry
+ 
+One dollar and eighty-seven cents. That was al
+l. And sixty cents of it in the smallest pieces of money - pennies. Pennies save
+d one and two at a time by negotiating with the men at the market who sold veget
+ables and meat. Negotiating until ones face burned with the silent knowledge of 
+being poor. Three times Della counted it. One dollar and eighty-seven cents. And
+ the next day would be Christmas.
+
+There was clearly nothing to do but sit down 
+and cry. So Della cried. Which led to the thought that life is made up of little
+ cries and smiles, with more little cries than smiles.
+
+Della finished her cryin
+g and dried her face. She stood by the window and looked out unhappily at a gray
+ cat walking along a gray fence in a gray back yard. Tomorrow would be Christmas
+**************************************************
+>>>>> The number of contiguous letter(s) are:
+One character: 5691
+Two contiguous characters: 232
+Three contiguous characters: 2
+Four or more contiguous characters: 0
+**** Total character counts: 6161
+**************************************************
+>>>>> The number of occurences of vowels: 
+Vowel 'A': 501
+Vowel 'E': 774
+Vowel 'I': 411
+Vowel 'O': 471
+Vowel 'u': 169
+Total vowels: 2326

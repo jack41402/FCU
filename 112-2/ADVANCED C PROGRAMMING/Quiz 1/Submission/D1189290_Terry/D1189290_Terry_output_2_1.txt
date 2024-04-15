@@ -1,0 +1,8 @@
+>>>> Input data string:
+
+>>>> Modified data string:
+AdvancedCProgrammingFCUPurdue22ECEProgramSpringSemester2024InternationalSchoolofTechnologyandManagementFengChiaUniversity
+
+
+>>>> Output data string:
+AdvancedCProgrammingFCUPurdue22ECEProgramSpringSemester2024InternationalSchoolofTechnologyandManagementFengChiaUniversity#####ytisrevinUaihCgneFtnemeganaMdnaygolonhceTfoloohcSlanoitanretnI4202retsemeSgnirpSmargorPECE22eudruPUCFgnimmargorPCdecnavdA

@@ -1,0 +1,23 @@
+
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <style>
+                        del { background: #ffe6e6; font-family: monospace; line-height: 0; }
+                        ins { background: #e6ffe6; font-family: monospace; line-height: 0; }
+                    </style>
+                </head>
+                <body>
+                    <div style="max-width: 45%; float: left; margin: 2%; font-family: monospace;">
+                        <h2 style=font-family: monospace; line-height: 0;>Standard</h2>
+                            <span style="font-family: monospace; line-height: 0;">Tests&nbsp;of&nbsp;string&nbsp;comparison&nbsp;with&nbsp;length&nbsp;n:<br><br>The&nbsp;library&nbsp;version:<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp("abcde",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp("abcde",&nbsp;"abc",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"abcde",&nbsp;4)&nbsp;returns&nbsp;-1<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"abcde",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp("xyz",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"xYZ",&nbsp;4)&nbsp;returns&nbsp;-1<br>&nbsp;&nbsp;--------------------------------------------------<br>The&nbsp;recursive&nbsp;version:<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp_rec("abcde",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp_rec("abcde",&nbsp;"abc",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"abcde",&nbsp;4)&nbsp;returns&nbsp;-1<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"abcde",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp_rec("xyz",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"xYZ",&nbsp;4)&nbsp;returns&nbsp;</span><del style="background:#ffe6e6; font-family: monospace; line-height: 0;">-</del><span style="font-family: monospace; line-height: 0;">1<br><br></span>
+                    </div>
+                </body>
+                <body>
+                    <div style="max-width: 45%; float: left; margin: 2%; font-family: monospace;">
+                        <h2>Compare</h2>
+                            <span style="font-family: monospace; line-height: 0;">Tests&nbsp;of&nbsp;string&nbsp;comparison&nbsp;with&nbsp;length&nbsp;n:<br><br>The&nbsp;library&nbsp;version:<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp("abcde",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp("abcde",&nbsp;"abc",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"abcde",&nbsp;4)&nbsp;returns&nbsp;-1<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"abcde",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp("xyz",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp("abc",&nbsp;"xYZ",&nbsp;4)&nbsp;returns&nbsp;-1<br>&nbsp;&nbsp;--------------------------------------------------<br>The&nbsp;recursive&nbsp;version:<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp_rec("abcde",&nbsp;"abc",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp_rec("abcde",&nbsp;"abc",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"abcde",&nbsp;4)&nbsp;returns&nbsp;-1<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"abcde",&nbsp;3)&nbsp;returns&nbsp;0<br>&nbsp;&nbsp;strncmp_rec("xyz",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"XYZ",&nbsp;4)&nbsp;returns&nbsp;1<br>&nbsp;&nbsp;strncmp_rec("abc",&nbsp;"xYZ",&nbsp;4)&nbsp;returns&nbsp;</span><span style="font-family: monospace; line-height: 0;">1<br><br></span>
+                    </div>
+                </body>
+                </html>
+                
