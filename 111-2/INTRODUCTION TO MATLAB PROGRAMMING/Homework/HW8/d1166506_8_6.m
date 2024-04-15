@@ -1,5 +1,5 @@
 x = 0:0.1:4 ;
-if (abs(stdnorm(1)-0.3413)<10-5)
+if (abs(stdnorm(1)-0.3413)<10^-4/)
     fprintf("Standard normal fucntion at 1 is %f\n" , stdnorm(1)) ;
 else
     fprintf("Valid false\n") ;

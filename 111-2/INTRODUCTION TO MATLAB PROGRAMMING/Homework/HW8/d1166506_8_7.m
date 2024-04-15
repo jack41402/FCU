@@ -1,5 +1,6 @@
 for i=0:20
-    disp([i fibonacci(i)])
+    fprintf("%3d %7d\n", i, fibonacci(i));
+    %disp([i fibonacci(i)])
 end
 
 function y = fibonacci(x)

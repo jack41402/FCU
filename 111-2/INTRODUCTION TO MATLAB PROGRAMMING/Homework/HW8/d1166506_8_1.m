@@ -1,5 +1,6 @@
 step = 0 ;
-x = input('') ;
+format compact
+x = input('Initial guess: ') ;
 eps = 1e-8 ;
 relative = 1 ;
 while (relative>eps && step<20)
