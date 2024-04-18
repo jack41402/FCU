@@ -1,4 +1,5 @@
-format default
+format compact
+format short
 L = @(R) (4000-pi.*R.^2)./(4.*R);
 fence = @(R) pi*R*50 + 2*(L(R)+R)*40;
 % minimize the total cost of the fence
