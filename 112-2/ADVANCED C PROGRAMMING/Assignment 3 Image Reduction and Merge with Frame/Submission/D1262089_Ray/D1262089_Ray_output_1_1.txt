@@ -1,0 +1,2 @@
+Enter the size of frame in pixel (between 4 and 20):
+Enter the RGB value of the frame color:File abraham_lake.bmp.bmp does not exist.
