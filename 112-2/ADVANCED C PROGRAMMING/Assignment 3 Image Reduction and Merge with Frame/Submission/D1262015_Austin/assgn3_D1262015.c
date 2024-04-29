@@ -215,7 +215,8 @@ int main(int argc, char *argv[]) {
   // Write image to file "AAA_reduced.bmp"
   // The file name is reused and the palette is the same as the original image.
   write_image_file(file_name, reduced_header, io_palette, reduced_imageData);
-  
+	if (reduced_header.Height==io_header.Height/2) printf("\n\nERROR!!!\n\n");
+
   // Peform the merge operation.
   // Reuse rowSize and rowSize_reduced computed earlier.
   for (i = 0; i < reduced_header.Height; i++) { // Go through all rows of the reduced image.
@@ -225,8 +226,8 @@ int main(int argc, char *argv[]) {
       // Note that row 0 is the bottom row and column 0 is the left-most column.
       k_1 = (i + io_header.Height / 2+2*frame_size) * rowSize + (io_header.Width - 1 - j+2*frame_size) * 3; // 1st quadrant.
       k_2 = (i + io_header.Height / 2+2*frame_size) * rowSize + (j+frame_size )* 3; // 2nd quadrant.
-      k_3 = (reduced_header.Height - 1 - i+frame_size) * rowSize + (j+frame_size )* 3; // 3rd quadrant.
-      k_4 = (reduced_header.Height - 1 - i+frame_size) * rowSize + (io_header.Width - 1 - j+2*frame_size) * 3; // 4th quadrant.
+      k_3 = (reduced_header.Height - 1 - i+frame_size-i) * rowSize + (j+frame_size )* 3; // 3rd quadrant.
+      k_4 = (reduced_header.Height - 1 - i+frame_size-i) * rowSize + (io_header.Width - 1 - j+2*frame_size) * 3; // 4th quadrant.
       io_imageData[k_1] = reduced_imageData[k_reduced]; // Copy the pixel in the 1st quadrant.
       io_imageData[k_1+1] = reduced_imageData[k_reduced+1];
       io_imageData[k_1+2] = reduced_imageData[k_reduced+2];
@@ -258,8 +259,9 @@ int main(int argc, char *argv[]) {
  // The merged file reuses the header, palette, image_data of the input image.
   char merged_file_name[40];
   strcpy(merged_file_name, argv[1]);
-  strcat(merged_file_name, "_merged.bmp");
-  write_image_file(merged_file_name, io_header, io_palette, io_imageData);
+  char *fname = strcat(merged_file_name, "_merged.bmp");
+  printf("FILENAME: %s\n\n", fname);
+  write_image_file(fname, io_header, io_palette, io_imageData);
  
 
   // Print the merged image file head.
@@ -277,36 +279,3 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-merged_header.Width = 2 * reduced_header.Width + 3 * frame_size;
-merged_header.Height = 2 * reduced_header.Height + 3 * frame_size;
-
-fillings = (4 - (merged_header.Width * 3) % 4) % 4;
-rowSize_merged = merged_header.Width * 3 + fillings;
-merged_header.ImageSize = rowSize_merged * merged_header.Height;
-merged_header.Size = io_header.Size - io_header.ImageSize + merged_header.ImageSize;
-
-for (i = 0; i < reduced_header.Height; i++) {
-    for (j = 0; j < reduced_header.Width; j++) {
-        k_reduced = i * rowSize_reduced + j * 3;
-        k_1 = (2 * frame_size + i + io_header.Height / 2) * rowSize_merged + (io_header.Width - j - 1 + 2 * frame_size) * 3;
-        k_2 = (2 * frame_size + i + io_header.Height / 2) * rowSize_merged + (j + frame_size) * 3;
-        k_3 = (reduced_header.Height - 1 - i + frame_size) * rowSize_merged + (j + frame_size) * 3;
-        k_4 = (reduced_header.Height - 1 - i + frame_size) * rowSize_merged + (io_header.Width - j - 1 + 2 * frame_size) * 3;
-
-        merged_imageData[k_1] = reduced_imageData[k_reduced];
-        merged_imageData[k_1 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_1 + 2] = reduced_imageData[k_reduced + 2];
-
-        merged_imageData[k_2] = reduced_imageData[k_reduced];
-        merged_imageData[k_2 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_2 + 2] = reduced_imageData[k_reduced + 2];
-
-        merged_imageData[k_3] = reduced_imageData[k_reduced];
-        merged_imageData[k_3 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_3 + 2] = reduced_imageData[k_reduced + 2];
-
-        merged_imageData[k_4] = reduced_imageData[k_reduced];
-        merged_imageData[k_4 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_4 + 2] = reduced_imageData[k_reduced + 2];
-    }
-}

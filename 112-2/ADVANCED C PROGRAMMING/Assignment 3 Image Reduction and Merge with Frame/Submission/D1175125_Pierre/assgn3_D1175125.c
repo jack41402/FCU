@@ -277,36 +277,3 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
-merged_header.Width = 2 * reduced_header.Width + 3 * frame_size;
-merged_header.Height = 2 * reduced_header.Height + 3 * frame_size;
-
-fillings = (4 - (merged_header.Width * 3) % 4) % 4;
-rowSize_merged = merged_header.Width * 3 + fillings;
-merged_header.ImageSize = rowSize_merged * merged_header.Height;
-merged_header.Size = io_header.Size - io_header.ImageSize + merged_header.ImageSize;
-
-for (i = 0; i < reduced_header.Height; i++) {
-    for (j = 0; j < reduced_header.Width; j++) {
-        k_reduced = i * rowSize_reduced + j * 3;
-        k_1 = (2 * frame_size + i + io_header.Height / 2) * rowSize_merged + (io_header.Width - j - 1 + 2 * frame_size) * 3;
-        k_2 = (2 * frame_size + i + io_header.Height / 2) * rowSize_merged + (j + frame_size) * 3;
-        k_3 = (reduced_header.Height - 1 - i + frame_size) * rowSize_merged + (j + frame_size) * 3;
-        k_4 = (reduced_header.Height - 1 - i + frame_size) * rowSize_merged + (io_header.Width - j - 1 + 2 * frame_size) * 3;
-
-        merged_imageData[k_1] = reduced_imageData[k_reduced];
-        merged_imageData[k_1 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_1 + 2] = reduced_imageData[k_reduced + 2];
-
-        merged_imageData[k_2] = reduced_imageData[k_reduced];
-        merged_imageData[k_2 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_2 + 2] = reduced_imageData[k_reduced + 2];
-
-        merged_imageData[k_3] = reduced_imageData[k_reduced];
-        merged_imageData[k_3 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_3 + 2] = reduced_imageData[k_reduced + 2];
-
-        merged_imageData[k_4] = reduced_imageData[k_reduced];
-        merged_imageData[k_4 + 1] = reduced_imageData[k_reduced + 1];
-        merged_imageData[k_4 + 2] = reduced_imageData[k_reduced + 2];
-    }
-}

@@ -44,7 +44,7 @@ void print_header(Header header)
   	printf("YResolution:      %u\n", header.YResolution); //Preferred vertical resolution of the image, in pixels per meter.
   	printf("Colors:           %u\n", header.Colors); //Value is zero except for indexed images using fewer than the maximum number of colors.
   	printf("ImportantColors:  %u\n", header.ImportantColors); //Number of colors that are considered important when rendering the image.
-  	
+}
 
 //Write the image file.
 void write_image_file(char *fname, Header header, unsigned char *palette, unsigned char *imageData) 

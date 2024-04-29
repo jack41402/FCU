@@ -20,7 +20,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e04d0b3-8f2d-4463-848b-3dc21fcc7cdc" name="Changes" comment="" />
+    <list default="true" id="8e04d0b3-8f2d-4463-848b-3dc21fcc7cdc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 3 Image Reduction and Merge with Frame/Submission/D1262015_Austin/assgn3_D1262015.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 3 Image Reduction and Merge with Frame/Submission/D1262015_Austin/assgn3_D1262015.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 3 Image Reduction and Merge with Frame/Submission/D1262075_Morris/abraham_lake_frame_merged.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 3 Image Reduction and Merge with Frame/Submission/D1262075_Morris/abraham_lake_frame_merged.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Assignment 3 Image Reduction and Merge with Frame/Submission/D1262075_Morris/assgn3_D1262075.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../Assignment 3 Image Reduction and Merge with Frame/Submission/D1262075_Morris/assgn3_D1262075.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +93,7 @@
       <workItem from="1711911075846" duration="627000" />
       <workItem from="1711914155180" duration="166000" />
       <workItem from="1713003089166" duration="1669000" />
+      <workItem from="1714219157650" duration="1365000" />
     </task>
     <servers />
   </component>
