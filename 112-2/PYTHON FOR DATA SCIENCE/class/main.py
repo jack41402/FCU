@@ -1,22 +1,14 @@
-# from functools import reduce
-#
-#
-# def minimum(arr):
-#     if isinstance(arr[0], str):
-#         return reduce(lambda x, y: x if len(x) < len(y) else y, arr)
-#         # return min(arr, key=len)
-#     else:
-#         return min(arr)
-#
-#
-# result = minimum([45, 5, 4, 3])
-# print(result)
-#
-# result = minimum(["red", "yellow", "green"])
-# print(result)
-import numpy
+import json
 
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(number)
-odd = [i for i in number if i % 2 == 1]
-print(odd)
+json_file_path = r"D:\GitHub\FCU\112-2\PYTHON FOR DATA SCIENCE\class\config.json"
+
+try:
+    with open(json_file_path, 'r', encoding='utf-8-sig') as j:
+        contents = json.loads(j.read())
+        print(contents)
+except FileNotFoundError:
+    print("The file was not found. Please check the file path.")
+except json.JSONDecodeError as e:
+    print("Failed to decode JSON from the file:", e)
+except Exception as e:
+    print("An error occurred:", e)
