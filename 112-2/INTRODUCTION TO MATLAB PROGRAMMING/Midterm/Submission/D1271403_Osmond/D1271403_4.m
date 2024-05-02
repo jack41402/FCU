@@ -1,0 +1,1 @@
+x_n = n*a^n/factorial(n+1)

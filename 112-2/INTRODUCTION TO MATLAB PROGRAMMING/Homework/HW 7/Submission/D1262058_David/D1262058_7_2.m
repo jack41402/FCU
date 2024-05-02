@@ -1,0 +1,12 @@
+y = @(x) 1 + exp(-0.2*x) .* sin(x + 2);
+min = fminbnd(y, 0, 10);
+fprintf("(x, y)=\n");
+disp([min y(min)]);
+fplot(y,[0 10]);
+hold on;
+y1 = @(x, c) 1 + exp(-0.2*x) .* sin(x + c);
+min = fminbnd(@(x) y1(x, 2.5), 0, 10);
+fprintf("(x, y)=\n");
+disp([min, y1(min, 2.5)]);
+fplot(@(x) y1(x, 2.5), [0 10]);
+hold off;

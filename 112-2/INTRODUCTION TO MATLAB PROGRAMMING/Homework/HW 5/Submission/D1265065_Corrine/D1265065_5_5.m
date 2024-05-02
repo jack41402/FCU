@@ -1,0 +1,9 @@
+salary_levels = [12000 15000 18000 24000 35000 50000 70000]
+numbers_of_each_levels = [3000 2500 1500 1000 400 100 25]
+average = mean(salary_levels)
+below_average = average < salary_levels;
+above_average = average > salary_levels;
+below = sum(below_average.*numbers_of_each_levels)
+above = sum(above_average.*numbers_of_each_levels)
+average_salary_earned = sum(salary_levels.*numbers_of_each_levels)./ sum(numbers_of_each_levels);
+fprintf("average_salary_earned = %.2f \n", average_salary_earned)

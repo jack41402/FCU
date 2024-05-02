@@ -1,0 +1,9 @@
+offer= [12000 15000 18000 24000 35000 50000 70000];
+level= [3000 2500 1500 1000 400 100 25];
+average_salary_level= mean(offer, "all")
+a=level(find(offer>average_level));
+above= sum(a)
+b= level(find(offer<average_level));
+below= sum(b)
+total= offer.*level;
+average_salary_earned= sum(total)./sum(level)

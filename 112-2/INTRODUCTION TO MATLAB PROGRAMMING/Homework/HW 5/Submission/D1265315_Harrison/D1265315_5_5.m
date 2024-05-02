@@ -1,0 +1,11 @@
+sal = [12000 15000 18000 24000 35000 50000 70000];
+num = [3000 2500 1500 1000 400 100 25];
+avgsal = mean(sal)
+above = num(find(sal>avgsal));
+b1 = sum(above)
+below = num(find(sal<avgsal));
+b2 = sum(below)
+t = sal.*num;
+total = sum(t);
+emp=sum(num);
+c = total/emp

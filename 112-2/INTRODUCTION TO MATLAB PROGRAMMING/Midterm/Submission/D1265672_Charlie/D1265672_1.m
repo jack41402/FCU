@@ -1,0 +1,10 @@
+the_ta = -pi/2:pi/20:pi/2;
+t = 0:0.2:4;
+a = 5;
+b = 2;
+fprintf("a = \n");
+disp((exp(-0.2.*t).*sin(b.*the_ta)+log(t+1)).*cos(2.*the_ta).^2);
+fprintf("b = \n");
+disp(((sin(a.*t).^-1)+log((t.^2+2.*t+1))).*tan(the_ta./2));
+fprintf("c = \n");
+disp((exp(t)+sin(the_ta))./b);

@@ -1,0 +1,11 @@
+theta = -pi/2:pi/20:pi/2;
+t = 0:0.2:4;
+b = 2;
+a = 5;
+a = @(theta, t) (exp(-0.2.*t).*sin(b.*theta)+log(t+1)).*(cos(2.*theta)).^2;
+a = a(theta, t)
+b = @(theta, t) (asin(a.*t) + log(t.^2+2.*t+1)).*tan(theta/2);
+b = b(theta, t)
+b = 2;
+c = @(theta, t) (exp(t) + sin(theta))./b;
+c = c(theta, t)

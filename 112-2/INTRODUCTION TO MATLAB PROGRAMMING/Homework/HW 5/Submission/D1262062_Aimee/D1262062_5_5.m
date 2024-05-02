@@ -1,0 +1,11 @@
+salary = [12000 15000 18000 24000 35000 50000 70000];
+employees = [3000 2500 1500 1000 400 100 25];
+average_salary_level = mean(salary)
+above_salary = salary > average_salary_level;
+below_salary = salary < average_salary_level;
+above_employees = above_salary.*employees;
+below_employees = below_salary.*employees;
+above = sum(above_employees)
+below = sum(below_employees)
+average_salary_earned = sum(salary.*employees)/sum(employees);
+fprintf('average_salary_earned = %.2f', average_salary_earned)
