@@ -1,0 +1,34 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = CStack_D1166506.o Node_D1166506.o quiz2_D1166506_2.o
+LINKOBJ  = CStack_D1166506.o Node_D1166506.o quiz2_D1166506_2.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = quiz2_D1166506_2.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+CStack_D1166506.o: CStack_D1166506.cpp
+	$(CPP) -c CStack_D1166506.cpp -o CStack_D1166506.o $(CXXFLAGS)
+
+Node_D1166506.o: Node_D1166506.cpp
+	$(CPP) -c Node_D1166506.cpp -o Node_D1166506.o $(CXXFLAGS)
+
+quiz2_D1166506_2.o: quiz2_D1166506_2.cpp
+	$(CPP) -c quiz2_D1166506_2.cpp -o quiz2_D1166506_2.o $(CXXFLAGS)
