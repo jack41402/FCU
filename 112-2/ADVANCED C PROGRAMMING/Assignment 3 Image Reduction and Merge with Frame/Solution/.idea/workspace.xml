@@ -9,7 +9,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="672e9ae6-b9d0-454d-ac2c-072a4ec41445" name="Changes" comment="" />
+    <list default="true" id="672e9ae6-b9d0-454d-ac2c-072a4ec41445" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/Fundamentals of Differential Equations and Boundary Value Problems 6th ed.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/Fundamentals of Differential Equations and Boundary Value Problems 6th ed.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/ORDINARY DIFFERENTIAL EQUATION 習題題號.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ORDINARY DIFFERENTIAL EQUATION/ORDINARY DIFFERENTIAL EQUATION 習題題號.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../PYTHON FOR DATA SCIENCE/Intro to Python for Computer Science and Data Science.pdf" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +47,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/GitHub/FCU/112-2/PYTHON FOR DATA SCIENCE/Homework/HW 3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,6 +66,7 @@
       <updated>1713635050784</updated>
       <workItem from="1713635052066" duration="2000" />
       <workItem from="1715653522565" duration="596000" />
+      <workItem from="1716902962653" duration="26000" />
     </task>
     <servers />
   </component>
