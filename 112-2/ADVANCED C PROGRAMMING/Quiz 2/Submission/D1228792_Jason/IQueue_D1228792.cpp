@@ -34,6 +34,7 @@ int IQueue::dequeue() {
 		e = head->elem;
 		temp = head;
 		head = head->next;
+        if(!head) tail = head;
 		delete(temp);
 		return e;
 	}

@@ -1,8 +1,9 @@
+format compact
 year = 2004:1:2009 ;
 population = [10 10.9 11.7 12.6 13.8 14.9] ;
 
 x = year - 2000 ;
-p = polyfit(x , log10(population) , 1) ;
+p = polyfit(x , log10(population) , 1)
 
 % y=mx+b
 b = 10^p(2) ;
