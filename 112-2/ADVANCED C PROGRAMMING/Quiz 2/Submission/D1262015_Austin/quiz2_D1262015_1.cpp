@@ -23,7 +23,7 @@ class Rectangle {
 // Height and width are between 2 and 20 (including). 
 // If not within the valid range, set to the integer value 2.
 Rectangle::Rectangle(int h, int w) {
-	hieght = h;
+	height = h;
 	width = w;
 	if(h < 2||h > 20){
 		h = 2;
@@ -31,8 +31,6 @@ Rectangle::Rectangle(int h, int w) {
 	if(w < 2||w > 20){
 		w =2;
 	}
-	
-	
 }
 
 // Compute the perimenter of the rectangle.

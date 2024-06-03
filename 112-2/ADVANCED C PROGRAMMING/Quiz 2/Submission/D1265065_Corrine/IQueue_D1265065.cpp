@@ -6,9 +6,9 @@ IQueue::IQueue(){
 } // Default constructor.
 		
 void IQueue::enqueue(int e){
-	Node *newnode;
+	Node *newNode;
 	newNode->elem = e;
-	if(isEmpty){
+	if(isEmpty()){
 		head = newNode;
 		tail = newNode;
 		//prev&next = NULL
@@ -22,7 +22,7 @@ void IQueue::enqueue(int e){
 		
 int IQueue::dequeue(){
 	Node *curr;
-	if(isEmpty){
+	if(isEmpty()){
 		return -1;
 	}
 	else{

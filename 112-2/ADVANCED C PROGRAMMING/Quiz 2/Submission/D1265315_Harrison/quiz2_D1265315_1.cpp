@@ -42,7 +42,7 @@ int Rectangle::area() const {
 
 // Input friend function. Read two integers separated by a space.
 istream & operator>>(istream & input, Rectangle &r) {
-	input >> r3.height >> r3.width;
+	input >> r.height >> r.width;
 	return input;
 }
 

@@ -6,13 +6,13 @@
 // Default constructor.
 Node::Node() {
 	data=0;
-	next = null;
-	prev = null;
+	next = NULL;
+	prev = NULL;
 }
 		
 // Constructor with data element.
 Node::Node(int e) {
 	data = e;
-	next = null;
-	prev = null;
+	next = NULL;
+	prev = NULL;
 }

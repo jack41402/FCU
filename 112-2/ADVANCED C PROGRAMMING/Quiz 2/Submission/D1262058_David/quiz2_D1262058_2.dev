@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=IQueue_skeleton.cpp
+FileName=..\D1262032_Derek\IQueue_D1262032.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=IQueue_skeleton.h
+FileName=..\D1262032_Derek\IQueue_D1262032.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=Node_skeleton.cpp
+FileName=..\D1262032_Derek\Node_D1262032.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=Node_skeleton.h
+FileName=..\D1262032_Derek\Node_D1262032.h
 CompileCpp=1
 Folder=
 Compile=1

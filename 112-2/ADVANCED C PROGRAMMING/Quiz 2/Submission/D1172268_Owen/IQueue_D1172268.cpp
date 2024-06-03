@@ -47,9 +47,6 @@ bool IQueue::isEmpty() {
 
 // Clear queue.		
 void IQueue::clear() {
-	while(this->head != NULL){
-		delete [] this->head;
-		this->head = NULL;
-		this->head->next = this->head; 
-	}
+		while (head!=NULL) this->dequeue();
+
 }

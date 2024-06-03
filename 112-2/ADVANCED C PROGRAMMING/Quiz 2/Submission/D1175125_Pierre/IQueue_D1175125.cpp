@@ -5,15 +5,15 @@
 
 // Default constructor.
 IQueue::IQueue() {
-	front = null;
-	rear = null;
+	front = NULL;
+	rear = NULL;
 }
 IQueue::~IQueue(){
 	clear();
 }
 // Enqueue operation. Insert to tail.
 void IQueue::enqueue(int e) {
-	Node* new Noe = new Node(e);
+	Node* newNode = new Node(e);
 	if(isEmpty()){
 		front = newNode;
 		rear = newNode;
@@ -31,10 +31,10 @@ int IQueue::dequeue() {
 		return -1;
 	}else{
 		int value = front ->data;
-		Node* temp = front:
+		Node* temp = front;
 			front = front->next;
-			if(frot != null)
-			front->prev = null;
+			if(front != NULL)
+			front->prev = NULL;
 			delete temp;
 			return value;
 	}
@@ -42,11 +42,11 @@ int IQueue::dequeue() {
 	
 // Check whether the queue is empty.	
 bool IQueue::isEmpty() {
-	return front == null;
+	return front == NULL;
 }
 
 // Clear queue.		
-void IQueue::clear() {
+int IQueue::clear() {
 	while(!isEmpty())
 		dequeue();
 }

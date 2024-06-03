@@ -45,7 +45,7 @@ int Rectangle::area() const {
 // Input friend function. Read two integers separated by a space.
 istream & operator>>(istream & input, Rectangle &r) {
 	input>>r.height>>r.width;
-	r.Rectangle(r.height, r.width);
+//	r.Rectangle(r.height, r.width);
 	return input;
 }
 

@@ -46,7 +46,7 @@ bool IQueue::isEmpty() {
 }
 
 // Clear queue.		
-void IQueue::clear() {
+int IQueue::clear() {
 	Node *temp;
 	temp = new Node();
 	while(head != NULL){

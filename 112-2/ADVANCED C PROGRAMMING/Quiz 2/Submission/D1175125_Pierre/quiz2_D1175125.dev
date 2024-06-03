@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=..\Desktop\Node_D1175125.cpp
+FileName=IQueue_D1175125.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=..\Desktop\Node_D1175125.h
+FileName=IQueue_D1175125.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=..\Desktop\quiz2_D1175125_2.cpp
+FileName=Node_D1175125.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=..\Desktop\IQueue_D1175125.cpp
+FileName=Node_D1175125.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=..\Desktop\IQueue_D1175125.h
+FileName=quiz2_D1175125_2.cpp
 CompileCpp=1
 Folder=
 Compile=1

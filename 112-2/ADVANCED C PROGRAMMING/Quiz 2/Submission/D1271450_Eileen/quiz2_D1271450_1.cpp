@@ -34,7 +34,7 @@ Rectangle::Rectangle(int h, int w) {
 
 // Compute the perimenter of the rectangle.
 int Rectangle::perimeter() const {
-	return this->(height+width)/2;
+	return (height+width)*2;
 }
 
 // Compute the area of the rectangle.
@@ -45,7 +45,6 @@ int Rectangle::area() const {
 // Input friend function. Read two integers separated by a space.
 istream & operator>>(istream & input, Rectangle &r) {
 	input>>r.height;
-	input>>" ";
 	input>>r.width;
 	return input;
 }
