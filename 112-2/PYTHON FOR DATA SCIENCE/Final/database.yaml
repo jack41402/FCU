@@ -1,0 +1,459 @@
+_default:
+  '101':
+    address: 2700 Cambridge St, West Lafayette, IN 47906
+    beds: 3 Beds
+    latitude: 40.4567805
+    longitude: -86.92263486006377
+    price: $2,300
+    property_name: AVAILABLE NOW, ShortTerm, West Lafayette H...
+    website: https://offcampushousing.purdue.edu/housing/property/available-now-shortterm-west-lafayette-h/scq42e7
+  '102':
+    address: 2404 Maxwell Dr, West Lafayette, IN 47906
+    beds: 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,899
+    property_name: 3 Bedroom House
+    website: https://offcampushousing.purdue.edu/housing/property/3-bedroom-house/trdmeg9
+  '103':
+    address: 3381 Edison Dr, West Lafayette, IN 47906
+    beds: 2 Beds
+    latitude: null
+    longitude: null
+    price: $1,800
+    property_name: 3381 Edison Dr
+    website: https://offcampushousing.purdue.edu/housing/property/3381-edison-dr/m9yeq4h
+  '104':
+    address: 2158 Ulen Ln, Lafayette, IN 47904
+    beds: 4 Beds
+    latitude: 40.44019650394252
+    longitude: -86.86332719920073
+    price: $1,600
+    property_name: Single-story 4 bed 2 bath home for rent!
+    website: https://offcampushousing.purdue.edu/housing/property/single-story-4-bed-2-bath-home-for-rent/07n7bz2
+  '105':
+    address: 2922 Underwood St, Lafayette, IN 47904
+    beds: 2 Beds
+    latitude: 40.437895824983926
+    longitude: -86.86395220231456
+    price: $975
+    property_name: Beautiful single family, hardwood floors, ...
+    website: https://offcampushousing.purdue.edu/housing/property/beautiful-single-family-hardwood-floors/t45mcr8
+  '106':
+    address: 11740 Silver St, Clarks Hill, IN 47930
+    beds: 3 Beds
+    latitude: 40.24699742022007
+    longitude: -86.72581143838313
+    price: $900
+    property_name: 3 bedroom 1 bathroom trailer
+    website: https://offcampushousing.purdue.edu/housing/property/3-bedroom-1-bathroom-trailer/9h05kp7
+  '107':
+    address: 4529 Hayloft Dr, West Lafayette, IN 47906
+    beds: 4 Beds
+    latitude: null
+    longitude: null
+    price: $2,700
+    property_name: 4529 Hayloft
+    website: https://offcampushousing.purdue.edu/housing/property/4529-hayloft/gt0j5hz
+  '108':
+    address: 3551 Tesla Dr, West Lafayette, IN 47906
+    beds: 3 Beds
+    latitude: null
+    longitude: null
+    price: $2,300
+    property_name: 3 bd 2 ba + office WLaf Home over 1600 sqft
+    website: https://offcampushousing.purdue.edu/housing/property/3-bd-2-ba-office-wlaf-home-over-1600-sqft/5v108tn
+  '109':
+    address: 60 Strawhat Dr, Lafayette, IN 47909
+    beds: 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,525
+    property_name: 3BR/2BA BI-LEVEL ON LAFAYETTE'S SOUTH SIDE
+    website: https://offcampushousing.purdue.edu/housing/property/3br-2ba-bi-level-on-lafayettes-south-side/lc3s7df
+  '11':
+    address: 102 North Chauncey Avenue, West Lafayette, IN 47906
+    beds: 1 - 4 Beds
+    latitude: null
+    longitude: null
+    price: $1,194 - $2,149
+    property_name: Chauncey Square
+    website: https://offcampushousing.purdue.edu/housing/property/chauncey-square/ocpwhy8lel
+  '110':
+    address: 3282 Hopkins Dr, West Lafayette, IN 47906
+    beds: 4 Beds
+    latitude: null
+    longitude: null
+    price: $2,350
+    property_name: 3282 Hopkins Dr
+    website: https://offcampushousing.purdue.edu/housing/property/3282-hopkins-dr/dg3gqkk
+  '111':
+    address: 2403 Edison Dr, West Lafayette, IN 47906
+    beds: 4 Beds
+    latitude: null
+    longitude: null
+    price: $2,350
+    property_name: 2403 Edison Dr
+    website: https://offcampushousing.purdue.edu/housing/property/2403-edison-dr/6ww5lrt
+  '112':
+    address: 3382 Edison Dr, West Lafayette, IN 47906
+    beds: 4 Beds
+    latitude: null
+    longitude: null
+    price: $2,350
+    property_name: 3382 Edison Dr
+    website: https://offcampushousing.purdue.edu/housing/property/3382-edison-dr/th2h2bc
+  '113':
+    address: 2252 Indian Trail Dr, West Lafayette, IN 47906
+    beds: 4 Beds
+    latitude: 40.45063880113283
+    longitude: -86.90719317753519
+    price: $2,000
+    property_name: 4 bd 2b with garage
+    website: https://offcampushousing.purdue.edu/housing/property/4-bd-2b-with-garage/33vjxmg
+  '114':
+    address: 3345 Sibley Ln, Lafayette, IN 47909
+    beds: 4 Beds
+    latitude: 40.37801967471069
+    longitude: -86.89306228531176
+    price: $2,100
+    property_name: Spacious 4 Bedroom 2.5 bathroom rental hom...
+    website: https://offcampushousing.purdue.edu/housing/property/spacious-4-bedroom-2-5-bathroom-rental-hom/6hjkb3r
+  '115':
+    address: 36 Vicksburg Ct, West Lafayette, IN 47906
+    beds: 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,900
+    property_name: 36 Vicksburg Ct
+    website: https://offcampushousing.purdue.edu/housing/property/36-vicksburg-ct/rlnzdw2
+  '131':
+    address: 117 S 26th Street, Lafayette, IN 47904
+    beds: 3 Beds
+    latitude: 40.4159048650894
+    longitude: -86.86728102808681
+    price: $900
+    property_name: S 26th Street Residential
+    website: https://offcampushousing.purdue.edu/housing/property/s-26th-street-residential/ocpj7z6787
+  '132':
+    address: 3680 Paramount Dr, West Lafayette, IN 47906
+    beds: Studio - 2 Beds
+    latitude: 40.46946635844334
+    longitude: -86.94643085660304
+    price: $1,100 - $1,750
+    property_name: Wabash Lofts
+    website: https://offcampushousing.purdue.edu/housing/property/wabash-lofts/ylz3z2r
+  '133':
+    address: ''
+    beds: 1 Bed
+    latitude: null
+    longitude: null
+    price: $650
+    property_name: House 15 minutes from campus
+    website: https://offcampushousing.purdue.edu/housing/property/house-15-minutes-from-campus/ocpez46hjp
+  '134':
+    address: 3000 Tantara Way, Lafayette, IN 47909
+    beds: 2 Beds
+    latitude: 40.3840932
+    longitude: -86.9025688
+    price: $1,899 - $2,768
+    property_name: Redwood Lafayette
+    website: https://offcampushousing.purdue.edu/housing/property/redwood-lafayette/rstp9y1
+  '135':
+    address: ''
+    beds: 1 Bed
+    latitude: null
+    longitude: null
+    price: $400
+    property_name: 3Bed Townhouse west of campus
+    website: https://offcampushousing.purdue.edu/housing/property/3bed-townhouse-west-of-campus/ocpb4se6m8
+  '136':
+    address: 111 S Salisbury St, West Lafayette, IN 47906
+    beds: Studio - 4 Beds
+    latitude: 40.4224189
+    longitude: -86.90612389234694
+    price: $980 - $1,635
+    property_name: Hub on Campus West Lafayette
+    website: https://offcampushousing.purdue.edu/housing/property/hub-on-campus-west-lafayette/nby65bq
+  '137':
+    address: 134 Pierce Street, West Lafayette, IN 47906
+    beds: Studio
+    latitude: 40.42259205
+    longitude: -86.90885215911581
+    price: $1,450
+    property_name: Campus Edge Studio
+    website: https://offcampushousing.purdue.edu/housing/property/campus-edge-studio/ocpr1z8lg1
+  '138':
+    address: 2629 Covington Street, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: 40.45588537173993
+    longitude: -86.91432966678767
+    price: $850
+    property_name: 3 bd | 3 bath - Covington St
+    website: https://offcampushousing.purdue.edu/housing/property/3-bd-3-bath-covington-st/ocp3962tle
+  '139':
+    address: 400 N River Rd, West Lafayette, IN 47906
+    beds: Studio - 3 Beds
+    latitude: 40.4309284
+    longitude: -86.89926463362126
+    price: $839 - $1,926
+    property_name: Launch
+    website: https://offcampushousing.purdue.edu/housing/property/launch/fbr7q8v
+  '148':
+    address: 325 Brown St, West Lafayette, IN 47906
+    beds: Studio - 2 Beds
+    latitude: 40.42195239124473
+    longitude: -86.90136274282648
+    price: $1,525 - $2,500
+    property_name: Wabash Landing
+    website: https://offcampushousing.purdue.edu/housing/property/wabash-landing/z6318kw
+  '149':
+    address: 2110 McCormick Road, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: 40.447631
+    longitude: -86.945186
+    price: $639
+    property_name: Station 21
+    website: https://offcampushousing.purdue.edu/housing/property/station-21/ocpdd0nj5j
+  '150':
+    address: 2766 Gawain Dr, Lafayette, IN 47909
+    beds: 3 Beds
+    latitude: null
+    longitude: null
+    price: $2,100 - $2,200
+    property_name: Avalon2
+    website: https://offcampushousing.purdue.edu/housing/property/avalon2/fjwkd7t
+  '151':
+    address: 415 N 11th St, Lafayette, IN 47904
+    beds: 2 Beds
+    latitude: 40.421138559905536
+    longitude: -86.88485540125073
+    price: $900
+    property_name: 415 N 11th St
+    website: https://offcampushousing.purdue.edu/housing/property/415-n-11th-st/hg6ncy0
+  '152':
+    address: 270 Littleton St, West Lafayette, IN 47906
+    beds: Studio - 2 Beds
+    latitude: 40.426658851535045
+    longitude: -86.90346838876972
+    price: $660 - $1,295
+    property_name: Crestview Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/crestview-apartments/8mvtwy3
+  '153':
+    address: 611 Rose Street, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: 40.43095318089345
+    longitude: -86.90148257831444
+    price: $995
+    property_name: Central, 1 Mile To Campus 1 Fully Furnished Room All Inclusive
+      $995/Rm Semester/12 Mnth. Lease
+    website: https://offcampushousing.purdue.edu/housing/property/central-1-mile-to-campus-1-fully-furnished-room-all-inclusive-995-rm-semester-12-mnth-lease/ocpvdxjtsd
+  '154':
+    address: 3004 Pemberly Dr, West Lafayette, IN 47906
+    beds: 1 - 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,425 - $2,450
+    property_name: 52 Flats
+    website: https://offcampushousing.purdue.edu/housing/property/52-flats/28sreqb
+  '155':
+    address: 1109 State Street Apt. B, Lafayette, IN 47905
+    beds: 2 Beds
+    latitude: null
+    longitude: null
+    price: $2,250
+    property_name: Fully Furnished 2 Bedroom/1 Bath
+    website: https://offcampushousing.purdue.edu/housing/property/fully-furnished-2-bedroom-1-bath/ocpdhwnn9j
+  '156':
+    address: 134 Pierce St, West Lafayette, IN 47906
+    beds: 2 - 4 Beds
+    latitude: 40.42259205
+    longitude: -86.90885215911581
+    price: $1,094 - $1,519
+    property_name: Campus Edge on Pierce
+    website: https://offcampushousing.purdue.edu/housing/property/campus-edge-on-pierce/ocpzebqlny
+  '157':
+    address: 111 Wiggins Street, West Lafayette, IN 47906
+    beds: 2 Beds
+    latitude: 40.42655422222222
+    longitude: -86.90635333333334
+    price: $775
+    property_name: Weida Apartments, two blocks to campus
+    website: https://offcampushousing.purdue.edu/housing/property/weida-apartments-two-blocks-to-campus/ocphdfw0s2
+  '158':
+    address: 4854 Precedent Way, Lafayette, IN 47905
+    beds: 1 - 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,425 - $1,875
+    property_name: Precedent Flats
+    website: https://offcampushousing.purdue.edu/housing/property/precedent-flats/xtzrs8p
+  '159':
+    address: 111 South Salisbury Street, West Lafayette, IN 47906
+    beds: 2 Beds
+    latitude: 40.4224189
+    longitude: -86.90612389234694
+    price: $1,345
+    property_name: The Hub
+    website: https://offcampushousing.purdue.edu/housing/property/the-hub/ocppjn2vyr
+  '160':
+    address: 402 Brunswick Dr, Lafayette, IN 47909
+    beds: 1 - 2 Beds
+    latitude: 40.38442975510204
+    longitude: -86.91486691836734
+    price: $975 - $1,190
+    property_name: Winfield Farms Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/winfield-farms-apartments/krdqwr9
+  '161':
+    address: 2080 Foxglove Way, West Lafayette, IN 47906
+    beds: 1 - 3 Beds
+    latitude: 40.46018804932981
+    longitude: -86.94240608042298
+    price: $1,549 - $2,279
+    property_name: Welcome Home to The Ivy Towns + Flats
+    website: https://offcampushousing.purdue.edu/housing/property/welcome-home-to-the-ivy-towns-flats/bjcyxmb
+  '162':
+    address: 1509 Mitch Daniels Boulevard, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: 40.4242632
+    longitude: -86.9232876
+    price: $1,750
+    property_name: Provenance Apartments 1 bed 1 bath (LOWEST POSSIBLE RENT)
+    website: https://offcampushousing.purdue.edu/housing/property/provenance-apartments-1-bed-1-bath-lowest-possible-rent/ocpj7cl804
+  '163':
+    address: 2919 Elite Ln, West Lafayette, IN 47906
+    beds: 1 - 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,334 - $1,828
+    property_name: WestRidge Flats
+    website: https://offcampushousing.purdue.edu/housing/property/westridge-flats/c9dh8hg
+  '164':
+    address: 111 South River Road, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: 40.4219299
+    longitude: -86.9046949
+    price: $830
+    property_name: State Street Towers
+    website: https://offcampushousing.purdue.edu/housing/property/state-street-towers/ocpvxmzlse
+  '165':
+    address: 318 N Russell St, West Lafayette, IN 47906
+    beds: Studio - 2 Beds
+    latitude: 40.42755208334438
+    longitude: -86.91904430284558
+    price: $1,299 - $2,499
+    property_name: Revive 318
+    website: https://offcampushousing.purdue.edu/housing/property/revive-318/75zhrjy
+  '166':
+    address: 1501 Mitch Daniels Blvd, West Lafayette, IN 47906
+    beds: Studio - 3 Beds
+    latitude: 40.4242632
+    longitude: -86.9232876
+    price: $1,749 - $3,347
+    property_name: Provenance Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/provenance-apartments/7g4dsgx
+  '167':
+    address: 102 North Chauncey Avenue, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: null
+    longitude: null
+    price: $1,989
+    property_name: 1407, Chauncey Square Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/1407-chauncey-square-apartments/ocpjfbxsk4
+  '168':
+    address: 3977 State Rd 38E, Lafayette, IN 47905
+    beds: Studio - 3 Beds
+    latitude: null
+    longitude: null
+    price: $863 - $2,255
+    property_name: Anvil 38 Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/anvil-38-apartments/zf2yl6z
+  '169':
+    address: 3315 Tilbury Dr, West Lafayette, IN 47909
+    beds: 1 Bed
+    latitude: 40.464985426752904
+    longitude: -86.9545739087049
+    price: $750
+    property_name: Summer Sublease a Room in a Nice and Quite 3B2B House_Female preferred
+    website: https://offcampushousing.purdue.edu/housing/property/summer-sublease-a-room-in-a-nice-and-quite-3b2b-house-female-preferred/ocpl05wcee
+  '170':
+    address: 320 Chapel Dr, Lafayette, IN 47909
+    beds: 1 - 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,200 - $1,800
+    property_name: Churchwoods Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/churchwoods-apartments/s8ctdd5
+  '171':
+    address: 226 South Grant St, West Lafayette, IN 47906
+    beds: 1 Bed
+    latitude: 40.421088696315714
+    longitude: -86.91020310811258
+    price: $800
+    property_name: 226 Grant St Apt 5
+    website: https://offcampushousing.purdue.edu/housing/property/226-grant-st-apt-5/ocpxzh7r9p
+  '177':
+    address: 501 North Russell Street, West Lafayette, IN 47906
+    beds: 10 Beds
+    latitude: 40.42943
+    longitude: -86.919274
+    price: $1,450
+    property_name: 501 Russell Street (Food Service Included in Lease)
+    website: https://offcampushousing.purdue.edu/housing/property/501-russell-street-food-service-included-in-lease/ocpkxe37d9
+  '178':
+    address: 475 South St, Lafayette, IN 47901
+    beds: 1 - 2 Beds
+    latitude: 40.41724105053464
+    longitude: -86.89220953311843
+    price: $1,503 - $2,440
+    property_name: The Ellsworth
+    website: https://offcampushousing.purdue.edu/housing/property/the-ellsworth/9rmrdc4
+  '179':
+    address: 3314 Hunter Rd, West Lafayette, IN 47906
+    beds: 3 Beds
+    latitude: null
+    longitude: null
+    price: $1,700
+    property_name: 3314 Hunter Rd
+    website: https://offcampushousing.purdue.edu/housing/property/3314-hunter-rd/b2yfd7c
+  '180':
+    address: 302 Vine St, West Lafayette, IN 47906
+    beds: 2 Beds
+    latitude: 40.4260581
+    longitude: -86.9079485
+    price: $1,199 - $1,600
+    property_name: Hi Vine by Weida Apartments
+    website: https://offcampushousing.purdue.edu/housing/property/hi-vine-by-weida-apartments/hssz8z2
+  '181':
+    address: 800 Vine Street, West Lafayette, IN 47906
+    beds: 5 Beds
+    latitude: 40.4333088537234
+    longitude: -86.90813700796123
+    price: $4,000
+    property_name: 5 Bedroom + 3 Bathroom House -> Fully Furnished + Internet - 2025-2026
+      school year
+    website: https://offcampushousing.purdue.edu/housing/property/5-bedroom-3-bathroom-house-fully-furnished-internet-2025-2026-school-year/ocpn5xm47m
+  '182':
+    address: 150 S Chauncey Ave, West Lafayette, IN 47906
+    beds: 3 - 4 Beds
+    latitude: 40.42245402636498
+    longitude: -86.90720845609465
+    price: $1,309 - $1,469
+    property_name: VERVE West Lafayette
+    website: https://offcampushousing.purdue.edu/housing/property/verve-west-lafayette/cv7p9nd
+  '183':
+    address: 116 Villefranche Drive, West Lafayette, IN 47906
+    beds: 2 Beds
+    latitude: 40.45059385876655
+    longitude: -86.9001804533026
+    price: $2,200
+    property_name: Fabulous Furnished  2br (3 beds)  2 ba with den and 2 sleeper sofas
+    website: https://offcampushousing.purdue.edu/housing/property/fabulous-furnished-2br-3-beds-2-ba-with-den-and-2-sleeper-sofas/ocp5qqwdlq
+  '184':
+    address: 100 S Chauncey Ave, West Lafayette, IN 47906
+    beds: Studio - 4 Beds
+    latitude: 40.4229721
+    longitude: -86.9066927
+    price: $1,139 - $2,534
+    property_name: Student | Rise on Chauncey
+    website: https://offcampushousing.purdue.edu/housing/property/student-rise-on-chauncey/x2c241q
