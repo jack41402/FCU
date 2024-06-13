@@ -11,6 +11,9 @@ Z = Zernike(X, Y);
 % (b) plot the surface
 mesh(X, Y, Z);
 
+figure;
+surf(X, Y, Z)
+
 % Define the elevation and azimuth angles
 elevation_angle = 180 / 12;
 azimuth_angles = linspace(-180, 180, 10);
