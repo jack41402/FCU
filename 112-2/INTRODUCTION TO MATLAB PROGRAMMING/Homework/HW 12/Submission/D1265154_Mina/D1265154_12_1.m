@@ -1,0 +1,16 @@
+years = [2004, 2005, 2006, 2007, 2008, 2009];
+population = [10, 10.9, 11.7, 12.6, 13.8, 14.9] * 1e6; 
+p = polyfit(years([1,2,4,5,6]), population([1,2,4,5,6]), 2); 
+years_fit = linspace(2004, 2009, 100);
+population_fit = polyval(p, years_fit);
+figure;
+plot(years, population, 'o', 'MarkerSize', 5, 'MarkerEdgeColor', 'b', 'MarkerFaceColor', 'none');
+hold on;
+plot(years_fit, population_fit, '-r', 'LineWidth', 0.5);
+xticks = 2004:2009;
+set(gca, 'XTick', xticks);
+target_population = 20.03 * 1e6;
+year_double = roots([p(1), p(2), p(3) - target_population]);
+year_double = year_double(year_double >= 2004);  
+fprintf('t=\n\t\t%.2f', year_double);
+hold off;

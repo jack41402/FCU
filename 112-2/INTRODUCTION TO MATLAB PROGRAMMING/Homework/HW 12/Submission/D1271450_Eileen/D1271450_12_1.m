@@ -1,0 +1,15 @@
+years = [2004, 2005, 2006, 2007, 2008, 2009];
+population = [10, 10.9, 11.7, 12.6, 13.8, 14.9] * 1e6;
+coefficients = polyfit(years - 2004, population, 2);
+poly_function = @(x) polyval(coefficients, x - 2004);
+figure;
+scatter(years, population, 'b');
+hold on;
+fplot(poly_function, [2004, 2009], 'r');
+hold off;
+double_population = 20.05 * 1e6;
+coefficients_adjusted = coefficients;
+coefficients_adjusted(end) = coefficients(end) - double_population;
+double_2004_size_year = roots(coefficients_adjusted) + 2004;
+double_2004_size_year = double_2004_size_year(double_2004_size_year > 2009);
+fprintf('t=\n: %.2f\n', double_2004_size_year);

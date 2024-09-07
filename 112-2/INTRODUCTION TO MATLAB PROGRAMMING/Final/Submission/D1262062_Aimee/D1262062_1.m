@@ -1,0 +1,20 @@
+f = @(n) ;
+x = 0:0.004:1;
+B1 = 1; 
+B2 = f(1);
+B3 = f(2);
+B4 = f(3);
+fig = figure;
+plot(x, B1,'b');
+hold on;
+plot(x, B2,'r');
+plot(x, B3,'yellow');
+plot(x, B4,'green');
+hold off;
+xlabel('X-axis');
+ylabel('Y-axis');
+title('Question 1');
+legend('B1(x)', 'B2(x)','B3(x)','B4(x)','Location', 'best');
+grid on;
+lines = findobj(fig, 'Type', 'Line');
+set(lines(2), 'LineStyle', '-.', 'Color', [1 0.2 1], 'LineWidth', 3); % First plot settings

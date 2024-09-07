@@ -3,7 +3,7 @@ FileName=assignment6_D1166570.dev
 Name=assignment6_D1166570
 UnitCount=7
 Type=1
-Ver=1
+Ver=2
 ObjFiles=
 Includes=
 Libs=
@@ -28,11 +28,13 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=
+LogOutput=
+LogOutputEnabled=0
 
 [Unit1]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\linear_equation_system_solver.cpp
+FileName=linear_equation_system_solver.cpp
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -40,9 +42,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\matrix.cpp
+FileName=matrix.cpp
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -50,9 +52,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\matrix.h
+FileName=matrix.h
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -60,9 +62,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\smatrix.cpp
+FileName=smatrix.cpp
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -70,9 +72,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\smatrix.h
+FileName=smatrix.h
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -80,9 +82,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\vector.cpp
+FileName=vector.cpp
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -90,9 +92,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=..\LinearEquationSystemSolver(1)\LinearEquationSystemSolver\vector.h
+FileName=vector.h
 CompileCpp=1
-Folder=assignment6_D1166570
+Folder=
 Compile=1
 Link=1
 Priority=1000
@@ -116,4 +118,5 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
+SyncProduct=0
 

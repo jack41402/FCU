@@ -1,0 +1,10 @@
+filename = 'test_score1.xls';
+opts = detectImportOptions(filename);
+data = readtable(filename, opts);
+data.Properties.VariableNames = {'Index', 'ID', 'Name', 'RegularAssessment', 'MidtermExam', 'FinalExam', 'RegularGrade', 'MidtermGrade', 'FinalGrade'};
+avgRegularAssessment = mean(data.RegularAssessment);
+avgMidtermExam = mean(data.MidtermExam);
+avgFinalExam = mean(data.FinalExam);
+newRow = {'29', 'Average score',   '-'   , avgRegularAssessment, avgMidtermExam, avgFinalExam, [], [], []};
+data = [data; newRow];
+writetable(data, 'updated_test_score1.xls');

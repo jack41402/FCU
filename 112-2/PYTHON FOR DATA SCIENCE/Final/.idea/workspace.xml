@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddb60aaa-6ee2-4011-929d-2e266b12d681" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Housing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crawl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ORDINARY DIFFERENTIAL EQUATION/ORDINARY DIFFERENTIAL EQUATION 習題題號.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../ORDINARY DIFFERENTIAL EQUATION/ORDINARY DIFFERENTIAL EQUATION 習題題號.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 4/assignment4_solution/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 5/Solution/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1166570_Levi/Assignment6_D1166570.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1166570_Levi/assignment6_D1166570.dev" beforeDir="false" afterPath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1166570_Levi/assignment6_D1166570.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1166570_Levi/matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1166570_Levi/matrix.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1265209_Jensen/Assignment6_D1265209.dev" beforeDir="false" afterPath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/Submission/D1265209_Jensen/Assignment6_D1265209.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/assignment6_grade_purdue.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6 Linear Equation System Solver/assignment6_grade_purdue.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ADVANCED C PROGRAMMING/Assignment 6/Assignment6_Linear_Equation_System_Solver/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +29,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="GitLabMergeRequestsSettings">{}</component>
+  <component name="GithubPullRequestsUISettings">{}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2hgMnju2U5GtWVEUFIRunMo34v6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,7 +46,9 @@
     "Python.login.executor": "Run",
     "Python.main.executor": "Run",
     "Python.map.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -60,7 +61,6 @@
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Final" />
-      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -104,6 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718011435617</updated>
       <workItem from="1718011436995" duration="14065000" />
+      <workItem from="1718878493771" duration="10000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,12 @@
+X = -2:0.19:2; 
+Y = -1:0.095:1; 
+Z = -5:5:5;
+P=(X^2+Y^2)^1/2;
+O=1/(tan(y/x));
+[X, Y] = meshgrid(X, Y);
+Z = 2 * P^2 .* sin(O).* cos(O);
+figure; 
+surf(X, Y, Z); 
+xlabel('x'); 
+ylabel('y'); 
+zlabel('z'); 

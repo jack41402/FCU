@@ -1,0 +1,134 @@
+// Basic operation interface of single linked ordered linear list.
+#include <stdio.h>
+#include <stdlib.h>
+#include "polynomial_product_list_D1175125.h"
+
+ // Initialize polynomial.
+void initial(Polynomial *P) {	
+	*P = NULL;  	
+}
+
+// Get number of terms of the polynomial. 
+int getTerm(Polynomial P) {
+	Term term = P; // node pointer. 
+	int count = 0; // The number of terms of the the polynomial is set to 0.
+	
+	while (term!=NULL) {
+		term = term->next; // Next term.
+		count++; // Increment term counter.
+	}
+	return count; // The number of terms of the the polynomial.	 
+}
+
+// Get a polynomial term with given degree.
+// If no term with the specified degree, return -99.0.
+Coeff getCoeff(Polynomial P, Degree deg){
+	Term current = P; // Term pointer.
+	
+	while (current!=NULL) { // Continue until no more term.
+		if (current->degree==deg) return current->coeff; // The specified is found.
+		else if (current->degree>deg) current = current->next; // Check next term.
+		else return 0.0; // The spcified degree is greater than the current term, no such term.
+	};
+	return 0.0; // No more term, fails.
+} 
+
+// Search a polynomial term with a specified degree. 
+// If successful, return the degree of the term; otherwise, return -1.
+int searchTerm(Polynomial P, Degree deg) {
+	Term current = P; // Term pointer.
+	
+	while (current!=NULL) { // Continue until no more term.
+		if (current->degree==deg) return deg; // Return degree.
+		else if (current->degree>deg) current = current->next; // Check next term.
+		else return -1; // The spcified degree is greater than the current term, no such term.
+	};
+	return -1; // No more term, fails.
+} 
+
+// Clear the polynomial.
+void clear(Polynomial *P){
+	Term current; // Pointer to the current node.
+	
+	while (*P!=NULL) { // There are more terms to clear.
+    	current = *P; // The current term.
+		*P = current->next; // The rest of the polynomial.
+		free(current); // Release the current term. 
+  }
+}
+
+// Checks whether the polynomial is empty. Return 1, if empty; otherwise, return 0.
+int is_empty(Polynomial P){
+  return P==NULL; // If polynomial is NULL, return 1; otherwise, return 0. 
+} 
+
+// Print the polynomial.
+void printPoly(Polynomial P){
+	Term current = P; // Pointer to the current term.
+
+	while (current!=NULL) { // There are more terms to print.
+		if (current!=P && current->coeff>0) printf("+");
+		if (current->degree>1) {
+			printf("%5.3f X^%d", current->coeff, current->degree); // Print degree i term, i>1.
+		}
+		else if (current->degree==1) {
+			printf("%5.3f X", current->coeff); // Print degree 1 term.
+		}
+		else {
+			printf("%5.3f", current->coeff); // Print degree 0 term.
+		}
+		current = current->next; // Move to the next node. 
+	}
+	printf("\n"); // Print a newline. 
+} 
+
+// Replace a polynomial term of a specified degree with given coefficient.
+// If the term of specified degree does not exist, insert a new term.
+// Return degree of the term.
+Degree replaceTerm(Polynomial *P, Degree deg, Coeff coeff){
+	//***** Complete this function. 
+	Term current = *p. prev = NULL, newTerm;
+	while(current != NULL && current->degree > deg){
+		prev = current;
+		current = current->next;
+	}
+	if(current != NULL && current-> degree == deg){
+		if(coeff == 0){
+			if(prev == NULL)
+				*P = current->next;
+			else
+				prev->next = current->next;
+			free(current);			
+		}else{
+			current->coeff = coeff;
+		}
+	}else{newTerm = (NodePtr)malloc(sizeof(Node));
+		newTerm->coeff = coeff;
+		newTerm->degree = degree;
+		newTerm->next = current;
+		if(prev == NULL)
+			*p = newTerm;
+		else
+			prev->next = newTerm;
+	}
+	return degree;
+}
+
+// Polynomial product.
+Polynomial productPolynomial(Polynomial P, Polynomial Q) {
+	//***** Complete this function. 
+	Polynomial prod = NULL;
+	initial(&prod);
+	Polynomial pPtr = P;
+	while(pPtr != NULL){
+		Polynomial qPtr = Q;
+		while (qPtr != NULL){
+			Degree newDegreee = pPtr->degree + qPtr->Degree;
+			Coeff newCoeff = pPtr->coeff * qPtr->coeff;
+			replaceTerm(&temp, newDegree, getCoeff(temp,NewDegree)+ newCoeff);
+			qPtr = qPtr->next;
+		}
+		pPtr = pPtr->next
+	}
+	return prod;	
+}
